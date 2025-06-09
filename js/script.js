@@ -335,6 +335,64 @@ const courses = [
     ],
   },
   {
+    id: 6,
+    title: "Tailwind CSS Darslari",
+    description: "Tez va zamonaviy web dizayn uchun Tailwind CSS frameworkini o'rganing",
+    image: "../images/tailwind.png",
+    videos: [
+      {
+        id: 1,
+        title: "Tailwind CSS ga kirish",
+        videoFile: "https://youtu.be/pfaSUYaSgRo"
+      },
+      {
+        id: 2,
+        title: "Tailwind CSS ni o'rnatish",
+        videoFile: "https://youtu.be/6zIuAyLZPH0"
+      },
+      {
+        id: 3,
+        title: "Asosiy utility classlar",
+        videoFile: "https://youtu.be/6zIuAyLZPH0"
+      },
+      {
+        id: 4,
+        title: "Ranglar va fonlar bilan ishlash",
+        videoFile: "https://youtu.be/6zIuAyLZPH0"
+      },
+      {
+        id: 5,
+        title: "Margin, Padding va Box Model",
+        videoFile: "https://youtu.be/6zIuAyLZPH0"
+      },
+      {
+        id: 6,
+        title: "Flex va Grid tizimi",
+        videoFile: "https://youtu.be/6zIuAyLZPH0"
+      },
+      {
+        id: 7,
+        title: "Responsive dizayn va breakpointlar",
+        videoFile: "https://youtu.be/6zIuAyLZPH0"
+      },
+      {
+        id: 8,
+        title: "Custom konfiguratsiya va theme",
+        videoFile: "https://youtu.be/6zIuAyLZPH0"
+      },
+      {
+        id: 9,
+        title: "Animatsiya va transitionlar",
+        videoFile: "https://youtu.be/6zIuAyLZPH0"
+      },
+      {
+        id: 10,
+        title: "Amaliy loyiha: Tailwind bilan landing page",
+        videoFile: "https://youtu.be/6zIuAyLZPH0"
+      }
+    ]
+  },
+  {
     id: 4,
     title: "JavaScript Dasturlash",
     description:
