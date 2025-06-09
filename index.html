@@ -1,2368 +1,1269 @@
 <!DOCTYPE html>
 <html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Dunyosi - Video Darsliklar Platformasi</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#00ff88',
-                        secondary: '#00cc6a',
-                        accent: '#00aa55',
-                        dark: '#0a0a0a',
-                        'dark-light': '#1a1a1a',
-                        'dark-lighter': '#2a2a2a',
-                        'web-green': '#00ff88',
-                        'web-dark': '#0f0f0f',
-                        'neon-green': '#39ff14',
-                        'cyber-blue': '#00d4ff'
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif']
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'web-spin': 'spin 20s linear infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'shimmer': 'shimmer 2s linear infinite',
-                        'bounce-slow': 'bounce 3s infinite',
-                        'fade-in': 'fadeIn 0.8s ease-out',
-                        'slide-up': 'slideUp 0.6s ease-out',
-                        'scale-in': 'scaleIn 0.5s ease-out'
-                    },
-                    keyframes: {
-                        glow: {
-                            '0%': { boxShadow: '0 0 5px #00ff88, 0 0 10px #00ff88, 0 0 15px #00ff88' },
-                            '100%': { boxShadow: '0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88' }
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' }
-                        },
-                        shimmer: {
-                            '0%': { transform: 'translateX(-100%)' },
-                            '100%': { transform: 'translateX(100%)' }
-                        },
-                        fadeIn: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
-                        },
-                        slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
-                        },
-                        scaleIn: {
-                            '0%': { opacity: '0', transform: 'scale(0.9)' },
-                            '100%': { opacity: '1', transform: 'scale(1)' }
-                        }
-                    },
-                    backgroundImage: {
-                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                        'cyber-grid': 'linear-gradient(rgba(0,255,136,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,136,0.1) 1px, transparent 1px)',
-                        'neural-net': 'radial-gradient(circle at 20% 50%, rgba(0,255,136,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(0,255,136,0.05) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(0,255,136,0.08) 0%, transparent 50%)'
-                    }
-                }
-            },
-            darkMode: 'class'
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: radial-gradient(ellipse at center, #0f0f0f 0%, #000000 100%);
-            background-attachment: fixed;
-        }
-        
-        /* Enhanced web pattern background */
-        .web-pattern {
-            background-image: 
-                radial-gradient(circle at 25% 25%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(0, 255, 136, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(57, 255, 20, 0.05) 0%, transparent 70%);
-            background-size: 800px 800px, 600px 600px, 1000px 1000px;
-            animation: float 8s ease-in-out infinite;
-        }
-        
-        /* Enhanced spider web decoration */
-        .web-decoration::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300ff88' fill-opacity='0.05'%3E%3Cpath d='M40 40l20-20M40 40l20 20M40 40l-20-20M40 40l-20 20M40 20v40M20 40h40M30 30l20 20M50 30l-20 20'/%3E%3Ccircle cx='40' cy='40' r='2'/%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3Ccircle cx='60' cy='20' r='1'/%3E%3Ccircle cx='20' cy='60' r='1'/%3E%3Ccircle cx='60' cy='60' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-            pointer-events: none;
-            opacity: 0.3;
-        }
-        
-        /* Cyber grid background */
-        .cyber-grid {
-            background-image: 
-                linear-gradient(rgba(0,255,136,0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0,255,136,0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-        }
-        
-        /* Hide all pages by default */
-        .page {
-            display: none;
-        }
-        
-        /* Show active page */
-        .page.active {
-            display: block;
-            animation: fade-in 0.8s ease-out;
-        }
-        
-        /* Active tab styling */
-        .admin-tab.active {
-            background: linear-gradient(135deg, #00ff88, #00cc6a);
-            color: #000;
-            box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
-            transform: translateY(-2px);
-        }
-        
-        /* Active form container */
-        .form-container.active {
-            display: block;
-            animation: slide-up 0.6s ease-out;
-        }
-        
-        /* Hidden form container */
-        .form-container {
-            display: none;
-        }
-
-        /* Enhanced user dropdown */
-        .user-dropdown {
-            display: none;
-            position: absolute;
-            right: 0;
-            top: 100%;
-            width: 280px;
-            z-index: 50;
-            animation: scale-in 0.3s ease-out;
-        }
-        
-        .user-dropdown.active {
-            display: block;
-        }
-
-        /* Enhanced glass effect */
-        .glass {
-            background: rgba(26, 26, 26, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(0, 255, 136, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .glass::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
-            animation: shimmer 3s infinite;
-        }
-        
-        /* Enhanced video player */
-        .video-player {
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%;
-            position: relative;
-            background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
-            border-radius: 1rem;
-            overflow: hidden;
-            border: 2px solid rgba(0, 255, 136, 0.3);
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
-        }
-        
-        .video-player video,
-        .video-player iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 0.8rem;
-        }
-        
-        /* Enhanced course card */
-        .course-card {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(15, 15, 15, 0.95));
-        }
-        
-        .course-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 136, 0.05) 50%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .course-card:hover::before {
-            opacity: 1;
-        }
-        
-        .course-card:hover {
-            transform: translateY(-12px) scale(1.03);
-            box-shadow: 
-                0 25px 50px -12px rgba(0, 0, 0, 0.4),
-                0 0 40px rgba(0, 255, 136, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            border-color: rgba(0, 255, 136, 0.5);
-        }
-        
-        /* Course image container */
-        .course-image-container {
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 204, 106, 0.05));
-        }
-        
-        .course-image-container::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(0, 255, 136, 0.1), transparent);
-            transform: translateX(-100%);
-            transition: transform 0.6s ease;
-        }
-        
-        .course-card:hover .course-image-container::after {
-            transform: translateX(100%);
-        }
-        
-        /* Enhanced custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: rgba(26, 26, 26, 0.8);
-            border-radius: 5px;
-            border: 1px solid rgba(0, 255, 136, 0.1);
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #00ff88, #00cc6a);
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(135deg, #00cc6a, #00aa55);
-            box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
-        }
-        
-        /* Enhanced sidebar active link */
-        .nav-link.active {
-            background: linear-gradient(90deg, rgba(0, 255, 136, 0.2), rgba(0, 204, 106, 0.15));
-            border-left: 4px solid #00ff88;
-            color: #00ff88;
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
-            transform: translateX(5px);
-        }
-        
-        .nav-link:hover {
-            background: rgba(0, 255, 136, 0.08);
-            color: #00ff88;
-            transform: translateX(3px);
-            transition: all 0.3s ease;
-        }
-        
-        /* Enhanced video list item */
-        .video-list-item {
-            transition: all 0.4s ease;
-            border: 1px solid rgba(0, 255, 136, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .video-list-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 3px;
-            background: linear-gradient(to bottom, #00ff88, #00cc6a);
-            transform: scaleY(0);
-            transition: transform 0.3s ease;
-        }
-        
-        .video-list-item:hover::before {
-            transform: scaleY(1);
-        }
-        
-        .video-list-item:hover {
-            background: rgba(0, 255, 136, 0.12);
-            border-color: rgba(0, 255, 136, 0.4);
-            transform: translateX(5px);
-        }
-        
-        .video-list-item.active {
-            background: linear-gradient(90deg, rgba(0, 255, 136, 0.25), rgba(0, 204, 106, 0.15));
-            border-left: 4px solid #00ff88;
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
-        }
-        
-        /* Enhanced button styles */
-        .btn-primary {
-            background: linear-gradient(135deg, #00ff88, #00cc6a);
-            color: #000;
-            font-weight: 700;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
-        }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-        
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #00cc6a, #00aa55);
-            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.5);
-            transform: translateY(-3px) scale(1.05);
-        }
-        
-        /* Enhanced input styles */
-        .input-web {
-            background: rgba(26, 26, 26, 0.9);
-            border: 2px solid rgba(0, 255, 136, 0.25);
-            color: white;
-            transition: all 0.4s ease;
-            position: relative;
-        }
-        
-        .input-web:focus {
-            border-color: #00ff88;
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
-            outline: none;
-            background: rgba(26, 26, 26, 0.95);
-        }
-        
-        /* Enhanced logo animation */
-        .logo-container {
-            position: relative;
-            animation: float 4s ease-in-out infinite;
-        }
-        
-        .logo-glow {
-            filter: drop-shadow(0 0 15px rgba(0, 255, 136, 0.7));
-            transition: filter 0.3s ease;
-        }
-        
-        .logo-glow:hover {
-            filter: drop-shadow(0 0 25px rgba(0, 255, 136, 1));
-        }
-        
-        /* Enhanced hero section */
-        .hero-gradient {
-            background: linear-gradient(135deg, 
-                rgba(0, 255, 136, 0.15) 0%, 
-                rgba(0, 0, 0, 0.8) 50%, 
-                rgba(0, 255, 136, 0.08) 100%);
-            position: relative;
-        }
-        
-        .hero-gradient::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2300ff88' fill-opacity='0.03'%3E%3Cpath d='M50 50m-20 0a20 20 0 1 1 40 0a20 20 0 1 1 -40 0M50 30v40M30 50h40M35 35l30 30M65 35l-30 30'/%3E%3C/g%3E%3C/svg%3E") repeat;
-            pointer-events: none;
-        }
-        
-        /* Enhanced stats cards */
-        .stat-card {
-            background: linear-gradient(145deg, rgba(26, 26, 26, 0.95), rgba(15, 15, 15, 0.98));
-            border: 1px solid rgba(0, 255, 136, 0.25);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(from 0deg, transparent, rgba(0, 255, 136, 0.1), transparent);
-            animation: spin 4s linear infinite;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .stat-card:hover::before {
-            opacity: 1;
-        }
-        
-        .stat-card:hover {
-            border-color: rgba(0, 255, 136, 0.5);
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
-            transform: translateY(-5px);
-        }
-
-        /* Modal backdrop enhancement */
-        .modal-backdrop {
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            background: rgba(0, 0, 0, 0.8);
-        }
-        
-        /* Floating elements */
-        .floating-element {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .floating-element:nth-child(2n) {
-            animation-delay: -2s;
-        }
-        
-        .floating-element:nth-child(3n) {
-            animation-delay: -4s;
-        }
-        
-        /* Glitch effect for special elements */
-        .glitch {
-            position: relative;
-        }
-        
-        .glitch::before,
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-        }
-        
-        .glitch::before {
-            animation: glitch-1 0.5s infinite;
-            color: #00ff88;
-            z-index: -1;
-        }
-        
-        .glitch::after {
-            animation: glitch-2 0.5s infinite;
-            color: #ff0088;
-            z-index: -2;
-        }
-        
-        @keyframes glitch-1 {
-            0%, 14%, 15%, 49%, 50%, 99%, 100% { transform: translate(0); }
-            15%, 49% { transform: translate(-2px, 1px); }
-        }
-        
-        @keyframes glitch-2 {
-            0%, 20%, 21%, 62%, 63%, 99%, 100% { transform: translate(0); }
-            21%, 62% { transform: translate(2px, -1px); }
-        }
-        
-        /* Neon text effect */
-        .neon-text {
-            color: #00ff88;
-            text-shadow: 
-                0 0 5px #00ff88,
-                0 0 10px #00ff88,
-                0 0 15px #00ff88,
-                0 0 20px #00ff88;
-            animation: neon-flicker 2s infinite alternate;
-        }
-        
-        @keyframes neon-flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-        
-        /* Progress bar enhancement */
-        .progress-bar {
-            background: linear-gradient(90deg, #00ff88, #00cc6a, #00aa55);
-            background-size: 200% 100%;
-            animation: progress-shine 2s infinite;
-        }
-        
-        @keyframes progress-shine {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-        
-        /* Course category badges */
-        .category-badge {
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 204, 106, 0.1));
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .category-badge:hover {
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.3), rgba(0, 204, 106, 0.2));
-            transform: scale(1.05);
-        }
-
-        /* Add these styles to your existing styles */
-        @media (max-width: 1024px) {
-            .input-web {
-                width: 200px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .input-web {
-                width: 150px;
-            }
-            
-            .hero-gradient {
-                padding: 2rem !important;
-            }
-            
-            .hero-gradient h1 {
-                font-size: 2.5rem !important;
-            }
-            
-            .stat-card {
-                padding: 1.5rem !important;
-            }
-            
-            .course-card {
-                margin-bottom: 1rem;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .input-web {
-                display: none;
-            }
-            
-            .hero-gradient h1 {
-                font-size: 2rem !important;
-            }
-            
-            .stat-card {
-                padding: 1rem !important;
-            }
-        }
-    </style>
-</head>
-<body class="bg-dark text-white web-pattern">
+    <!-- Tailwind configni alohida fayl orqali ulash -->
+    <script src="tailwind-config.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="bg-dark text-white web-pattern">
     <div class="flex min-h-screen">
-        <!-- Enhanced Sidebar -->
-        <div id="sidebar" class="w-64 fixed h-full bg-dark-light shadow-2xl z-50 overflow-y-auto border-r border-gray-800 web-decoration transform -translate-x-full lg:translate-x-0 transition-transform duration-300">
-            <div class="flex items-center p-6 border-b border-gray-800 relative">
-                <div class="logo-container w-12 h-12 mr-3 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-black font-bold text-xl logo-glow">
-                    <i class="fas fa-spider"></i>
+      <!-- Enhanced Sidebar -->
+      <div
+        id="sidebar"
+        class="w-64 fixed h-full bg-dark-light shadow-2xl z-50 overflow-y-auto border-r border-gray-800 web-decoration transform -translate-x-full lg:translate-x-0 transition-transform duration-300"
+      >
+        <div class="flex items-center p-6 border-b border-gray-800 relative">
+          <div
+            class="logo-container w-12 h-12 mr-3 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-black font-bold text-xl logo-glow"
+          >
+            <i class="fas fa-spider"></i>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-primary neon-text">
+              Web Dunyosi
+            </h2>
+            <p class="text-xs text-gray-400">Video Darsliklar</p>
+          </div>
+          <div
+            class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full animate-pulse"
+          ></div>
+        </div>
+
+        <nav class="p-4">
+          <div class="mb-6">
+            <h3
+              class="text-gray-400 text-xs uppercase mb-3 px-3 font-semibold tracking-wider"
+            >
+              Asosiy
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="nav-link flex items-center p-3 rounded-lg transition-all group"
+                >
+                  <i
+                    class="fas fa-home mr-3 text-lg group-hover:scale-110 transition-transform"
+                  ></i>
+                  <span>Bosh sahifa</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#courses"
+                  class="nav-link active flex items-center p-3 rounded-lg transition-all group"
+                >
+                  <i
+                    class="fas fa-graduation-cap mr-3 text-lg group-hover:scale-110 transition-transform"
+                  ></i>
+                  <span>Kurslar</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="nav-link flex items-center p-3 rounded-lg transition-all group"
+                >
+                  <i
+                    class="fas fa-project-diagram mr-3 text-lg group-hover:scale-110 transition-transform"
+                  ></i>
+                  <span>Loyihalar</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#dashboard"
+                  class="nav-link flex items-center p-3 rounded-lg transition-all group"
+                >
+                  <i
+                    class="fas fa-chart-line mr-3 text-lg group-hover:scale-110 transition-transform"
+                  ></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+              <li id="adminMenuItem" class="hidden">
+                <a
+                  href="#admin"
+                  class="nav-link flex items-center p-3 rounded-lg transition-all group"
+                >
+                  <i
+                    class="fas fa-user-shield mr-3 text-lg group-hover:scale-110 transition-transform"
+                  ></i>
+                  <span>Admin Panel</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-6">
+            <h3
+              class="text-gray-400 text-xs uppercase mb-3 px-3 font-semibold tracking-wider"
+            >
+              Loyihalar
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#blogs"
+                  class="nav-link flex items-center p-3 rounded-lg transition-all group"
+                >
+                  <i
+                    class="fas fa-blog mr-3 text-lg group-hover:scale-110 transition-transform"
+                  ></i>
+                  <span>Blog</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#resume"
+                  class="nav-link flex items-center p-3 rounded-lg transition-all group"
+                >
+                  <i
+                    class="fas fa-file-alt mr-3 text-lg group-hover:scale-110 transition-transform"
+                  ></i>
+                  <span>Resume Builder</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#code"
+                  class="nav-link flex items-center p-3 rounded-lg transition-all group"
+                >
+                  <i
+                    class="fas fa-code mr-3 text-lg group-hover:scale-110 transition-transform"
+                  ></i>
+                  <span>Code Showcase</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="absolute bottom-5 left-0 right-0 px-5">
+            <div class="flex justify-center space-x-3 mb-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-dark-lighter hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 floating-element"
+              >
+                <i class="fab fa-telegram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-dark-lighter hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 floating-element"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-dark-lighter hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 floating-element"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-dark-lighter hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 floating-element"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <div class="text-center text-xs text-gray-500">
+              © 2024 Web Dunyosi
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Sidebar Overlay for mobile -->
+      <div
+        id="sidebarOverlay"
+        class="fixed inset-0 bg-black/60 z-40 hidden lg:hidden"
+      ></div>
+
+      <!-- Enhanced Main Content -->
+      <div class="flex-1 lg:ml-64 min-h-screen">
+        <!-- Enhanced Header -->
+        <header
+          class="flex justify-between items-center py-4 px-6 glass sticky top-0 z-20 border-b border-gray-800"
+        >
+          <div class="flex items-center">
+            <!-- Mobile Menu Button -->
+            <button
+              id="mobileMenuBtn"
+              class="lg:hidden w-11 h-11 rounded-xl bg-dark-lighter flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 mr-4"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Qidirish..."
+                class="input-web rounded-xl px-4 py-3 pl-12 w-80 text-sm"
+              />
+              <i class="fas fa-search absolute left-4 top-4 text-gray-400"></i>
+              <div class="absolute right-3 top-3">
+                <kbd class="px-2 py-1 text-xs bg-gray-700 rounded">Ctrl+K</kbd>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <button
+              class="w-11 h-11 rounded-xl bg-dark-lighter flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 group"
+            >
+              <i
+                class="fas fa-moon group-hover:rotate-12 transition-transform"
+              ></i>
+            </button>
+            <button
+              class="w-11 h-11 rounded-xl bg-dark-lighter flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 relative group"
+            >
+              <i class="fas fa-bell group-hover:animate-bounce"></i>
+              <span
+                class="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full animate-pulse flex items-center justify-center text-xs text-black font-bold"
+                >3</span
+              >
+            </button>
+
+            <!-- Enhanced User Account Section -->
+            <div id="userAccount" class="hidden relative">
+              <div
+                id="userAccountBtn"
+                class="flex items-center glass rounded-xl px-4 py-3 cursor-pointer hover:bg-primary/10 transition-all group"
+              >
+                <div
+                  class="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mr-3 group-hover:scale-110 transition-transform"
+                >
+                  <i class="fas fa-user text-black text-sm"></i>
+                </div>
+                <span id="userDisplayName" class="mr-3 font-medium">User</span>
+                <i
+                  class="fas fa-chevron-down text-sm group-hover:rotate-180 transition-transform"
+                ></i>
+              </div>
+
+              <div
+                id="userDropdown"
+                class="user-dropdown glass rounded-2xl p-6 mt-2 shadow-2xl border border-gray-700"
+              >
+                <div class="border-b border-gray-700 pb-4 mb-4">
+                  <div class="flex items-center mb-3">
+                    <div
+                      class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mr-4"
+                    >
+                      <i class="fas fa-user text-black text-lg"></i>
+                    </div>
+                    <div>
+                      <div id="dropdownUserName" class="font-bold text-lg">
+                        User
+                      </div>
+                      <div id="userRole" class="text-sm text-gray-400">
+                        Foydalanuvchi
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex space-x-2">
+                    <span class="category-badge px-3 py-1 rounded-full text-xs"
+                      >Pro</span
+                    >
+                    <span class="category-badge px-3 py-1 rounded-full text-xs"
+                      >Active</span
+                    >
+                  </div>
+                </div>
+                <ul class="space-y-2">
+                  <li>
+                    <a
+                      href="#profile"
+                      class="flex items-center p-3 rounded-xl hover:bg-dark/50 transition-all group"
+                    >
+                      <i
+                        class="fas fa-user-circle mr-3 group-hover:scale-110 transition-transform"
+                      ></i>
+                      <span>Profil</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#settings"
+                      class="flex items-center p-3 rounded-xl hover:bg-dark/50 transition-all group"
+                    >
+                      <i
+                        class="fas fa-cog mr-3 group-hover:rotate-90 transition-transform"
+                      ></i>
+                      <span>Sozlamalar</span>
+                    </a>
+                  </li>
+                  <li id="adminDropdownLink" class="hidden">
+                    <a
+                      href="#admin"
+                      class="flex items-center p-3 rounded-xl hover:bg-dark/50 transition-all group"
+                    >
+                      <i
+                        class="fas fa-user-shield mr-3 group-hover:scale-110 transition-transform"
+                      ></i>
+                      <span>Admin Panel</span>
+                    </a>
+                  </li>
+                  <li class="border-t border-gray-700 pt-3 mt-3">
+                    <button
+                      id="logoutBtn"
+                      class="flex items-center p-3 rounded-xl hover:bg-red-600/20 hover:text-red-400 transition-all w-full text-left group"
+                    >
+                      <i
+                        class="fas fa-sign-out-alt mr-3 group-hover:translate-x-1 transition-transform"
+                      ></i>
+                      <span>Chiqish</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Enhanced Login Button -->
+            <div
+              id="loginBtn"
+              class="btn-primary px-8 py-3 rounded-xl cursor-pointer transition-all font-bold"
+            >
+              <i class="fas fa-sign-in-alt mr-2"></i>
+              Kirish
+            </div>
+          </div>
+        </header>
+
+        <!-- Enhanced Home Page -->
+        <div id="homePage" class="page active p-6">
+          <!-- Enhanced Hero Section -->
+          <div
+            class="hero-gradient p-12 rounded-3xl mb-12 border border-gray-800 relative overflow-hidden"
+          >
+            <div class="absolute inset-0 opacity-10 cyber-grid"></div>
+            <div class="relative z-10 flex flex-col lg:flex-row items-center">
+              <div class="flex-1 mb-10 lg:mb-0 lg:pr-12">
+                <h1 class="text-6xl font-black mb-8 leading-tight">
+                  <span class="neon-text glitch" data-text="Web Dunyosi"
+                    >Web Dunyosi</span
+                  >
+                  -
+                  <br />
+                  <span
+                    class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+                  >
+                    Dasturlash Olamiga Xush Kelibsiz
+                  </span>
+                </h1>
+                <p
+                  class="text-xl mb-10 leading-relaxed text-gray-300 max-w-2xl"
+                >
+                  Zamonaviy web texnologiyalarini o'rganing. HTML, CSS,
+                  JavaScript va boshqa ko'plab texnologiyalar bo'yicha
+                  professional darajadagi bilimlar oling.
+                </p>
+                <div class="flex flex-wrap gap-6">
+                  <a
+                    href="#courses"
+                    class="btn-primary px-10 py-5 rounded-xl font-bold transition-all inline-flex items-center text-lg group"
+                  >
+                    <i
+                      class="fas fa-play mr-3 group-hover:scale-110 transition-transform"
+                    ></i>
+                    Kurslarni Boshlash
+                  </a>
+                  <a
+                    href="#projects"
+                    class="bg-transparent border-2 border-primary text-primary hover:bg-primary/10 px-10 py-5 rounded-xl font-bold transition-all inline-flex items-center text-lg group"
+                  >
+                    <i
+                      class="fas fa-rocket mr-3 group-hover:scale-110 transition-transform"
+                    ></i>
+                    Loyihalarni Ko'rish
+                  </a>
+                </div>
+              </div>
+              <div class="flex-1 flex justify-center">
+                <div class="relative">
+                  <div
+                    class="w-96 h-96 rounded-full bg-gradient-to-br from-primary/20 to-secondary/10 flex items-center justify-center animate-pulse-slow relative overflow-hidden"
+                  >
+                    <i
+                      class="fas fa-spider text-primary text-9xl logo-glow animate-web-spin"
+                    ></i>
+                    <div
+                      class="absolute inset-0 rounded-full border-4 border-primary/30 animate-ping"
+                    ></div>
+                    <div
+                      class="absolute inset-4 rounded-full border-2 border-secondary/20 animate-pulse"
+                    ></div>
+                  </div>
+                  <div
+                    class="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-bounce"
+                  ></div>
+                  <div
+                    class="absolute -bottom-4 -left-4 w-6 h-6 bg-secondary rounded-full animate-bounce"
+                    style="animation-delay: 1s"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enhanced Featured Courses -->
+          <div class="mb-12">
+            <div class="flex justify-between items-center mb-10">
+              <div>
+                <h2 class="text-4xl font-black mb-3">
+                  <span class="neon-text">Mashhur Kurslar</span>
+                </h2>
+                <p class="text-gray-400 text-lg">
+                  Eng ko'p o'qilayotgan kurslar bilan tanishing
+                </p>
+              </div>
+              <a
+                href="#courses"
+                class="text-primary flex items-center hover:text-secondary transition-all group text-lg font-semibold"
+              >
+                Barchasini ko'rish
+                <i
+                  class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"
+                ></i>
+              </a>
+            </div>
+            <div
+              id="featuredCourses"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+            >
+              <!-- Courses will be loaded dynamically -->
+            </div>
+          </div>
+
+          <!-- Enhanced Statistics -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="stat-card rounded-2xl p-8 text-center relative">
+              <div class="text-primary text-5xl mb-6 floating-element">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3 class="text-3xl font-black text-primary mb-3 neon-text">
+                50+
+              </h3>
+              <p class="text-gray-400 text-lg">Video Darslik</p>
+              <div
+                class="absolute top-4 right-4 w-3 h-3 bg-primary rounded-full animate-pulse"
+              ></div>
+            </div>
+            <div class="stat-card rounded-2xl p-8 text-center relative">
+              <div class="text-primary text-5xl mb-6 floating-element">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3 class="text-3xl font-black text-primary mb-3 neon-text">
+                1000+
+              </h3>
+              <p class="text-gray-400 text-lg">Faol O'quvchi</p>
+              <div
+                class="absolute top-4 right-4 w-3 h-3 bg-secondary rounded-full animate-pulse"
+                style="animation-delay: 0.5s"
+              ></div>
+            </div>
+            <div class="stat-card rounded-2xl p-8 text-center relative">
+              <div class="text-primary text-5xl mb-6 floating-element">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3 class="text-3xl font-black text-primary mb-3 neon-text">
+                5+
+              </h3>
+              <p class="text-gray-400 text-lg">Kurs Kategoriyasi</p>
+              <div
+                class="absolute top-4 right-4 w-3 h-3 bg-accent rounded-full animate-pulse"
+                style="animation-delay: 1s"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enhanced Courses Page -->
+        <div id="coursesPage" class="page p-6">
+          <div class="mb-10">
+            <h1 class="text-5xl font-black mb-6">
+              <span class="neon-text">Barcha Kurslar</span>
+            </h1>
+            <p class="text-gray-300 text-xl max-w-3xl">
+              Dasturlash bo'yicha eng so'nggi va professional kurslarni
+              o'rganing
+            </p>
+          </div>
+
+          <div
+            id="allCoursesGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+          >
+            <!-- Courses will be loaded dynamically -->
+          </div>
+        </div>
+
+        <!-- Course Details Page -->
+        <div id="courseDetailsPage" class="page p-6">
+          <div id="courseContent">
+            <!-- Course content will be loaded dynamically -->
+          </div>
+        </div>
+
+        <!-- Enhanced Projects Page -->
+        <div id="projectsPage" class="page p-6">
+          <div class="mb-10">
+            <h1 class="text-5xl font-black mb-6">
+              <span class="neon-text">Loyihalar</span>
+            </h1>
+            <p class="text-gray-300 text-xl max-w-3xl">
+              Bizning eng so'nggi va innovatsion loyihalarimiz bilan tanishing
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="course-card glass rounded-3xl overflow-hidden">
+              <div
+                class="course-image-container h-56 bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center border-b border-gray-700"
+              >
+                <i
+                  class="fas fa-blog text-primary text-7xl floating-element"
+                ></i>
+              </div>
+              <div class="p-8">
+                <h3 class="text-2xl font-bold mb-4">Blog Platform</h3>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                  Zamonaviy blog platformasi - maqolalar yozish va ulashish
+                  uchun
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary font-bold">Tez orada</span>
+                  <div class="flex space-x-2">
+                    <span class="category-badge px-3 py-1 text-xs rounded-full"
+                      >React</span
+                    >
+                    <span class="category-badge px-3 py-1 text-xs rounded-full"
+                      >Node.js</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="course-card glass rounded-3xl overflow-hidden">
+              <div
+                class="course-image-container h-56 bg-gradient-to-br from-green-500/20 to-teal-600/20 flex items-center justify-center border-b border-gray-700"
+              >
+                <i
+                  class="fas fa-file-alt text-primary text-7xl floating-element"
+                ></i>
+              </div>
+              <div class="p-8">
+                <h3 class="text-2xl font-bold mb-4">Resume Builder</h3>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                  Professional CV yaratish uchun zamonaviy vosita
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary font-bold">Tez orada</span>
+                  <div class="flex space-x-2">
+                    <span class="category-badge px-3 py-1 text-xs rounded-full"
+                      >Vue.js</span
+                    >
+                    <span class="category-badge px-3 py-1 text-xs rounded-full"
+                      >PDF</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="course-card glass rounded-3xl overflow-hidden">
+              <div
+                class="course-image-container h-56 bg-gradient-to-br from-pink-500/20 to-red-600/20 flex items-center justify-center border-b border-gray-700"
+              >
+                <i
+                  class="fas fa-code text-primary text-7xl floating-element"
+                ></i>
+              </div>
+              <div class="p-8">
+                <h3 class="text-2xl font-bold mb-4">Code Showcase</h3>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                  Kod namunalarini chiroyli ko'rinishda ulashish platformasi
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary font-bold">Tez orada</span>
+                  <div class="flex space-x-2">
+                    <span class="category-badge px-3 py-1 text-xs rounded-full"
+                      >Next.js</span
+                    >
+                    <span class="category-badge px-3 py-1 text-xs rounded-full"
+                      >Prism</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enhanced Dashboard Page -->
+        <div id="dashboardPage" class="page p-6">
+          <div class="mb-10">
+            <h1 class="text-5xl font-black mb-6">
+              <span class="neon-text">Dashboard</span>
+            </h1>
+            <p class="text-gray-300 text-xl max-w-3xl">
+              Sizning o'quv jarayoningiz va yutuqlaringiz haqida ma'lumot
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="stat-card rounded-2xl p-8 relative">
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold">O'qilgan kurslar</h3>
+                <i
+                  class="fas fa-graduation-cap text-primary text-3xl floating-element"
+                ></i>
+              </div>
+              <div class="text-4xl font-black text-primary mb-3 neon-text">
+                0
+              </div>
+              <p class="text-gray-400 mb-4">Jami kurslar</p>
+              <div class="bg-dark-lighter rounded-full h-3 overflow-hidden">
+                <div
+                  class="progress-bar h-3 rounded-full"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+            <div class="stat-card rounded-2xl p-8 relative">
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold">Ko'rilgan videolar</h3>
+                <i
+                  class="fas fa-video text-primary text-3xl floating-element"
+                ></i>
+              </div>
+              <div class="text-4xl font-black text-primary mb-3 neon-text">
+                0
+              </div>
+              <p class="text-gray-400 mb-4">Jami videolar</p>
+              <div class="bg-dark-lighter rounded-full h-3 overflow-hidden">
+                <div
+                  class="progress-bar h-3 rounded-full"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+            <div class="stat-card rounded-2xl p-8 relative">
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold">O'quv vaqti</h3>
+                <i
+                  class="fas fa-clock text-primary text-3xl floating-element"
+                ></i>
+              </div>
+              <div class="text-4xl font-black text-primary mb-3 neon-text">
+                0h
+              </div>
+              <p class="text-gray-400 mb-4">Jami vaqt</p>
+              <div class="bg-dark-lighter rounded-full h-3 overflow-hidden">
+                <div
+                  class="progress-bar h-3 rounded-full"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enhanced Profile Page -->
+        <div id="profilePage" class="page p-6">
+          <div class="max-w-4xl mx-auto">
+            <div class="glass rounded-3xl p-10 border border-gray-700">
+              <div class="flex items-center mb-10">
+                <div
+                  class="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mr-8 floating-element"
+                >
+                  <i class="fas fa-user text-black text-4xl"></i>
                 </div>
                 <div>
-                    <h2 class="text-xl font-bold text-primary neon-text">Web Dunyosi</h2>
-                    <p class="text-xs text-gray-400">Video Darsliklar</p>
+                  <h1
+                    id="profileUserName"
+                    class="text-3xl font-black neon-text"
+                  >
+                    Foydalanuvchi
+                  </h1>
+                  <p id="profileUserRole" class="text-gray-400 text-lg">
+                    Foydalanuvchi
+                  </p>
+                  <div class="flex space-x-2 mt-2">
+                    <span class="category-badge px-3 py-1 rounded-full text-xs"
+                      >Active</span
+                    >
+                    <span class="category-badge px-3 py-1 rounded-full text-xs"
+                      >Member</span
+                    >
+                  </div>
                 </div>
-                <div class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+              </div>
+
+              <form id="profileForm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <label
+                      for="profileName"
+                      class="block mb-3 font-bold text-lg"
+                      >Ism</label
+                    >
+                    <input
+                      type="text"
+                      id="profileName"
+                      class="input-web w-full p-4 rounded-xl text-lg"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="profileEmail"
+                      class="block mb-3 font-bold text-lg"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="profileEmail"
+                      class="input-web w-full p-4 rounded-xl text-lg"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <div class="mb-8">
+                  <label for="profileBio" class="block mb-3 font-bold text-lg"
+                    >Bio</label
+                  >
+                  <textarea
+                    id="profileBio"
+                    rows="5"
+                    class="input-web w-full p-4 rounded-xl text-lg"
+                    placeholder="O'zingiz haqingizda qisqacha ma'lumot..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn-primary px-10 py-4 rounded-xl font-bold transition-all text-lg"
+                >
+                  <i class="fas fa-save mr-3"></i>
+                  Saqlash
+                </button>
+              </form>
             </div>
-            
-            <nav class="p-4">
-                <div class="mb-6">
-                    <h3 class="text-gray-400 text-xs uppercase mb-3 px-3 font-semibold tracking-wider">Asosiy</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="#home" class="nav-link flex items-center p-3 rounded-lg transition-all group">
-                                <i class="fas fa-home mr-3 text-lg group-hover:scale-110 transition-transform"></i> 
-                                <span>Bosh sahifa</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#courses" class="nav-link active flex items-center p-3 rounded-lg transition-all group">
-                                <i class="fas fa-graduation-cap mr-3 text-lg group-hover:scale-110 transition-transform"></i> 
-                                <span>Kurslar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#projects" class="nav-link flex items-center p-3 rounded-lg transition-all group">
-                                <i class="fas fa-project-diagram mr-3 text-lg group-hover:scale-110 transition-transform"></i> 
-                                <span>Loyihalar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#dashboard" class="nav-link flex items-center p-3 rounded-lg transition-all group">
-                                <i class="fas fa-chart-line mr-3 text-lg group-hover:scale-110 transition-transform"></i> 
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-                        <li id="adminMenuItem" class="hidden">
-                            <a href="#admin" class="nav-link flex items-center p-3 rounded-lg transition-all group">
-                                <i class="fas fa-user-shield mr-3 text-lg group-hover:scale-110 transition-transform"></i> 
-                                <span>Admin Panel</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="mb-6">
-                    <h3 class="text-gray-400 text-xs uppercase mb-3 px-3 font-semibold tracking-wider">Loyihalar</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="#blogs" class="nav-link flex items-center p-3 rounded-lg transition-all group">
-                                <i class="fas fa-blog mr-3 text-lg group-hover:scale-110 transition-transform"></i> 
-                                <span>Blog</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#resume" class="nav-link flex items-center p-3 rounded-lg transition-all group">
-                                <i class="fas fa-file-alt mr-3 text-lg group-hover:scale-110 transition-transform"></i> 
-                                <span>Resume Builder</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#code" class="nav-link flex items-center p-3 rounded-lg transition-all group">
-                                <i class="fas fa-code mr-3 text-lg group-hover:scale-110 transition-transform"></i> 
-                                <span>Code Showcase</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="absolute bottom-5 left-0 right-0 px-5">
-                    <div class="flex justify-center space-x-3 mb-4">
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-dark-lighter hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 floating-element">
-                            <i class="fab fa-telegram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-dark-lighter hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 floating-element">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-dark-lighter hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 floating-element">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-dark-lighter hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 floating-element">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    <div class="text-center text-xs text-gray-500">
-                        © 2024 Web Dunyosi
-                    </div>
-                </div>
-            </nav>
+          </div>
         </div>
-        <!-- Sidebar Overlay for mobile -->
-        <div id="sidebarOverlay" class="fixed inset-0 bg-black/60 z-40 hidden lg:hidden"></div>
 
-        <!-- Enhanced Main Content -->
-        <div class="flex-1 lg:ml-64 min-h-screen">
-            <!-- Enhanced Header -->
-            <header class="flex justify-between items-center py-4 px-6 glass sticky top-0 z-20 border-b border-gray-800">
-                <div class="flex items-center">
-                    <!-- Mobile Menu Button -->
-                    <button id="mobileMenuBtn" class="lg:hidden w-11 h-11 rounded-xl bg-dark-lighter flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 mr-4">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <div class="relative">
-                        <input type="text" placeholder="Qidirish..." class="input-web rounded-xl px-4 py-3 pl-12 w-80 text-sm">
-                        <i class="fas fa-search absolute left-4 top-4 text-gray-400"></i>
-                        <div class="absolute right-3 top-3">
-                            <kbd class="px-2 py-1 text-xs bg-gray-700 rounded">Ctrl+K</kbd>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <button class="w-11 h-11 rounded-xl bg-dark-lighter flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 group">
-                        <i class="fas fa-moon group-hover:rotate-12 transition-transform"></i>
-                    </button>
-                    <button class="w-11 h-11 rounded-xl bg-dark-lighter flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 relative group">
-                        <i class="fas fa-bell group-hover:animate-bounce"></i>
-                        <span class="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full animate-pulse flex items-center justify-center text-xs text-black font-bold">3</span>
-                    </button>
-                    
-                    <!-- Enhanced User Account Section -->
-                    <div id="userAccount" class="hidden relative">
-                        <div id="userAccountBtn" class="flex items-center glass rounded-xl px-4 py-3 cursor-pointer hover:bg-primary/10 transition-all group">
-                            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-user text-black text-sm"></i>
-                            </div>
-                            <span id="userDisplayName" class="mr-3 font-medium">User</span>
-                            <i class="fas fa-chevron-down text-sm group-hover:rotate-180 transition-transform"></i>
-                        </div>
-                        
-                        <div id="userDropdown" class="user-dropdown glass rounded-2xl p-6 mt-2 shadow-2xl border border-gray-700">
-                            <div class="border-b border-gray-700 pb-4 mb-4">
-                                <div class="flex items-center mb-3">
-                                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mr-4">
-                                        <i class="fas fa-user text-black text-lg"></i>
-                                    </div>
-                                    <div>
-                                        <div id="dropdownUserName" class="font-bold text-lg">User</div>
-                                        <div id="userRole" class="text-sm text-gray-400">Foydalanuvchi</div>
-                                    </div>
-                                </div>
-                                <div class="flex space-x-2">
-                                    <span class="category-badge px-3 py-1 rounded-full text-xs">Pro</span>
-                                    <span class="category-badge px-3 py-1 rounded-full text-xs">Active</span>
-                                </div>
-                            </div>
-                            <ul class="space-y-2">
-                                <li>
-                                    <a href="#profile" class="flex items-center p-3 rounded-xl hover:bg-dark/50 transition-all group">
-                                        <i class="fas fa-user-circle mr-3 group-hover:scale-110 transition-transform"></i> 
-                                        <span>Profil</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#settings" class="flex items-center p-3 rounded-xl hover:bg-dark/50 transition-all group">
-                                        <i class="fas fa-cog mr-3 group-hover:rotate-90 transition-transform"></i> 
-                                        <span>Sozlamalar</span>
-                                    </a>
-                                </li>
-                                <li id="adminDropdownLink" class="hidden">
-                                    <a href="#admin" class="flex items-center p-3 rounded-xl hover:bg-dark/50 transition-all group">
-                                        <i class="fas fa-user-shield mr-3 group-hover:scale-110 transition-transform"></i> 
-                                        <span>Admin Panel</span>
-                                    </a>
-                                </li>
-                                <li class="border-t border-gray-700 pt-3 mt-3">
-                                    <button id="logoutBtn" class="flex items-center p-3 rounded-xl hover:bg-red-600/20 hover:text-red-400 transition-all w-full text-left group">
-                                        <i class="fas fa-sign-out-alt mr-3 group-hover:translate-x-1 transition-transform"></i> 
-                                        <span>Chiqish</span>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Enhanced Login Button -->
-                    <div id="loginBtn" class="btn-primary px-8 py-3 rounded-xl cursor-pointer transition-all font-bold">
-                        <i class="fas fa-sign-in-alt mr-2"></i>
-                        Kirish
-                    </div>
-                </div>
-            </header>
+        <!-- Enhanced Admin Panel Page -->
+        <div id="adminPage" class="page p-6">
+          <div
+            class="bg-gradient-to-r from-primary/15 to-secondary/15 border border-primary/40 p-8 rounded-3xl mb-10"
+          >
+            <h1 class="text-4xl font-black mb-3 neon-text">Admin Panel</h1>
+            <p class="text-gray-300 text-lg">
+              Saytni boshqarish va ma'lumotlarni tahrirlash
+            </p>
+          </div>
 
-            <!-- Enhanced Home Page -->
-            <div id="homePage" class="page active p-6">
-                <!-- Enhanced Hero Section -->
-                <div class="hero-gradient p-12 rounded-3xl mb-12 border border-gray-800 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-10 cyber-grid"></div>
-                    <div class="relative z-10 flex flex-col lg:flex-row items-center">
-                        <div class="flex-1 mb-10 lg:mb-0 lg:pr-12">
-                            <h1 class="text-6xl font-black mb-8 leading-tight">
-                                <span class="neon-text glitch" data-text="Web Dunyosi">Web Dunyosi</span> - 
-                                <br>
-                                <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                                    Dasturlash Olamiga Xush Kelibsiz
-                                </span>
-                            </h1>
-                            <p class="text-xl mb-10 leading-relaxed text-gray-300 max-w-2xl">
-                                Zamonaviy web texnologiyalarini o'rganing. HTML, CSS, JavaScript va boshqa ko'plab texnologiyalar bo'yicha professional darajadagi bilimlar oling.
-                            </p>
-                            <div class="flex flex-wrap gap-6">
-                                <a href="#courses" class="btn-primary px-10 py-5 rounded-xl font-bold transition-all inline-flex items-center text-lg group">
-                                    <i class="fas fa-play mr-3 group-hover:scale-110 transition-transform"></i>
-                                    Kurslarni Boshlash
-                                </a>
-                                <a href="#projects" class="bg-transparent border-2 border-primary text-primary hover:bg-primary/10 px-10 py-5 rounded-xl font-bold transition-all inline-flex items-center text-lg group">
-                                    <i class="fas fa-rocket mr-3 group-hover:scale-110 transition-transform"></i>
-                                    Loyihalarni Ko'rish
-                                </a>
-                            </div>
-                        </div>
-                        <div class="flex-1 flex justify-center">
-                            <div class="relative">
-                                <div class="w-96 h-96 rounded-full bg-gradient-to-br from-primary/20 to-secondary/10 flex items-center justify-center animate-pulse-slow relative overflow-hidden">
-                                    <i class="fas fa-spider text-primary text-9xl logo-glow animate-web-spin"></i>
-                                    <div class="absolute inset-0 rounded-full border-4 border-primary/30 animate-ping"></div>
-                                    <div class="absolute inset-4 rounded-full border-2 border-secondary/20 animate-pulse"></div>
-                                </div>
-                                <div class="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-bounce"></div>
-                                <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-secondary rounded-full animate-bounce" style="animation-delay: 1s;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div
+            class="flex bg-dark-lighter rounded-2xl mb-10 overflow-hidden overflow-x-auto border border-gray-700"
+          >
+            <div
+              class="admin-tab active py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
+              data-tab="dashboard"
+            >
+              <i class="fas fa-chart-line mr-3"></i>Dashboard
+            </div>
+            <div
+              class="admin-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
+              data-tab="courses"
+            >
+              <i class="fas fa-graduation-cap mr-3"></i>Kurslar
+            </div>
+            <div
+              class="admin-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
+              data-tab="videos"
+            >
+              <i class="fas fa-video mr-3"></i>Videolar
+            </div>
+            <div
+              class="admin-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
+              data-tab="users"
+            >
+              <i class="fas fa-users mr-3"></i>Foydalanuvchilar
+            </div>
+          </div>
 
-                <!-- Enhanced Featured Courses -->
-                <div class="mb-12">
-                    <div class="flex justify-between items-center mb-10">
-                        <div>
-                            <h2 class="text-4xl font-black mb-3">
-                                <span class="neon-text">Mashhur Kurslar</span>
-                            </h2>
-                            <p class="text-gray-400 text-lg">Eng ko'p o'qilayotgan kurslar bilan tanishing</p>
-                        </div>
-                        <a href="#courses" class="text-primary flex items-center hover:text-secondary transition-all group text-lg font-semibold">
-                            Barchasini ko'rish 
-                            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
-                        </a>
-                    </div>
-                    <div id="featuredCourses" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        <!-- Courses will be loaded dynamically -->
-                    </div>
+          <div id="dashboard" class="admin-content">
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10"
+            >
+              <div class="stat-card rounded-2xl p-8 text-center relative">
+                <div class="text-primary text-4xl mb-6 floating-element">
+                  <i class="fas fa-graduation-cap"></i>
                 </div>
-
-                <!-- Enhanced Statistics -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                    <div class="stat-card rounded-2xl p-8 text-center relative">
-                        <div class="text-primary text-5xl mb-6 floating-element">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3 class="text-3xl font-black text-primary mb-3 neon-text">50+</h3>
-                        <p class="text-gray-400 text-lg">Video Darslik</p>
-                        <div class="absolute top-4 right-4 w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                    </div>
-                    <div class="stat-card rounded-2xl p-8 text-center relative">
-                        <div class="text-primary text-5xl mb-6 floating-element">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="text-3xl font-black text-primary mb-3 neon-text">1000+</h3>
-                        <p class="text-gray-400 text-lg">Faol O'quvchi</p>
-                        <div class="absolute top-4 right-4 w-3 h-3 bg-secondary rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
-                    </div>
-                    <div class="stat-card rounded-2xl p-8 text-center relative">
-                        <div class="text-primary text-5xl mb-6 floating-element">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3 class="text-3xl font-black text-primary mb-3 neon-text">5+</h3>
-                        <p class="text-gray-400 text-lg">Kurs Kategoriyasi</p>
-                        <div class="absolute top-4 right-4 w-3 h-3 bg-accent rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-                    </div>
+                <h3 class="text-gray-300 text-xl mb-4 font-bold">
+                  Jami kurslar
+                </h3>
+                <div
+                  class="text-5xl font-black text-primary neon-text"
+                  id="totalCourses"
+                >
+                  0
                 </div>
+              </div>
+              <div class="stat-card rounded-2xl p-8 text-center relative">
+                <div class="text-primary text-4xl mb-6 floating-element">
+                  <i class="fas fa-video"></i>
+                </div>
+                <h3 class="text-gray-300 text-xl mb-4 font-bold">
+                  Jami videolar
+                </h3>
+                <div
+                  class="text-5xl font-black text-primary neon-text"
+                  id="totalVideos"
+                >
+                  0
+                </div>
+              </div>
+              <div class="stat-card rounded-2xl p-8 text-center relative">
+                <div class="text-primary text-4xl mb-6 floating-element">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h3 class="text-gray-300 text-xl mb-4 font-bold">
+                  Jami foydalanuvchilar
+                </h3>
+                <div
+                  class="text-5xl font-black text-primary neon-text"
+                  id="totalUsers"
+                >
+                  1
+                </div>
+              </div>
             </div>
 
-            <!-- Enhanced Courses Page -->
-            <div id="coursesPage" class="page p-6">
-                <div class="mb-10">
-                    <h1 class="text-5xl font-black mb-6">
-                        <span class="neon-text">Barcha Kurslar</span>
-                    </h1>
-                    <p class="text-gray-300 text-xl max-w-3xl">Dasturlash bo'yicha eng so'nggi va professional kurslarni o'rganing</p>
-                </div>
+            <div class="glass rounded-2xl p-8 mb-8 border border-gray-700">
+              <h2 class="text-2xl font-bold mb-8">
+                So'nggi qo'shilgan kurslar
+              </h2>
+              <div class="course-list" id="recentCourses">
+                <!-- Recent courses will be loaded dynamically -->
+              </div>
+            </div>
+          </div>
 
-                <div id="allCoursesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Courses will be loaded dynamically -->
+          <div id="courses" class="admin-content hidden">
+            <div class="glass rounded-2xl p-8 mb-8 border border-gray-700">
+              <h2 class="text-2xl font-bold mb-8">Kurs qo'shish</h2>
+              <form id="addCourseForm">
+                <div class="flex flex-col md:flex-row gap-8 mb-8">
+                  <div class="flex-1">
+                    <label
+                      for="courseTitle"
+                      class="block mb-3 font-bold text-lg"
+                      >Kurs nomi</label
+                    >
+                    <input
+                      type="text"
+                      id="courseTitle"
+                      required
+                      class="input-web w-full p-4 rounded-xl text-lg"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <label
+                      for="courseImage"
+                      class="block mb-3 font-bold text-lg"
+                      >Rasm URL</label
+                    >
+                    <input
+                      type="text"
+                      id="courseImage"
+                      required
+                      class="input-web w-full p-4 rounded-xl text-lg"
+                    />
+                  </div>
                 </div>
+                <div class="mb-8">
+                  <label
+                    for="courseDescription"
+                    class="block mb-3 font-bold text-lg"
+                    >Tavsif</label
+                  >
+                  <textarea
+                    id="courseDescription"
+                    rows="5"
+                    required
+                    class="input-web w-full p-4 rounded-xl text-lg"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn-primary px-8 py-4 rounded-xl font-bold transition-all text-lg"
+                >
+                  <i class="fas fa-plus mr-3"></i>Kurs qo'shish
+                </button>
+              </form>
             </div>
 
-            <!-- Course Details Page -->
-            <div id="courseDetailsPage" class="page p-6">
-                <div id="courseContent">
-                    <!-- Course content will be loaded dynamically -->
+            <div class="glass rounded-2xl p-8 border border-gray-700">
+              <h2 class="text-2xl font-bold mb-8">Barcha kurslar</h2>
+              <div class="course-list" id="adminCourses">
+                <!-- All courses will be loaded dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <div id="videos" class="admin-content hidden">
+            <div class="glass rounded-2xl p-8 mb-8 border border-gray-700">
+              <h2 class="text-2xl font-bold mb-8">Video qo'shish</h2>
+              <form id="addVideoForm">
+                <div class="flex flex-col md:flex-row gap-8 mb-8">
+                  <div class="flex-1">
+                    <label
+                      for="videoCourse"
+                      class="block mb-3 font-bold text-lg"
+                      >Kurs</label
+                    >
+                    <select
+                      id="videoCourse"
+                      required
+                      class="input-web w-full p-4 rounded-xl text-lg"
+                    >
+                      <!-- Courses will be loaded dynamically -->
+                    </select>
+                  </div>
+                  <div class="flex-1">
+                    <label for="videoTitle" class="block mb-3 font-bold text-lg"
+                      >Video nomi</label
+                    >
+                    <input
+                      type="text"
+                      id="videoTitle"
+                      required
+                      class="input-web w-full p-4 rounded-xl text-lg"
+                    />
+                  </div>
                 </div>
+                <div class="mb-8">
+                  <label for="videoFile" class="block mb-3 font-bold text-lg"
+                    >Video URL</label
+                  >
+                  <input
+                    type="url"
+                    id="videoFile"
+                    placeholder="YouTube, Vimeo yoki boshqa video URL"
+                    required
+                    class="input-web w-full p-4 rounded-xl text-lg"
+                  />
+                  <p class="text-sm text-gray-400 mt-3">
+                    YouTube, Vimeo yoki to'g'ridan-to'g'ri video linkini
+                    kiriting
+                  </p>
+                </div>
+                <button
+                  type="submit"
+                  class="btn-primary px-8 py-4 rounded-xl font-bold transition-all text-lg"
+                >
+                  <i class="fas fa-plus mr-3"></i>Video qo'shish
+                </button>
+              </form>
             </div>
 
-            <!-- Enhanced Projects Page -->
-            <div id="projectsPage" class="page p-6">
-                <div class="mb-10">
-                    <h1 class="text-5xl font-black mb-6">
-                        <span class="neon-text">Loyihalar</span>
-                    </h1>
-                    <p class="text-gray-300 text-xl max-w-3xl">Bizning eng so'nggi va innovatsion loyihalarimiz bilan tanishing</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="course-card glass rounded-3xl overflow-hidden">
-                        <div class="course-image-container h-56 bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center border-b border-gray-700">
-                            <i class="fas fa-blog text-primary text-7xl floating-element"></i>
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-4">Blog Platform</h3>
-                            <p class="text-gray-400 mb-6 leading-relaxed">Zamonaviy blog platformasi - maqolalar yozish va ulashish uchun</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold">Tez orada</span>
-                                <div class="flex space-x-2">
-                                    <span class="category-badge px-3 py-1 text-xs rounded-full">React</span>
-                                    <span class="category-badge px-3 py-1 text-xs rounded-full">Node.js</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-card glass rounded-3xl overflow-hidden">
-                        <div class="course-image-container h-56 bg-gradient-to-br from-green-500/20 to-teal-600/20 flex items-center justify-center border-b border-gray-700">
-                            <i class="fas fa-file-alt text-primary text-7xl floating-element"></i>
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-4">Resume Builder</h3>
-                            <p class="text-gray-400 mb-6 leading-relaxed">Professional CV yaratish uchun zamonaviy vosita</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold">Tez orada</span>
-                                <div class="flex space-x-2">
-                                    <span class="category-badge px-3 py-1 text-xs rounded-full">Vue.js</span>
-                                    <span class="category-badge px-3 py-1 text-xs rounded-full">PDF</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-card glass rounded-3xl overflow-hidden">
-                        <div class="course-image-container h-56 bg-gradient-to-br from-pink-500/20 to-red-600/20 flex items-center justify-center border-b border-gray-700">
-                            <i class="fas fa-code text-primary text-7xl floating-element"></i>
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold mb-4">Code Showcase</h3>
-                            <p class="text-gray-400 mb-6 leading-relaxed">Kod namunalarini chiroyli ko'rinishda ulashish platformasi</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-primary font-bold">Tez orada</span>
-                                <div class="flex space-x-2">
-                                    <span class="category-badge px-3 py-1 text-xs rounded-full">Next.js</span>
-                                    <span class="category-badge px-3 py-1 text-xs rounded-full">Prism</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="glass rounded-2xl p-8 border border-gray-700">
+              <h2 class="text-2xl font-bold mb-8">Barcha videolar</h2>
+              <div class="video-list" id="allVideos">
+                <!-- All videos will be loaded dynamically -->
+              </div>
             </div>
+          </div>
 
-            <!-- Enhanced Dashboard Page -->
-            <div id="dashboardPage" class="page p-6">
-                <div class="mb-10">
-                    <h1 class="text-5xl font-black mb-6">
-                        <span class="neon-text">Dashboard</span>
-                    </h1>
-                    <p class="text-gray-300 text-xl max-w-3xl">Sizning o'quv jarayoningiz va yutuqlaringiz haqida ma'lumot</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="stat-card rounded-2xl p-8 relative">
-                        <div class="flex items-center justify-between mb-6">
-                            <h3 class="text-xl font-bold">O'qilgan kurslar</h3>
-                            <i class="fas fa-graduation-cap text-primary text-3xl floating-element"></i>
-                        </div>
-                        <div class="text-4xl font-black text-primary mb-3 neon-text">0</div>
-                        <p class="text-gray-400 mb-4">Jami kurslar</p>
-                        <div class="bg-dark-lighter rounded-full h-3 overflow-hidden">
-                            <div class="progress-bar h-3 rounded-full" style="width: 0%"></div>
-                        </div>
-                    </div>
-                    <div class="stat-card rounded-2xl p-8 relative">
-                        <div class="flex items-center justify-between mb-6">
-                            <h3 class="text-xl font-bold">Ko'rilgan videolar</h3>
-                            <i class="fas fa-video text-primary text-3xl floating-element"></i>
-                        </div>
-                        <div class="text-4xl font-black text-primary mb-3 neon-text">0</div>
-                        <p class="text-gray-400 mb-4">Jami videolar</p>
-                        <div class="bg-dark-lighter rounded-full h-3 overflow-hidden">
-                            <div class="progress-bar h-3 rounded-full" style="width: 0%"></div>
-                        </div>
-                    </div>
-                    <div class="stat-card rounded-2xl p-8 relative">
-                        <div class="flex items-center justify-between mb-6">
-                            <h3 class="text-xl font-bold">O'quv vaqti</h3>
-                            <i class="fas fa-clock text-primary text-3xl floating-element"></i>
-                        </div>
-                        <div class="text-4xl font-black text-primary mb-3 neon-text">0h</div>
-                        <p class="text-gray-400 mb-4">Jami vaqt</p>
-                        <div class="bg-dark-lighter rounded-full h-3 overflow-hidden">
-                            <div class="progress-bar h-3 rounded-full" style="width: 0%"></div>
-                        </div>
-                    </div>
-                </div>
+          <div id="users" class="admin-content hidden">
+            <div class="glass rounded-2xl p-8 border border-gray-700">
+              <h2 class="text-2xl font-bold mb-8">Foydalanuvchilar</h2>
+              <div class="user-list" id="allUsers">
+                <!-- All users will be loaded dynamically -->
+              </div>
             </div>
-
-            <!-- Enhanced Profile Page -->
-            <div id="profilePage" class="page p-6">
-                <div class="max-w-4xl mx-auto">
-                    <div class="glass rounded-3xl p-10 border border-gray-700">
-                        <div class="flex items-center mb-10">
-                            <div class="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mr-8 floating-element">
-                                <i class="fas fa-user text-black text-4xl"></i>
-                            </div>
-                            <div>
-                                <h1 id="profileUserName" class="text-3xl font-black neon-text">Foydalanuvchi</h1>
-                                <p id="profileUserRole" class="text-gray-400 text-lg">Foydalanuvchi</p>
-                                <div class="flex space-x-2 mt-2">
-                                    <span class="category-badge px-3 py-1 rounded-full text-xs">Active</span>
-                                    <span class="category-badge px-3 py-1 rounded-full text-xs">Member</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <form id="profileForm">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                                <div>
-                                    <label for="profileName" class="block mb-3 font-bold text-lg">Ism</label>
-                                    <input type="text" id="profileName" class="input-web w-full p-4 rounded-xl text-lg">
-                                </div>
-                                <div>
-                                    <label for="profileEmail" class="block mb-3 font-bold text-lg">Email</label>
-                                    <input type="email" id="profileEmail" class="input-web w-full p-4 rounded-xl text-lg" readonly>
-                                </div>
-                            </div>
-                            <div class="mb-8">
-                                <label for="profileBio" class="block mb-3 font-bold text-lg">Bio</label>
-                                <textarea id="profileBio" rows="5" class="input-web w-full p-4 rounded-xl text-lg" placeholder="O'zingiz haqingizda qisqacha ma'lumot..."></textarea>
-                            </div>
-                            <button type="submit" class="btn-primary px-10 py-4 rounded-xl font-bold transition-all text-lg">
-                                <i class="fas fa-save mr-3"></i>
-                                Saqlash
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Enhanced Admin Panel Page -->
-            <div id="adminPage" class="page p-6">
-                <div class="bg-gradient-to-r from-primary/15 to-secondary/15 border border-primary/40 p-8 rounded-3xl mb-10">
-                    <h1 class="text-4xl font-black mb-3 neon-text">Admin Panel</h1>
-                    <p class="text-gray-300 text-lg">Saytni boshqarish va ma'lumotlarni tahrirlash</p>
-                </div>
-
-                <div class="flex bg-dark-lighter rounded-2xl mb-10 overflow-hidden overflow-x-auto border border-gray-700">
-                    <div class="admin-tab active py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg" data-tab="dashboard">
-                        <i class="fas fa-chart-line mr-3"></i>Dashboard
-                    </div>
-                    <div class="admin-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg" data-tab="courses">
-                        <i class="fas fa-graduation-cap mr-3"></i>Kurslar
-                    </div>
-                    <div class="admin-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg" data-tab="videos">
-                        <i class="fas fa-video mr-3"></i>Videolar
-                    </div>
-                    <div class="admin-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg" data-tab="users">
-                        <i class="fas fa-users mr-3"></i>Foydalanuvchilar
-                    </div>
-                </div>
-
-                <div id="dashboard" class="admin-content">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-                        <div class="stat-card rounded-2xl p-8 text-center relative">
-                            <div class="text-primary text-4xl mb-6 floating-element"><i class="fas fa-graduation-cap"></i></div>
-                            <h3 class="text-gray-300 text-xl mb-4 font-bold">Jami kurslar</h3>
-                            <div class="text-5xl font-black text-primary neon-text" id="totalCourses">0</div>
-                        </div>
-                        <div class="stat-card rounded-2xl p-8 text-center relative">
-                            <div class="text-primary text-4xl mb-6 floating-element"><i class="fas fa-video"></i></div>
-                            <h3 class="text-gray-300 text-xl mb-4 font-bold">Jami videolar</h3>
-                            <div class="text-5xl font-black text-primary neon-text" id="totalVideos">0</div>
-                        </div>
-                        <div class="stat-card rounded-2xl p-8 text-center relative">
-                            <div class="text-primary text-4xl mb-6 floating-element"><i class="fas fa-users"></i></div>
-                            <h3 class="text-gray-300 text-xl mb-4 font-bold">Jami foydalanuvchilar</h3>
-                            <div class="text-5xl font-black text-primary neon-text" id="totalUsers">1</div>
-                        </div>
-                    </div>
-
-                    <div class="glass rounded-2xl p-8 mb-8 border border-gray-700">
-                        <h2 class="text-2xl font-bold mb-8">So'nggi qo'shilgan kurslar</h2>
-                        <div class="course-list" id="recentCourses">
-                            <!-- Recent courses will be loaded dynamically -->
-                        </div>
-                    </div>
-                </div>
-
-                <div id="courses" class="admin-content hidden">
-                    <div class="glass rounded-2xl p-8 mb-8 border border-gray-700">
-                        <h2 class="text-2xl font-bold mb-8">Kurs qo'shish</h2>
-                        <form id="addCourseForm">
-                            <div class="flex flex-col md:flex-row gap-8 mb-8">
-                                <div class="flex-1">
-                                    <label for="courseTitle" class="block mb-3 font-bold text-lg">Kurs nomi</label>
-                                    <input type="text" id="courseTitle" required class="input-web w-full p-4 rounded-xl text-lg">
-                                </div>
-                                <div class="flex-1">
-                                    <label for="courseImage" class="block mb-3 font-bold text-lg">Rasm URL</label>
-                                    <input type="text" id="courseImage" required class="input-web w-full p-4 rounded-xl text-lg">
-                                </div>
-                            </div>
-                            <div class="mb-8">
-                                <label for="courseDescription" class="block mb-3 font-bold text-lg">Tavsif</label>
-                                <textarea id="courseDescription" rows="5" required class="input-web w-full p-4 rounded-xl text-lg"></textarea>
-                            </div>
-                            <button type="submit" class="btn-primary px-8 py-4 rounded-xl font-bold transition-all text-lg">
-                                <i class="fas fa-plus mr-3"></i>Kurs qo'shish
-                            </button>
-                        </form>
-                    </div>
-
-                    <div class="glass rounded-2xl p-8 border border-gray-700">
-                        <h2 class="text-2xl font-bold mb-8">Barcha kurslar</h2>
-                        <div class="course-list" id="adminCourses">
-                            <!-- All courses will be loaded dynamically -->
-                        </div>
-                    </div>
-                </div>
-
-                <div id="videos" class="admin-content hidden">
-                    <div class="glass rounded-2xl p-8 mb-8 border border-gray-700">
-                        <h2 class="text-2xl font-bold mb-8">Video qo'shish</h2>
-                        <form id="addVideoForm">
-                            <div class="flex flex-col md:flex-row gap-8 mb-8">
-                                <div class="flex-1">
-                                    <label for="videoCourse" class="block mb-3 font-bold text-lg">Kurs</label>
-                                    <select id="videoCourse" required class="input-web w-full p-4 rounded-xl text-lg">
-                                        <!-- Courses will be loaded dynamically -->
-                                    </select>
-                                </div>
-                                <div class="flex-1">
-                                    <label for="videoTitle" class="block mb-3 font-bold text-lg">Video nomi</label>
-                                    <input type="text" id="videoTitle" required class="input-web w-full p-4 rounded-xl text-lg">
-                                </div>
-                            </div>
-                            <div class="mb-8">
-                                <label for="videoFile" class="block mb-3 font-bold text-lg">Video URL</label>
-                                <input type="url" id="videoFile" placeholder="YouTube, Vimeo yoki boshqa video URL" required class="input-web w-full p-4 rounded-xl text-lg">
-                                <p class="text-sm text-gray-400 mt-3">YouTube, Vimeo yoki to'g'ridan-to'g'ri video linkini kiriting</p>
-                            </div>
-                            <button type="submit" class="btn-primary px-8 py-4 rounded-xl font-bold transition-all text-lg">
-                                <i class="fas fa-plus mr-3"></i>Video qo'shish
-                            </button>
-                        </form>
-                    </div>
-
-                    <div class="glass rounded-2xl p-8 border border-gray-700">
-                        <h2 class="text-2xl font-bold mb-8">Barcha videolar</h2>
-                        <div class="video-list" id="allVideos">
-                            <!-- All videos will be loaded dynamically -->
-                        </div>
-                    </div>
-                </div>
-
-                <div id="users" class="admin-content hidden">
-                    <div class="glass rounded-2xl p-8 border border-gray-700">
-                        <h2 class="text-2xl font-bold mb-8">Foydalanuvchilar</h2>
-                        <div class="user-list" id="allUsers">
-                            <!-- All users will be loaded dynamically -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Enhanced Login Modal -->
-    <div id="loginModal" class="fixed inset-0 bg-black/90 z-50 hidden overflow-auto modal-backdrop">
-        <div class="glass mx-auto my-[5%] p-10 rounded-3xl w-[450px] shadow-2xl relative border border-gray-700">
-            <span class="absolute right-6 top-6 text-3xl cursor-pointer close hover:text-primary transition-colors hover:scale-110">&times;</span>
-            <div class="flex mb-8 border-b border-gray-700">
-                <div class="tab active px-8 py-4 cursor-pointer border-b-2 border-primary text-primary font-bold text-lg" data-tab="login">Kirish</div>
-                <div class="tab px-8 py-4 cursor-pointer font-bold text-lg" data-tab="register">Ro'yxatdan o'tish</div>
-            </div>
-            <div id="loginForm" class="form-container active">
-                <h2 class="text-center text-3xl font-black mb-8 neon-text">Kirish</h2>
-                <form id="loginFormElement">
-                    <div class="mb-8">
-                        <label for="loginEmail" class="block mb-3 font-bold text-lg">Login</label>
-                        <input type="text" id="loginEmail" required class="input-web w-full p-4 rounded-xl text-lg">
-                    </div>
-                    <div class="mb-8">
-                        <label for="loginPassword" class="block mb-3 font-bold text-lg">Parol</label>
-                        <input type="password" id="loginPassword" required class="input-web w-full p-4 rounded-xl text-lg">
-                    </div>
-                    <button type="submit" class="btn-primary w-full py-4 px-6 rounded-xl font-bold text-lg">
-                        <i class="fas fa-sign-in-alt mr-3"></i>
-                        Kirish
-                    </button>
-                </form>
-            </div>
-            <div id="registerForm" class="form-container">
-                <h2 class="text-center text-3xl font-black mb-8 neon-text">Ro'yxatdan o'tish</h2>
-                <form id="registerFormElement">
-                    <div class="mb-8">
-                        <label for="registerEmail" class="block mb-3 font-bold text-lg">Email</label>
-                        <input type="email" id="registerEmail" required class="input-web w-full p-4 rounded-xl text-lg">
-                    </div>
-                    <div class="mb-8">
-                        <label for="registerPassword" class="block mb-3 font-bold text-lg">Parol</label>
-                        <input type="password" id="registerPassword" required class="input-web w-full p-4 rounded-xl text-lg">
-                    </div>
-                    <div class="mb-8">
-                        <label for="confirmPassword" class="block mb-3 font-bold text-lg">Parolni tasdiqlang</label>
-                        <input type="password" id="confirmPassword" required class="input-web w-full p-4 rounded-xl text-lg">
-                    </div>
-                    <button type="submit" class="btn-primary w-full py-4 px-6 rounded-xl font-bold text-lg">
-                        <i class="fas fa-user-plus mr-3"></i>
-                        Ro'yxatdan o'tish
-                    </button>
-                </form>
-            </div>
+    <div
+      id="loginModal"
+      class="fixed inset-0 bg-black/90 z-50 hidden overflow-auto modal-backdrop"
+    >
+      <div
+        class="glass mx-auto my-[5%] p-10 rounded-3xl w-[450px] shadow-2xl relative border border-gray-700"
+      >
+        <span
+          class="absolute right-6 top-6 text-3xl cursor-pointer close hover:text-primary transition-colors hover:scale-110"
+          >&times;</span
+        >
+        <div class="flex mb-8 border-b border-gray-700">
+          <div
+            class="tab active px-8 py-4 cursor-pointer border-b-2 border-primary text-primary font-bold text-lg"
+            data-tab="login"
+          >
+            Kirish
+          </div>
+          <div
+            class="tab px-8 py-4 cursor-pointer font-bold text-lg"
+            data-tab="register"
+          >
+            Ro'yxatdan o'tish
+          </div>
         </div>
+        <div id="loginForm" class="form-container active">
+          <h2 class="text-center text-3xl font-black mb-8 neon-text">Kirish</h2>
+          <form id="loginFormElement">
+            <div class="mb-8">
+              <label for="loginEmail" class="block mb-3 font-bold text-lg"
+                >Login</label
+              >
+              <input
+                type="text"
+                id="loginEmail"
+                required
+                class="input-web w-full p-4 rounded-xl text-lg"
+              />
+            </div>
+            <div class="mb-8">
+              <label for="loginPassword" class="block mb-3 font-bold text-lg"
+                >Parol</label
+              >
+              <input
+                type="password"
+                id="loginPassword"
+                required
+                class="input-web w-full p-4 rounded-xl text-lg"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn-primary w-full py-4 px-6 rounded-xl font-bold text-lg"
+            >
+              <i class="fas fa-sign-in-alt mr-3"></i>
+              Kirish
+            </button>
+          </form>
+        </div>
+        <div id="registerForm" class="form-container">
+          <h2 class="text-center text-3xl font-black mb-8 neon-text">
+            Ro'yxatdan o'tish
+          </h2>
+          <form id="registerFormElement">
+            <div class="mb-8">
+              <label for="registerEmail" class="block mb-3 font-bold text-lg"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="registerEmail"
+                required
+                class="input-web w-full p-4 rounded-xl text-lg"
+              />
+            </div>
+            <div class="mb-8">
+              <label for="registerPassword" class="block mb-3 font-bold text-lg"
+                >Parol</label
+              >
+              <input
+                type="password"
+                id="registerPassword"
+                required
+                class="input-web w-full p-4 rounded-xl text-lg"
+              />
+            </div>
+            <div class="mb-8">
+              <label for="confirmPassword" class="block mb-3 font-bold text-lg"
+                >Parolni tasdiqlang</label
+              >
+              <input
+                type="password"
+                id="confirmPassword"
+                required
+                class="input-web w-full p-4 rounded-xl text-lg"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn-primary w-full py-4 px-6 rounded-xl font-bold text-lg"
+            >
+              <i class="fas fa-user-plus mr-3"></i>
+              Ro'yxatdan o'tish
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
 
     <!-- Enhanced Edit Course Modal -->
-    <div id="editCourseModal" class="fixed inset-0 bg-black/90 z-50 hidden overflow-auto modal-backdrop">
-        <div class="glass mx-auto my-[5%] p-10 rounded-3xl w-[550px] shadow-2xl relative border border-gray-700">
-            <span class="absolute right-6 top-6 text-3xl cursor-pointer close hover:text-primary transition-colors hover:scale-110">&times;</span>
-            <h2 class="text-3xl font-black mb-8 neon-text">Kursni tahrirlash</h2>
-            <form id="editCourseForm">
-                <input type="hidden" id="editCourseId">
-                <div class="mb-8">
-                    <label for="editCourseTitle" class="block mb-3 font-bold text-lg">Kurs nomi</label>
-                    <input type="text" id="editCourseTitle" required class="input-web w-full p-4 rounded-xl text-lg">
-                </div>
-                <div class="mb-8">
-                    <label for="editCourseImage" class="block mb-3 font-bold text-lg">Rasm URL</label>
-                    <input type="text" id="editCourseImage" required class="input-web w-full p-4 rounded-xl text-lg">
-                </div>
-                <div class="mb-8">
-                    <label for="editCourseDescription" class="block mb-3 font-bold text-lg">Tavsif</label>
-                    <textarea id="editCourseDescription" rows="5" required class="input-web w-full p-4 rounded-xl text-lg"></textarea>
-                </div>
-                <button type="submit" class="btn-primary w-full py-4 px-6 rounded-xl font-bold text-lg">
-                    <i class="fas fa-save mr-3"></i>
-                    Saqlash
-                </button>
-            </form>
-        </div>
+    <div
+      id="editCourseModal"
+      class="fixed inset-0 bg-black/90 z-50 hidden overflow-auto modal-backdrop"
+    >
+      <div
+        class="glass mx-auto my-[5%] p-10 rounded-3xl w-[550px] shadow-2xl relative border border-gray-700"
+      >
+        <span
+          class="absolute right-6 top-6 text-3xl cursor-pointer close hover:text-primary transition-colors hover:scale-110"
+          >&times;</span
+        >
+        <h2 class="text-3xl font-black mb-8 neon-text">Kursni tahrirlash</h2>
+        <form id="editCourseForm">
+          <input type="hidden" id="editCourseId" />
+          <div class="mb-8">
+            <label for="editCourseTitle" class="block mb-3 font-bold text-lg"
+              >Kurs nomi</label
+            >
+            <input
+              type="text"
+              id="editCourseTitle"
+              required
+              class="input-web w-full p-4 rounded-xl text-lg"
+            />
+          </div>
+          <div class="mb-8">
+            <label for="editCourseImage" class="block mb-3 font-bold text-lg"
+              >Rasm URL</label
+            >
+            <input
+              type="text"
+              id="editCourseImage"
+              required
+              class="input-web w-full p-4 rounded-xl text-lg"
+            />
+          </div>
+          <div class="mb-8">
+            <label
+              for="editCourseDescription"
+              class="block mb-3 font-bold text-lg"
+              >Tavsif</label
+            >
+            <textarea
+              id="editCourseDescription"
+              rows="5"
+              required
+              class="input-web w-full p-4 rounded-xl text-lg"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn-primary w-full py-4 px-6 rounded-xl font-bold text-lg"
+          >
+            <i class="fas fa-save mr-3"></i>
+            Saqlash
+          </button>
+        </form>
+      </div>
     </div>
 
     <!-- Enhanced Edit Video Modal -->
-    <div id="editVideoModal" class="fixed inset-0 bg-black/90 z-50 hidden overflow-auto modal-backdrop">
-        <div class="glass mx-auto my-[5%] p-10 rounded-3xl w-[550px] shadow-2xl relative border border-gray-700">
-            <span class="absolute right-6 top-6 text-3xl cursor-pointer close hover:text-primary transition-colors hover:scale-110">&times;</span>
-            <h2 class="text-3xl font-black mb-8 neon-text">Videoni tahrirlash</h2>
-            <form id="editVideoForm">
-                <input type="hidden" id="editVideoCourseId">
-                <input type="hidden" id="editVideoId">
-                <div class="mb-8">
-                    <label for="editVideoTitle" class="block mb-3 font-bold text-lg">Video nomi</label>
-                    <input type="text" id="editVideoTitle" required class="input-web w-full p-4 rounded-xl text-lg">
-                </div>
-                <div class="mb-8">
-                    <label for="editVideoFile" class="block mb-3 font-bold text-lg">Video URL</label>
-                    <input type="url" id="editVideoFile" placeholder="YouTube, Vimeo yoki boshqa video URL" required class="input-web w-full p-4 rounded-xl text-lg">
-                    <p class="text-sm text-gray-400 mt-3">YouTube, Vimeo yoki to'g'ridan-to'g'ri video linkini kiriting</p>
-                </div>
-                <button type="submit" class="btn-primary w-full py-4 px-6 rounded-xl font-bold text-lg">
-                    <i class="fas fa-save mr-3"></i>
-                    Saqlash
-                </button>
-            </form>
-        </div>
+    <div
+      id="editVideoModal"
+      class="fixed inset-0 bg-black/90 z-50 hidden overflow-auto modal-backdrop"
+    >
+      <div
+        class="glass mx-auto my-[5%] p-10 rounded-3xl w-[550px] shadow-2xl relative border border-gray-700"
+      >
+        <span
+          class="absolute right-6 top-6 text-3xl cursor-pointer close hover:text-primary transition-colors hover:scale-110"
+          >&times;</span
+        >
+        <h2 class="text-3xl font-black mb-8 neon-text">Videoni tahrirlash</h2>
+        <form id="editVideoForm">
+          <input type="hidden" id="editVideoCourseId" />
+          <input type="hidden" id="editVideoId" />
+          <div class="mb-8">
+            <label for="editVideoTitle" class="block mb-3 font-bold text-lg"
+              >Video nomi</label
+            >
+            <input
+              type="text"
+              id="editVideoTitle"
+              required
+              class="input-web w-full p-4 rounded-xl text-lg"
+            />
+          </div>
+          <div class="mb-8">
+            <label for="editVideoFile" class="block mb-3 font-bold text-lg"
+              >Video URL</label
+            >
+            <input
+              type="url"
+              id="editVideoFile"
+              placeholder="YouTube, Vimeo yoki boshqa video URL"
+              required
+              class="input-web w-full p-4 rounded-xl text-lg"
+            />
+            <p class="text-sm text-gray-400 mt-3">
+              YouTube, Vimeo yoki to'g'ridan-to'g'ri video linkini kiriting
+            </p>
+          </div>
+          <button
+            type="submit"
+            class="btn-primary w-full py-4 px-6 rounded-xl font-bold text-lg"
+          >
+            <i class="fas fa-save mr-3"></i>
+            Saqlash
+          </button>
+        </form>
+      </div>
     </div>
 
     <!-- Enhanced Video Player Modal -->
-    <div id="videoPlayerModal" class="fixed inset-0 bg-black/95 z-50 hidden overflow-auto modal-backdrop">
-        <div class="max-w-6xl mx-auto my-[2%] relative">
-            <span class="absolute right-6 top-6 text-4xl cursor-pointer text-white close-video z-10 hover:text-primary transition-colors hover:scale-110">&times;</span>
-            <div class="video-player">
-                <div id="mainVideoPlayer" class="w-full h-full bg-black rounded-2xl">
-                    <!-- Video will be loaded here -->
-                </div>
-            </div>
-            <div class="glass p-8 rounded-b-3xl border border-gray-700 border-t-0">
-                <h2 id="videoPlayerTitle" class="text-3xl font-bold mb-4 neon-text">Video Title</h2>
-                <div class="flex justify-between items-center">
-                    <p id="videoPlayerCourse" class="text-gray-400 text-lg">Course Name</p>
-                    <div class="flex space-x-6">
-                        <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-                            <i class="fas fa-thumbs-up text-xl"></i>
-                        </button>
-                        <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-                            <i class="fas fa-share text-xl"></i>
-                        </button>
-                        <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-                            <i class="fas fa-download text-xl"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <div
+      id="videoPlayerModal"
+      class="fixed inset-0 bg-black/95 z-50 hidden overflow-auto modal-backdrop"
+    >
+      <div class="max-w-6xl mx-auto my-[2%] relative">
+        <span
+          class="absolute right-6 top-6 text-4xl cursor-pointer text-white close-video z-10 hover:text-primary transition-colors hover:scale-110"
+          >&times;</span
+        >
+        <div class="video-player">
+          <div id="mainVideoPlayer" class="w-full h-full bg-black rounded-2xl">
+            <!-- Video will be loaded here -->
+          </div>
         </div>
+        <div class="glass p-8 rounded-b-3xl border border-gray-700 border-t-0">
+          <h2 id="videoPlayerTitle" class="text-3xl font-bold mb-4 neon-text">
+            Video Title
+          </h2>
+          <div class="flex justify-between items-center">
+            <p id="videoPlayerCourse" class="text-gray-400 text-lg">
+              Course Name
+            </p>
+            <div class="flex space-x-6">
+              <button
+                class="text-gray-400 hover:text-primary transition-all hover:scale-110"
+              >
+                <i class="fas fa-thumbs-up text-xl"></i>
+              </button>
+              <button
+                class="text-gray-400 hover:text-primary transition-all hover:scale-110"
+              >
+                <i class="fas fa-share text-xl"></i>
+              </button>
+              <button
+                class="text-gray-400 hover:text-primary transition-all hover:scale-110"
+              >
+                <i class="fas fa-download text-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script>
-        // Initialize data
-        let users = [];
-
-        const courses = [
-            {
-                id: 1,
-                title: 'KOMPYUTER SAVODXONLIGI',
-                description: 'Kompyuter bilan ishlashning asosiy ko\'nikmalarini o\'rganing',
-                image: 'https://bilgi.uz/upload/iblock/49c/oygn1pbpcjri8pffoa9ctyh8rdpncoda/Kompyuter%20savodxonligi%20kursi%20Fon%20(780x470).png',
-                videos: [
-                    { id: 1, title: 'File kengaytmasini ko\'rinadigan qilish', videoFile: 'https://youtu.be/oxTwNHP3lXk?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 2, title: 'YouTube URL manzilini qanday o\'zgartirish mumkin', videoFile: 'https://youtu.be/ZXf-89wlVK0?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 3, title: 'Windows 11da Ekran kutish vaqtini sozlash', videoFile: 'https://youtu.be/JzDCjNctOb8?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 4, title: 'LightShot Chop etish tugmasi ishlamayotganini qanday tuzatish mumkin', videoFile: 'https://youtu.be/ZXf-89wlVK0?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 5, title: 'Antivirusni o\'chirish', videoFile: 'https://youtu.be/1mVbPSWCtsQ?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 6, title: 'Bandicam dasturini o\'rnatish', videoFile: 'https://youtu.be/e7Kg1kBvjM0?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 7, title: 'Lightshot matn yoki o\'q hajmini qanday kattalashtirish', videoFile: 'https://youtu.be/1n2BUdkkqZU?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 8, title: 'Google Docs da ishlash', videoFile: 'https://youtu.be/2OSY2hlnq5Y?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 9, title: 'Movavi Editor ni o\'rnatish', videoFile: 'https://youtu.be/7ebDSxAqPmA?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 10, title: 'Photoshop tilini o\'zgartirish', videoFile: 'https://youtu.be/Uuh4h0LDSLg?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 11, title: 'Word sozlamalarini o\'zgartirish', videoFile: 'https://youtu.be/Lu5c-GSAScA?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 12, title: 'Office Tab dasturi haqida', videoFile: 'https://youtu.be/Lu5c-GSAScA?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 13, title: 'NOTION dasturini o\'rnatish', videoFile: 'https://youtu.be/he7gHT0fVKQ?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 14, title: 'NOTION - Video kurslarni rejalashtirish', videoFile: 'https://youtu.be/ecUyXK_t548?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 15, title: 'NOTION - Eslatma yaratish', videoFile: 'https://youtu.be/0en9r8ewtSk?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 16, title: 'NOTION - Lug\'atni kalendar orqali rejalashtirish', videoFile: 'https://youtu.be/OIEkuWfFKjg?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 17, title: 'Notion orqali checklist yaratish', videoFile: 'https://youtu.be/P4lHPbKJIZ0?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                    { id: 18, title: 'Notion checklist', videoFile: 'https://youtu.be/NeGIaY3pHEc?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK' },
-                ]
-            },
-            {
-                id: 2,
-                title: 'HTML Asoslari',
-                description: 'Web sahifalar yaratishning asosiy tili - HTML ni o\'rganing',
-                image: 'https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg',
-                videos: [
-                { id: 1, title: 'HTML asoslari - Kirish', videoFile: 'https://youtu.be/QpW_TETUVro?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 2, title: 'HTML haqida', videoFile: 'https://www.youtube.com/watch?v=jqmHTqVHQRs' },
-                    { id: 3, title: 'Web dasturlash', videoFile: 'https://youtu.be/C_R5CJZzvG8?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 4, title: 'Hujjatni formatlash, tag va ularning atributlari', videoFile: 'https://youtu.be/R68RFFRkzDk?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 5, title: 'Taglar haqida batafsil.', videoFile: 'https://youtu.be/Q0DeFN-Lj9g?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 6, title: 'Attributlar haqida batafsil.', videoFile: 'https://youtu.be/LmkuKu_P4oA?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 7, title: ' HTML hujjatda shajara tushunchasi va izoh', videoFile: 'https://youtu.be/ul3lqZDCEag?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 8, title: 'Block va inline xususiyatli teglar haqida', videoFile: 'https://youtu.be/gvwnxc0kiag?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 9, title: 'Kod yozish madaniyati', videoFile: 'https://youtu.be/dRVJn1OjUpQ?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 10, title: 'HTML hujjatning asosiy strukturasi', videoFile: 'https://youtu.be/15SCOio0foY?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 11, title: 'Heading, hr, br, pre.', videoFile: 'https://youtu.be/wyIUSNENDrA?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 12, title: 'HTML hujjatda jadval hosil qilish', videoFile: 'https://youtu.be/qYmaxcYJldk?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 13, title: 'HTML tilining grafika darslarigacha bolgan qismidan foydalanib sahifa tayyorlash', videoFile: 'https://youtu.be/qGFYTjy6Wb4?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 14, title: ' img, iframe.', videoFile: 'https://youtu.be/qp1X9asWaBQ?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 15, title: 'Forma yaratish. form va input teglari haqida. 1-qism.', videoFile: 'https://youtu.be/Wc5cEsVH6vo?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 16, title: 'Forma yaratish. input, select, datalist, option teglari haqida. 2-qism.', videoFile: 'https://youtu.be/RHatko24zp0?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                    { id: 17, title: 'audio, video.', videoFile: 'https://youtu.be/oaSQvMxfQUc?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG' },
-                ]
-            },
-            {
-                id: 3,
-                title: 'CSS Dizayn',
-                description: 'Web sahifalarni chiroyli qilish uchun CSS stillarini o\'rganing',
-                image: 'https://www.fannavaracademy.com/wp-content/uploads/2018/06/course-css.jpg',
-                videos: [
-                { id: 1, title: 'CSS | 1. Cssda kod yozish usullari.', videoFile: 'https://youtu.be/4AXdVL6sFaE?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb' },
-                    { id: 2, title: 'CSS | 2. Selektorlar haqida.', videoFile: 'https://youtu.be/FFHnN71ZF3o?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb' },
-                    { id: 3, title: 'CSS | 3.font-family, font-style, font-size, color propertylari va absolyut olchov birliklari haqida', videoFile: 'https://youtu.be/AJYZtYzCGKo?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb' },
-                    { id: 4, title: 'CSS | 4. Selectorlar 2-qisim.', videoFile: 'https://youtu.be/EEzqgL1rd_c?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb' },
-                    { id: 5, title: 'CSS | 5. font-weight, line-height, font-family', videoFile: 'https://youtu.be/mfT3uqorKyI?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb' },
-                    { id: 6, title: 'CSS | 6. Pseudo selectorlar haqida', videoFile: 'https://youtu.be/1ZiS2mkMJFQ?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb' },
-                    { id: 7, title: 'CSS | 7. text properties', videoFile: 'https://youtu.be/CkkX8h8McaY?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb' },
-                    { id: 8, title: 'CSS | 8. pseudo classlar', videoFile: 'https://youtu.be/jrnmzahXCxY?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb' },
-                    { id: 9, title: 'CSS | 9. Background color, display', videoFile: 'https://youtu.be/v7DR0R3KWS8?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb' },
-                    { id: 10, title: 'CSS | 10. border, padding, margin', videoFile: 'https://youtu.be/AFqHEW5JjPY?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb' },
-                    { id: 11, title: '', videoFile: '' },
-                    { id: 12, title: '', videoFile: '' },
-                    { id: 13, title: '', videoFile: '' },
-                    { id: 14, title: '', videoFile: '' },
-                    { id: 15, title: '', videoFile: '' },
-                    { id: 16, title: '', videoFile: '' },
-                    { id: 17, title: '', videoFile: '' },
-                    { id: 18, title: '', videoFile: '' },
-                    { id: 19, title: '', videoFile: '' },
-                    { id: 20, title: '', videoFile: '' },
-                    { id: 21, title: '', videoFile: '' },
-                    { id: 22, title: '', videoFile: '' },
-                    { id: 23, title: '', videoFile: '' },
-                    { id: 24, title: '', videoFile: '' },
-                    { id: 25, title: '', videoFile: '' },
-                    { id: 26, title: '', videoFile: '' },
-                    { id: 27, title: '', videoFile: '' },
-                    { id: 28, title: '', videoFile: '' },
-                    { id: 29, title: '', videoFile: '' },
-                    { id: 30, title: '', videoFile: '' },
-                    { id: 31, title: '', videoFile: '' },
-                    { id: 32, title: '', videoFile: '' },
-                    { id: 33, title: '', videoFile: '' },
-                    { id: 34, title: '', videoFile: '' },
-                    { id: 35, title: '', videoFile: '' },
-                    { id: 36, title: '', videoFile: '' },
-                    { id: 37, title: '', videoFile: '' },
-                    { id: 38, title: '', videoFile: '' },
-                    { id: 39, title: '', videoFile: '' },
-                    { id: 40, title: '', videoFile: '' },
-                    { id: 41, title: '', videoFile: '' },
-                    { id: 42, title: '', videoFile: '' },
-                    { id: 43, title: '', videoFile: '' },   
-                ]
-            },
-            {
-                id: 4,
-                title: 'JavaScript Dasturlash',
-                description: 'Interaktiv web sahifalar yaratish uchun JavaScript ni o\'rganing',
-                image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png',
-                videos: [
-                { id: 1, title: 'MERN Stack kursi haqida', videoFile: 'https://youtu.be/yyasmRTnsqI?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 2, title: '1-dars. JavaScript modulni samarali tugatish', videoFile: 'https://youtu.be/7wKJ2wj8vPk?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 3, title: '2-dars. Ish joyini sozlash', videoFile: 'https://youtu.be/AX3AFc4n_1s?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 4, title: '3-dars. Node js ni ornatish', videoFile: 'https://youtu.be/TK_7Q4mTT7s?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 5, title: '4-dars. Javascript nima?', videoFile: 'https://youtu.be/EjpJiZViUhE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 6, title: '5-dars Ozgaruvchilar', videoFile: 'https://youtu.be/wx5YU36IqnM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 7, title: '6-dars. Qatiy rejim va u nima?', videoFile: 'https://youtu.be/_HNC2CS9VrE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 8, title: '7-dars. Javascriptdagi malumotlar turlarining tasnifi', videoFile: 'https://youtu.be/y9OOdaKLU3o?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 9, title: '8-dars. Foydalanuvchi bilan oddiy muloqot', videoFile: 'https://youtu.be/qbskYCDdsNY?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 10, title: '8-dars. Javascriptda foydalanuvchi bilan muloqot', videoFile: 'https://youtu.be/JPXkfrymWD0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 11, title: '9-dars. Interpolatsiya', videoFile: 'https://youtu.be/fYZy93uqk5Q?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 12, title: '10-dars. Javascript Operatorlari', videoFile: 'https://youtu.be/lcmEWA0_ABU?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 13, title: '11-dars Git and GitHub boshlovchilar uchun. #git #github #programming', videoFile: 'https://youtu.be/ai5JZTEoE8M?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 14, title: '12-dars. Amaliyot. Ilova yaratishni boshlaymiz', videoFile: 'https://youtu.be/yVknEYclH3Y?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 15, title: '13-dars. Shartli operator', videoFile: 'https://youtu.be/KbR53u2vUVE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 16, title: '14-dars. Loops - while, do while and for', videoFile: 'https://youtu.be/DGHlPDMTkrs?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 17, title: '14-dars. for in and for of', videoFile: 'https://youtu.be/ZB6pS-AZf0A?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 18, title: '15-dars. Amaliyot. Sikl', videoFile: 'https://youtu.be/2NmNh0vNxtk?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 19, title: '16-dars. Funksiya', videoFile: 'https://youtu.be/MCwtzmx7rE0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 20, title: '17. Metod va xususiyatlar', videoFile: 'https://youtu.be/hPbKpEpUBa8?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 21, title: '18-dars. Amaliyot. Function.', videoFile: 'https://youtu.be/Lfr5WAdFnLg?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 22, title: '19-dars. Callback function', videoFile: 'https://youtu.be/QJSp9YaCIj8?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 23, title: '20-dars. Obyektlar, destruptizatsiya', videoFile: 'https://youtu.be/a78_nMCpikU?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 24, title: '21-dars. Massivlar va psevdo massivlar', videoFile: 'https://youtu.be/y2k4JZVLKXI?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                    { id: 25, title: '35-dars. ClassList', videoFile: 'https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu' },
-                ]
-            }
-        ];
-
-        // Initialize localStorage
-        if (!localStorage.getItem('courses')) {
-            localStorage.setItem('courses', JSON.stringify(courses));
-        }
-        if (!localStorage.getItem('users')) {
-            localStorage.setItem('users', JSON.stringify(users));
-        }
-
-        // DOM elements
-        const loginBtn = document.getElementById('loginBtn');
-        const userAccount = document.getElementById('userAccount');
-        const userAccountBtn = document.getElementById('userAccountBtn');
-        const userDropdown = document.getElementById('userDropdown');
-        const loginModal = document.getElementById('loginModal');
-        const editCourseModal = document.getElementById('editCourseModal');
-        const editVideoModal = document.getElementById('editVideoModal');
-
-        // Navigation function
-        function navigateTo(page) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            
-            const targetPage = document.getElementById(page + 'Page');
-            if (targetPage) {
-                targetPage.classList.add('active');
-                
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                });
-                
-                const activeLink = document.querySelector(`a[href="#${page}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('active');
-                }
-                
-                // Load page-specific content
-                switch(page) {
-                    case 'home':
-                        loadFeaturedCourses();
-                        break;
-                    case 'courses':
-                        loadAllCourses();
-                        break;
-                    case 'courseDetails':
-                        loadCourseDetails();
-                        break;
-                    case 'admin':
-                        loadAdminData();
-                        break;
-                    case 'profile':
-                        loadProfileData();
-                        break;
-                }
-            }
-        }
-
-        // Authentication functions
-        function checkLoginStatus() {
-            const currentUser = localStorage.getItem('currentUser');
-            if (currentUser) {
-                const user = JSON.parse(currentUser);
-                showUserAccount(user);
-            } else {
-                showLoginButton();
-            }
-        }
-
-        function showUserAccount(user) {
-            loginBtn.style.display = 'none';
-            userAccount.classList.remove('hidden');
-            document.getElementById('userDisplayName').textContent = user.name || user.email;
-            document.getElementById('dropdownUserName').textContent = user.name || user.email;
-            document.getElementById('userRole').textContent = user.isAdmin ? 'Administrator' : 'Foydalanuvchi';
-            
-            if (user.isAdmin) {
-                document.getElementById('adminMenuItem').classList.remove('hidden');
-                document.getElementById('adminDropdownLink').classList.remove('hidden');
-            }
-        }
-
-        function showLoginButton() {
-            loginBtn.style.display = 'block';
-            userAccount.classList.add('hidden');
-            document.getElementById('adminMenuItem').classList.add('hidden');
-            document.getElementById('adminDropdownLink').classList.add('hidden');
-        }
-
-        // Enhanced course loading functions
-        function loadFeaturedCourses() {
-            const featuredCourses = document.getElementById('featuredCourses');
-            const courses = JSON.parse(localStorage.getItem('courses'));
-            
-            featuredCourses.innerHTML = '';
-            
-            courses.slice(0, 3).forEach((course, index) => {
-                const courseCard = createCourseCard(course);
-                courseCard.style.animationDelay = `${index * 0.2}s`;
-                courseCard.classList.add('animate-fade-in');
-                featuredCourses.appendChild(courseCard);
-            });
-            
-            addCourseClickListeners();
-        }
-
-        function loadAllCourses() {
-            const allCoursesGrid = document.getElementById('allCoursesGrid');
-            const courses = JSON.parse(localStorage.getItem('courses'));
-            
-            allCoursesGrid.innerHTML = '';
-            
-            courses.forEach((course, index) => {
-                const courseCard = createCourseCard(course);
-                courseCard.style.animationDelay = `${index * 0.15}s`;
-                courseCard.classList.add('animate-slide-up');
-                allCoursesGrid.appendChild(courseCard);
-            });
-            
-            addCourseClickListeners();
-        }
-
-        function createCourseCard(course) {
-            const courseCard = document.createElement('div');
-            courseCard.className = 'course-card glass rounded-3xl overflow-hidden transition-all border border-gray-700';
-            courseCard.innerHTML = `
-                <div class="course-image-container h-56 bg-gradient-to-br from-dark-lighter to-dark flex justify-center items-center p-6 border-b border-gray-700 relative">
-                    <img src="${course.image}" alt="${course.title}" class="h-36 w-36 object-contain rounded-2xl floating-element">
-                    <div class="absolute top-4 right-4 category-badge px-3 py-1 rounded-full text-xs">
-                        <i class="fas fa-star mr-1"></i>Popular
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold mb-4 text-primary">${course.title}</h3>
-                    <p class="text-gray-300 mb-6 h-20 overflow-hidden leading-relaxed">${course.description}</p>
-                    <div class="flex justify-between items-center">
-                        <div class="flex items-center text-gray-400">
-                            <i class="fas fa-video mr-2 text-primary"></i>
-                            <span class="font-semibold">${course.videos.length} video</span>
-                        </div>
-                        <a href="#courseDetails" data-id="${course.id}" class="course-link btn-primary px-6 py-3 rounded-xl inline-flex items-center font-bold transition-all group">
-                            <i class="fas fa-play mr-2 group-hover:scale-110 transition-transform"></i>
-                            Ko'rish
-                        </a>
-                    </div>
-                </div>
-            `;
-            return courseCard;
-        }
-
-        function addCourseClickListeners() {
-            document.querySelectorAll('.course-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const courseId = this.getAttribute('data-id');
-                    localStorage.setItem('currentCourseId', courseId);
-                    navigateTo('courseDetails');
-                });
-            });
-        }
-
-        function loadCourseDetails() {
-            const courseContent = document.getElementById('courseContent');
-            const courseId = parseInt(localStorage.getItem('currentCourseId'));
-            const courses = JSON.parse(localStorage.getItem('courses'));
-            const course = courses.find(c => c.id === courseId);
-            
-            if (!course) {
-                courseContent.innerHTML = '<div class="text-red-500 text-center py-10 text-xl">Kurs topilmadi!</div>';
-                return;
-            }
-            
-            // Enhanced course header
-            courseContent.innerHTML = `
-                <div class="flex flex-col lg:flex-row items-center mb-10 glass rounded-3xl p-10 border border-gray-700 animate-fade-in">
-                    <div class="w-40 h-40 mb-8 lg:mb-0 lg:mr-10 bg-gradient-to-br from-dark-lighter to-dark rounded-3xl flex justify-center items-center border border-gray-700 floating-element">
-                        <img src="${course.image}" alt="${course.title}" class="w-32 h-32 object-contain rounded-2xl">
-                    </div>
-                    <div class="text-center lg:text-left">
-                        <h1 class="text-5xl font-black mb-6 text-primary neon-text">
-                            ${course.title}
-                        </h1>
-                        <p class="text-gray-300 text-xl mb-6 leading-relaxed">${course.description}</p>
-                        <div class="flex flex-wrap justify-center lg:justify-start gap-6">
-                            <div class="flex items-center text-gray-400">
-                                <i class="fas fa-video mr-3 text-primary text-xl"></i>
-                                <span class="text-lg font-semibold">${course.videos.length} video darslik</span>
-                            </div>
-                            <div class="flex items-center text-gray-400">
-                                <i class="fas fa-clock mr-3 text-primary text-xl"></i>
-                                <span class="text-lg font-semibold">Bepul</span>
-                            </div>
-                            <div class="flex items-center text-gray-400">
-                                <i class="fas fa-certificate mr-3 text-primary text-xl"></i>
-                                <span class="text-lg font-semibold">Sertifikat</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            const currentUser = localStorage.getItem('currentUser');
-            
-            if (!currentUser) {
-                // Enhanced login required message
-                const loginRequired = document.createElement('div');
-                loginRequired.className = 'text-center py-20 px-10 glass rounded-3xl mt-10 border border-gray-700 animate-scale-in';
-                loginRequired.innerHTML = `
-                    <div class="mb-8">
-                        <i class="fas fa-lock text-primary text-8xl mb-6 floating-element"></i>
-                        <h2 class="text-4xl font-black mb-6 neon-text">Kursni ko'rish uchun tizimga kiring</h2>
-                        <p class="text-gray-300 mb-10 text-xl leading-relaxed max-w-2xl mx-auto">Video darsliklarni ko'rish uchun ro'yxatdan o'ting yoki tizimga kiring</p>
-                    </div>
-                    <button id="courseLoginBtn" class="btn-primary px-12 py-5 rounded-xl font-bold transition-all inline-flex items-center text-xl">
-                        <i class="fas fa-sign-in-alt mr-3"></i>
-                        Kirish / Ro'yxatdan o'tish
-                    </button>
-                `;
-                courseContent.appendChild(loginRequired);
-                
-                document.getElementById('courseLoginBtn').addEventListener('click', function() {
-                    loginModal.style.display = 'block';
-                });
-            } else {
-                // Enhanced course content for logged in users
-                const courseContainer = document.createElement('div');
-                courseContainer.className = 'flex flex-col xl:flex-row gap-10 animate-slide-up';
-                
-                // Enhanced video player section
-                const videoPlayerSection = document.createElement('div');
-                videoPlayerSection.className = 'w-full xl:w-2/3';
-                videoPlayerSection.innerHTML = `
-                    <div class="glass rounded-3xl overflow-hidden border border-gray-700">
-                        <div class="video-player">
-                            <div id="courseVideoPlayer" class="flex items-center justify-center bg-gradient-to-br from-dark-lighter to-dark">
-                                <div class="text-center">
-                                    <i class="fas fa-play-circle text-primary text-8xl mb-6 floating-element"></i>
-                                    <p class="text-gray-400 text-xl">Video tanlang</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <h2 id="currentVideoTitle" class="text-3xl font-bold mb-4 neon-text">${course.videos[0]?.title || 'Video tanlang'}</h2>
-                            <div class="flex justify-between items-center">
-                                <p class="text-gray-400 text-lg">${course.title}</p>
-                                <div class="flex space-x-6">
-                                    <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-                                        <i class="fas fa-thumbs-up text-xl"></i>
-                                    </button>
-                                    <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-                                        <i class="fas fa-share text-xl"></i>
-                                    </button>
-                                    <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-                                        <i class="fas fa-bookmark text-xl"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-                // Enhanced video list section
-                const videoListSection = document.createElement('div');
-                videoListSection.className = 'w-full xl:w-1/3';
-                videoListSection.innerHTML = `
-                    <div class="glass rounded-3xl h-full border border-gray-700">
-                        <div class="p-8 border-b border-gray-700">
-                            <h3 class="text-2xl font-bold flex items-center neon-text">
-                                <i class="fas fa-list-play mr-4 text-primary"></i>
-                                Video Darsliklar
-                            </h3>
-                        </div>
-                        <div class="video-list-container overflow-y-auto" style="max-height: 700px;">
-                            <ul id="courseVideoList" class="divide-y divide-gray-700">
-                                ${course.videos.map((video, index) => `
-                                    <li class="video-list-item p-6 cursor-pointer transition-all ${index === 0 ? 'active' : ''}" data-video="${video.videoFile}" data-title="${video.title}">
-                                        <div class="flex items-start">
-                                            <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mr-5 flex-shrink-0 floating-element">
-                                                <i class="fas fa-play text-primary text-lg"></i>
-                                            </div>
-                                            <div class="flex-1">
-                                                <h4 class="font-bold mb-2 text-lg">${video.title}</h4>
-                                                <p class="text-gray-400">Video ${index + 1}</p>
-                                                <div class="flex items-center mt-2">
-                                                    <span class="category-badge px-2 py-1 rounded text-xs">HD</span>
-                                                    <span class="text-gray-500 text-xs ml-2">• 5 min</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
-                    </div>
-                `;
-                
-                courseContainer.appendChild(videoPlayerSection);
-                courseContainer.appendChild(videoListSection);
-                courseContent.appendChild(courseContainer);
-                
-                // Load first video
-                if (course.videos.length > 0) {
-                    loadVideoPlayer(course.videos[0].videoFile, course.videos[0].title);
-                }
-                
-                // Add enhanced video list click listeners
-                document.querySelectorAll('.video-list-item').forEach(item => {
-                    item.addEventListener('click', function() {
-                        const videoUrl = this.getAttribute('data-video');
-                        const videoTitle = this.getAttribute('data-title');
-                        
-                        document.querySelectorAll('.video-list-item').forEach(item => item.classList.remove('active'));
-                        this.classList.add('active');
-                        
-                        loadVideoPlayer(videoUrl, videoTitle);
-                        document.getElementById('currentVideoTitle').textContent = videoTitle;
-                    });
-                });
-            }
-        }
-
-        function loadVideoPlayer(videoUrl, videoTitle) {
-            const player = document.getElementById('courseVideoPlayer');
-            let embedCode = '';
-            
-            if (videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be')) {
-                const videoId = extractYouTubeId(videoUrl);
-                if (videoId) {
-                    embedCode = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allowfullscreen class="w-full h-full rounded-2xl"></iframe>`;
-                }
-            } else if (videoUrl.includes('vimeo.com')) {
-                const videoId = extractVimeoId(videoUrl);
-                if (videoId) {
-                    embedCode = `<iframe src="https://player.vimeo.com/video/${videoId}?autoplay=1" frameborder="0" allowfullscreen class="w-full h-full rounded-2xl"></iframe>`;
-                }
-            } else {
-                embedCode = `<video controls autoplay class="w-full h-full rounded-2xl"><source src="${videoUrl}" type="video/mp4">Video yuklanmadi.</video>`;
-            }
-            
-            player.innerHTML = embedCode;
-        }
-
-        function extractYouTubeId(url) {
-            const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
-            const match = url.match(regex);
-            return match ? match[1] : null;
-        }
-
-        function extractVimeoId(url) {
-            const regex = /vimeo\.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|)(\d+)(?:$|\/|\?)/;
-            const match = url.match(regex);
-            return match ? match[3] : null;
-        }
-
-        // Enhanced profile functions
-        function loadProfileData() {
-            const currentUser = localStorage.getItem('currentUser');
-            if (!currentUser) {
-                navigateTo('home');
-                return;
-            }
-            
-            const user = JSON.parse(currentUser);
-            document.getElementById('profileUserName').textContent = user.name || user.email;
-            document.getElementById('profileUserRole').textContent = user.isAdmin ? 'Administrator' : 'Foydalanuvchi';
-            document.getElementById('profileName').value = user.name || '';
-            document.getElementById('profileEmail').value = user.email;
-            document.getElementById('profileBio').value = user.bio || '';
-        }
-
-        // Enhanced admin functions
-        function loadAdminData() {
-            const courses = JSON.parse(localStorage.getItem('courses'));
-            const users = JSON.parse(localStorage.getItem('users'));
-            
-            document.getElementById('totalCourses').textContent = courses.length;
-            document.getElementById('totalVideos').textContent = courses.reduce((total, course) => total + course.videos.length, 0);
-            document.getElementById('totalUsers').textContent = users.length;
-            
-            loadRecentCourses();
-            loadAdminCourses();
-            loadAdminVideos();
-            loadAdminUsers();
-            loadCourseOptions();
-        }
-
-        function loadRecentCourses() {
-            const container = document.getElementById('recentCourses');
-            const courses = JSON.parse(localStorage.getItem('courses'));
-            
-            container.innerHTML = '';
-            
-            courses.slice(-3).forEach((course, index) => {
-                const courseItem = document.createElement('div');
-                courseItem.className = 'flex items-center justify-between p-6 glass rounded-2xl mb-6 border border-gray-700 animate-fade-in';
-                courseItem.style.animationDelay = `${index * 0.1}s`;
-                courseItem.innerHTML = `
-                    <div class="flex items-center">
-                        <img src="${course.image}" alt="${course.title}" class="w-20 h-20 rounded-2xl mr-6 object-cover floating-element">
-                        <div>
-                            <h3 class="font-bold text-primary text-lg">${course.title}</h3>
-                            <p class="text-gray-400">${course.videos.length} video</p>
-                        </div>
-                    </div>
-                    <span class="category-badge px-4 py-2 rounded-full font-bold">Yangi</span>
-                `;
-                container.appendChild(courseItem);
-            });
-        }
-
-        function loadAdminCourses() {
-            const container = document.getElementById('adminCourses');
-            const courses = JSON.parse(localStorage.getItem('courses'));
-            
-            container.innerHTML = '';
-            
-            courses.forEach((course, index) => {
-                const courseItem = document.createElement('div');
-                courseItem.className = 'flex items-center justify-between p-6 glass rounded-2xl mb-6 border border-gray-700 animate-slide-up';
-                courseItem.style.animationDelay = `${index * 0.1}s`;
-                courseItem.innerHTML = `
-                    <div class="flex items-center">
-                        <img src="${course.image}" alt="${course.title}" class="w-24 h-24 rounded-2xl mr-6 object-cover floating-element">
-                        <div>
-                            <h3 class="font-bold text-primary text-xl">${course.title}</h3>
-                            <p class="text-gray-400 mb-2 leading-relaxed">${course.description}</p>
-                            <p class="text-primary font-semibold">${course.videos.length} video</p>
-                        </div>
-                    </div>
-                    <div class="flex space-x-3">
-                        <button onclick="editCourse(${course.id})" class="bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-xl font-bold transition-all hover:scale-105">
-                            <i class="fas fa-edit mr-2"></i>Tahrirlash
-                        </button>
-                        <button onclick="deleteCourse(${course.id})" class="bg-red-600 hover:bg-red-700 px-5 py-3 rounded-xl font-bold transition-all hover:scale-105">
-                            <i class="fas fa-trash mr-2"></i>O'chirish
-                        </button>
-                    </div>
-                `;
-                container.appendChild(courseItem);
-            });
-        }
-
-        function loadAdminVideos() {
-            const container = document.getElementById('allVideos');
-            const courses = JSON.parse(localStorage.getItem('courses'));
-            
-            container.innerHTML = '';
-            
-            let videoIndex = 0;
-            courses.forEach(course => {
-                course.videos.forEach(video => {
-                    const videoItem = document.createElement('div');
-                    videoItem.className = 'flex items-center justify-between p-6 glass rounded-2xl mb-6 border border-gray-700 animate-fade-in';
-                    videoItem.style.animationDelay = `${videoIndex * 0.05}s`;
-                    videoItem.innerHTML = `
-                        <div class="flex items-center">
-                            <div class="w-20 h-20 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mr-6 floating-element">
-                                <i class="fas fa-play text-primary text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-lg">${video.title}</h3>
-                                <p class="text-gray-400">${course.title}</p>
-                                <p class="text-gray-500 text-sm truncate max-w-xs">${video.videoFile}</p>
-                            </div>
-                        </div>
-                        <div class="flex space-x-3">
-                            <button onclick="playVideo('${video.videoFile}', '${video.title}', '${course.title}')" class="btn-primary px-4 py-3 rounded-xl font-bold">
-                                <i class="fas fa-play mr-2"></i>Ko'rish
-                            </button>
-                            <button onclick="editVideo(${course.id}, ${video.id})" class="bg-blue-600 hover:bg-blue-700 px-4 py-3 rounded-xl font-bold transition-all hover:scale-105">
-                                <i class="fas fa-edit mr-2"></i>Tahrirlash
-                            </button>
-                            <button onclick="deleteVideo(${course.id}, ${video.id})" class="bg-red-600 hover:bg-red-700 px-4 py-3 rounded-xl font-bold transition-all hover:scale-105">
-                                <i class="fas fa-trash mr-2"></i>O'chirish
-                            </button>
-                        </div>
-                    `;
-                    container.appendChild(videoItem);
-                    videoIndex++;
-                });
-            });
-        }
-
-        function loadAdminUsers() {
-            const container = document.getElementById('allUsers');
-            const users = JSON.parse(localStorage.getItem('users'));
-            
-            container.innerHTML = '';
-            
-            users.forEach((user, index) => {
-                const userItem = document.createElement('div');
-                userItem.className = 'flex items-center justify-between p-6 glass rounded-2xl mb-6 border border-gray-700 animate-slide-up';
-                userItem.style.animationDelay = `${index * 0.1}s`;
-                userItem.innerHTML = `
-                    <div class="flex items-center">
-                        <div class="w-20 h-20 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mr-6 floating-element">
-                            <i class="fas fa-user text-primary text-2xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg">${user.name || user.email}</h3>
-                            <p class="text-gray-400">${user.email}</p>
-                            <p class="text-primary font-semibold">${user.isAdmin ? 'Administrator' : 'Foydalanuvchi'}</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="text-green-400 font-bold flex items-center category-badge px-4 py-2 rounded-full">
-                            <i class="fas fa-circle text-xs mr-2"></i>Faol
-                        </span>
-                    </div>
-                `;
-                container.appendChild(userItem);
-            });
-        }
-
-        function loadCourseOptions() {
-            const select = document.getElementById('videoCourse');
-            const courses = JSON.parse(localStorage.getItem('courses'));
-            
-            select.innerHTML = '<option value="">Kursni tanlang</option>';
-            
-            courses.forEach(course => {
-                const option = document.createElement('option');
-                option.value = course.id;
-                option.textContent = course.title;
-                select.appendChild(option);
-            });
-        }
-
-        // Enhanced video player modal function
-        function playVideo(videoUrl, videoTitle, courseTitle) {
-            const modal = document.getElementById('videoPlayerModal');
-            const player = document.getElementById('mainVideoPlayer');
-            const titleElement = document.getElementById('videoPlayerTitle');
-            const courseElement = document.getElementById('videoPlayerCourse');
-            
-            titleElement.textContent = videoTitle;
-            courseElement.textContent = courseTitle;
-            
-            let embedCode = '';
-            
-            if (videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be')) {
-                const videoId = extractYouTubeId(videoUrl);
-                if (videoId) {
-                    embedCode = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allowfullscreen class="w-full h-full rounded-2xl"></iframe>`;
-                }
-            } else if (videoUrl.includes('vimeo.com')) {
-                const videoId = extractVimeoId(videoUrl);
-                if (videoId) {
-                    embedCode = `<iframe src="https://player.vimeo.com/video/${videoId}?autoplay=1" frameborder="0" allowfullscreen class="w-full h-full rounded-2xl"></iframe>`;
-                }
-            } else {
-                embedCode = `<video controls autoplay class="w-full h-full rounded-2xl"><source src="${videoUrl}" type="video/mp4">Video yuklanmadi.</video>`;
-            }
-            
-            player.innerHTML = embedCode;
-            modal.classList.remove('hidden');
-        }
-
-        // Enhanced CRUD functions
-        function editCourse(courseId) {
-            const courses = JSON.parse(localStorage.getItem('courses'));
-            const course = courses.find(c => c.id === courseId);
-            
-            if (course) {
-                document.getElementById('editCourseId').value = course.id;
-                document.getElementById('editCourseTitle').value = course.title;
-                document.getElementById('editCourseImage').value = course.image;
-                document.getElementById('editCourseDescription').value = course.description;
-                
-                editCourseModal.style.display = 'block';
-            }
-        }
-
-        function editVideo(courseId, videoId) {
-            const courses = JSON.parse(localStorage.getItem('courses'));
-            const course = courses.find(c => c.id === courseId);
-            
-            if (course) {
-                const video = course.videos.find(v => v.id === videoId);
-                
-                if (video) {
-                    document.getElementById('editVideoCourseId').value = courseId;
-                    document.getElementById('editVideoId').value = videoId;
-                    document.getElementById('editVideoTitle').value = video.title;
-                    document.getElementById('editVideoFile').value = video.videoFile;
-                    
-                    editVideoModal.style.display = 'block';
-                }
-            }
-        }
-
-        function deleteCourse(courseId) {
-            if (confirm('Kursni o\'chirishga ishonchingiz komilmi?')) {
-                let courses = JSON.parse(localStorage.getItem('courses'));
-                courses = courses.filter(c => c.id !== courseId);
-                localStorage.setItem('courses', JSON.stringify(courses));
-                loadAdminData();
-            }
-        }
-
-        function deleteVideo(courseId, videoId) {
-            if (confirm('Videoni o\'chirishga ishonchingiz komilmi?')) {
-                const courses = JSON.parse(localStorage.getItem('courses'));
-                const courseIndex = courses.findIndex(c => c.id === courseId);
-                
-                if (courseIndex !== -1) {
-                    courses[courseIndex].videos = courses[courseIndex].videos.filter(v => v.id !== videoId);
-                    localStorage.setItem('courses', JSON.stringify(courses));
-                    loadAdminData();
-                }
-            }
-        }
-
-        // Enhanced Event Listeners
-        document.addEventListener('DOMContentLoaded', function() {
-            checkLoginStatus();
-            navigateTo('home');
-            
-            // Enhanced navigation
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const page = this.getAttribute('href').substring(1);
-                    navigateTo(page);
-                });
-            });
-            
-            // Enhanced login button
-            loginBtn.addEventListener('click', function() {
-                loginModal.style.display = 'block';
-            });
-            
-            // Enhanced user dropdown
-            userAccountBtn.addEventListener('click', function() {
-                userDropdown.classList.toggle('active');
-            });
-            
-            // Close dropdowns
-            document.addEventListener('click', function(e) {
-                if (!userAccountBtn.contains(e.target) && !userDropdown.contains(e.target)) {
-                    userDropdown.classList.remove('active');
-                }
-            });
-            
-            // Enhanced logout
-            document.getElementById('logoutBtn').addEventListener('click', function() {
-                localStorage.removeItem('currentUser');
-                checkLoginStatus();
-                navigateTo('home');
-                userDropdown.classList.remove('active');
-            });
-            
-            // Enhanced modal close buttons
-            document.querySelectorAll('.close').forEach(closeBtn => {
-                closeBtn.addEventListener('click', function() {
-                    this.closest('.fixed').style.display = 'none';
-                });
-            });
-            
-            document.querySelector('.close-video').addEventListener('click', function() {
-                document.getElementById('videoPlayerModal').classList.add('hidden');
-            });
-            
-            // Enhanced tab switching
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.addEventListener('click', function() {
-                    const tabName = this.getAttribute('data-tab');
-                    
-                    document.querySelectorAll('.tab').forEach(t => {
-                        t.classList.remove('active', 'border-primary', 'text-primary');
-                    });
-                    
-                    this.classList.add('active', 'border-primary', 'text-primary');
-                    
-                    document.querySelectorAll('.form-container').forEach(container => {
-                        container.classList.remove('active');
-                    });
-                    
-                    document.getElementById(tabName + 'Form').classList.add('active');
-                });
-            });
-            
-            // Enhanced admin tab switching
-            document.querySelectorAll('.admin-tab').forEach(tab => {
-                tab.addEventListener('click', function() {
-                    const tabName = this.getAttribute('data-tab');
-                    
-                    document.querySelectorAll('.admin-tab').forEach(t => {
-                        t.classList.remove('active');
-                    });
-                    
-                    this.classList.add('active');
-                    
-                    document.querySelectorAll('.admin-content').forEach(content => {
-                        content.classList.add('hidden');
-                    });
-                    
-                    document.getElementById(tabName).classList.remove('hidden');
-                    
-                    if (tabName === 'videos') {
-                        loadCourseOptions();
-                    }
-                });
-            });
-            
-            // Enhanced forms
-            document.getElementById('loginFormElement').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const email = document.getElementById('loginEmail').value;
-                const password = document.getElementById('loginPassword').value;
-                
-                const users = JSON.parse(localStorage.getItem('users'));
-                const user = users.find(u => u.email === email && u.password === password);
-                
-                if (user) {
-                    localStorage.setItem('currentUser', JSON.stringify(user));
-                    showUserAccount(user);
-                    loginModal.style.display = 'none';
-                    this.reset();
-                } else {
-                    alert('Email yoki parol noto\'g\'ri!');
-                }
-            });
-            
-            document.getElementById('registerFormElement').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const email = document.getElementById('registerEmail').value;
-                const password = document.getElementById('registerPassword').value;
-                const confirmPassword = document.getElementById('confirmPassword').value;
-                
-                if (password !== confirmPassword) {
-                    alert('Parollar mos kelmaydi!');
-                    return;
-                }
-                
-                const users = JSON.parse(localStorage.getItem('users'));
-                
-                if (users.find(u => u.email === email)) {
-                    alert('Bu email allaqachon ro\'yxatdan o\'tgan!');
-                    return;
-                }
-                
-                const newUser = {
-                    email: email,
-                    password: password,
-                    isAdmin: false,
-                    name: ''
-                };
-                
-                users.push(newUser);
-                localStorage.setItem('users', JSON.stringify(users));
-                localStorage.setItem('currentUser', JSON.stringify(newUser));
-                
-                showUserAccount(newUser);
-                loginModal.style.display = 'none';
-                this.reset();
-            });
-            
-            document.getElementById('addCourseForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const title = document.getElementById('courseTitle').value;
-                const image = document.getElementById('courseImage').value;
-                const description = document.getElementById('courseDescription').value;
-                
-                const courses = JSON.parse(localStorage.getItem('courses'));
-                const newCourse = {
-                    id: Date.now(),
-                    title: title,
-                    image: image,
-                    description: description,
-                    videos: []
-                };
-                
-                courses.push(newCourse);
-                localStorage.setItem('courses', JSON.stringify(courses));
-                
-                this.reset();
-                loadAdminData();
-                alert('Kurs muvaffaqiyatli qo\'shildi!');
-            });
-            
-            document.getElementById('addVideoForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const courseId = parseInt(document.getElementById('videoCourse').value);
-                const title = document.getElementById('videoTitle').value;
-                const videoUrl = document.getElementById('videoFile').value;
-                
-                if (!courseId) {
-                    alert('Kursni tanlang!');
-                    return;
-                }
-                
-                const courses = JSON.parse(localStorage.getItem('courses'));
-                const courseIndex = courses.findIndex(c => c.id === courseId);
-                
-                if (courseIndex !== -1) {
-                    const newVideo = {
-                        id: Date.now(),
-                        title: title,
-                        videoFile: videoUrl
-                    };
-                    
-                    courses[courseIndex].videos.push(newVideo);
-                    localStorage.setItem('courses', JSON.stringify(courses));
-                    
-                    this.reset();
-                    loadAdminData();
-                    alert('Video muvaffaqiyatli qo\'shildi!');
-                }
-            });
-            
-            document.getElementById('editCourseForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const courseId = parseInt(document.getElementById('editCourseId').value);
-                const title = document.getElementById('editCourseTitle').value;
-                const image = document.getElementById('editCourseImage').value;
-                const description = document.getElementById('editCourseDescription').value;
-                
-                const courses = JSON.parse(localStorage.getItem('courses'));
-                const courseIndex = courses.findIndex(c => c.id === courseId);
-                
-                if (courseIndex !== -1) {
-                    courses[courseIndex].title = title;
-                    courses[courseIndex].image = image;
-                    courses[courseIndex].description = description;
-                    
-                    localStorage.setItem('courses', JSON.stringify(courses));
-                    
-                    editCourseModal.style.display = 'none';
-                    loadAdminData();
-                    alert('Kurs muvaffaqiyatli yangilandi!');
-                }
-            });
-            
-            document.getElementById('editVideoForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const courseId = parseInt(document.getElementById('editVideoCourseId').value);
-                const videoId = parseInt(document.getElementById('editVideoId').value);
-                const title = document.getElementById('editVideoTitle').value;
-                const videoUrl = document.getElementById('editVideoFile').value;
-                
-                const courses = JSON.parse(localStorage.getItem('courses'));
-                const courseIndex = courses.findIndex(c => c.id === courseId);
-                
-                if (courseIndex !== -1) {
-                    const videoIndex = courses[courseIndex].videos.findIndex(v => v.id === videoId);
-                    
-                    if (videoIndex !== -1) {
-                        courses[courseIndex].videos[videoIndex].title = title;
-                        if (videoUrl) {
-                            courses[courseIndex].videos[videoIndex].videoFile = videoUrl;
-                        }
-                        
-                        localStorage.setItem('courses', JSON.stringify(courses));
-                        
-                        editVideoModal.style.display = 'none';
-                        loadAdminData();
-                        alert('Video muvaffaqiyatli yangilandi!');
-                    }
-                }
-            });
-            
-            document.getElementById('profileForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('profileName').value;
-                const bio = document.getElementById('profileBio').value;
-                
-                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-                currentUser.name = name;
-                currentUser.bio = bio;
-                
-                const users = JSON.parse(localStorage.getItem('users'));
-                const userIndex = users.findIndex(u => u.email === currentUser.email);
-                if (userIndex !== -1) {
-                    users[userIndex] = currentUser;
-                    localStorage.setItem('users', JSON.stringify(users));
-                }
-                
-                localStorage.setItem('currentUser', JSON.stringify(currentUser));
-                showUserAccount(currentUser);
-                alert('Profil muvaffaqiyatli yangilandi!');
-            });
-        });
-
-        // Add this to your existing JavaScript
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu functionality
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const sidebar = document.getElementById('sidebar');
-            const sidebarOverlay = document.getElementById('sidebarOverlay');
-
-            function openSidebar() {
-                sidebar.classList.remove('-translate-x-full');
-                sidebarOverlay.classList.remove('hidden');
-                sidebarOverlay.classList.add('block');
-                sidebar.style.zIndex = '50';
-            }
-            function closeSidebar() {
-                sidebar.classList.add('-translate-x-full');
-                sidebarOverlay.classList.add('hidden');
-                sidebarOverlay.classList.remove('block');
-                sidebar.style.zIndex = '10';
-            }
-
-            mobileMenuBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                openSidebar();
-            });
-
-            sidebarOverlay.addEventListener('click', function() {
-                closeSidebar();
-            });
-
-            window.addEventListener('resize', function() {
-                if (window.innerWidth >= 1024) {
-                    sidebar.classList.remove('-translate-x-full');
-                    sidebarOverlay.classList.add('hidden');
-                } else {
-                    closeSidebar();
-                }
-            });
-        });
-    </script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
