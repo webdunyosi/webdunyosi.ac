@@ -1,5 +1,6 @@
 // Initialize data
 let users = []
+let currentUser = null // Global variable for current user
 
 const courses = [
   {
@@ -435,7 +436,7 @@ const courses = [
         id: 16,
         title: "14-dars. Loops - while, do while and for",
         videoFile:
-          "https://youtu.be/DGHlPDMTkrs?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+          "https://youtu.be/DGHZuDHn2rs?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
       },
       {
         id: 17,
@@ -453,13 +454,13 @@ const courses = [
         id: 19,
         title: "16-dars. Funksiya",
         videoFile:
-          "https://youtu.be/MCwtzmx7rE0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+          "https://youtu.be/MCwtzQz7rE0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
       },
       {
         id: 20,
         title: "17. Metod va xususiyatlar",
         videoFile:
-          "https://youtu.be/hPbKpEpUBa8?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+          "https://youtu.be/hPb7KpEpUBa?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
       },
       {
         id: 21,
@@ -541,7 +542,7 @@ const courses = [
       },
       {
         id: 9,
-        title: "Custom hooklar yaratish",
+        title: "Custom hookslar yaratish",
         videoFile: "https://youtu.be/6ThXsUwLWvc"
       },
       {
@@ -552,14 +553,6 @@ const courses = [
     ]
   }
 ]
-
-// Initialize localStorage
-if (!localStorage.getItem("courses")) {
-  localStorage.setItem("courses", JSON.stringify(courses))
-}
-if (!localStorage.getItem("users")) {
-  localStorage.setItem("users", JSON.stringify(users))
-}
 
 // DOM elements
 const loginBtn = document.getElementById("loginBtn")
@@ -612,10 +605,8 @@ function navigateTo(page) {
 
 // Authentication functions
 function checkLoginStatus() {
-  const currentUser = localStorage.getItem("currentUser")
   if (currentUser) {
-    const user = JSON.parse(currentUser)
-    showUserAccount(user)
+    showUserAccount(currentUser)
   } else {
     showLoginButton()
   }
@@ -648,7 +639,6 @@ function showLoginButton() {
 // Enhanced course loading functions
 function loadFeaturedCourses() {
   const featuredCourses = document.getElementById("featuredCourses")
-  const courses = JSON.parse(localStorage.getItem("courses"))
 
   featuredCourses.innerHTML = ""
 
@@ -664,7 +654,6 @@ function loadFeaturedCourses() {
 
 function loadAllCourses() {
   const allCoursesGrid = document.getElementById("allCoursesGrid")
-  const courses = JSON.parse(localStorage.getItem("courses"))
 
   allCoursesGrid.innerHTML = ""
 
@@ -712,16 +701,17 @@ function addCourseClickListeners() {
     link.addEventListener("click", function (e) {
       e.preventDefault()
       const courseId = this.getAttribute("data-id")
-      localStorage.setItem("currentCourseId", courseId)
+      currentCourseId = courseId // Store current course ID in global variable
       navigateTo("courseDetails")
     })
   })
 }
 
+let currentCourseId = null // Global variable to store current course ID
+
 function loadCourseDetails() {
   const courseContent = document.getElementById("courseContent")
-  const courseId = parseInt(localStorage.getItem("currentCourseId"))
-  const courses = JSON.parse(localStorage.getItem("courses"))
+  const courseId = parseInt(currentCourseId)
   const course = courses.find((c) => c.id === courseId)
 
   if (!course) {
@@ -903,28 +893,23 @@ function extractVimeoId(url) {
 
 // Enhanced profile functions
 function loadProfileData() {
-  const currentUser = localStorage.getItem("currentUser")
   if (!currentUser) {
     navigateTo("home")
     return
   }
 
-  const user = JSON.parse(currentUser)
   document.getElementById("profileUserName").textContent =
-    user.name || user.email
-  document.getElementById("profileUserRole").textContent = user.isAdmin
+    currentUser.name || currentUser.email
+  document.getElementById("profileUserRole").textContent = currentUser.isAdmin
     ? "Administrator"
     : "Foydalanuvchi"
-  document.getElementById("profileName").value = user.name || ""
-  document.getElementById("profileEmail").value = user.email
-  document.getElementById("profileBio").value = user.bio || ""
+  document.getElementById("profileName").value = currentUser.name || ""
+  document.getElementById("profileEmail").value = currentUser.email
+  document.getElementById("profileBio").value = currentUser.bio || ""
 }
 
 // Enhanced admin functions
 function loadAdminData() {
-  const courses = JSON.parse(localStorage.getItem("courses"))
-  const users = JSON.parse(localStorage.getItem("users"))
-
   document.getElementById("totalCourses").textContent = courses.length
   document.getElementById("totalVideos").textContent = courses.reduce(
     (total, course) => total + course.videos.length,
@@ -941,7 +926,6 @@ function loadAdminData() {
 
 function loadRecentCourses() {
   const container = document.getElementById("recentCourses")
-  const courses = JSON.parse(localStorage.getItem("courses"))
 
   container.innerHTML = ""
 
@@ -966,7 +950,6 @@ function loadRecentCourses() {
 
 function loadAdminCourses() {
   const container = document.getElementById("adminCourses")
-  const courses = JSON.parse(localStorage.getItem("courses"))
 
   container.innerHTML = ""
 
@@ -999,7 +982,6 @@ function loadAdminCourses() {
 
 function loadAdminVideos() {
   const container = document.getElementById("allVideos")
-  const courses = JSON.parse(localStorage.getItem("courses"))
 
   container.innerHTML = ""
 
@@ -1041,7 +1023,6 @@ function loadAdminVideos() {
 
 function loadAdminUsers() {
   const container = document.getElementById("allUsers")
-  const users = JSON.parse(localStorage.getItem("users"))
 
   container.innerHTML = ""
 
@@ -1056,13 +1037,9 @@ function loadAdminUsers() {
                             <i class="fas fa-user text-primary text-2xl"></i>
                         </div>
                         <div>
-                            <h3 class="font-bold text-lg">${
-                              user.name || user.email
-                            }</h3>
+                            <h3 class="font-bold text-lg">${user.name || user.email}</h3>
                             <p class="text-gray-400">${user.email}</p>
-                            <p class="text-primary font-semibold">${
-                              user.isAdmin ? "Administrator" : "Foydalanuvchi"
-                            }</p>
+                            <p class="text-primary font-semibold">${user.isAdmin ? "Administrator" : "Foydalanuvchi"}</p>
                         </div>
                     </div>
                     <div class="flex items-center">
@@ -1077,7 +1054,6 @@ function loadAdminUsers() {
 
 function loadCourseOptions() {
   const select = document.getElementById("videoCourse")
-  const courses = JSON.parse(localStorage.getItem("courses"))
 
   select.innerHTML = '<option value="">Kursni tanlang</option>'
 
@@ -1121,7 +1097,6 @@ function playVideo(videoUrl, videoTitle, courseTitle) {
 
 // Enhanced CRUD functions
 function editCourse(courseId) {
-  const courses = JSON.parse(localStorage.getItem("courses"))
   const course = courses.find((c) => c.id === courseId)
 
   if (course) {
@@ -1135,7 +1110,6 @@ function editCourse(courseId) {
 }
 
 function editVideo(courseId, videoId) {
-  const courses = JSON.parse(localStorage.getItem("courses"))
   const course = courses.find((c) => c.id === courseId)
 
   if (course) {
@@ -1154,24 +1128,23 @@ function editVideo(courseId, videoId) {
 
 function deleteCourse(courseId) {
   if (confirm("Kursni o'chirishga ishonchingiz komilmi?")) {
-    let courses = JSON.parse(localStorage.getItem("courses"))
-    courses = courses.filter((c) => c.id !== courseId)
-    localStorage.setItem("courses", JSON.stringify(courses))
-    loadAdminData()
+    const index = courses.findIndex((c) => c.id === courseId)
+    if (index !== -1) {
+      courses.splice(index, 1)
+      loadAdminData()
+    }
   }
 }
 
 function deleteVideo(courseId, videoId) {
   if (confirm("Videoni o'chirishga ishonchingiz komilmi?")) {
-    const courses = JSON.parse(localStorage.getItem("courses"))
-    const courseIndex = courses.findIndex((c) => c.id === courseId)
-
-    if (courseIndex !== -1) {
-      courses[courseIndex].videos = courses[courseIndex].videos.filter(
-        (v) => v.id !== videoId
-      )
-      localStorage.setItem("courses", JSON.stringify(courses))
-      loadAdminData()
+    const course = courses.find((c) => c.id === courseId)
+    if (course) {
+      const videoIndex = course.videos.findIndex((v) => v.id === videoId)
+      if (videoIndex !== -1) {
+        course.videos.splice(videoIndex, 1)
+        loadAdminData()
+      }
     }
   }
 }
@@ -1212,7 +1185,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Enhanced logout
   document.getElementById("logoutBtn").addEventListener("click", function () {
-    localStorage.removeItem("currentUser")
+    currentUser = null
     checkLoginStatus()
     navigateTo("home")
     userDropdown.classList.remove("active")
@@ -1280,13 +1253,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const email = document.getElementById("loginEmail").value
       const password = document.getElementById("loginPassword").value
 
-      const users = JSON.parse(localStorage.getItem("users"))
       const user = users.find(
         (u) => u.email === email && u.password === password
       )
 
       if (user) {
-        localStorage.setItem("currentUser", JSON.stringify(user))
+        currentUser = user
         showUserAccount(user)
         loginModal.style.display = "none"
         this.reset()
@@ -1309,8 +1281,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return
       }
 
-      const users = JSON.parse(localStorage.getItem("users"))
-
       if (users.find((u) => u.email === email)) {
         alert("Bu email allaqachon ro'yxatdan o'tgan!")
         return
@@ -1324,9 +1294,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       users.push(newUser)
-      localStorage.setItem("users", JSON.stringify(users))
-      localStorage.setItem("currentUser", JSON.stringify(newUser))
-
+      currentUser = newUser
       showUserAccount(newUser)
       loginModal.style.display = "none"
       this.reset()
@@ -1341,7 +1309,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const image = document.getElementById("courseImage").value
       const description = document.getElementById("courseDescription").value
 
-      const courses = JSON.parse(localStorage.getItem("courses"))
       const newCourse = {
         id: Date.now(),
         title: title,
@@ -1351,8 +1318,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       courses.push(newCourse)
-      localStorage.setItem("courses", JSON.stringify(courses))
-
       this.reset()
       loadAdminData()
       alert("Kurs muvaffaqiyatli qo'shildi!")
@@ -1372,19 +1337,15 @@ document.addEventListener("DOMContentLoaded", function () {
         return
       }
 
-      const courses = JSON.parse(localStorage.getItem("courses"))
-      const courseIndex = courses.findIndex((c) => c.id === courseId)
-
-      if (courseIndex !== -1) {
+      const course = courses.find((c) => c.id === courseId)
+      if (course) {
         const newVideo = {
           id: Date.now(),
           title: title,
           videoFile: videoUrl,
         }
 
-        courses[courseIndex].videos.push(newVideo)
-        localStorage.setItem("courses", JSON.stringify(courses))
-
+        course.videos.push(newVideo)
         this.reset()
         loadAdminData()
         alert("Video muvaffaqiyatli qo'shildi!")
@@ -1401,15 +1362,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const image = document.getElementById("editCourseImage").value
       const description = document.getElementById("editCourseDescription").value
 
-      const courses = JSON.parse(localStorage.getItem("courses"))
-      const courseIndex = courses.findIndex((c) => c.id === courseId)
-
-      if (courseIndex !== -1) {
-        courses[courseIndex].title = title
-        courses[courseIndex].image = image
-        courses[courseIndex].description = description
-
-        localStorage.setItem("courses", JSON.stringify(courses))
+      const course = courses.find((c) => c.id === courseId)
+      if (course) {
+        course.title = title
+        course.image = image
+        course.description = description
 
         editCourseModal.style.display = "none"
         loadAdminData()
@@ -1429,21 +1386,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const title = document.getElementById("editVideoTitle").value
       const videoUrl = document.getElementById("editVideoFile").value
 
-      const courses = JSON.parse(localStorage.getItem("courses"))
-      const courseIndex = courses.findIndex((c) => c.id === courseId)
-
-      if (courseIndex !== -1) {
-        const videoIndex = courses[courseIndex].videos.findIndex(
-          (v) => v.id === videoId
-        )
-
-        if (videoIndex !== -1) {
-          courses[courseIndex].videos[videoIndex].title = title
+      const course = courses.find((c) => c.id === courseId)
+      if (course) {
+        const video = course.videos.find((v) => v.id === videoId)
+        if (video) {
+          video.title = title
           if (videoUrl) {
-            courses[courseIndex].videos[videoIndex].videoFile = videoUrl
+            video.videoFile = videoUrl
           }
-
-          localStorage.setItem("courses", JSON.stringify(courses))
 
           editVideoModal.style.display = "none"
           loadAdminData()
@@ -1460,25 +1410,20 @@ document.addEventListener("DOMContentLoaded", function () {
       const name = document.getElementById("profileName").value
       const bio = document.getElementById("profileBio").value
 
-      const currentUser = JSON.parse(localStorage.getItem("currentUser"))
-      currentUser.name = name
-      currentUser.bio = bio
+      if (currentUser) {
+        currentUser.name = name
+        currentUser.bio = bio
 
-      const users = JSON.parse(localStorage.getItem("users"))
-      const userIndex = users.findIndex((u) => u.email === currentUser.email)
-      if (userIndex !== -1) {
-        users[userIndex] = currentUser
-        localStorage.setItem("users", JSON.stringify(users))
+        const userIndex = users.findIndex((u) => u.email === currentUser.email)
+        if (userIndex !== -1) {
+          users[userIndex] = currentUser
+        }
+
+        showUserAccount(currentUser)
+        alert("Profil muvaffaqiyatli yangilandi!")
       }
-
-      localStorage.setItem("currentUser", JSON.stringify(currentUser))
-      showUserAccount(currentUser)
-      alert("Profil muvaffaqiyatli yangilandi!")
     })
-})
 
-// Add this to your existing JavaScript
-document.addEventListener("DOMContentLoaded", function () {
   // Mobile menu functionality
   const mobileMenuBtn = document.getElementById("mobileMenuBtn")
   const sidebar = document.getElementById("sidebar")
