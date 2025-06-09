@@ -493,6 +493,64 @@ const courses = [
       },
     ],
   },
+  {
+    id: 5,
+    title: "React Dasturlash",
+    description: "Zamonaviy web ilovalar yaratish uchun React kutubxonasini o'rganing",
+    image: "../images/react.webp",
+    videos: [
+      {
+        id: 1,
+        title: "Reactga kirish",
+        videoFile: "https://youtu.be/bMknfKXIFA8"
+      },
+      {
+        id: 2,
+        title: "React komponentlar va JSX",
+        videoFile: "https://youtu.be/Ke90Tje7VS0"
+      },
+      {
+        id: 3,
+        title: "Props va State tushunchasi",
+        videoFile: "https://youtu.be/6ThXsUwLWvc"
+      },
+      {
+        id: 4,
+        title: "useState va useEffect hooklari",
+        videoFile: "https://youtu.be/dpw9EHDh2bM"
+      },
+      {
+        id: 5,
+        title: "React Router bilan navigatsiya",
+        videoFile: "https://youtu.be/Law7wfdg_ls"
+      },
+      {
+        id: 6,
+        title: "Formalar va controlled komponentlar",
+        videoFile: "https://youtu.be/0ZJgIjIuY7U"
+      },
+      {
+        id: 7,
+        title: "API bilan ishlash (fetch, axios)",
+        videoFile: "https://youtu.be/5W_q7RQE8xE"
+      },
+      {
+        id: 8,
+        title: "React Context va prop drilling",
+        videoFile: "https://youtu.be/35lXWvCuM8o"
+      },
+      {
+        id: 9,
+        title: "Custom hooklar yaratish",
+        videoFile: "https://youtu.be/6ThXsUwLWvc"
+      },
+      {
+        id: 10,
+        title: "React bilan loyihani yakunlash",
+        videoFile: "https://youtu.be/Tn6-PIqc4UM"
+      }
+    ]
+  }
 ]
 
 // Initialize localStorage
