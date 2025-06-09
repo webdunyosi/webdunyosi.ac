@@ -195,7 +195,7 @@
       <div class="flex-1 lg:ml-64 min-h-screen">
         <!-- Enhanced Header -->
         <header
-          class="flex justify-between items-center py-4 px-6 glass sticky top-0 z-20 border-b border-gray-800"
+          class="flex justify-between items-center py-4 lg:py-0 px-6 lg:px-0 glass sticky top-0 z-20 border-b border-gray-800"
         >
           <div class="flex items-center">
             <!-- Mobile Menu Button -->
@@ -205,82 +205,14 @@
             >
               <i class="fas fa-bars"></i>
             </button>
-            <div class="relative">
-              <input
-                type="text"
-                placeholder="Qidirish..."
-                class="input-web rounded-xl px-4 py-3 pl-12 w-80 text-sm"
-              />
-              <i class="fas fa-search absolute left-4 top-4 text-gray-400"></i>
-              <div class="absolute right-3 top-3">
-                <kbd class="px-2 py-1 text-xs bg-gray-700 rounded">Ctrl+K</kbd>
-              </div>
-            </div>
           </div>
           <div class="flex items-center space-x-4">
-            <button
-              class="w-11 h-11 rounded-xl bg-dark-lighter flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 group"
-            >
-              <i
-                class="fas fa-moon group-hover:rotate-12 transition-transform"
-              ></i>
-            </button>
-            <button
-              class="w-11 h-11 rounded-xl bg-dark-lighter flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 relative group"
-            >
-              <i class="fas fa-bell group-hover:animate-bounce"></i>
-              <span
-                class="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full animate-pulse flex items-center justify-center text-xs text-black font-bold"
-                >3</span
-              >
-            </button>
-
             <!-- Enhanced User Account Section -->
             <div id="userAccount" class="hidden relative">
-              <div
-                id="userAccountBtn"
-                class="flex items-center glass rounded-xl px-4 py-3 cursor-pointer hover:bg-primary/10 transition-all group"
-              >
-                <div
-                  class="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mr-3 group-hover:scale-110 transition-transform"
-                >
-                  <i class="fas fa-user text-black text-sm"></i>
-                </div>
-                <span id="userDisplayName" class="mr-3 font-medium">User</span>
-                <i
-                  class="fas fa-chevron-down text-sm group-hover:rotate-180 transition-transform"
-                ></i>
-              </div>
-
               <div
                 id="userDropdown"
                 class="user-dropdown glass rounded-2xl p-6 mt-2 shadow-2xl border border-gray-700"
               >
-                <div class="border-b border-gray-700 pb-4 mb-4">
-                  <div class="flex items-center mb-3">
-                    <div
-                      class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mr-4"
-                    >
-                      <i class="fas fa-user text-black text-lg"></i>
-                    </div>
-                    <div>
-                      <div id="dropdownUserName" class="font-bold text-lg">
-                        User
-                      </div>
-                      <div id="userRole" class="text-sm text-gray-400">
-                        Foydalanuvchi
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flex space-x-2">
-                    <span class="category-badge px-3 py-1 rounded-full text-xs"
-                      >Pro</span
-                    >
-                    <span class="category-badge px-3 py-1 rounded-full text-xs"
-                      >Active</span
-                    >
-                  </div>
-                </div>
                 <ul class="space-y-2">
                   <li>
                     <a
@@ -333,10 +265,8 @@
             <!-- Enhanced Login Button -->
             <div
               id="loginBtn"
-              class="btn-primary px-8 py-3 rounded-xl cursor-pointer transition-all font-bold"
+              class="btn-primary rounded-xl cursor-pointer transition-all font-bold"
             >
-              <i class="fas fa-sign-in-alt mr-2"></i>
-              Kirish
             </div>
           </div>
         </header>
