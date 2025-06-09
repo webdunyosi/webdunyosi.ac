@@ -6,8 +6,7 @@ const courses = [
     id: 1,
     title: "KOMPYUTER SAVODXONLIGI",
     description: "Kompyuter bilan ishlashning asosiy ko'nikmalarini o'rganing",
-    image:
-      "https://bilgi.uz/upload/iblock/49c/oygn1pbpcjri8pffoa9ctyh8rdpncoda/Kompyuter%20savodxonligi%20kursi%20Fon%20(780x470).png",
+    image: "../images/savodxonlik.png",
     videos: [
       {
         id: 1,
@@ -124,8 +123,7 @@ const courses = [
     id: 2,
     title: "HTML Asoslari",
     description: "Web sahifalar yaratishning asosiy tili - HTML ni o'rganing",
-    image:
-      "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg",
+    image: "../images/html.jpg",
     videos: [
       {
         id: 1,
@@ -237,8 +235,7 @@ const courses = [
     title: "CSS Dizayn",
     description:
       "Web sahifalarni chiroyli qilish uchun CSS stillarini o'rganing",
-    image:
-      "https://www.fannavaracademy.com/wp-content/uploads/2018/06/course-css.jpg",
+    image: "../images/css.jpg",
     videos: [
       {
         id: 1,
@@ -341,8 +338,7 @@ const courses = [
     title: "JavaScript Dasturlash",
     description:
       "Interaktiv web sahifalar yaratish uchun JavaScript ni o'rganing",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+    image: "../images/js.png",
     videos: [
       {
         id: 1,
@@ -629,27 +625,27 @@ function createCourseCard(course) {
   courseCard.className =
     "course-card glass rounded-3xl overflow-hidden transition-all border border-gray-700"
   courseCard.innerHTML = `
-                <div class="course-image-container h-56 bg-gradient-to-br from-dark-lighter to-dark flex justify-center items-center p-6 border-b border-gray-700 relative">
-                    <img src="${course.image}" alt="${course.title}" class="h-36 w-36 object-contain rounded-2xl floating-element">
-                    <div class="absolute top-4 right-4 category-badge px-3 py-1 rounded-full text-xs">
-                        <i class="fas fa-star mr-1"></i>Popular
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold mb-4 text-primary">${course.title}</h3>
-                    <p class="text-gray-300 mb-6 h-20 overflow-hidden leading-relaxed">${course.description}</p>
-                    <div class="flex justify-between items-center">
-                        <div class="flex items-center text-gray-400">
-                            <i class="fas fa-video mr-2 text-primary"></i>
-                            <span class="font-semibold">${course.videos.length} video</span>
-                        </div>
-                        <a href="#courseDetails" data-id="${course.id}" class="course-link btn-primary px-6 py-3 rounded-xl inline-flex items-center font-bold transition-all group">
-                            <i class="fas fa-play mr-2 group-hover:scale-110 transition-transform"></i>
-                            Ko'rish
-                        </a>
-                    </div>
-                </div>
-            `
+    <div class="course-image-container h-56 bg-gradient-to-br from-dark-lighter to-dark flex justify-center items-center border-b border-gray-700 relative">
+        <img src="${course.image}" alt="${course.title}" class="object-contain floating-element">
+        <div class="absolute top-4 right-4 category-badge px-3 py-1 rounded-full text-xs">
+            <i class="fas fa-star mr-1"></i>Popular
+        </div>
+    </div>
+    <div class="p-8">
+        <h3 class="text-2xl font-bold mb-4 text-primary">${course.title}</h3>
+        <p class="text-gray-300 mb-6 h-20 overflow-hidden leading-relaxed">${course.description}</p>
+        <div class="flex justify-between items-center">
+            <div class="flex items-center text-gray-400">
+                <i class="fas fa-video mr-2 text-primary"></i>
+                <span class="font-semibold">${course.videos.length} video</span>
+            </div>
+            <a href="#courseDetails" data-id="${course.id}" class="course-link btn-primary px-6 py-3 rounded-xl inline-flex items-center font-bold transition-all group">
+                <i class="fas fa-play mr-2 group-hover:scale-110 transition-transform"></i>
+                Ko'rish
+            </a>
+        </div>
+    </div>
+  `
   return courseCard
 }
 
@@ -763,9 +759,7 @@ function loadCourseDetails() {
               (video, index) => `
               <li class="video-list-item p-6 cursor-pointer transition-all ${
                 index === 0 ? "active" : ""
-              }" data-video="${
-                video.videoFile
-              }" data-title="${video.title}">
+              }" data-video="${video.videoFile}" data-title="${video.title}">
                 <div class="flex items-start">
                   <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mr-5 flex-shrink-0 floating-element">
                     <i class="fas fa-play text-primary text-lg"></i>
