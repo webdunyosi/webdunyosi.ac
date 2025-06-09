@@ -678,173 +678,140 @@ function loadCourseDetails() {
 
   // Enhanced course header
   courseContent.innerHTML = `
-                <div class="flex flex-col lg:flex-row items-center mb-10 glass rounded-3xl p-10 border border-gray-700 animate-fade-in">
-                    <div class="w-40 h-40 mb-8 lg:mb-0 lg:mr-10 bg-gradient-to-br from-dark-lighter to-dark rounded-3xl flex justify-center items-center border border-gray-700 floating-element">
-                        <img src="${course.image}" alt="${course.title}" class="w-32 h-32 object-contain rounded-2xl">
+    <div class="flex flex-col lg:flex-row items-center mb-10 glass rounded-3xl p-10 border border-gray-700 animate-fade-in">
+      <div class="w-40 h-40 mb-8 lg:mb-0 lg:mr-10 bg-gradient-to-br from-dark-lighter to-dark rounded-3xl flex justify-center items-center border border-gray-700 floating-element">
+        <img src="${course.image}" alt="${course.title}" class="w-32 h-32 object-contain rounded-2xl">
+      </div>
+      <div class="text-center lg:text-left">
+        <h1 class="text-5xl font-black mb-6 text-primary neon-text">
+          ${course.title}
+        </h1>
+        <p class="text-gray-300 text-xl mb-6 leading-relaxed">${course.description}</p>
+        <div class="flex flex-wrap justify-center lg:justify-start gap-6">
+          <div class="flex items-center text-gray-400">
+            <i class="fas fa-video mr-3 text-primary text-xl"></i>
+            <span class="text-lg font-semibold">${course.videos.length} video darslik</span>
+          </div>
+          <div class="flex items-center text-gray-400">
+            <i class="fas fa-clock mr-3 text-primary text-xl"></i>
+            <span class="text-lg font-semibold">Bepul</span>
+          </div>
+          <div class="flex items-center text-gray-400">
+            <i class="fas fa-certificate mr-3 text-primary text-xl"></i>
+            <span class="text-lg font-semibold">Sertifikat</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+
+  // Foydalanuvchi tekshiruvisiz har doim video va ro'yxat chiqadi
+  const courseContainer = document.createElement("div")
+  courseContainer.className =
+    "flex flex-col xl:flex-row gap-10 animate-slide-up"
+
+  // Video player section
+  const videoPlayerSection = document.createElement("div")
+  videoPlayerSection.className = "w-full xl:w-2/3"
+  videoPlayerSection.innerHTML = `
+    <div class="glass rounded-3xl overflow-hidden border border-gray-700">
+      <div class="video-player">
+        <div id="courseVideoPlayer" class="flex items-center justify-center bg-gradient-to-br from-dark-lighter to-dark">
+          <div class="text-center">
+            <i class="fas fa-play-circle text-primary text-8xl mb-6 floating-element"></i>
+            <p class="text-gray-400 text-xl">Video tanlang</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-8">
+        <h2 id="currentVideoTitle" class="text-3xl font-bold mb-4 neon-text">${
+          course.videos[0]?.title || "Video tanlang"
+        }</h2>
+        <div class="flex justify-between items-center">
+          <p class="text-gray-400 text-lg">${course.title}</p>
+          <div class="flex space-x-6">
+            <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
+              <i class="fas fa-thumbs-up text-xl"></i>
+            </button>
+            <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
+              <i class="fas fa-share text-xl"></i>
+            </button>
+            <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
+              <i class="fas fa-bookmark text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+
+  // Video list section
+  const videoListSection = document.createElement("div")
+  videoListSection.className = "w-full xl:w-1/3"
+  videoListSection.innerHTML = `
+    <div class="glass rounded-3xl h-full border border-gray-700">
+      <div class="p-8 border-b border-gray-700">
+        <h3 class="text-2xl font-bold flex items-center neon-text">
+          <i class="fas fa-list-play mr-4 text-primary"></i>
+          Video Darsliklar
+        </h3>
+      </div>
+      <div class="video-list-container overflow-y-auto" style="max-height: 700px;">
+        <ul id="courseVideoList" class="divide-y divide-gray-700">
+          ${course.videos
+            .map(
+              (video, index) => `
+              <li class="video-list-item p-6 cursor-pointer transition-all ${
+                index === 0 ? "active" : ""
+              }" data-video="${
+                video.videoFile
+              }" data-title="${video.title}">
+                <div class="flex items-start">
+                  <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mr-5 flex-shrink-0 floating-element">
+                    <i class="fas fa-play text-primary text-lg"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="font-bold mb-2 text-lg">${video.title}</h4>
+                    <p class="text-gray-400">Video ${index + 1}</p>
+                    <div class="flex items-center mt-2">
+                      <span class="category-badge px-2 py-1 rounded text-xs">HD</span>
+                      <span class="text-gray-500 text-xs ml-2">• 5 min</span>
                     </div>
-                    <div class="text-center lg:text-left">
-                        <h1 class="text-5xl font-black mb-6 text-primary neon-text">
-                            ${course.title}
-                        </h1>
-                        <p class="text-gray-300 text-xl mb-6 leading-relaxed">${course.description}</p>
-                        <div class="flex flex-wrap justify-center lg:justify-start gap-6">
-                            <div class="flex items-center text-gray-400">
-                                <i class="fas fa-video mr-3 text-primary text-xl"></i>
-                                <span class="text-lg font-semibold">${course.videos.length} video darslik</span>
-                            </div>
-                            <div class="flex items-center text-gray-400">
-                                <i class="fas fa-clock mr-3 text-primary text-xl"></i>
-                                <span class="text-lg font-semibold">Bepul</span>
-                            </div>
-                            <div class="flex items-center text-gray-400">
-                                <i class="fas fa-certificate mr-3 text-primary text-xl"></i>
-                                <span class="text-lg font-semibold">Sertifikat</span>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+              </li>
             `
+            )
+            .join("")}
+        </ul>
+      </div>
+    </div>
+  `
 
-  const currentUser = localStorage.getItem("currentUser")
+  courseContainer.appendChild(videoPlayerSection)
+  courseContainer.appendChild(videoListSection)
+  courseContent.appendChild(courseContainer)
 
-  if (!currentUser) {
-    // Enhanced login required message
-    const loginRequired = document.createElement("div")
-    loginRequired.className =
-      "text-center py-20 px-10 glass rounded-3xl mt-10 border border-gray-700 animate-scale-in"
-    loginRequired.innerHTML = `
-                    <div class="mb-8">
-                        <i class="fas fa-lock text-primary text-8xl mb-6 floating-element"></i>
-                        <h2 class="text-4xl font-black mb-6 neon-text">Kursni ko'rish uchun tizimga kiring</h2>
-                        <p class="text-gray-300 mb-10 text-xl leading-relaxed max-w-2xl mx-auto">Video darsliklarni ko'rish uchun ro'yxatdan o'ting yoki tizimga kiring</p>
-                    </div>
-                    <button id="courseLoginBtn" class="btn-primary px-12 py-5 rounded-xl font-bold transition-all inline-flex items-center text-xl">
-                        <i class="fas fa-sign-in-alt mr-3"></i>
-                        Kirish / Ro'yxatdan o'tish
-                    </button>
-                `
-    courseContent.appendChild(loginRequired)
-
-    document
-      .getElementById("courseLoginBtn")
-      .addEventListener("click", function () {
-        loginModal.style.display = "block"
-      })
-  } else {
-    // Enhanced course content for logged in users
-    const courseContainer = document.createElement("div")
-    courseContainer.className =
-      "flex flex-col xl:flex-row gap-10 animate-slide-up"
-
-    // Enhanced video player section
-    const videoPlayerSection = document.createElement("div")
-    videoPlayerSection.className = "w-full xl:w-2/3"
-    videoPlayerSection.innerHTML = `
-                    <div class="glass rounded-3xl overflow-hidden border border-gray-700">
-                        <div class="video-player">
-                            <div id="courseVideoPlayer" class="flex items-center justify-center bg-gradient-to-br from-dark-lighter to-dark">
-                                <div class="text-center">
-                                    <i class="fas fa-play-circle text-primary text-8xl mb-6 floating-element"></i>
-                                    <p class="text-gray-400 text-xl">Video tanlang</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <h2 id="currentVideoTitle" class="text-3xl font-bold mb-4 neon-text">${
-                              course.videos[0]?.title || "Video tanlang"
-                            }</h2>
-                            <div class="flex justify-between items-center">
-                                <p class="text-gray-400 text-lg">${
-                                  course.title
-                                }</p>
-                                <div class="flex space-x-6">
-                                    <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-                                        <i class="fas fa-thumbs-up text-xl"></i>
-                                    </button>
-                                    <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-                                        <i class="fas fa-share text-xl"></i>
-                                    </button>
-                                    <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-                                        <i class="fas fa-bookmark text-xl"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `
-
-    // Enhanced video list section
-    const videoListSection = document.createElement("div")
-    videoListSection.className = "w-full xl:w-1/3"
-    videoListSection.innerHTML = `
-                    <div class="glass rounded-3xl h-full border border-gray-700">
-                        <div class="p-8 border-b border-gray-700">
-                            <h3 class="text-2xl font-bold flex items-center neon-text">
-                                <i class="fas fa-list-play mr-4 text-primary"></i>
-                                Video Darsliklar
-                            </h3>
-                        </div>
-                        <div class="video-list-container overflow-y-auto" style="max-height: 700px;">
-                            <ul id="courseVideoList" class="divide-y divide-gray-700">
-                                ${course.videos
-                                  .map(
-                                    (video, index) => `
-                                    <li class="video-list-item p-6 cursor-pointer transition-all ${
-                                      index === 0 ? "active" : ""
-                                    }" data-video="${
-                                      video.videoFile
-                                    }" data-title="${video.title}">
-                                        <div class="flex items-start">
-                                            <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mr-5 flex-shrink-0 floating-element">
-                                                <i class="fas fa-play text-primary text-lg"></i>
-                                            </div>
-                                            <div class="flex-1">
-                                                <h4 class="font-bold mb-2 text-lg">${
-                                                  video.title
-                                                }</h4>
-                                                <p class="text-gray-400">Video ${
-                                                  index + 1
-                                                }</p>
-                                                <div class="flex items-center mt-2">
-                                                    <span class="category-badge px-2 py-1 rounded text-xs">HD</span>
-                                                    <span class="text-gray-500 text-xs ml-2">• 5 min</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                `
-                                  )
-                                  .join("")}
-                            </ul>
-                        </div>
-                    </div>
-                `
-
-    courseContainer.appendChild(videoPlayerSection)
-    courseContainer.appendChild(videoListSection)
-    courseContent.appendChild(courseContainer)
-
-    // Load first video
-    if (course.videos.length > 0) {
-      loadVideoPlayer(course.videos[0].videoFile, course.videos[0].title)
-    }
-
-    // Add enhanced video list click listeners
-    document.querySelectorAll(".video-list-item").forEach((item) => {
-      item.addEventListener("click", function () {
-        const videoUrl = this.getAttribute("data-video")
-        const videoTitle = this.getAttribute("data-title")
-
-        document
-          .querySelectorAll(".video-list-item")
-          .forEach((item) => item.classList.remove("active"))
-        this.classList.add("active")
-
-        loadVideoPlayer(videoUrl, videoTitle)
-        document.getElementById("currentVideoTitle").textContent = videoTitle
-      })
-    })
+  // Load first video
+  if (course.videos.length > 0) {
+    loadVideoPlayer(course.videos[0].videoFile, course.videos[0].title)
   }
+
+  // Video list click listeners
+  document.querySelectorAll(".video-list-item").forEach((item) => {
+    item.addEventListener("click", function () {
+      const videoUrl = this.getAttribute("data-video")
+      const videoTitle = this.getAttribute("data-title")
+
+      document
+        .querySelectorAll(".video-list-item")
+        .forEach((item) => item.classList.remove("active"))
+      this.classList.add("active")
+
+      loadVideoPlayer(videoUrl, videoTitle)
+      document.getElementById("currentVideoTitle").textContent = videoTitle
+    })
+  })
 }
 
 function loadVideoPlayer(videoUrl, videoTitle) {
