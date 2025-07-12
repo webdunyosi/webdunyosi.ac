@@ -299,7 +299,11 @@ const courses = [
         videoFile:
           "https://youtu.be/AFqHEW5JjPY?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb",
       },
-      { id: 11, title: "", videoFile: "" },
+      {
+        id: 11,
+        title: "16-dars. Flexbox haqida.",
+        videoFile: "https://youtu.be/BStVx2twbIo?si=EhByps7i26PBNI-s",
+      },
       { id: 12, title: "", videoFile: "" },
       { id: 13, title: "", videoFile: "" },
       { id: 14, title: "", videoFile: "" },
@@ -337,60 +341,61 @@ const courses = [
   {
     id: 6,
     title: "Tailwind CSS Darslari",
-    description: "Tez va zamonaviy web dizayn uchun Tailwind CSS frameworkini o'rganing",
+    description:
+      "Tez va zamonaviy web dizayn uchun Tailwind CSS frameworkini o'rganing",
     image: "../images/tailwind.png",
     videos: [
       {
         id: 1,
         title: "Tailwind CSS ga kirish",
-        videoFile: "https://youtu.be/pfaSUYaSgRo"
+        videoFile: "https://youtu.be/pfaSUYaSgRo",
       },
       {
         id: 2,
         title: "Tailwind CSS ni o'rnatish",
-        videoFile: "https://youtu.be/6zIuAyLZPH0"
+        videoFile: "https://youtu.be/6zIuAyLZPH0",
       },
       {
         id: 3,
         title: "Asosiy utility classlar",
-        videoFile: "https://youtu.be/6zIuAyLZPH0"
+        videoFile: "https://youtu.be/6zIuAyLZPH0",
       },
       {
         id: 4,
         title: "Ranglar va fonlar bilan ishlash",
-        videoFile: "https://youtu.be/6zIuAyLZPH0"
+        videoFile: "https://youtu.be/6zIuAyLZPH0",
       },
       {
         id: 5,
         title: "Margin, Padding va Box Model",
-        videoFile: "https://youtu.be/6zIuAyLZPH0"
+        videoFile: "https://youtu.be/6zIuAyLZPH0",
       },
       {
         id: 6,
         title: "Flex va Grid tizimi",
-        videoFile: "https://youtu.be/6zIuAyLZPH0"
+        videoFile: "https://youtu.be/6zIuAyLZPH0",
       },
       {
         id: 7,
         title: "Responsive dizayn va breakpointlar",
-        videoFile: "https://youtu.be/6zIuAyLZPH0"
+        videoFile: "https://youtu.be/6zIuAyLZPH0",
       },
       {
         id: 8,
         title: "Custom konfiguratsiya va theme",
-        videoFile: "https://youtu.be/6zIuAyLZPH0"
+        videoFile: "https://youtu.be/6zIuAyLZPH0",
       },
       {
         id: 9,
         title: "Animatsiya va transitionlar",
-        videoFile: "https://youtu.be/6zIuAyLZPH0"
+        videoFile: "https://youtu.be/6zIuAyLZPH0",
       },
       {
         id: 10,
         title: "Amaliy loyiha: Tailwind bilan landing page",
-        videoFile: "https://youtu.be/6zIuAyLZPH0"
-      }
-    ]
+        videoFile: "https://youtu.be/6zIuAyLZPH0",
+      },
+    ],
   },
   {
     id: 4,
@@ -555,61 +560,62 @@ const courses = [
   {
     id: 5,
     title: "React Dasturlash",
-    description: "Zamonaviy web ilovalar yaratish uchun React kutubxonasini o'rganing",
+    description:
+      "Zamonaviy web ilovalar yaratish uchun React kutubxonasini o'rganing",
     image: "../images/react.webp",
     videos: [
       {
         id: 1,
         title: "Reactga kirish",
-        videoFile: "https://youtu.be/bMknfKXIFA8"
+        videoFile: "https://youtu.be/bMknfKXIFA8",
       },
       {
         id: 2,
         title: "React komponentlar va JSX",
-        videoFile: "https://youtu.be/Ke90Tje7VS0"
+        videoFile: "https://youtu.be/Ke90Tje7VS0",
       },
       {
         id: 3,
         title: "Props va State tushunchasi",
-        videoFile: "https://youtu.be/6ThXsUwLWvc"
+        videoFile: "https://youtu.be/6ThXsUwLWvc",
       },
       {
         id: 4,
         title: "useState va useEffect hooklari",
-        videoFile: "https://youtu.be/dpw9EHDh2bM"
+        videoFile: "https://youtu.be/dpw9EHDh2bM",
       },
       {
         id: 5,
         title: "React Router bilan navigatsiya",
-        videoFile: "https://youtu.be/Law7wfdg_ls"
+        videoFile: "https://youtu.be/Law7wfdg_ls",
       },
       {
         id: 6,
         title: "Formalar va controlled komponentlar",
-        videoFile: "https://youtu.be/0ZJgIjIuY7U"
+        videoFile: "https://youtu.be/0ZJgIjIuY7U",
       },
       {
         id: 7,
         title: "API bilan ishlash (fetch, axios)",
-        videoFile: "https://youtu.be/5W_q7RQE8xE"
+        videoFile: "https://youtu.be/5W_q7RQE8xE",
       },
       {
         id: 8,
         title: "React Context va prop drilling",
-        videoFile: "https://youtu.be/35lXWvCuM8o"
+        videoFile: "https://youtu.be/35lXWvCuM8o",
       },
       {
         id: 9,
         title: "Custom hookslar yaratish",
-        videoFile: "https://youtu.be/6ThXsUwLWvc"
+        videoFile: "https://youtu.be/6ThXsUwLWvc",
       },
       {
         id: 10,
         title: "React bilan loyihani yakunlash",
-        videoFile: "https://youtu.be/Tn6-PIqc4UM"
-      }
-    ]
-  }
+        videoFile: "https://youtu.be/Tn6-PIqc4UM",
+      },
+    ],
+  },
 ]
 
 // DOM elements
@@ -1095,9 +1101,13 @@ function loadAdminUsers() {
                             <i class="fas fa-user text-primary text-2xl"></i>
                         </div>
                         <div>
-                            <h3 class="font-bold text-lg">${user.name || user.email}</h3>
+                            <h3 class="font-bold text-lg">${
+                              user.name || user.email
+                            }</h3>
                             <p class="text-gray-400">${user.email}</p>
-                            <p class="text-primary font-semibold">${user.isAdmin ? "Administrator" : "Foydalanuvchi"}</p>
+                            <p class="text-primary font-semibold">${
+                              user.isAdmin ? "Administrator" : "Foydalanuvchi"
+                            }</p>
                         </div>
                     </div>
                     <div class="flex items-center">
