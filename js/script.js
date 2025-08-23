@@ -5,6 +5,19 @@ let currentUser = null // Global variable for current user
 const courses = [
   {
     id: 1,
+    title: "CSS VAZIFALAR",
+    description: "CSS vazifalarini shu yerga joylab boraman.",
+    image: "../images/savodxonlik.png",
+    videos: [
+      {
+        id: 1,
+        title: "CSS 1-dars vazifalari",
+        videoFile: "https://youtu.be/wsV-8gbd2KM",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "KOMPYUTER SAVODXONLIGI",
     description: "Kompyuter bilan ishlashning asosiy ko'nikmalarini o'rganing",
     image: "../images/savodxonlik.png",
@@ -121,7 +134,7 @@ const courses = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "HTML Asoslari",
     description: "Web sahifalar yaratishning asosiy tili - HTML ni o'rganing",
     image: "../images/html.jpg",
@@ -232,7 +245,7 @@ const courses = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "CSS Dizayn",
     description:
       "Web sahifalarni chiroyli qilish uchun CSS stillarini o'rganing",
@@ -339,7 +352,7 @@ const courses = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     title: "Tailwind CSS Darslari",
     description:
       "Tez va zamonaviy web dizayn uchun Tailwind CSS frameworkini o'rganing",
@@ -398,7 +411,7 @@ const courses = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     title: "JavaScript Dasturlash",
     description:
       "Interaktiv web sahifalar yaratish uchun JavaScript ni o'rganing",
@@ -558,7 +571,7 @@ const courses = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     title: "React Dasturlash",
     description:
       "Zamonaviy web ilovalar yaratish uchun React kutubxonasini o'rganing",
