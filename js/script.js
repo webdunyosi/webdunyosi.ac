@@ -11,6 +11,11 @@ const courses = [
     videos: [
       {
         id: 1,
+        title: "Vazifani qayerdan topish kerak?",
+        videoFile: "https://youtu.be/PlZPhopUb0w",
+      },
+      {
+        id: 2,
         title: "CSS 1-dars vazifalari",
         videoFile: "https://youtu.be/wsV-8gbd2KM",
       },
