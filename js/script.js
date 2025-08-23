@@ -7,7 +7,7 @@ const courses = [
     id: 1,
     title: "CSS VAZIFALAR",
     description: "CSS vazifalarini shu yerga joylab boraman.",
-    image: "../images/savodxonlik.png",
+    image: "../images/css-vazifalar.png",
     videos: [
       {
         id: 1,
