@@ -19,6 +19,11 @@ const courses = [
         title: "CSS 1-dars vazifalari",
         videoFile: "https://youtu.be/wsV-8gbd2KM",
       },
+      {
+        id: 2,
+        title: "CSS 4-dars. Uyga vazifa",
+        videoFile: "https://youtu.be/s7yhYyRI6IQ",
+      },
     ],
   },
   {
