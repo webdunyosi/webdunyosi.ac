@@ -155,6 +155,19 @@ const courses = [
   },
   {
     id: 3,
+    title: "HTML NEW 2025",
+    description: "Web sahifalar yaratishning asosiy tili - HTML ni o'rganing",
+    image: "../images/html.jpg",
+    videos: [
+      {
+        id: 1,
+        title: "HTML asoslari - Kirish",
+        videoFile: "https://youtu.be/stkPk65Sthk",
+      },
+    ],
+  },
+  {
+    id: 3,
     title: "HTML Asoslari",
     description: "Web sahifalar yaratishning asosiy tili - HTML ni o'rganing",
     image: "../images/html.jpg",
