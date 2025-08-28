@@ -11,21 +11,26 @@ const courses = [
     videos: [
       {
         id: 1,
+        title: "Yangi boshlovchilar uchun",
+        videoFile: "https://youtu.be/E0gwAOier80",
+      },
+      {
+        id: 2,
         title: "Vazifani qayerdan topish kerak?",
         videoFile: "https://youtu.be/PlZPhopUb0w",
       },
       {
-        id: 2,
+        id: 3,
         title: "CSS 1-dars vazifalari",
         videoFile: "https://youtu.be/wsV-8gbd2KM",
       },
       {
-        id: 2,
+        id: 4,
         title: "CSS 3-dars. Uyga vazifa. Restaurants",
         videoFile: "https://youtu.be/xlt6KwAOAFI",
       },
       {
-        id: 2,
+        id: 5,
         title: "CSS 4-dars. Uyga vazifa",
         videoFile: "https://youtu.be/s7yhYyRI6IQ",
       },
