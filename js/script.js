@@ -21,6 +21,11 @@ const courses = [
       },
       {
         id: 2,
+        title: "CSS 3-dars. Uyga vazifa. Restaurants",
+        videoFile: "https://youtu.be/xlt6KwAOAFI",
+      },
+      {
+        id: 2,
         title: "CSS 4-dars. Uyga vazifa",
         videoFile: "https://youtu.be/s7yhYyRI6IQ",
       },
