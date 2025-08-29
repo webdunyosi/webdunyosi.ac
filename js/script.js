@@ -19,6 +19,11 @@ const courses = [
         title: "HTML asoslari - Kirish",
         videoFile: "https://youtu.be/stkPk65Sthk",
       },
+      {
+        id: 3,
+        title: "2-dars. Img, div, komentariya",
+        videoFile: "https://youtu.be/vhhwnIn7x-Y",
+      },
     ],
   },
   {
