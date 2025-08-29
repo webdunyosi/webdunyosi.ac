@@ -5,6 +5,24 @@ let currentUser = null // Global variable for current user
 const courses = [
   {
     id: 1,
+    title: "HTML NEW 2025",
+    description: "Web sahifalar yaratishning asosiy tili - HTML ni o'rganing",
+    image: "../images/html.jpg",
+    videos: [
+      {
+        id: 1,
+        title: "Yangi boshlovchilar uchun",
+        videoFile: "https://youtu.be/E0gwAOier80",
+      },
+      {
+        id: 2,
+        title: "HTML asoslari - Kirish",
+        videoFile: "https://youtu.be/stkPk65Sthk",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "CSS VAZIFALAR",
     description: "CSS vazifalarini shu yerga joylab boraman.",
     image: "../images/css-vazifalar.png",
@@ -28,24 +46,6 @@ const courses = [
         id: 4,
         title: "CSS 4-dars. Uyga vazifa",
         videoFile: "https://youtu.be/s7yhYyRI6IQ",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "HTML NEW 2025",
-    description: "Web sahifalar yaratishning asosiy tili - HTML ni o'rganing",
-    image: "../images/html.jpg",
-    videos: [
-      {
-        id: 1,
-        title: "Yangi boshlovchilar uchun",
-        videoFile: "https://youtu.be/E0gwAOier80",
-      },
-      {
-        id: 2,
-        title: "HTML asoslari - Kirish",
-        videoFile: "https://youtu.be/stkPk65Sthk",
       },
     ],
   },
