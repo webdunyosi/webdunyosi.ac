@@ -11,26 +11,21 @@ const courses = [
     videos: [
       {
         id: 1,
-        title: "Yangi boshlovchilar uchun",
-        videoFile: "https://youtu.be/E0gwAOier80",
-      },
-      {
-        id: 2,
         title: "Vazifani qayerdan topish kerak?",
         videoFile: "https://youtu.be/PlZPhopUb0w",
       },
       {
-        id: 3,
+        id: 2,
         title: "CSS 1-dars vazifalari",
         videoFile: "https://youtu.be/wsV-8gbd2KM",
       },
       {
-        id: 4,
+        id: 3,
         title: "CSS 3-dars. Uyga vazifa. Restaurants",
         videoFile: "https://youtu.be/xlt6KwAOAFI",
       },
       {
-        id: 5,
+        id: 4,
         title: "CSS 4-dars. Uyga vazifa",
         videoFile: "https://youtu.be/s7yhYyRI6IQ",
       },
@@ -38,6 +33,24 @@ const courses = [
   },
   {
     id: 2,
+    title: "HTML NEW 2025",
+    description: "Web sahifalar yaratishning asosiy tili - HTML ni o'rganing",
+    image: "../images/html.jpg",
+    videos: [
+      {
+        id: 1,
+        title: "Yangi boshlovchilar uchun",
+        videoFile: "https://youtu.be/E0gwAOier80",
+      },
+      {
+        id: 2,
+        title: "HTML asoslari - Kirish",
+        videoFile: "https://youtu.be/stkPk65Sthk",
+      },
+    ],
+  },
+  {
+    id: 3,
     title: "KOMPYUTER SAVODXONLIGI",
     description: "Kompyuter bilan ishlashning asosiy ko'nikmalarini o'rganing",
     image: "../images/savodxonlik.png",
@@ -150,19 +163,6 @@ const courses = [
         title: "Notion checklist",
         videoFile:
           "https://youtu.be/NeGIaY3pHEc?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "HTML NEW 2025",
-    description: "Web sahifalar yaratishning asosiy tili - HTML ni o'rganing",
-    image: "../images/html.jpg",
-    videos: [
-      {
-        id: 1,
-        title: "HTML asoslari - Kirish",
-        videoFile: "https://youtu.be/stkPk65Sthk",
       },
     ],
   },
