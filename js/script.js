@@ -16,7 +16,7 @@ const courses = [
       },
       {
         id: 2,
-        title: "HTML asoslari - Kirish",
+        title: "1-dars. HTML asoslari - Kirish",
         videoFile: "https://youtu.be/stkPk65Sthk",
       },
       {
