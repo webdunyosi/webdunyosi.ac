@@ -1289,21 +1289,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Enhanced login button
   loginBtn.addEventListener("click", function () {
-    loginModal.style.display = "block"
+    if (loginModal) {
+      loginModal.style.display = "block"
+    }
   })
 
   // Enhanced user dropdown
-  userAccountBtn.addEventListener("click", function () {
-    userDropdown.classList.toggle("active")
-  })
+  if (userAccountBtn) {
+    userAccountBtn.addEventListener("click", function () {
+      if (userDropdown) {
+        userDropdown.classList.toggle("active")
+      }
+    })
+  }
 
   // Close dropdowns
   document.addEventListener("click", function (e) {
-    if (
-      !userAccountBtn.contains(e.target) &&
-      !userDropdown.contains(e.target)
-    ) {
-      userDropdown.classList.remove("active")
+    if (userAccountBtn && userDropdown) {
+      if (
+        !userAccountBtn.contains(e.target) &&
+        !userDropdown.contains(e.target)
+      ) {
+        userDropdown.classList.remove("active")
+      }
     }
   })
 
@@ -1369,9 +1377,9 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
   // Enhanced forms
-  document
-    .getElementById("loginFormElement")
-    .addEventListener("submit", function (e) {
+  const loginFormEl = document.getElementById("loginFormElement")
+  if (loginFormEl) {
+    loginFormEl.addEventListener("submit", function (e) {
       e.preventDefault()
 
       const email = document.getElementById("loginEmail").value
@@ -1384,16 +1392,17 @@ document.addEventListener("DOMContentLoaded", function () {
       if (user) {
         currentUser = user
         showUserAccount(user)
-        loginModal.style.display = "none"
+        if (loginModal) loginModal.style.display = "none"
         this.reset()
       } else {
         alert("Email yoki parol noto'g'ri!")
       }
     })
+  }
 
-  document
-    .getElementById("registerFormElement")
-    .addEventListener("submit", function (e) {
+  const registerFormEl = document.getElementById("registerFormElement")
+  if (registerFormEl) {
+    registerFormEl.addEventListener("submit", function (e) {
       e.preventDefault()
 
       const email = document.getElementById("registerEmail").value
@@ -1420,9 +1429,10 @@ document.addEventListener("DOMContentLoaded", function () {
       users.push(newUser)
       currentUser = newUser
       showUserAccount(newUser)
-      loginModal.style.display = "none"
+      if (loginModal) loginModal.style.display = "none"
       this.reset()
     })
+  }
 
   document
     .getElementById("addCourseForm")
