@@ -24,6 +24,11 @@ const courses = [
         title: "2-dars. Img, div, komentariya",
         videoFile: "https://youtu.be/vhhwnIn7x-Y",
       },
+      {
+        id: 4,
+        title: "3-dars. Anchor, Iframe",
+        videoFile: "https://youtu.be/WxADzZG-AsI",
+      },
     ],
   },
   {
