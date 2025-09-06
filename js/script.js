@@ -48,9 +48,14 @@ const courses = [
         videoFile: "https://youtu.be/Cwazxwe8EXc",
       },
       {
-        id: 1,
+        id: 2,
         title: "2-dars. Text propertylari",
         videoFile: "https://youtu.be/xyhk6zIXB-M",
+      },
+      {
+        id: 3,
+        title: "3-dars. Background-color, Display",
+        videoFile: "https://youtu.be/gU2pMuKKEuE",
       },
     ],
   },
