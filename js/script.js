@@ -38,6 +38,19 @@ const courses = [
   },
   {
     id: 2,
+    title: "CSS NEW 2025",
+    description: "Web sahifalarni chiroyli qilish uchun CSS stillarini o'rganing",
+    image: "../images/css.jpg",
+    videos: [
+      {
+        id: 1,
+        title: "1-dars. Css kirish, Css ulash, Color, Selectorlar, Hover, Nth-child.",
+        videoFile: "https://youtu.be/Cwazxwe8EXc",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "CSS VAZIFALAR",
     description: "CSS vazifalarini shu yerga joylab boraman.",
     image: "../images/css-vazifalar.png",
