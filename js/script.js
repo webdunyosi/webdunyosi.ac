@@ -44,8 +44,13 @@ const courses = [
     videos: [
       {
         id: 1,
-        title: "1-dars. Css kirish, Css ulash, Color, Selectorlar, Hover, Nth-child.",
+        title: "1-dars. Css kirish, Css ulash, Color, Selectorlar, Hover, Nth-child",
         videoFile: "https://youtu.be/Cwazxwe8EXc",
+      },
+      {
+        id: 1,
+        title: "2-dars. Text propertylari",
+        videoFile: "https://youtu.be/xyhk6zIXB-M",
       },
     ],
   },
