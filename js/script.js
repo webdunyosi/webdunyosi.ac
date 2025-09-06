@@ -54,6 +54,11 @@ const courses = [
       },
       {
         id: 3,
+        title: "3-dars. Background-color, Display.",
+        videoFile: "https://youtu.be/gU2pMuKKEuE",
+      },
+      {
+        id: 4,
         title: "4-dars. Width, Height, Border.",
         videoFile: "https://youtu.be/gU2pMuKKEuE",
       },
