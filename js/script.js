@@ -67,6 +67,11 @@ const courses = [
         title: "5-dars.  Padding, Margin, Border-radius",
         videoFile: "https://youtu.be/Z50UCstYRfM",
       },
+      {
+        id: 6,
+        title: "6-dars. Background-img, Gradient",
+        videoFile: "https://youtu.be/zwbZ7n6teVA",
+      },
     ],
   },
   {
