@@ -60,7 +60,7 @@ const courses = [
       {
         id: 4,
         title: "4-dars. Width, Height, Border",
-        videoFile: "https://youtu.be/gU2pMuKKEuE",
+        videoFile: "https://youtu.be/Cg1mVfRQIGE",
       },
       {
         id: 5,
