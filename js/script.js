@@ -77,6 +77,11 @@ const courses = [
         title: "7-dars. Flex box. 1-qism",
         videoFile: "https://youtu.be/gf08BsANT30",
       },
+      {
+        id: 8,
+        title: "8-dars. Flex box. 2-qism",
+        videoFile: "https://youtu.be/0frBcO7T_Qg",
+      },
     ],
   },
   {
