@@ -72,6 +72,11 @@ const courses = [
         title: "6-dars. Background-img, Gradient",
         videoFile: "https://youtu.be/zwbZ7n6teVA",
       },
+      {
+        id: 7,
+        title: "7-dars. Flex box. 1-qism",
+        videoFile: "https://youtu.be/gf08BsANT30",
+      },
     ],
   },
   {
