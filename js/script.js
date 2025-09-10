@@ -128,6 +128,11 @@ const courses = [
         title: "CSS 4-dars. Uyga vazifa",
         videoFile: "https://youtu.be/s7yhYyRI6IQ",
       },
+      {
+        id: 6,
+        title: "CSS 5-dars. Uyga vazifa. Burger",
+        videoFile: "https://youtu.be/gFzZdlXfTUc",
+      },
     ],
   },
   // REACTJS VAZIFALAR
