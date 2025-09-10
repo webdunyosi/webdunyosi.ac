@@ -132,10 +132,10 @@ const courses = [
   },
   // REACTJS VAZIFALAR
   {
-    id: 3,
-    title: "CSS VAZIFALAR",
-    description: "CSS vazifalarini shu yerga joylab boraman.",
-    image: "../images/css-vazifalar.png",
+    id: 4,
+    title: "REACTJS VAZIFALAR",
+    description: "ReactJS darslari uchun uyga vazifalar",
+    image: "../images/rj.jpg",
     videos: [
       {
         id: 1,
