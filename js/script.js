@@ -3,6 +3,7 @@ let users = []
 let currentUser = null // Global variable for current user
 
 const courses = [
+  // HTML NEW 2025
   {
     id: 1,
     title: "HTML NEW 2025",
@@ -36,6 +37,7 @@ const courses = [
       },
     ],
   },
+  // CSS NEW 2025
   {
     id: 2,
     title: "CSS NEW 2025",
@@ -87,10 +89,16 @@ const courses = [
         title: "9-dars. Responsive, :root",
         videoFile: "https://youtu.be/q9vULhEkovI",
       },
+      {
+        id: 10,
+        title: "10-dars. box-shadow, Object-fit, Boxicons",
+        videoFile: "https://youtu.be/CTft-qAuiOI",
+      },
     ],
   },
+  // CSS VAZIFALAR
   {
-    id: 2,
+    id: 3,
     title: "CSS VAZIFALAR",
     description: "CSS vazifalarini shu yerga joylab boraman.",
     image: "../images/css-vazifalar.png",
@@ -107,11 +115,16 @@ const courses = [
       },
       {
         id: 3,
+        title: "CSS 2-dars. Uyga vazifa - EaTurkish",
+        videoFile: "https://youtu.be/qMXiR8wvclI",
+      },
+      {
+        id: 4,
         title: "CSS 3-dars. Uyga vazifa. Restaurants",
         videoFile: "https://youtu.be/xlt6KwAOAFI",
       },
       {
-        id: 4,
+        id: 5,
         title: "CSS 4-dars. Uyga vazifa",
         videoFile: "https://youtu.be/s7yhYyRI6IQ",
       },
