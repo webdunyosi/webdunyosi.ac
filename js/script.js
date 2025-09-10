@@ -130,6 +130,20 @@ const courses = [
       },
     ],
   },
+  // REACTJS VAZIFALAR
+  {
+    id: 3,
+    title: "CSS VAZIFALAR",
+    description: "CSS vazifalarini shu yerga joylab boraman.",
+    image: "../images/css-vazifalar.png",
+    videos: [
+      {
+        id: 1,
+        title: "4-dars. Props, Distruptizatsiya, map, React Developer Tools",
+        videoFile: "https://youtu.be/croIMV8jAvY",
+      },
+    ],
+  },
   {
     id: 3,
     title: "KOMPYUTER SAVODXONLIGI",
