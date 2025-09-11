@@ -604,6 +604,22 @@ body {
   .course-card {
     margin-bottom: 1rem;
   }
+
+  /* Hide tab text on tablets and smaller */
+  .course-tab span,
+  .course-tab i + span {
+    display: none;
+  }
+
+  .course-tab {
+    padding: 1rem 1.5rem !important;
+    min-width: auto;
+  }
+
+  .course-tab i {
+    margin-right: 0 !important;
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -617,5 +633,21 @@ body {
 
   .stat-card {
     padding: 1rem !important;
+  }
+
+  /* Hide tab text on mobile */
+  .course-tab span,
+  .course-tab i + span {
+    display: none;
+  }
+
+  .course-tab {
+    padding: 0.75rem 1rem !important;
+    min-width: auto;
+  }
+
+  .course-tab i {
+    margin-right: 0 !important;
+    font-size: 1.1rem;
   }
 }

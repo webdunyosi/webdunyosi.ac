@@ -378,31 +378,53 @@
           >
             <div
               class="course-tab active py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
-              data-tab="videoLessons"
+              data-tab="newVideos"
             >
-              <i class="fas fa-play-circle mr-3"></i>Video Darslar
+              <i class="fas fa-star mr-3"></i><span>Yangi Videolar</span>
+            </div>
+            <div
+              class="course-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
+              data-tab="oldVideos"
+            >
+              <i class="fas fa-history mr-3"></i><span>Eski Videolar</span>
             </div>
             <div
               class="course-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
               data-tab="assignments"
             >
-              <i class="fas fa-tasks mr-3"></i>Vazifalar
+              <i class="fas fa-tasks mr-3"></i><span>Vazifalar</span>
             </div>
           </div>
 
-          <!-- Video Lessons Section -->
-          <div id="videoLessons" class="course-content">
+          <!-- New Videos Section -->
+          <div id="newVideos" class="course-content">
             <div class="mb-8">
-              <h2 class="text-3xl font-bold mb-4 neon-text">Video Darslar</h2>
+              <h2 class="text-3xl font-bold mb-4 neon-text">Yangi Videolar</h2>
               <p class="text-gray-400 text-lg">
-                Dasturlash bo'yicha professional video darsliklar
+                Eng so'nggi va zamonaviy video darsliklar (2025)
               </p>
             </div>
             <div
-              id="videoLessonsGrid"
+              id="newVideosGrid"
               class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
             >
-              <!-- Video lessons will be loaded dynamically -->
+              <!-- New videos will be loaded dynamically -->
+            </div>
+          </div>
+
+          <!-- Old Videos Section -->
+          <div id="oldVideos" class="course-content hidden">
+            <div class="mb-8">
+              <h2 class="text-3xl font-bold mb-4 neon-text">Eski Videolar</h2>
+              <p class="text-gray-400 text-lg">
+                Asosiy va klassik video darsliklar
+              </p>
+            </div>
+            <div
+              id="oldVideosGrid"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+            >
+              <!-- Old videos will be loaded dynamically -->
             </div>
           </div>
 

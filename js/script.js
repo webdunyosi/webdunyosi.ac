@@ -2,8 +2,8 @@
 let users = []
 let currentUser = null // Global variable for current user
 
-// Video Darslar kurslari
-const videoLessons = [
+// Yangi Videolar (2025)
+const newVideos = [
   // HTML NEW 2025
   {
     id: 1,
@@ -99,6 +99,10 @@ const videoLessons = [
       },
     ],
   },
+]
+
+// Eski Videolar
+const oldVideos = [
   // KOMPYUTER SAVODXONLIGI
   {
     id: 3,
@@ -777,6 +781,9 @@ const assignments = [
   },
 ]
 
+// Barcha video darslar (yangi + eski)
+const videoLessons = [...newVideos, ...oldVideos]
+
 // Barcha kurslar (video darslar + vazifalar)
 const courses = [...videoLessons, ...assignments]
 
@@ -879,20 +886,36 @@ function loadFeaturedCourses() {
 }
 
 function loadAllCourses() {
-  loadVideoLessons()
+  loadNewVideos()
+  loadOldVideos()
   loadAssignments()
 }
 
-function loadVideoLessons() {
-  const videoLessonsGrid = document.getElementById("videoLessonsGrid")
+function loadNewVideos() {
+  const newVideosGrid = document.getElementById("newVideosGrid")
 
-  videoLessonsGrid.innerHTML = ""
+  newVideosGrid.innerHTML = ""
 
-  videoLessons.forEach((course, index) => {
+  newVideos.forEach((course, index) => {
     const courseCard = createCourseCard(course)
     courseCard.style.animationDelay = `${index * 0.15}s`
     courseCard.classList.add("animate-slide-up")
-    videoLessonsGrid.appendChild(courseCard)
+    newVideosGrid.appendChild(courseCard)
+  })
+
+  addCourseClickListeners()
+}
+
+function loadOldVideos() {
+  const oldVideosGrid = document.getElementById("oldVideosGrid")
+
+  oldVideosGrid.innerHTML = ""
+
+  oldVideos.forEach((course, index) => {
+    const courseCard = createCourseCard(course)
+    courseCard.style.animationDelay = `${index * 0.15}s`
+    courseCard.classList.add("animate-slide-up")
+    oldVideosGrid.appendChild(courseCard)
   })
 
   addCourseClickListeners()
