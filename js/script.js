@@ -905,6 +905,8 @@ function loadNewVideos() {
     const courseCard = createCourseCard(course)
     courseCard.style.animationDelay = `${index * 0.15}s`
     courseCard.classList.add("animate-slide-up")
+    const linkEl = courseCard.querySelector("a.course-link")
+    if (linkEl) linkEl.setAttribute("data-group", "new")
     newVideosGrid.appendChild(courseCard)
   })
 
@@ -920,6 +922,8 @@ function loadOldVideos() {
     const courseCard = createCourseCard(course)
     courseCard.style.animationDelay = `${index * 0.15}s`
     courseCard.classList.add("animate-slide-up")
+    const linkEl = courseCard.querySelector("a.course-link")
+    if (linkEl) linkEl.setAttribute("data-group", "old")
     oldVideosGrid.appendChild(courseCard)
   })
 
@@ -935,6 +939,8 @@ function loadAssignments() {
     const courseCard = createCourseCard(course)
     courseCard.style.animationDelay = `${index * 0.15}s`
     courseCard.classList.add("animate-slide-up")
+    const linkEl = courseCard.querySelector("a.course-link")
+    if (linkEl) linkEl.setAttribute("data-group", "assignments")
     assignmentsGrid.appendChild(courseCard)
   })
 
@@ -975,7 +981,9 @@ function addCourseClickListeners() {
     link.addEventListener("click", function (e) {
       e.preventDefault()
       const courseId = this.getAttribute("data-id")
+      const courseGroup = this.getAttribute("data-group") || null
       currentCourseId = courseId // Store current course ID in global variable
+      window.currentCourseGroup = courseGroup
       navigateTo("courseDetails")
     })
   })
@@ -986,7 +994,13 @@ let currentCourseId = null // Global variable to store current course ID
 function loadCourseDetails() {
   const courseContent = document.getElementById("courseContent")
   const courseId = parseInt(currentCourseId)
-  const course = courses.find((c) => c.id === courseId)
+  const group = window.currentCourseGroup || null
+  let sourceList = courses
+  if (group === "new") sourceList = newVideos
+  else if (group === "old") sourceList = oldVideos
+  else if (group === "assignments") sourceList = assignments
+
+  const course = sourceList.find((c) => c.id === courseId)
 
   if (!course) {
     courseContent.innerHTML =
