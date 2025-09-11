@@ -107,6 +107,11 @@ const newVideos = [
         title: "12-dars.Backdrop-filterd, sticky, z-index",
         videoFile: "https://youtu.be/U6lDfArUsqQ",
       },
+      {
+        id: 13,
+        title: "13-dars. 2D Transform",
+        videoFile: "https://youtu.be/1f_xMsUsWdA",
+      },
     ],
   },
 ]
