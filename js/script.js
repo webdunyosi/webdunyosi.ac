@@ -97,6 +97,11 @@ const newVideos = [
         title: "10-dars. box-shadow, Object-fit, Boxicons",
         videoFile: "https://youtu.be/CTft-qAuiOI",
       },
+      {
+        id: 11,
+        title: "11-dars. position, overflow",
+        videoFile: "https://youtu.be/5B4Q1uBV904",
+      },
     ],
   },
 ]
