@@ -2,7 +2,8 @@
 let users = []
 let currentUser = null // Global variable for current user
 
-const courses = [
+// Video Darslar kurslari
+const videoLessons = [
   // HTML NEW 2025
   {
     id: 1,
@@ -41,12 +42,14 @@ const courses = [
   {
     id: 2,
     title: "CSS NEW 2025",
-    description: "Web sahifalarni chiroyli qilish uchun CSS stillarini o'rganing",
+    description:
+      "Web sahifalarni chiroyli qilish uchun CSS stillarini o'rganing",
     image: "../images/css.jpg",
     videos: [
       {
         id: 1,
-        title: "1-dars. Css kirish, Css ulash, Color, Selectorlar, Hover, Nth-child",
+        title:
+          "1-dars. Css kirish, Css ulash, Color, Selectorlar, Hover, Nth-child",
         videoFile: "https://youtu.be/Cwazxwe8EXc",
       },
       {
@@ -96,59 +99,7 @@ const courses = [
       },
     ],
   },
-  // CSS VAZIFALAR
-  {
-    id: 3,
-    title: "CSS VAZIFALAR",
-    description: "CSS vazifalarini shu yerga joylab boraman.",
-    image: "../images/css-vazifalar.png",
-    videos: [
-      {
-        id: 1,
-        title: "Vazifani qayerdan topish kerak?",
-        videoFile: "https://youtu.be/PlZPhopUb0w",
-      },
-      {
-        id: 2,
-        title: "CSS 1-dars vazifalari",
-        videoFile: "https://youtu.be/wsV-8gbd2KM",
-      },
-      {
-        id: 3,
-        title: "CSS 2-dars. Uyga vazifa - EaTurkish",
-        videoFile: "https://youtu.be/qMXiR8wvclI",
-      },
-      {
-        id: 4,
-        title: "CSS 3-dars. Uyga vazifa. Restaurants",
-        videoFile: "https://youtu.be/xlt6KwAOAFI",
-      },
-      {
-        id: 5,
-        title: "CSS 4-dars. Uyga vazifa",
-        videoFile: "https://youtu.be/s7yhYyRI6IQ",
-      },
-      {
-        id: 6,
-        title: "CSS 5-dars. Uyga vazifa. Burger",
-        videoFile: "https://youtu.be/gFzZdlXfTUc",
-      },
-    ],
-  },
-  // REACTJS VAZIFALAR
-  {
-    id: 4,
-    title: "REACTJS VAZIFALAR",
-    description: "ReactJS darslari uchun uyga vazifalar",
-    image: "../images/rj.jpg",
-    videos: [
-      {
-        id: 1,
-        title: "4-dars. Props, Distruptizatsiya, map, React Developer Tools",
-        videoFile: "https://youtu.be/croIMV8jAvY",
-      },
-    ],
-  },
+  // KOMPYUTER SAVODXONLIGI
   {
     id: 3,
     title: "KOMPYUTER SAVODXONLIGI",
@@ -266,8 +217,9 @@ const courses = [
       },
     ],
   },
+  // HTML Asoslari
   {
-    id: 3,
+    id: 4,
     title: "HTML Asoslari",
     description: "Web sahifalar yaratishning asosiy tili - HTML ni o'rganing",
     image: "../images/html.jpg",
@@ -377,8 +329,9 @@ const courses = [
       },
     ],
   },
+  // CSS Dizayn
   {
-    id: 4,
+    id: 5,
     title: "CSS Dizayn",
     description:
       "Web sahifalarni chiroyli qilish uchun CSS stillarini o'rganing",
@@ -484,8 +437,9 @@ const courses = [
       { id: 43, title: "", videoFile: "" },
     ],
   },
+  // Tailwind CSS Darslari
   {
-    id: 5,
+    id: 6,
     title: "Tailwind CSS Darslari",
     description:
       "Tez va zamonaviy web dizayn uchun Tailwind CSS frameworkini o'rganing",
@@ -543,8 +497,9 @@ const courses = [
       },
     ],
   },
+  // JavaScript Dasturlash
   {
-    id: 6,
+    id: 7,
     title: "JavaScript Dasturlash",
     description:
       "Interaktiv web sahifalar yaratish uchun JavaScript ni o'rganing",
@@ -703,8 +658,9 @@ const courses = [
       },
     ],
   },
+  // React Dasturlash
   {
-    id: 7,
+    id: 8,
     title: "React Dasturlash",
     description:
       "Zamonaviy web ilovalar yaratish uchun React kutubxonasini o'rganing",
@@ -763,6 +719,66 @@ const courses = [
     ],
   },
 ]
+
+// Vazifalar kurslari
+const assignments = [
+  // CSS VAZIFALAR
+  {
+    id: 1,
+    title: "CSS VAZIFALAR",
+    description: "CSS vazifalarini shu yerga joylab boraman.",
+    image: "../images/css-vazifalar.png",
+    videos: [
+      {
+        id: 1,
+        title: "Vazifani qayerdan topish kerak?",
+        videoFile: "https://youtu.be/PlZPhopUb0w",
+      },
+      {
+        id: 2,
+        title: "CSS 1-dars vazifalari",
+        videoFile: "https://youtu.be/wsV-8gbd2KM",
+      },
+      {
+        id: 3,
+        title: "CSS 2-dars. Uyga vazifa - EaTurkish",
+        videoFile: "https://youtu.be/qMXiR8wvclI",
+      },
+      {
+        id: 4,
+        title: "CSS 3-dars. Uyga vazifa. Restaurants",
+        videoFile: "https://youtu.be/xlt6KwAOAFI",
+      },
+      {
+        id: 5,
+        title: "CSS 4-dars. Uyga vazifa",
+        videoFile: "https://youtu.be/s7yhYyRI6IQ",
+      },
+      {
+        id: 6,
+        title: "CSS 5-dars. Uyga vazifa. Burger",
+        videoFile: "https://youtu.be/gFzZdlXfTUc",
+      },
+    ],
+  },
+  // REACTJS VAZIFALAR
+  {
+    id: 2,
+    title: "REACTJS VAZIFALAR",
+    description: "ReactJS darslari uchun uyga vazifalar",
+    image: "../images/rj.jpg",
+    videos: [
+      {
+        id: 1,
+        title: "4-dars. Props, Distruptizatsiya, map, React Developer Tools",
+        videoFile: "https://youtu.be/croIMV8jAvY",
+      },
+    ],
+  },
+]
+
+// Barcha kurslar (video darslar + vazifalar)
+const courses = [...videoLessons, ...assignments]
 
 // DOM elements
 const loginBtn = document.getElementById("loginBtn")
@@ -863,15 +879,35 @@ function loadFeaturedCourses() {
 }
 
 function loadAllCourses() {
-  const allCoursesGrid = document.getElementById("allCoursesGrid")
+  loadVideoLessons()
+  loadAssignments()
+}
 
-  allCoursesGrid.innerHTML = ""
+function loadVideoLessons() {
+  const videoLessonsGrid = document.getElementById("videoLessonsGrid")
 
-  courses.forEach((course, index) => {
+  videoLessonsGrid.innerHTML = ""
+
+  videoLessons.forEach((course, index) => {
     const courseCard = createCourseCard(course)
     courseCard.style.animationDelay = `${index * 0.15}s`
     courseCard.classList.add("animate-slide-up")
-    allCoursesGrid.appendChild(courseCard)
+    videoLessonsGrid.appendChild(courseCard)
+  })
+
+  addCourseClickListeners()
+}
+
+function loadAssignments() {
+  const assignmentsGrid = document.getElementById("assignmentsGrid")
+
+  assignmentsGrid.innerHTML = ""
+
+  assignments.forEach((course, index) => {
+    const courseCard = createCourseCard(course)
+    courseCard.style.animationDelay = `${index * 0.15}s`
+    courseCard.classList.add("animate-slide-up")
+    assignmentsGrid.appendChild(courseCard)
   })
 
   addCourseClickListeners()
@@ -1463,6 +1499,25 @@ document.addEventListener("DOMContentLoaded", function () {
       if (tabName === "videos") {
         loadCourseOptions()
       }
+    })
+  })
+
+  // Course tab switching
+  document.querySelectorAll(".course-tab").forEach((tab) => {
+    tab.addEventListener("click", function () {
+      const tabName = this.getAttribute("data-tab")
+
+      document.querySelectorAll(".course-tab").forEach((t) => {
+        t.classList.remove("active")
+      })
+
+      this.classList.add("active")
+
+      document.querySelectorAll(".course-content").forEach((content) => {
+        content.classList.add("hidden")
+      })
+
+      document.getElementById(tabName).classList.remove("hidden")
     })
   })
 

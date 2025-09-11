@@ -59,11 +59,24 @@ body {
 }
 
 /* Active tab styling */
-.admin-tab.active {
+.admin-tab.active,
+.course-tab.active {
   background: linear-gradient(135deg, #00ff88, #00cc6a);
   color: #000;
   box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
   transform: translateY(-2px);
+}
+
+/* Course tab styling */
+.course-tab {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.course-tab:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: rgba(0, 255, 136, 0.4);
+  color: #00ff88;
 }
 
 /* Active form container */

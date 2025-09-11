@@ -372,11 +372,52 @@
             </p>
           </div>
 
+          <!-- Course Categories Tabs -->
           <div
-            id="allCoursesGrid"
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+            class="flex bg-dark-lighter rounded-2xl mb-10 overflow-hidden overflow-x-auto border border-gray-700"
           >
-            <!-- Courses will be loaded dynamically -->
+            <div
+              class="course-tab active py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
+              data-tab="videoLessons"
+            >
+              <i class="fas fa-play-circle mr-3"></i>Video Darslar
+            </div>
+            <div
+              class="course-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
+              data-tab="assignments"
+            >
+              <i class="fas fa-tasks mr-3"></i>Vazifalar
+            </div>
+          </div>
+
+          <!-- Video Lessons Section -->
+          <div id="videoLessons" class="course-content">
+            <div class="mb-8">
+              <h2 class="text-3xl font-bold mb-4 neon-text">Video Darslar</h2>
+              <p class="text-gray-400 text-lg">
+                Dasturlash bo'yicha professional video darsliklar
+              </p>
+            </div>
+            <div
+              id="videoLessonsGrid"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+            >
+              <!-- Video lessons will be loaded dynamically -->
+            </div>
+          </div>
+
+          <!-- Assignments Section -->
+          <div id="assignments" class="course-content hidden">
+            <div class="mb-8">
+              <h2 class="text-3xl font-bold mb-4 neon-text">Vazifalar</h2>
+              <p class="text-gray-400 text-lg">Amaliy vazifalar va loyihalar</p>
+            </div>
+            <div
+              id="assignmentsGrid"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+            >
+              <!-- Assignments will be loaded dynamically -->
+            </div>
           </div>
         </div>
 
