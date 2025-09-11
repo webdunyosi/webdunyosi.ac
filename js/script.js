@@ -102,6 +102,11 @@ const newVideos = [
         title: "11-dars. position, overflow",
         videoFile: "https://youtu.be/5B4Q1uBV904",
       },
+      {
+        id: 12,
+        title: "12-dars.Backdrop-filterd, sticky, z-index",
+        videoFile: "https://youtu.be/U6lDfArUsqQ",
+      },
     ],
   },
 ]
