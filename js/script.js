@@ -112,6 +112,11 @@ const newVideos = [
         title: "13-dars. 2D Transform",
         videoFile: "https://youtu.be/1f_xMsUsWdA",
       },
+      {
+        id: 14,
+        title: "14-dars. Animation",
+        videoFile: "https://youtu.be/TeYUlI1tUsc",
+      },
     ],
   },
 ]
