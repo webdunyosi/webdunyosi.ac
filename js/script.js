@@ -13,7 +13,6 @@ const activeStudents = [
     projectScore: 50, // loyihalar uchun ball
     completedTasks: 9, // bajarilgan vazifalar soni
     startedAt: "01.05.2025", // kursni boshlagan sana
-    achievements: ["Top Performer", "Fast Learner", "Team Player"], // erishilgan yutuqlar
     courses: ["HTML NEW 2025", "CSS NEW 2025", "JavaScript Dasturlash"], // o'qiyotgan kurslar
   },
   {
@@ -26,7 +25,6 @@ const activeStudents = [
     projectScore: 90,
     completedTasks: 7,
     startedAt: "",
-    achievements: ["Creative Thinker", "Problem Solver"],
     courses: ["CSS NEW 2025", "React Dasturlash"],
   },
   {
@@ -39,7 +37,6 @@ const activeStudents = [
     projectScore: 85,
     completedTasks: 6,
     startedAt: "",
-    achievements: ["Consistent Learner"],
     courses: ["HTML Asoslari", "CSS Dizayn", "JavaScript Dasturlash"],
   },
   {
@@ -52,7 +49,6 @@ const activeStudents = [
     projectScore: 78,
     completedTasks: 5,
     startedAt: "",
-    achievements: ["Dedicated Student"],
     courses: ["HTML NEW 2025", "CSS NEW 2025"],
   },
   {
@@ -65,7 +61,6 @@ const activeStudents = [
     projectScore: 70,
     completedTasks: 4,
     startedAt: "",
-    achievements: ["Improving"],
     courses: ["HTML Asoslari", "CSS Dizayn"],
   },
   {
@@ -78,7 +73,6 @@ const activeStudents = [
     projectScore: 94,
     completedTasks: 9,
     startedAt: "",
-    achievements: ["Top Performer", "Innovation Leader", "Mentor"],
     courses: [
       "HTML NEW 2025",
       "CSS NEW 2025",
@@ -96,7 +90,6 @@ const activeStudents = [
     projectScore: 82,
     completedTasks: 6,
     startedAt: "",
-    achievements: ["Hard Worker"],
     courses: ["JavaScript Dasturlash", "React Dasturlash"],
   },
   {
@@ -109,7 +102,6 @@ const activeStudents = [
     projectScore: 87,
     completedTasks: 7,
     startedAt: "",
-    achievements: ["Detail Oriented", "Quick Learner"],
     courses: ["CSS NEW 2025", "Tailwind CSS Darslari", "React Dasturlash"],
   },
   {
@@ -122,7 +114,6 @@ const activeStudents = [
     projectScore: 74,
     completedTasks: 5,
     startedAt: "",
-    achievements: ["Steady Progress"],
     courses: ["HTML Asoslari", "CSS Dizayn", "JavaScript Dasturlash"],
   },
   {
@@ -135,7 +126,6 @@ const activeStudents = [
     projectScore: 91,
     completedTasks: 8,
     startedAt: "",
-    achievements: ["Creative Designer", "Code Master"],
     courses: ["CSS NEW 2025", "Tailwind CSS Darslari", "React Dasturlash"],
   },
 ]
@@ -1473,17 +1463,7 @@ function createStudentCard(student, index) {
       </div>
     </div>
 
-    <div class="mb-4">
-      <h4 class="text-sm font-semibold text-gray-300 mb-2">Yutuqlar</h4>
-      <div class="flex flex-wrap">
-        ${student.achievements
-          .map(
-            (achievement) =>
-              `<span class="achievement-badge">${achievement}</span>`
-          )
-          .join("")}
-      </div>
-    </div>
+    
 
     <div>
       <h4 class="text-sm font-semibold text-gray-300 mb-2">Kurslar</h4>
