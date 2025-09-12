@@ -5,34 +5,31 @@ let currentUser = null // Global variable for current user
 // Faol o'quvchilar ma'lumotlari
 const activeStudents = [
   {
-    id: 1,
-    name: "Ahmad Karimov",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    weeklyActivity: 95,
-    taskScore: 92,
-    projectScore: 88,
-    totalScore: 91.7,
-    completedTasks: 8,
-    completedProjects: 3,
-    lastActive: "2 soat oldin",
-    level: "excellent",
-    achievements: ["Top Performer", "Fast Learner", "Team Player"],
-    courses: ["HTML NEW 2025", "CSS NEW 2025", "JavaScript Dasturlash"],
+    id: 1, // o'quvchi raqami
+    name: "Dustmurodov Akmal", // o'quvchi ismi
+    avatar: "../images/students/DustmurodovAkmal.png", // o'quvchi rasmi
+    attendance: 88, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 50, // loyihalar uchun ball
+    completedTasks: 8, // bajarilgan vazifalar soni
+    completedProjects: 3, // bajarilgan loyihalar soni
+    lastActive: "2 soat oldin", // oxirgi faollik vaqti
+
+    achievements: ["Top Performer", "Fast Learner", "Team Player"], // erishilgan yutuqlar
+    courses: ["HTML NEW 2025", "CSS NEW 2025", "JavaScript Dasturlash"], // o'qiyotgan kurslar
   },
   {
     id: 2,
     name: "Malika Tosheva",
     avatar:
       "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-    weeklyActivity: 88,
+    attendance: 88,
     taskScore: 85,
     projectScore: 90,
-    totalScore: 87.7,
     completedTasks: 7,
     completedProjects: 2,
     lastActive: "5 soat oldin",
-    level: "excellent",
+
     achievements: ["Creative Thinker", "Problem Solver"],
     courses: ["CSS NEW 2025", "React Dasturlash"],
   },
@@ -41,14 +38,13 @@ const activeStudents = [
     name: "Javohir Rahimov",
     avatar:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    weeklyActivity: 82,
+    attendance: 82,
     taskScore: 78,
     projectScore: 85,
-    totalScore: 81.7,
     completedTasks: 6,
     completedProjects: 2,
     lastActive: "1 kun oldin",
-    level: "good",
+
     achievements: ["Consistent Learner"],
     courses: ["HTML Asoslari", "CSS Dizayn", "JavaScript Dasturlash"],
   },
@@ -57,14 +53,13 @@ const activeStudents = [
     name: "Dilnoza Qodirova",
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    weeklyActivity: 75,
+    attendance: 75,
     taskScore: 72,
     projectScore: 78,
-    totalScore: 75.0,
     completedTasks: 5,
     completedProjects: 1,
     lastActive: "2 kun oldin",
-    level: "good",
+
     achievements: ["Dedicated Student"],
     courses: ["HTML NEW 2025", "CSS NEW 2025"],
   },
@@ -73,14 +68,13 @@ const activeStudents = [
     name: "Bobur Mirzayev",
     avatar:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    weeklyActivity: 68,
+    attendance: 68,
     taskScore: 65,
     projectScore: 70,
-    totalScore: 67.7,
     completedTasks: 4,
     completedProjects: 1,
     lastActive: "3 kun oldin",
-    level: "average",
+
     achievements: ["Improving"],
     courses: ["HTML Asoslari", "CSS Dizayn"],
   },
@@ -89,14 +83,13 @@ const activeStudents = [
     name: "Zarina Usmanova",
     avatar:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    weeklyActivity: 92,
+    attendance: 92,
     taskScore: 89,
     projectScore: 94,
-    totalScore: 91.7,
     completedTasks: 9,
     completedProjects: 4,
     lastActive: "30 daqiqa oldin",
-    level: "excellent",
+
     achievements: ["Top Performer", "Innovation Leader", "Mentor"],
     courses: [
       "HTML NEW 2025",
@@ -110,14 +103,13 @@ const activeStudents = [
     name: "Sardor Toshmatov",
     avatar:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
-    weeklyActivity: 79,
+    attendance: 79,
     taskScore: 76,
     projectScore: 82,
-    totalScore: 79.0,
     completedTasks: 6,
     completedProjects: 2,
     lastActive: "4 soat oldin",
-    level: "good",
+
     achievements: ["Hard Worker"],
     courses: ["JavaScript Dasturlash", "React Dasturlash"],
   },
@@ -126,14 +118,13 @@ const activeStudents = [
     name: "Gulnora Xasanova",
     avatar:
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face",
-    weeklyActivity: 85,
+    attendance: 85,
     taskScore: 82,
     projectScore: 87,
-    totalScore: 84.7,
     completedTasks: 7,
     completedProjects: 3,
     lastActive: "1 soat oldin",
-    level: "excellent",
+
     achievements: ["Detail Oriented", "Quick Learner"],
     courses: ["CSS NEW 2025", "Tailwind CSS Darslari", "React Dasturlash"],
   },
@@ -142,14 +133,13 @@ const activeStudents = [
     name: "Rustam Sobirov",
     avatar:
       "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
-    weeklyActivity: 71,
+    attendance: 71,
     taskScore: 68,
     projectScore: 74,
-    totalScore: 71.0,
     completedTasks: 5,
     completedProjects: 1,
     lastActive: "1 kun oldin",
-    level: "good",
+
     achievements: ["Steady Progress"],
     courses: ["HTML Asoslari", "CSS Dizayn", "JavaScript Dasturlash"],
   },
@@ -158,18 +148,42 @@ const activeStudents = [
     name: "Madina Karimova",
     avatar:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    weeklyActivity: 88,
+    attendance: 88,
     taskScore: 85,
     projectScore: 91,
-    totalScore: 88.0,
     completedTasks: 8,
     completedProjects: 3,
     lastActive: "3 soat oldin",
-    level: "excellent",
+
     achievements: ["Creative Designer", "Code Master"],
     courses: ["CSS NEW 2025", "Tailwind CSS Darslari", "React Dasturlash"],
   },
 ]
+
+// Recalculate totalScore automatically from attendance, taskScore, projectScore
+function computeStudentsTotalScores() {
+  activeStudents.forEach((student) => {
+    const attendance = Number(student.attendance) || 0
+    const task = Number(student.taskScore) || 0
+    const project = Number(student.projectScore) || 0
+    const average = (attendance + task + project) / 3
+    student.totalScore = Math.round(average * 10) / 10
+
+    // Assign level automatically based on totalScore
+    if (student.totalScore >= 90) {
+      student.level = "excellent"
+    } else if (student.totalScore >= 70) {
+      student.level = "good"
+    } else if (student.totalScore >= 50) {
+      student.level = "average"
+    } else {
+      student.level = "low"
+    }
+  })
+}
+
+// Compute scores on initialization
+computeStudentsTotalScores()
 
 // Yangi Videolar (2025)
 const newVideos = [
@@ -1379,7 +1393,7 @@ function loadStudentsStatistics() {
     activeStudents.reduce((sum, student) => sum + student.totalScore, 0) /
     totalStudents
   const averageAttendance =
-    activeStudents.reduce((sum, student) => sum + student.weeklyActivity, 0) /
+    activeStudents.reduce((sum, student) => sum + student.attendance, 0) /
     totalStudents
 
   document.getElementById("totalActiveStudents").textContent = totalStudents
@@ -1460,7 +1474,7 @@ function createStudentCard(student, index) {
 
     <div class="student-stats">
       <div class="stat-item">
-        <div class="stat-value">${student.weeklyActivity}%</div>
+        <div class="stat-value">${student.attendance}%</div>
         <div class="stat-label">Yo'qlama natijasi</div>
       </div>
       <div class="stat-item">
