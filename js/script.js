@@ -12,7 +12,7 @@ const activeStudents = [
     projectScore: 50, // loyihalar uchun ball
     completedTasks: 9, // bajarilgan vazifalar soni
     startedAt: "01.05.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwind", "javascript"], // o'qiyotgan kurslar
+    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
   {
     name: "Dustov Eldor", // o'quvchi ismi
@@ -22,7 +22,47 @@ const activeStudents = [
     projectScore: 0, // loyihalar uchun ball
     completedTasks: 1, // bajarilgan vazifalar soni
     startedAt: "08.09.2025", // kursni boshlagan sana
-    courses: ["html", "css"], // o'qiyotgan kurslar
+    courses: ["html", "css"], // Tugallangan kurslar
+  },
+  {
+    name: "Abdalov Sanat", // o'quvchi ismi
+    avatar: "../images/students/AbdalovSanat.png", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 50, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 6, // bajarilgan vazifalar soni
+    startedAt: "08.09.2025", // kursni boshlagan sana
+    courses: ["html", "css"], // Tugallangan kurslar
+  },
+  {
+    name: "Mamarayimov Nemat", // o'quvchi ismi
+    avatar: "../images/students/MamarayimovNemat.png", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 9, // bajarilgan vazifalar soni
+    startedAt: "04.08.2025", // kursni boshlagan sana
+    courses: ["html", "css"], // Tugallangan kurslar
+  },
+  {
+    name: "Mavlonova Marjona", // o'quvchi ismi
+    avatar: "../images/students/MavlonovaMarjona.png", // o'quvchi rasmi
+    attendance: 63, // yo'qlama foizi
+    taskScore: 11, // vazifalar uchun ball
+    projectScore: 100, // loyihalar uchun ball
+    completedTasks: 1, // bajarilgan vazifalar soni
+    startedAt: "01.05.2025", // kursni boshlagan sana
+    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+  },
+  {
+    name: "Axbutayev Muhammadali", // o'quvchi ismi
+    avatar: "../images/students/AxbutayevMuhammadali.png", // o'quvchi rasmi
+    attendance: 93, // yo'qlama foizi
+    taskScore: 89, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 8, // bajarilgan vazifalar soni
+    startedAt: "28.08.2025", // kursni boshlagan sana
+    courses: ["html", "css"], // Tugallangan kurslar
   },
 ]
 
