@@ -879,8 +879,13 @@ const assignments = [
       },
       {
         id: 6,
-        title: "CSS 5-dars. Uyga vazifa. Burger",
+        title: "CSS 5-dars. Uyga vazifa. Max Way",
         videoFile: "https://youtu.be/gFzZdlXfTUc",
+      },
+      {
+        id: 7,
+        title: "6-dars. Uyga vazifa. Amid",
+        videoFile: "https://youtu.be/caLAMR0yDzg",
       },
     ],
   },
