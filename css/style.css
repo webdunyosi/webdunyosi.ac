@@ -805,7 +805,7 @@ body {
 }
 
 /* Add these styles to your existing styles */
-@media (max-width: 1223px) {
+@media (max-width: 1440px) {
   .student-tab {
     padding: 0.75rem 1rem !important;
     font-size: 0.9rem;
