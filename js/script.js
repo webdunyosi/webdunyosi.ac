@@ -2,6 +2,175 @@
 let users = []
 let currentUser = null // Global variable for current user
 
+// Faol o'quvchilar ma'lumotlari
+const activeStudents = [
+  {
+    id: 1,
+    name: "Ahmad Karimov",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    weeklyActivity: 95,
+    taskScore: 92,
+    projectScore: 88,
+    totalScore: 91.7,
+    completedTasks: 8,
+    completedProjects: 3,
+    lastActive: "2 soat oldin",
+    level: "excellent",
+    achievements: ["Top Performer", "Fast Learner", "Team Player"],
+    courses: ["HTML NEW 2025", "CSS NEW 2025", "JavaScript Dasturlash"],
+  },
+  {
+    id: 2,
+    name: "Malika Tosheva",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    weeklyActivity: 88,
+    taskScore: 85,
+    projectScore: 90,
+    totalScore: 87.7,
+    completedTasks: 7,
+    completedProjects: 2,
+    lastActive: "5 soat oldin",
+    level: "excellent",
+    achievements: ["Creative Thinker", "Problem Solver"],
+    courses: ["CSS NEW 2025", "React Dasturlash"],
+  },
+  {
+    id: 3,
+    name: "Javohir Rahimov",
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    weeklyActivity: 82,
+    taskScore: 78,
+    projectScore: 85,
+    totalScore: 81.7,
+    completedTasks: 6,
+    completedProjects: 2,
+    lastActive: "1 kun oldin",
+    level: "good",
+    achievements: ["Consistent Learner"],
+    courses: ["HTML Asoslari", "CSS Dizayn", "JavaScript Dasturlash"],
+  },
+  {
+    id: 4,
+    name: "Dilnoza Qodirova",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    weeklyActivity: 75,
+    taskScore: 72,
+    projectScore: 78,
+    totalScore: 75.0,
+    completedTasks: 5,
+    completedProjects: 1,
+    lastActive: "2 kun oldin",
+    level: "good",
+    achievements: ["Dedicated Student"],
+    courses: ["HTML NEW 2025", "CSS NEW 2025"],
+  },
+  {
+    id: 5,
+    name: "Bobur Mirzayev",
+    avatar:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    weeklyActivity: 68,
+    taskScore: 65,
+    projectScore: 70,
+    totalScore: 67.7,
+    completedTasks: 4,
+    completedProjects: 1,
+    lastActive: "3 kun oldin",
+    level: "average",
+    achievements: ["Improving"],
+    courses: ["HTML Asoslari", "CSS Dizayn"],
+  },
+  {
+    id: 6,
+    name: "Zarina Usmanova",
+    avatar:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    weeklyActivity: 92,
+    taskScore: 89,
+    projectScore: 94,
+    totalScore: 91.7,
+    completedTasks: 9,
+    completedProjects: 4,
+    lastActive: "30 daqiqa oldin",
+    level: "excellent",
+    achievements: ["Top Performer", "Innovation Leader", "Mentor"],
+    courses: [
+      "HTML NEW 2025",
+      "CSS NEW 2025",
+      "JavaScript Dasturlash",
+      "React Dasturlash",
+    ],
+  },
+  {
+    id: 7,
+    name: "Sardor Toshmatov",
+    avatar:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
+    weeklyActivity: 79,
+    taskScore: 76,
+    projectScore: 82,
+    totalScore: 79.0,
+    completedTasks: 6,
+    completedProjects: 2,
+    lastActive: "4 soat oldin",
+    level: "good",
+    achievements: ["Hard Worker"],
+    courses: ["JavaScript Dasturlash", "React Dasturlash"],
+  },
+  {
+    id: 8,
+    name: "Gulnora Xasanova",
+    avatar:
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face",
+    weeklyActivity: 85,
+    taskScore: 82,
+    projectScore: 87,
+    totalScore: 84.7,
+    completedTasks: 7,
+    completedProjects: 3,
+    lastActive: "1 soat oldin",
+    level: "excellent",
+    achievements: ["Detail Oriented", "Quick Learner"],
+    courses: ["CSS NEW 2025", "Tailwind CSS Darslari", "React Dasturlash"],
+  },
+  {
+    id: 9,
+    name: "Rustam Sobirov",
+    avatar:
+      "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
+    weeklyActivity: 71,
+    taskScore: 68,
+    projectScore: 74,
+    totalScore: 71.0,
+    completedTasks: 5,
+    completedProjects: 1,
+    lastActive: "1 kun oldin",
+    level: "good",
+    achievements: ["Steady Progress"],
+    courses: ["HTML Asoslari", "CSS Dizayn", "JavaScript Dasturlash"],
+  },
+  {
+    id: 10,
+    name: "Madina Karimova",
+    avatar:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
+    weeklyActivity: 88,
+    taskScore: 85,
+    projectScore: 91,
+    totalScore: 88.0,
+    completedTasks: 8,
+    completedProjects: 3,
+    lastActive: "3 soat oldin",
+    level: "excellent",
+    achievements: ["Creative Designer", "Code Master"],
+    courses: ["CSS NEW 2025", "Tailwind CSS Darslari", "React Dasturlash"],
+  },
+]
+
 // Yangi Videolar (2025)
 const newVideos = [
   // HTML NEW 2025
@@ -846,6 +1015,9 @@ function navigateTo(page) {
       case "courseDetails":
         loadCourseDetails()
         break
+      case "students":
+        loadStudentsData()
+        break
       case "admin":
         loadAdminData()
         break
@@ -1192,6 +1364,158 @@ function extractVimeoId(url) {
     /vimeo\.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|)(\d+)(?:$|\/|\?)/
   const match = url.match(regex)
   return match ? match[3] : null
+}
+
+// Enhanced students functions
+function loadStudentsData() {
+  loadStudentsStatistics()
+  loadStudentsList()
+  addStudentTabListeners()
+}
+
+function loadStudentsStatistics() {
+  const totalStudents = activeStudents.length
+  const averageScore =
+    activeStudents.reduce((sum, student) => sum + student.totalScore, 0) /
+    totalStudents
+  const averageAttendance =
+    activeStudents.reduce((sum, student) => sum + student.weeklyActivity, 0) /
+    totalStudents
+
+  document.getElementById("totalActiveStudents").textContent = totalStudents
+  document.getElementById("averageScore").textContent = Math.round(averageScore)
+  document.getElementById("averageAttendance").textContent =
+    Math.round(averageAttendance) + "%"
+}
+
+function loadStudentsList(filter = "all") {
+  const studentsList = document.getElementById("studentsList")
+  studentsList.innerHTML = ""
+
+  let filteredStudents = activeStudents
+
+  if (filter !== "all") {
+    filteredStudents = activeStudents.filter(
+      (student) => student.level === filter
+    )
+  }
+
+  // Sort by total score descending
+  filteredStudents.sort((a, b) => b.totalScore - a.totalScore)
+
+  filteredStudents.forEach((student, index) => {
+    const studentCard = createStudentCard(student, index)
+    studentsList.appendChild(studentCard)
+  })
+}
+
+function createStudentCard(student, index) {
+  const studentCard = document.createElement("div")
+  studentCard.className = "student-card glass animate-fade-in"
+  studentCard.style.animationDelay = `${index * 0.1}s`
+
+  const levelText = {
+    excellent: "A'lo",
+    good: "Yaxshi",
+    average: "Qoniqarli",
+  }
+
+  const levelColor = {
+    excellent: "excellent",
+    good: "good",
+    average: "average",
+  }
+
+  studentCard.innerHTML = `
+    <div class="student-level-badge ${levelColor[student.level]}">
+      ${levelText[student.level]}
+    </div>
+    
+    <div class="flex items-center mb-6">
+      <img src="${student.avatar}" alt="${
+    student.name
+  }" class="student-avatar mr-4">
+      <div class="flex-1">
+        <h3 class="text-xl font-bold text-primary mb-1">${student.name}</h3>
+        <div class="last-active">
+          <i class="fas fa-clock"></i>
+          <span>${student.lastActive}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <div class="flex justify-between items-center mb-2">
+        <span class="text-sm font-semibold text-gray-300">Umumiy natija</span>
+        <span class="text-lg font-bold text-primary">${
+          student.totalScore
+        }%</span>
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" style="width: ${
+          student.totalScore
+        }%; background: linear-gradient(90deg, #00ff88, #00cc6a);"></div>
+      </div>
+    </div>
+
+    <div class="student-stats">
+      <div class="stat-item">
+        <div class="stat-value">${student.weeklyActivity}%</div>
+        <div class="stat-label">Yo'qlama natijasi</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">${student.taskScore}%</div>
+        <div class="stat-label">Vazifalar</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">${student.projectScore}%</div>
+        <div class="stat-label">Loyihalar</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">${student.completedTasks}</div>
+        <div class="stat-label">Bajarilgan vazifalar</div>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h4 class="text-sm font-semibold text-gray-300 mb-2">Yutuqlar</h4>
+      <div class="flex flex-wrap">
+        ${student.achievements
+          .map(
+            (achievement) =>
+              `<span class="achievement-badge">${achievement}</span>`
+          )
+          .join("")}
+      </div>
+    </div>
+
+    <div>
+      <h4 class="text-sm font-semibold text-gray-300 mb-2">Kurslar</h4>
+      <div class="course-tags">
+        ${student.courses
+          .map((course) => `<span class="course-tag">${course}</span>`)
+          .join("")}
+      </div>
+    </div>
+  `
+
+  return studentCard
+}
+
+function addStudentTabListeners() {
+  document.querySelectorAll(".student-tab").forEach((tab) => {
+    tab.addEventListener("click", function () {
+      const tabName = this.getAttribute("data-tab")
+
+      document.querySelectorAll(".student-tab").forEach((t) => {
+        t.classList.remove("active")
+      })
+
+      this.classList.add("active")
+
+      loadStudentsList(tabName)
+    })
+  })
 }
 
 // Enhanced profile functions

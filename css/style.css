@@ -79,6 +79,25 @@ body {
   color: #00ff88;
 }
 
+/* Student tab styling */
+.student-tab {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.student-tab:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: rgba(0, 255, 136, 0.4);
+  color: #00ff88;
+}
+
+.student-tab.active {
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  color: #000;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+  transform: translateY(-2px);
+}
+
 /* Active form container */
 .form-container.active {
   display: block;
@@ -577,10 +596,241 @@ body {
   transform: scale(1.05);
 }
 
+/* Student card styling */
+.student-card {
+  background: linear-gradient(
+    145deg,
+    rgba(26, 26, 26, 0.95),
+    rgba(15, 15, 15, 0.98)
+  );
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.student-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(0, 255, 136, 0.05) 50%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.student-card:hover::before {
+  opacity: 1;
+}
+
+.student-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(0, 255, 136, 0.2);
+  border-color: rgba(0, 255, 136, 0.5);
+}
+
+.student-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 255, 136, 0.3);
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.student-card:hover .student-avatar {
+  border-color: rgba(0, 255, 136, 0.6);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
+.student-level-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.student-level-badge.excellent {
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  color: #000;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+.student-level-badge.good {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.student-level-badge.average {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+
+.progress-bar-container {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  height: 8px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 1rem;
+  transition: width 0.8s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: progress-shine 2s infinite;
+}
+
+.achievement-badge {
+  display: inline-block;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  color: #00ff88;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.achievement-badge:hover {
+  background: rgba(0, 255, 136, 0.2);
+  transform: scale(1.05);
+}
+
+.student-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00ff88;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.course-tag {
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  color: #00ff88;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.course-tag:hover {
+  background: rgba(0, 255, 136, 0.2);
+  transform: scale(1.05);
+}
+
+.last-active {
+  color: #6b7280;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.last-active i {
+  color: #00ff88;
+}
+
 /* Add these styles to your existing styles */
+@media (max-width: 1223px) {
+  .student-tab {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.9rem;
+  }
+
+  .student-tab i {
+    font-size: 0.9rem;
+  }
+
+  .student-tab span {
+    font-size: 0.85rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .input-web {
     width: 200px;
+  }
+
+  .student-tab {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.8rem;
+  }
+
+  .student-tab i {
+    font-size: 0.8rem;
+    margin-right: 0.5rem !important;
+  }
+
+  .student-tab span {
+    font-size: 0.75rem;
   }
 }
 
@@ -649,5 +899,64 @@ body {
   .course-tab i {
     margin-right: 0 !important;
     font-size: 1.1rem;
+  }
+
+  /* Student card responsive */
+  .student-card {
+    padding: 1.5rem;
+  }
+
+  .student-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .student-stats {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+
+  /* Hide tab text on mobile */
+  .student-tab span,
+  .student-tab i + span {
+    display: none;
+  }
+
+  .student-tab {
+    padding: 0.6rem 0.8rem !important;
+    min-width: auto;
+  }
+
+  .student-tab i {
+    margin-right: 0 !important;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .input-web {
+    display: none;
+  }
+
+  .hero-gradient h1 {
+    font-size: 2rem !important;
+  }
+
+  .stat-card {
+    padding: 1rem !important;
+  }
+
+  /* Student tabs on very small screens */
+  .student-tab {
+    padding: 0.5rem 0.6rem !important;
+    font-size: 0.7rem;
+  }
+
+  .student-tab i {
+    font-size: 0.9rem;
   }
 }

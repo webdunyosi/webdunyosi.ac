@@ -79,6 +79,17 @@
                   <span>Kurslar</span>
                 </a>
               </li>
+              <li>
+                <a
+                  href="#students"
+                  class="nav-link flex items-center p-3 rounded-lg transition-all group"
+                >
+                  <i
+                    class="fas fa-users mr-3 text-lg group-hover:scale-110 transition-transform"
+                  ></i>
+                  <span>Faol O'quvchilar</span>
+                </a>
+              </li>
               <li id="adminMenuItem" class="hidden">
                 <a
                   href="#admin"
@@ -447,6 +458,108 @@
         <div id="courseDetailsPage" class="page p-6">
           <div id="courseContent">
             <!-- Course content will be loaded dynamically -->
+          </div>
+        </div>
+
+        <!-- Faol O'quvchilar Page -->
+        <div id="studentsPage" class="page p-6">
+          <div class="mb-10">
+            <h1 class="text-5xl font-black mb-6">
+              <span class="neon-text">Faol O'quvchilar</span>
+            </h1>
+            <p class="text-gray-300 text-xl max-w-3xl">
+              Haftalik faollik, vazifalar va loyihalar bo'yicha eng yaxshi
+              natijalarni ko'rsatgan o'quvchilar
+            </p>
+          </div>
+
+          <!-- Statistics Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="stat-card rounded-2xl p-8 text-center relative">
+              <div class="text-primary text-5xl mb-6 floating-element">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <h3
+                class="text-3xl font-black text-primary mb-3 neon-text"
+                id="totalActiveStudents"
+              >
+                0
+              </h3>
+              <p class="text-gray-400 text-lg">Faol O'quvchilar</p>
+              <div
+                class="absolute top-4 right-4 w-3 h-3 bg-primary rounded-full animate-pulse"
+              ></div>
+            </div>
+            <div class="stat-card rounded-2xl p-8 text-center relative">
+              <div class="text-primary text-5xl mb-6 floating-element">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3
+                class="text-3xl font-black text-primary mb-3 neon-text"
+                id="averageScore"
+              >
+                0
+              </h3>
+              <p class="text-gray-400 text-lg">O'rtacha Ball</p>
+              <div
+                class="absolute top-4 right-4 w-3 h-3 bg-secondary rounded-full animate-pulse"
+                style="animation-delay: 0.5s"
+              ></div>
+            </div>
+            <div class="stat-card rounded-2xl p-8 text-center relative">
+              <div class="text-primary text-5xl mb-6 floating-element">
+                <i class="fas fa-clipboard-check"></i>
+              </div>
+              <h3
+                class="text-3xl font-black text-primary mb-3 neon-text"
+                id="averageAttendance"
+              >
+                0%
+              </h3>
+              <p class="text-gray-400 text-lg">O'rtacha Yo'qlama</p>
+              <div
+                class="absolute top-4 right-4 w-3 h-3 bg-accent rounded-full animate-pulse"
+                style="animation-delay: 1s"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div
+            class="flex bg-dark-lighter rounded-2xl mb-10 overflow-hidden overflow-x-auto border border-gray-700"
+          >
+            <div
+              class="student-tab active py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
+              data-tab="all"
+            >
+              <i class="fas fa-users mr-3"></i><span>Barchasi</span>
+            </div>
+            <div
+              class="student-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
+              data-tab="excellent"
+            >
+              <i class="fas fa-medal mr-3"></i><span>A'lo (90-100%)</span>
+            </div>
+            <div
+              class="student-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
+              data-tab="good"
+            >
+              <i class="fas fa-star mr-3"></i><span>Yaxshi (70-89%)</span>
+            </div>
+            <div
+              class="student-tab py-5 px-8 cursor-pointer transition-all whitespace-nowrap font-bold text-lg"
+              data-tab="average"
+            >
+              <i class="fas fa-check mr-3"></i><span>Qoniqarli (50-69%)</span>
+            </div>
+          </div>
+
+          <!-- Students List -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
+            id="studentsList"
+          >
+            <!-- Students will be loaded dynamically -->
           </div>
         </div>
 
