@@ -1393,6 +1393,27 @@ function loadStudentsList(filter = "all") {
   })
 }
 
+// Helper: map course names to icon
+function getCourseIcon(courseName) {
+  const name = String(courseName || "").toLowerCase()
+  if (name.includes("html")) {
+    return { src: "../images/icons/html.webp", alt: "HTML" }
+  }
+  if (name.includes("tailwind")) {
+    return { src: "../images/icons/tw.png", alt: "Tailwind CSS" }
+  }
+  if (name.includes("react")) {
+    return { src: "../images/icons/rj.png", alt: "React" }
+  }
+  if (name.includes("javascript")) {
+    return { src: "../images/icons/js.png", alt: "JavaScript" }
+  }
+  if (name.includes("css")) {
+    return { src: "../images/icons/css.webp", alt: "CSS" }
+  }
+  return null
+}
+
 function createStudentCard(student, index) {
   const studentCard = document.createElement("div")
   studentCard.className = "student-card glass animate-fade-in"
@@ -1467,9 +1488,14 @@ function createStudentCard(student, index) {
 
     <div>
       <h4 class="text-sm font-semibold text-gray-300 mb-2">Kurslar</h4>
-      <div class="course-tags">
+      <div class="course-tags flex items-center flex-wrap gap-3">
         ${student.courses
-          .map((course) => `<span class="course-tag">${course}</span>`)
+          .map((course) => {
+            const icon = getCourseIcon(course)
+            return icon
+              ? `<img src="${icon.src}" alt="${icon.alt}" title="${icon.alt}" class="w-8 h-8 object-contain">`
+              : `<span class="course-tag">${course}</span>`
+          })
           .join("")}
       </div>
     </div>
