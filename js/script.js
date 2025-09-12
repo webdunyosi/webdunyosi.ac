@@ -107,21 +107,26 @@ const newVideos = [
       },
       {
         id: 2,
+        title: "Faol o'quvchilar bo'limi haqida",
+        videoFile: "https://youtu.be/-MlnCH-rZLs",
+      },
+      {
+        id: 3,
         title: "1-dars. HTML asoslari - Kirish",
         videoFile: "https://youtu.be/stkPk65Sthk",
       },
       {
-        id: 3,
+        id: 4,
         title: "2-dars. Img, div, komentariya",
         videoFile: "https://youtu.be/vhhwnIn7x-Y",
       },
       {
-        id: 4,
+        id: 5,
         title: "3-dars. Anchor, Iframe",
         videoFile: "https://youtu.be/WxADzZG-AsI",
       },
       {
-        id: 5,
+        id: 6,
         title: "4-dars. Form",
         videoFile: "https://youtu.be/NDbsi_pTnVw",
       },
