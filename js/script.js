@@ -2012,7 +2012,7 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
   window.addEventListener("resize", function () {
-    if (window.innerWidth >= 1024) {
+    if (window.innerWidth >= 1280) {
       sidebar.classList.remove("-translate-x-full")
       sidebarOverlay.classList.add("hidden")
     } else {
