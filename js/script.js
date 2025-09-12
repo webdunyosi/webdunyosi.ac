@@ -11,10 +11,8 @@ const activeStudents = [
     attendance: 88, // yo'qlama foizi
     taskScore: 100, // vazifalar uchun ball
     projectScore: 50, // loyihalar uchun ball
-    completedTasks: 8, // bajarilgan vazifalar soni
-    completedProjects: 3, // bajarilgan loyihalar soni
-    lastActive: "2 soat oldin", // oxirgi faollik vaqti
-
+    completedTasks: 9, // bajarilgan vazifalar soni
+    startedAt: "01.05.2025", // kursni boshlagan sana
     achievements: ["Top Performer", "Fast Learner", "Team Player"], // erishilgan yutuqlar
     courses: ["HTML NEW 2025", "CSS NEW 2025", "JavaScript Dasturlash"], // o'qiyotgan kurslar
   },
@@ -27,9 +25,7 @@ const activeStudents = [
     taskScore: 85,
     projectScore: 90,
     completedTasks: 7,
-    completedProjects: 2,
-    lastActive: "5 soat oldin",
-
+    startedAt: "",
     achievements: ["Creative Thinker", "Problem Solver"],
     courses: ["CSS NEW 2025", "React Dasturlash"],
   },
@@ -42,9 +38,7 @@ const activeStudents = [
     taskScore: 78,
     projectScore: 85,
     completedTasks: 6,
-    completedProjects: 2,
-    lastActive: "1 kun oldin",
-
+    startedAt: "",
     achievements: ["Consistent Learner"],
     courses: ["HTML Asoslari", "CSS Dizayn", "JavaScript Dasturlash"],
   },
@@ -57,9 +51,7 @@ const activeStudents = [
     taskScore: 72,
     projectScore: 78,
     completedTasks: 5,
-    completedProjects: 1,
-    lastActive: "2 kun oldin",
-
+    startedAt: "",
     achievements: ["Dedicated Student"],
     courses: ["HTML NEW 2025", "CSS NEW 2025"],
   },
@@ -72,9 +64,7 @@ const activeStudents = [
     taskScore: 65,
     projectScore: 70,
     completedTasks: 4,
-    completedProjects: 1,
-    lastActive: "3 kun oldin",
-
+    startedAt: "",
     achievements: ["Improving"],
     courses: ["HTML Asoslari", "CSS Dizayn"],
   },
@@ -87,9 +77,7 @@ const activeStudents = [
     taskScore: 89,
     projectScore: 94,
     completedTasks: 9,
-    completedProjects: 4,
-    lastActive: "30 daqiqa oldin",
-
+    startedAt: "",
     achievements: ["Top Performer", "Innovation Leader", "Mentor"],
     courses: [
       "HTML NEW 2025",
@@ -107,9 +95,7 @@ const activeStudents = [
     taskScore: 76,
     projectScore: 82,
     completedTasks: 6,
-    completedProjects: 2,
-    lastActive: "4 soat oldin",
-
+    startedAt: "",
     achievements: ["Hard Worker"],
     courses: ["JavaScript Dasturlash", "React Dasturlash"],
   },
@@ -122,9 +108,7 @@ const activeStudents = [
     taskScore: 82,
     projectScore: 87,
     completedTasks: 7,
-    completedProjects: 3,
-    lastActive: "1 soat oldin",
-
+    startedAt: "",
     achievements: ["Detail Oriented", "Quick Learner"],
     courses: ["CSS NEW 2025", "Tailwind CSS Darslari", "React Dasturlash"],
   },
@@ -137,9 +121,7 @@ const activeStudents = [
     taskScore: 68,
     projectScore: 74,
     completedTasks: 5,
-    completedProjects: 1,
-    lastActive: "1 kun oldin",
-
+    startedAt: "",
     achievements: ["Steady Progress"],
     courses: ["HTML Asoslari", "CSS Dizayn", "JavaScript Dasturlash"],
   },
@@ -152,9 +134,7 @@ const activeStudents = [
     taskScore: 85,
     projectScore: 91,
     completedTasks: 8,
-    completedProjects: 3,
-    lastActive: "3 soat oldin",
-
+    startedAt: "",
     achievements: ["Creative Designer", "Code Master"],
     courses: ["CSS NEW 2025", "Tailwind CSS Darslari", "React Dasturlash"],
   },
@@ -1452,8 +1432,10 @@ function createStudentCard(student, index) {
       <div class="flex-1">
         <h3 class="text-xl font-bold text-primary mb-1">${student.name}</h3>
         <div class="last-active">
-          <i class="fas fa-clock"></i>
-          <span>${student.lastActive}</span>
+          <i class="fas fa-calendar-alt"></i>
+          <span>${
+            student.startedAt || "Boshlanish sanasi ko'rsatilmagan"
+          }</span>
         </div>
       </div>
     </div>
