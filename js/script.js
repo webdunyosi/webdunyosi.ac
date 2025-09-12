@@ -211,6 +211,11 @@ const newVideos = [
         title: "14-dars. Animation",
         videoFile: "https://youtu.be/TeYUlI1tUsc",
       },
+      {
+        id: 15,
+        title: "15-dars. Grid",
+        videoFile: "https://youtu.be/tzwhtnsCQN4",
+      },
     ],
   },
 ]
