@@ -5,7 +5,6 @@ let currentUser = null // Global variable for current user
 // Faol o'quvchilar ma'lumotlari
 const activeStudents = [
   {
-    id: 1, // o'quvchi raqami
     name: "Dustmurodov Akmal", // o'quvchi ismi
     avatar: "../images/students/DustmurodovAkmal.png", // o'quvchi rasmi
     attendance: 88, // yo'qlama foizi
@@ -13,120 +12,17 @@ const activeStudents = [
     projectScore: 50, // loyihalar uchun ball
     completedTasks: 9, // bajarilgan vazifalar soni
     startedAt: "01.05.2025", // kursni boshlagan sana
-    courses: ["HTML NEW 2025", "CSS NEW 2025", "JavaScript Dasturlash"], // o'qiyotgan kurslar
+    courses: ["html", "css", "tailwind", "javascript"], // o'qiyotgan kurslar
   },
   {
-    id: 2,
-    name: "Malika Tosheva",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-    attendance: 88,
-    taskScore: 85,
-    projectScore: 90,
-    completedTasks: 7,
-    startedAt: "",
-    courses: ["CSS NEW 2025", "React Dasturlash"],
-  },
-  {
-    id: 3,
-    name: "Javohir Rahimov",
-    avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    attendance: 82,
-    taskScore: 78,
-    projectScore: 85,
-    completedTasks: 6,
-    startedAt: "",
-    courses: ["HTML Asoslari", "CSS Dizayn", "JavaScript Dasturlash"],
-  },
-  {
-    id: 4,
-    name: "Dilnoza Qodirova",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    attendance: 75,
-    taskScore: 72,
-    projectScore: 78,
-    completedTasks: 5,
-    startedAt: "",
-    courses: ["HTML NEW 2025", "CSS NEW 2025"],
-  },
-  {
-    id: 5,
-    name: "Bobur Mirzayev",
-    avatar:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    attendance: 68,
-    taskScore: 65,
-    projectScore: 70,
-    completedTasks: 4,
-    startedAt: "",
-    courses: ["HTML Asoslari", "CSS Dizayn"],
-  },
-  {
-    id: 6,
-    name: "Zarina Usmanova",
-    avatar:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    attendance: 92,
-    taskScore: 89,
-    projectScore: 94,
-    completedTasks: 9,
-    startedAt: "",
-    courses: [
-      "HTML NEW 2025",
-      "CSS NEW 2025",
-      "JavaScript Dasturlash",
-      "React Dasturlash",
-    ],
-  },
-  {
-    id: 7,
-    name: "Sardor Toshmatov",
-    avatar:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
-    attendance: 79,
-    taskScore: 76,
-    projectScore: 82,
-    completedTasks: 6,
-    startedAt: "",
-    courses: ["JavaScript Dasturlash", "React Dasturlash"],
-  },
-  {
-    id: 8,
-    name: "Gulnora Xasanova",
-    avatar:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face",
-    attendance: 85,
-    taskScore: 82,
-    projectScore: 87,
-    completedTasks: 7,
-    startedAt: "",
-    courses: ["CSS NEW 2025", "Tailwind CSS Darslari", "React Dasturlash"],
-  },
-  {
-    id: 9,
-    name: "Rustam Sobirov",
-    avatar:
-      "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
-    attendance: 71,
-    taskScore: 68,
-    projectScore: 74,
-    completedTasks: 5,
-    startedAt: "",
-    courses: ["HTML Asoslari", "CSS Dizayn", "JavaScript Dasturlash"],
-  },
-  {
-    id: 10,
-    name: "Madina Karimova",
-    avatar:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    attendance: 88,
-    taskScore: 85,
-    projectScore: 91,
-    completedTasks: 8,
-    startedAt: "",
-    courses: ["CSS NEW 2025", "Tailwind CSS Darslari", "React Dasturlash"],
+    name: "Dustov Eldor", // o'quvchi ismi
+    avatar: "../images/students/DustovEldor.jpg", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 11, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 1, // bajarilgan vazifalar soni
+    startedAt: "08.09.2025", // kursni boshlagan sana
+    courses: ["html", "css"], // o'qiyotgan kurslar
   },
 ]
 
@@ -1399,17 +1295,17 @@ function getCourseIcon(courseName) {
   if (name.includes("html")) {
     return { src: "../images/icons/html.webp", alt: "HTML" }
   }
+  if (name.includes("css")) {
+    return { src: "../images/icons/css.webp", alt: "CSS" }
+  }
   if (name.includes("tailwind")) {
     return { src: "../images/icons/tw.png", alt: "Tailwind CSS" }
-  }
-  if (name.includes("react")) {
-    return { src: "../images/icons/rj.png", alt: "React" }
   }
   if (name.includes("javascript")) {
     return { src: "../images/icons/js.png", alt: "JavaScript" }
   }
-  if (name.includes("css")) {
-    return { src: "../images/icons/css.webp", alt: "CSS" }
+  if (name.includes("react")) {
+    return { src: "../images/icons/rj.png", alt: "React" }
   }
   return null
 }
@@ -1423,12 +1319,14 @@ function createStudentCard(student, index) {
     excellent: "A'lo",
     good: "Yaxshi",
     average: "Qoniqarli",
+    low: "Past",
   }
 
   const levelColor = {
     excellent: "excellent",
     good: "good",
     average: "average",
+    low: "low",
   }
 
   studentCard.innerHTML = `
@@ -1487,7 +1385,7 @@ function createStudentCard(student, index) {
     
 
     <div>
-      <h4 class="text-sm font-semibold text-gray-300 mb-2">Kurslar</h4>
+      <h4 class="text-sm font-semibold text-gray-300 mb-2">Tugallangan Kurslar</h4>
       <div class="course-tags flex items-center flex-wrap gap-3">
         ${student.courses
           .map((course) => {

@@ -683,6 +683,12 @@ body {
   box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
 }
 
+.student-level-badge.low {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: white;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
 .progress-bar-container {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
