@@ -9,7 +9,7 @@ const activeStudents = [
     avatar: "../images/students/DustmurodovAkmal.png", // o'quvchi rasmi
     attendance: 88, // yo'qlama foizi
     taskScore: 100, // vazifalar uchun ball
-    projectScore: 50, // loyihalar uchun ball
+    projectScore: 100, // loyihalar uchun ball
     completedTasks: 9, // bajarilgan vazifalar soni
     startedAt: "01.05.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
