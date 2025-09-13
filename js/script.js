@@ -64,6 +64,46 @@ const activeStudents = [
     startedAt: "28.08.2025", // kursni boshlagan sana
     courses: ["html", "css"], // Tugallangan kurslar
   },
+  {
+    name: "Raxmonqulov Ozodbek", // o'quvchi ismi
+    avatar: "../images/students/RaxmonqulovOzodbek.png", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 4, // bajarilgan vazifalar soni
+    startedAt: "06.09.2025", // kursni boshlagan sana
+    courses: ["html"], // Tugallangan kurslar
+  },
+  {
+    name: "Aslonov Jahongir", // o'quvchi ismi
+    avatar: "../images/students/AslonovJahongir.png", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 50, // loyihalar uchun ball
+    completedTasks: 11, // bajarilgan vazifalar soni
+    startedAt: "11.08.2025", // kursni boshlagan sana
+    courses: ["html", "css"], // Tugallangan kurslar
+  },
+  {
+    name: "Sharipov Zafar", // o'quvchi ismi
+    avatar: "../images/students/SharipovZafar.JPG", // o'quvchi rasmi
+    attendance: 71, // yo'qlama foizi
+    taskScore: 90, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 9, // bajarilgan vazifalar soni
+    startedAt: "19.08.2025", // kursni boshlagan sana
+    courses: ["html", "css"], // Tugallangan kurslar
+  },
+  {
+    name: "Burxonov Behruz", // o'quvchi ismi
+    avatar: "../images/students/BurxonovBehruz.png", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 83, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 8, // bajarilgan vazifalar soni
+    startedAt: "19.08.2025", // kursni boshlagan sana
+    courses: ["html", "css"], // Tugallangan kurslar
+  },
 ]
 
 // Recalculate totalScore automatically from attendance, taskScore, projectScore
