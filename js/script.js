@@ -102,7 +102,7 @@ const activeStudents = [
     projectScore: 0, // loyihalar uchun ball
     completedTasks: 8, // bajarilgan vazifalar soni
     startedAt: "19.08.2025", // kursni boshlagan sana
-    courses: ["html", "css"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
 ]
 
@@ -116,11 +116,11 @@ function computeStudentsTotalScores() {
     student.totalScore = Math.round(average * 10) / 10
 
     // Assign level automatically based on totalScore
-    if (student.totalScore >= 90) {
+    if (student.totalScore >= 80) {
       student.level = "excellent"
-    } else if (student.totalScore >= 70) {
+    } else if (student.totalScore >= 60) {
       student.level = "good"
-    } else if (student.totalScore >= 50) {
+    } else if (student.totalScore >= 40) {
       student.level = "average"
     } else {
       student.level = "low"
