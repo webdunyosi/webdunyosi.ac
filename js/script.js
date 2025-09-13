@@ -114,6 +114,16 @@ const activeStudents = [
     startedAt: "19.08.2025", // kursni boshlagan sana
     courses: ["html", "css"], // Tugallangan kurslar
   },
+  {
+    name: "Muzaffarov Jasur", // o'quvchi ismi
+    avatar: "../images/students/MuzaffarovJasur.png", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 44, // vazifalar uchun ball
+    projectScore: 100, // loyihalar uchun ball
+    completedTasks: 4, // bajarilgan vazifalar soni
+    startedAt: "01.06.2030", // kursni boshlagan sana
+    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+  },
 ]
 
 // Recalculate totalScore automatically from attendance, taskScore, projectScore
