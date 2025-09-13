@@ -126,6 +126,14 @@ function computeStudentsTotalScores() {
       student.level = "low"
     }
   })
+
+  // Calculate rankings based on totalScore
+  const sortedStudents = [...activeStudents].sort(
+    (a, b) => b.totalScore - a.totalScore
+  )
+  sortedStudents.forEach((student, index) => {
+    student.rank = index + 1
+  })
 }
 
 // Compute scores on initialization
@@ -1409,6 +1417,7 @@ function createStudentCard(student, index) {
   const studentCard = document.createElement("div")
   studentCard.className = "student-card glass animate-fade-in"
   studentCard.style.animationDelay = `${index * 0.1}s`
+  studentCard.setAttribute("data-rank", student.rank)
 
   const levelText = {
     excellent: "A'lo",
@@ -1424,9 +1433,37 @@ function createStudentCard(student, index) {
     low: "low",
   }
 
+  // Medal icons for top 3 positions
+  const getMedalIcon = (rank) => {
+    if (rank === 1)
+      return '<i class="fas fa-medal text-yellow-400 text-2xl"></i>'
+    if (rank === 2) return '<i class="fas fa-medal text-gray-300 text-2xl"></i>'
+    if (rank === 3)
+      return '<i class="fas fa-medal text-orange-400 text-2xl"></i>'
+    return ""
+  }
+
+  // Rank display
+  const getRankDisplay = (rank) => {
+    if (rank <= 3) {
+      return `
+        <div class="rank-medal-container">
+          ${getMedalIcon(rank)}
+          <span class="rank-number">${rank}</span>
+        </div>
+      `
+    }
+    return `<div class="rank-number-only">${rank}</div>`
+  }
+
   studentCard.innerHTML = `
-    <div class="student-level-badge ${levelColor[student.level]}">
-      ${levelText[student.level]}
+    <div class="student-header">
+      <div class="student-level-badge ${levelColor[student.level]}">
+        ${levelText[student.level]}
+      </div>
+      <div class="student-rank">
+        ${getRankDisplay(student.rank)}
+      </div>
     </div>
     
     <div class="flex items-center mb-6">
