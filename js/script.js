@@ -48,7 +48,7 @@ const activeStudents = [
     name: "Mavlonova Marjona", // o'quvchi ismi
     avatar: "../images/students/MavlonovaMarjona.png", // o'quvchi rasmi
     attendance: 63, // yo'qlama foizi
-    taskScore: 22 , // vazifalar uchun ball
+    taskScore: 22, // vazifalar uchun ball
     projectScore: 100, // loyihalar uchun ball
     completedTasks: 2, // bajarilgan vazifalar soni
     startedAt: "01.05.2025", // kursni boshlagan sana
@@ -283,6 +283,21 @@ const newVideos = [
         id: 15,
         title: "15-dars. Grid",
         videoFile: "https://youtu.be/tzwhtnsCQN4",
+      },
+    ],
+  },
+  // TAILWINDCSS NEW 2025
+  {
+    id: 2,
+    title: "TAILWINDCSS NEW 2025",
+    description:
+      "Tez va zamonaviy web dizayn uchun Tailwind CSS frameworkini o'rganing",
+    image: "../images/tailwind.png",
+    videos: [
+      {
+        id: 1,
+        title: "1-dars. TailwindCss, Color, Hover",
+        videoFile: "https://youtu.be/mrSys5opVyM",
       },
     ],
   },
@@ -628,69 +643,9 @@ const oldVideos = [
       { id: 43, title: "", videoFile: "" },
     ],
   },
-  // Tailwind CSS Darslari
-  {
-    id: 6,
-    title: "Tailwind CSS Darslari",
-    description:
-      "Tez va zamonaviy web dizayn uchun Tailwind CSS frameworkini o'rganing",
-    image: "../images/tailwind.png",
-    videos: [
-      {
-        id: 1,
-        title: "Tailwind CSS ga kirish",
-        videoFile: "https://youtu.be/pfaSUYaSgRo",
-      },
-      {
-        id: 2,
-        title: "Tailwind CSS ni o'rnatish",
-        videoFile: "https://youtu.be/6zIuAyLZPH0",
-      },
-      {
-        id: 3,
-        title: "Asosiy utility classlar",
-        videoFile: "https://youtu.be/6zIuAyLZPH0",
-      },
-      {
-        id: 4,
-        title: "Ranglar va fonlar bilan ishlash",
-        videoFile: "https://youtu.be/6zIuAyLZPH0",
-      },
-      {
-        id: 5,
-        title: "Margin, Padding va Box Model",
-        videoFile: "https://youtu.be/6zIuAyLZPH0",
-      },
-      {
-        id: 6,
-        title: "Flex va Grid tizimi",
-        videoFile: "https://youtu.be/6zIuAyLZPH0",
-      },
-      {
-        id: 7,
-        title: "Responsive dizayn va breakpointlar",
-        videoFile: "https://youtu.be/6zIuAyLZPH0",
-      },
-      {
-        id: 8,
-        title: "Custom konfiguratsiya va theme",
-        videoFile: "https://youtu.be/6zIuAyLZPH0",
-      },
-      {
-        id: 9,
-        title: "Animatsiya va transitionlar",
-        videoFile: "https://youtu.be/6zIuAyLZPH0",
-      },
-      {
-        id: 10,
-        title: "Amaliy loyiha: Tailwind bilan landing page",
-        videoFile: "https://youtu.be/6zIuAyLZPH0",
-      },
-    ],
-  },
   // JavaScript Dasturlash
   {
-    id: 7,
+    id: 6,
     title: "JavaScript Dasturlash",
     description:
       "Interaktiv web sahifalar yaratish uchun JavaScript ni o'rganing",
@@ -851,7 +806,7 @@ const oldVideos = [
   },
   // React Dasturlash
   {
-    id: 8,
+    id: 7,
     title: "React Dasturlash",
     description:
       "Zamonaviy web ilovalar yaratish uchun React kutubxonasini o'rganing",
@@ -1071,7 +1026,7 @@ function loadFeaturedCourses() {
   featuredCourses.innerHTML = ""
 
   courses.slice(0, 3).forEach((course, index) => {
-    const courseCard = createCourseCard(course)
+    const courseCard = createCourseCard(course, "featured")
     courseCard.style.animationDelay = `${index * 0.2}s`
     courseCard.classList.add("animate-fade-in")
     featuredCourses.appendChild(courseCard)
@@ -1092,7 +1047,7 @@ function loadNewVideos() {
   newVideosGrid.innerHTML = ""
 
   newVideos.forEach((course, index) => {
-    const courseCard = createCourseCard(course)
+    const courseCard = createCourseCard(course, "new")
     courseCard.style.animationDelay = `${index * 0.15}s`
     courseCard.classList.add("animate-slide-up")
     const linkEl = courseCard.querySelector("a.course-link")
@@ -1109,7 +1064,7 @@ function loadOldVideos() {
   oldVideosGrid.innerHTML = ""
 
   oldVideos.forEach((course, index) => {
-    const courseCard = createCourseCard(course)
+    const courseCard = createCourseCard(course, "old")
     courseCard.style.animationDelay = `${index * 0.15}s`
     courseCard.classList.add("animate-slide-up")
     const linkEl = courseCard.querySelector("a.course-link")
@@ -1126,7 +1081,7 @@ function loadAssignments() {
   assignmentsGrid.innerHTML = ""
 
   assignments.forEach((course, index) => {
-    const courseCard = createCourseCard(course)
+    const courseCard = createCourseCard(course, "assignments")
     courseCard.style.animationDelay = `${index * 0.15}s`
     courseCard.classList.add("animate-slide-up")
     const linkEl = courseCard.querySelector("a.course-link")
@@ -1137,26 +1092,47 @@ function loadAssignments() {
   addCourseClickListeners()
 }
 
-function createCourseCard(course) {
+function createCourseCard(course, category = "featured") {
   const courseCard = document.createElement("div")
   courseCard.className =
     "course-card glass rounded-3xl overflow-hidden transition-all border border-gray-700"
+
+  // Category badge content based on category
+  const getCategoryBadge = (category) => {
+    switch (category) {
+      case "new":
+        return '<i class="fas fa-star mr-1"></i>Yangi'
+      case "old":
+        return '<i class="fas fa-clock mr-1"></i>Eski'
+      case "assignments":
+        return '<i class="fas fa-tasks mr-1"></i>Vazifa'
+      default:
+        return '<i class="fas fa-star mr-1"></i>Popular'
+    }
+  }
+
   courseCard.innerHTML = `
     <div class="course-image-container h-56 bg-gradient-to-br from-dark-lighter to-dark flex justify-center items-center border-b border-gray-700 relative">
-        <img src="${course.image}" alt="${course.title}" class="object-contain floating-element">
+        <img src="${course.image}" alt="${
+    course.title
+  }" class="object-contain floating-element">
         <div class="absolute top-4 right-4 category-badge px-3 py-1 rounded-full text-xs">
-            <i class="fas fa-star mr-1"></i>Popular
+            ${getCategoryBadge(category)}
         </div>
     </div>
     <div class="p-8">
         <h3 class="text-2xl font-bold mb-4 text-primary">${course.title}</h3>
-        <p class="text-gray-300 mb-6 h-20 overflow-hidden leading-relaxed">${course.description}</p>
+        <p class="text-gray-300 mb-6 h-20 overflow-hidden leading-relaxed">${
+          course.description
+        }</p>
         <div class="flex justify-between items-center">
             <div class="flex items-center text-gray-400">
                 <i class="fas fa-video mr-2 text-primary"></i>
                 <span class="font-semibold">${course.videos.length} video</span>
             </div>
-            <a href="#courseDetails" data-id="${course.id}" class="course-link btn-primary px-6 py-3 rounded-xl inline-flex items-center font-bold transition-all group">
+            <a href="#courseDetails" data-id="${
+              course.id
+            }" class="course-link btn-primary px-6 py-3 rounded-xl inline-flex items-center font-bold transition-all group">
                 <i class="fas fa-play mr-2 group-hover:scale-110 transition-transform"></i>
                 Ko'rish
             </a>
@@ -1250,7 +1226,9 @@ function loadCourseDetails() {
           course.videos[0]?.title || "Video tanlang"
         }</h2>
         <div class="flex justify-between items-center">
-          <p class="text-gray-400 text-lg">${course.title}</p>
+          <a href="https://docs.google.com/spreadsheets/d/159vyoIidvK4XFzySgxTkneMgOG_IYRWGF0cI5fgYQM0/edit?gid=0#gid=0" target="_blank" class="text-gray-400 text-lg">${
+            course.title
+          }</a>
           <div class="flex space-x-6">
             <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
               <i class="fas fa-thumbs-up text-xl"></i>
