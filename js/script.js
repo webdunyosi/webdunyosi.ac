@@ -1176,27 +1176,27 @@ function loadCourseDetails() {
 
   // Enhanced course header
   courseContent.innerHTML = `
-    <div class="flex flex-col lg:flex-row items-center mb-10 glass rounded-3xl p-10 border border-gray-700 animate-fade-in">
-      <div class="w-40 h-40 mb-8 lg:mb-0 lg:mr-10 bg-gradient-to-br from-dark-lighter to-dark rounded-3xl flex justify-center items-center border border-gray-700 floating-element">
-        <img src="${course.image}" alt="${course.title}" class="w-32 h-32 object-contain rounded-2xl">
+    <div class="flex flex-col lg:flex-row items-center mb-6 glass rounded-2xl p-6 border border-gray-700 animate-fade-in">
+      <div class="w-24 h-24 mb-4 lg:mb-0 lg:mr-6 bg-gradient-to-br from-dark-lighter to-dark rounded-2xl flex justify-center items-center border border-gray-700 floating-element">
+        <img src="${course.image}" alt="${course.title}" class="w-20 h-20 object-contain rounded-xl">
       </div>
       <div class="text-center lg:text-left">
-        <h1 class="text-5xl font-black mb-6 text-primary neon-text">
+        <h1 class="text-3xl font-black mb-4 text-primary neon-text">
           ${course.title}
         </h1>
-        <p class="text-gray-300 text-xl mb-6 leading-relaxed">${course.description}</p>
-        <div class="flex flex-wrap justify-center lg:justify-start gap-6">
+        <p class="text-gray-300 text-lg mb-4 leading-relaxed">${course.description}</p>
+        <div class="flex flex-wrap justify-center lg:justify-start gap-4">
           <div class="flex items-center text-gray-400">
-            <i class="fas fa-video mr-3 text-primary text-xl"></i>
-            <span class="text-lg font-semibold">${course.videos.length} video darslik</span>
+            <i class="fas fa-video mr-2 text-primary"></i>
+            <span class="font-semibold">${course.videos.length} video</span>
           </div>
           <div class="flex items-center text-gray-400">
-            <i class="fas fa-clock mr-3 text-primary text-xl"></i>
-            <span class="text-lg font-semibold">Bepul</span>
+            <i class="fas fa-clock mr-2 text-primary"></i>
+            <span class="font-semibold">Bepul</span>
           </div>
           <div class="flex items-center text-gray-400">
-            <i class="fas fa-certificate mr-3 text-primary text-xl"></i>
-            <span class="text-lg font-semibold">Sertifikat</span>
+            <i class="fas fa-certificate mr-2 text-primary"></i>
+            <span class="font-semibold">Sertifikat</span>
           </div>
         </div>
       </div>
@@ -1205,39 +1205,38 @@ function loadCourseDetails() {
 
   // Foydalanuvchi tekshiruvisiz har doim video va ro'yxat chiqadi
   const courseContainer = document.createElement("div")
-  courseContainer.className =
-    "flex flex-col xl:flex-row gap-10 animate-slide-up"
+  courseContainer.className = "flex flex-col xl:flex-row gap-6 animate-slide-up"
 
-  // Video player section
+  // Video player section - optimized for more space
   const videoPlayerSection = document.createElement("div")
-  videoPlayerSection.className = "w-full xl:w-2/3"
+  videoPlayerSection.className = "w-full xl:w-3/4"
   videoPlayerSection.innerHTML = `
-    <div class="glass rounded-3xl overflow-hidden border border-gray-700">
+    <div class="glass rounded-2xl overflow-hidden border border-gray-700">
       <div class="video-player">
         <div id="courseVideoPlayer" class="flex items-center justify-center bg-gradient-to-br from-dark-lighter to-dark">
           <div class="text-center">
-            <i class="fas fa-play-circle text-primary text-8xl mb-6 floating-element"></i>
-            <p class="text-gray-400 text-xl">Video tanlang</p>
+            <i class="fas fa-play-circle text-primary text-6xl mb-4 floating-element"></i>
+            <p class="text-gray-400 text-lg">Video tanlang</p>
           </div>
         </div>
       </div>
-      <div class="p-8">
-        <h2 id="currentVideoTitle" class="text-3xl font-bold mb-4 neon-text">${
+      <div class="p-6">
+        <h2 id="currentVideoTitle" class="text-2xl font-bold mb-3 neon-text">${
           course.videos[0]?.title || "Video tanlang"
         }</h2>
         <div class="flex justify-between items-center">
-          <a href="https://docs.google.com/spreadsheets/d/159vyoIidvK4XFzySgxTkneMgOG_IYRWGF0cI5fgYQM0/edit?gid=0#gid=0" target="_blank" class="text-gray-400 text-lg">${
+          <a href="https://docs.google.com/spreadsheets/d/159vyoIidvK4XFzySgxTkneMgOG_IYRWGF0cI5fgYQM0/edit?gid=0#gid=0" target="_blank" class="text-gray-400">${
             course.title
           }</a>
-          <div class="flex space-x-6">
+          <div class="flex space-x-4">
             <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-              <i class="fas fa-thumbs-up text-xl"></i>
+              <i class="fas fa-thumbs-up"></i>
             </button>
             <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-              <i class="fas fa-share text-xl"></i>
+              <i class="fas fa-share"></i>
             </button>
             <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-              <i class="fas fa-bookmark text-xl"></i>
+              <i class="fas fa-bookmark"></i>
             </button>
           </div>
         </div>
@@ -1245,40 +1244,42 @@ function loadCourseDetails() {
     </div>
   `
 
-  // Video list section
+  // Video list section - compact sidebar
   const videoListSection = document.createElement("div")
-  videoListSection.className = "w-full xl:w-1/3"
+  videoListSection.className = "w-full xl:w-1/4"
   videoListSection.innerHTML = `
-    <div class="glass rounded-3xl h-full border border-gray-700">
-      <div class="p-8 border-b border-gray-700">
-        <h3 class="text-2xl font-bold flex items-center neon-text">
-          <i class="fas fa-list-play mr-4 text-primary"></i>
-          Video Darsliklar
+    <div class="glass rounded-2xl h-full border border-gray-700">
+      <div class="p-4 border-b border-gray-700">
+        <h3 class="text-lg font-bold flex items-center neon-text">
+          <i class="fas fa-list-play mr-2 text-primary"></i>
+          Darsliklar
         </h3>
       </div>
-      <div class="video-list-container overflow-y-auto" style="max-height: 700px;">
+      <div class="video-list-container overflow-y-auto" style="max-height: 600px;">
         <ul id="courseVideoList" class="divide-y divide-gray-700">
           ${course.videos
             .map(
               (video, index) => `
-              <li class="video-list-item p-6 cursor-pointer transition-all ${
+              <li class="video-list-item p-4 cursor-pointer transition-all ${
                 index === 0 ? "active" : ""
               }" data-video="${video.videoFile}" data-title="${video.title}">
                 <div class="flex items-start">
-                  <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mr-5 flex-shrink-0 floating-element">
-                    <i class="fas fa-play text-primary text-lg"></i>
+                  <div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mr-3 flex-shrink-0 floating-element">
+                    <i class="fas fa-play text-primary"></i>
                   </div>
-                  <div class="flex-1">
-                    <h4 class="font-bold mb-2 text-lg">${video.title}</h4>
-                    <p class="text-gray-400">Video ${index + 1}</p>
-                    <div class="flex items-center mt-2">
-                      <span class="category-badge px-2 py-1 rounded text-xs">HD</span>
-                      <span class="text-gray-500 text-xs ml-2">• 5 min</span>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="font-bold mb-1 text-sm leading-tight">${
+                      video.title
+                    }</h4>
+                    <div class="flex items-center mt-1">
+                      <span class="text-xs text-gray-500">${
+                        index + 1
+                      } • 5 min</span>
                     </div>
                   </div>
                 </div>
               </li>
-            `
+              `
             )
             .join("")}
         </ul>

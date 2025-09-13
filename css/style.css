@@ -900,6 +900,52 @@ body {
   box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
 }
 
+/* Video Player Optimization */
+.video-player {
+  aspect-ratio: 16/9;
+  width: 100%;
+  position: relative;
+}
+
+.video-player iframe,
+.video-player video {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+/* Responsive video layout */
+@media (max-width: 1280px) {
+  .course-container {
+    flex-direction: column;
+  }
+
+  .video-player-section {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .video-list-section {
+    width: 100% !important;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-player {
+    aspect-ratio: 4/3;
+  }
+
+  .course-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .course-header img {
+    margin-bottom: 1rem;
+  }
+}
+
 .student-level-badge.good {
   background: linear-gradient(135deg, #3b82f6, #1d4ed8);
   color: white;
