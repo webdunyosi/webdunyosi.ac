@@ -661,7 +661,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  min-height: 2.5rem;
 }
 
 .student-level-badge {
@@ -671,36 +672,44 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-/* Student rank styling */
+/* Student rank styling - positioned lower to avoid name overlap */
 .student-rank {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .rank-medal-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.1rem;
   position: relative;
+  margin-top: 0.5rem;
 }
 
 .rank-number {
   background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
   color: #00ff88;
   font-weight: 800;
-  font-size: 1.1rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  font-size: 0.9rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid rgba(0, 255, 136, 0.3);
-  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
   position: relative;
   z-index: 2;
 }
@@ -709,15 +718,15 @@ body {
   background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
   color: #00ff88;
   font-weight: 800;
-  font-size: 1.1rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  font-size: 0.9rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid rgba(0, 255, 136, 0.3);
-  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
 }
 
 /* Medal animations */
@@ -734,26 +743,39 @@ body {
   }
 }
 
+/* Student info section with proper spacing */
+.student-info-section {
+  margin-top: 1rem;
+  padding-right: 3rem; /* Space for rank display */
+}
+
+.student-name-container {
+  min-height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* Special styling for top 3 positions */
 .student-card[data-rank="1"] .rank-number {
   background: linear-gradient(135deg, #ffd700, #ffed4e);
   color: #000;
   border-color: #ffd700;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
 }
 
 .student-card[data-rank="2"] .rank-number {
   background: linear-gradient(135deg, #c0c0c0, #e5e5e5);
   color: #000;
   border-color: #c0c0c0;
-  box-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.4);
 }
 
 .student-card[data-rank="3"] .rank-number {
   background: linear-gradient(135deg, #cd7f32, #daa520);
   color: #fff;
   border-color: #cd7f32;
-  box-shadow: 0 0 20px rgba(205, 127, 50, 0.5);
+  box-shadow: 0 0 15px rgba(205, 127, 50, 0.4);
 }
 
 .student-level-badge.excellent {

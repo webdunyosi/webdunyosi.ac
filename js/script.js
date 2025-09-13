@@ -1446,10 +1446,10 @@ function createStudentCard(student, index) {
   // Medal icons for top 3 positions
   const getMedalIcon = (rank) => {
     if (rank === 1)
-      return '<i class="fas fa-medal text-yellow-400 text-2xl"></i>'
-    if (rank === 2) return '<i class="fas fa-medal text-gray-300 text-2xl"></i>'
+      return '<i class="fas fa-medal text-yellow-400 text-lg"></i>'
+    if (rank === 2) return '<i class="fas fa-medal text-gray-300 text-lg"></i>'
     if (rank === 3)
-      return '<i class="fas fa-medal text-orange-400 text-2xl"></i>'
+      return '<i class="fas fa-medal text-orange-400 text-lg"></i>'
     return ""
   }
 
@@ -1476,11 +1476,11 @@ function createStudentCard(student, index) {
       </div>
     </div>
     
-    <div class="flex items-center mb-6">
+    <div class="flex items-center mb-6 student-info-section">
       <img src="${student.avatar}" alt="${
     student.name
   }" class="student-avatar mr-4">
-      <div class="flex-1">
+      <div class="flex-1 student-name-container">
         <h3 class="text-xl font-bold text-primary mb-1">${student.name}</h3>
         <div class="last-active">
           <i class="fas fa-calendar-alt"></i>
