@@ -778,6 +778,122 @@ body {
   box-shadow: 0 0 15px rgba(205, 127, 50, 0.4);
 }
 
+/* Medal-themed card styling for top 3 positions */
+.student-card[data-rank="1"] {
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 215, 0, 0.05),
+    rgba(26, 26, 26, 0.95)
+  );
+}
+
+.student-card[data-rank="1"]::before {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.1),
+    rgba(255, 215, 0, 0.05),
+    rgba(255, 215, 0, 0.1)
+  );
+}
+
+.student-card[data-rank="1"]:hover {
+  border-color: rgba(255, 215, 0, 0.6);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.student-card[data-rank="2"] {
+  border: 2px solid rgba(192, 192, 192, 0.3);
+  background: linear-gradient(
+    145deg,
+    rgba(192, 192, 192, 0.05),
+    rgba(26, 26, 26, 0.95)
+  );
+}
+
+.student-card[data-rank="2"]::before {
+  background: linear-gradient(
+    45deg,
+    rgba(192, 192, 192, 0.1),
+    rgba(192, 192, 192, 0.05),
+    rgba(192, 192, 192, 0.1)
+  );
+}
+
+.student-card[data-rank="2"]:hover {
+  border-color: rgba(192, 192, 192, 0.6);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(192, 192, 192, 0.3);
+}
+
+.student-card[data-rank="3"] {
+  border: 2px solid rgba(205, 127, 50, 0.3);
+  background: linear-gradient(
+    145deg,
+    rgba(205, 127, 50, 0.05),
+    rgba(26, 26, 26, 0.95)
+  );
+}
+
+.student-card[data-rank="3"]::before {
+  background: linear-gradient(
+    45deg,
+    rgba(205, 127, 50, 0.1),
+    rgba(205, 127, 50, 0.05),
+    rgba(205, 127, 50, 0.1)
+  );
+}
+
+.student-card[data-rank="3"]:hover {
+  border-color: rgba(205, 127, 50, 0.6);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(205, 127, 50, 0.3);
+}
+
+/* Medal-themed progress bars and accents */
+.student-card[data-rank="1"] .progress-bar-fill {
+  background: linear-gradient(90deg, #ffd700, #ffed4e) !important;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.student-card[data-rank="1"] .text-primary {
+  color: #ffd700 !important;
+}
+
+.student-card[data-rank="1"] .student-avatar {
+  border-color: rgba(255, 215, 0, 0.6);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.student-card[data-rank="2"] .progress-bar-fill {
+  background: linear-gradient(90deg, #c0c0c0, #e5e5e5) !important;
+  box-shadow: 0 0 10px rgba(192, 192, 192, 0.5);
+}
+
+.student-card[data-rank="2"] .text-primary {
+  color: #c0c0c0 !important;
+}
+
+.student-card[data-rank="2"] .student-avatar {
+  border-color: rgba(192, 192, 192, 0.6);
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
+}
+
+.student-card[data-rank="3"] .progress-bar-fill {
+  background: linear-gradient(90deg, #cd7f32, #daa520) !important;
+  box-shadow: 0 0 10px rgba(205, 127, 50, 0.5);
+}
+
+.student-card[data-rank="3"] .text-primary {
+  color: #cd7f32 !important;
+}
+
+.student-card[data-rank="3"] .student-avatar {
+  border-color: rgba(205, 127, 50, 0.6);
+  box-shadow: 0 0 15px rgba(205, 127, 50, 0.3);
+}
+
 .student-level-badge.excellent {
   background: linear-gradient(135deg, #00ff88, #00cc6a);
   color: #000;
