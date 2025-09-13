@@ -104,6 +104,16 @@ const activeStudents = [
     startedAt: "19.08.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
+  {
+    name: "Temirbekov Ahadjon", // o'quvchi ismi
+    avatar: "../images/students/TemirbekovAhadjon.png", // o'quvchi rasmi
+    attendance: 56, // yo'qlama foizi
+    taskScore: 80, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 8, // bajarilgan vazifalar soni
+    startedAt: "19.08.2025", // kursni boshlagan sana
+    courses: ["html", "css"], // Tugallangan kurslar
+  },
 ]
 
 // Recalculate totalScore automatically from attendance, taskScore, projectScore
