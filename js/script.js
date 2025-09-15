@@ -319,6 +319,11 @@ const newVideos = [
         title: "1-dars. TailwindCss, Color, Hover",
         videoFile: "https://youtu.be/mrSys5opVyM",
       },
+      {
+        id: 2,
+        title: "2-dars. Text property",
+        videoFile: "https://youtu.be/ty0JqVa8HS8",
+      },
     ],
   },
 ]
