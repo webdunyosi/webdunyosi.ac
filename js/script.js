@@ -928,11 +928,29 @@ const assignments = [
   },
 ]
 
+// Savollar kurslari
+const questions = [
+  // CSS SAVOLLAR
+  {
+    id: 1,
+    title: "CSS SAVOLLAR",
+    description: "CSS bo'yicha o'quvchilar bergan savollar va javoblar",
+    image: "../images/question.webp",
+    videos: [
+      {
+        id: 1,
+        title: "Qanday qilib saytdan orqa fon rasmini olish mumkin?",
+        videoFile: "https://youtu.be/Obp5LvqEzZM",
+      },
+    ],
+  }
+]
+
 // Barcha video darslar (yangi + eski)
 const videoLessons = [...newVideos, ...oldVideos]
 
-// Barcha kurslar (video darslar + vazifalar)
-const courses = [...videoLessons, ...assignments]
+// Barcha kurslar (video darslar + vazifalar + savollar)
+const courses = [...videoLessons, ...assignments, ...questions]
 
 // DOM elements
 const loginBtn = document.getElementById("loginBtn")
@@ -1039,6 +1057,7 @@ function loadAllCourses() {
   loadNewVideos()
   loadOldVideos()
   loadAssignments()
+  loadQuestions()
 }
 
 function loadNewVideos() {
@@ -1092,6 +1111,23 @@ function loadAssignments() {
   addCourseClickListeners()
 }
 
+function loadQuestions() {
+  const questionsGrid = document.getElementById("questionsGrid")
+
+  questionsGrid.innerHTML = ""
+
+  questions.forEach((course, index) => {
+    const courseCard = createCourseCard(course, "questions")
+    courseCard.style.animationDelay = `${index * 0.15}s`
+    courseCard.classList.add("animate-slide-up")
+    const linkEl = courseCard.querySelector("a.course-link")
+    if (linkEl) linkEl.setAttribute("data-group", "questions")
+    questionsGrid.appendChild(courseCard)
+  })
+
+  addCourseClickListeners()
+}
+
 function createCourseCard(course, category = "featured") {
   const courseCard = document.createElement("div")
   courseCard.className =
@@ -1106,6 +1142,8 @@ function createCourseCard(course, category = "featured") {
         return '<i class="fas fa-clock mr-1"></i>Eski'
       case "assignments":
         return '<i class="fas fa-tasks mr-1"></i>Vazifa'
+      case "questions":
+        return '<i class="fas fa-question-circle mr-1"></i>Savol'
       default:
         return '<i class="fas fa-star mr-1"></i>Popular'
     }
@@ -1167,6 +1205,7 @@ function loadCourseDetails() {
   if (group === "new") sourceList = newVideos
   else if (group === "old") sourceList = oldVideos
   else if (group === "assignments") sourceList = assignments
+  else if (group === "questions") sourceList = questions
 
   const course = sourceList.find((c) => c.id === courseId)
 
