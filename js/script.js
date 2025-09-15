@@ -308,7 +308,7 @@ const newVideos = [
   },
   // TAILWINDCSS NEW 2025
   {
-    id: 2,
+    id: 3,
     title: "TAILWINDCSS NEW 2025",
     description:
       "Tez va zamonaviy web dizayn uchun Tailwind CSS frameworkini o'rganing",
