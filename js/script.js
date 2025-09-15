@@ -121,7 +121,27 @@ const activeStudents = [
     taskScore: 44, // vazifalar uchun ball
     projectScore: 100, // loyihalar uchun ball
     completedTasks: 4, // bajarilgan vazifalar soni
-    startedAt: "01.06.2030", // kursni boshlagan sana
+    startedAt: "01.06.2025", // kursni boshlagan sana
+    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+  },
+  {
+    name: "Saydaliyev Salohiddin", // o'quvchi ismi
+    avatar: "../images/students/SaydaliyevSalohiddin.png", // o'quvchi rasmi
+    attendance: 97, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 8, // bajarilgan vazifalar soni
+    startedAt: "01.07.2025", // kursni boshlagan sana
+    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+  },
+  {
+    name: "Mardiyev Yahyo", // o'quvchi ismi
+    avatar: "../images/students/MardiyevYahyo.png", // o'quvchi rasmi
+    attendance: 97, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 100, // loyihalar uchun ball
+    completedTasks: 10, // bajarilgan vazifalar soni
+    startedAt: "01.06.2029", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
 ]
@@ -941,6 +961,11 @@ const questions = [
         id: 1,
         title: "Qanday qilib saytdan orqa fon rasmini olish mumkin?",
         videoFile: "https://youtu.be/Obp5LvqEzZM",
+      },
+      {
+        id: 2,
+        title: "Qanday qilib ikki xil rangni birlashtirish mumkin?",
+        videoFile: "https://youtu.be/R99Zh4pEq80",
       },
     ],
   }
