@@ -324,6 +324,11 @@ const newVideos = [
         title: "2-dars. Text property",
         videoFile: "https://youtu.be/ty0JqVa8HS8",
       },
+      {
+        id: 3,
+        title: "3-dars. Flexbox",
+        videoFile: "https://youtu.be/J--VlZ51uxI",
+      },
     ],
   },
 ]
