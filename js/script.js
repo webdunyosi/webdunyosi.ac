@@ -18,9 +18,9 @@ const activeStudents = [
     name: "Dustov Eldor", // o'quvchi ismi
     avatar: "../images/students/DustovEldor.jpg", // o'quvchi rasmi
     attendance: 100, // yo'qlama foizi
-    taskScore: 11, // vazifalar uchun ball
-    projectScore: 0, // loyihalar uchun ball
-    completedTasks: 1, // bajarilgan vazifalar soni
+    taskScore: 45, // vazifalar uchun ball
+    projectScore: 50, // loyihalar uchun ball
+    completedTasks: 5, // bajarilgan vazifalar soni
     startedAt: "08.09.2025", // kursni boshlagan sana
     courses: ["html", "css"], // Tugallangan kurslar
   },
@@ -28,9 +28,9 @@ const activeStudents = [
     name: "Abdalov Sanat", // o'quvchi ismi
     avatar: "../images/students/AbdalovSanat.png", // o'quvchi rasmi
     attendance: 100, // yo'qlama foizi
-    taskScore: 50, // vazifalar uchun ball
+    taskScore: 100, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 6, // bajarilgan vazifalar soni
+    completedTasks: 12, // bajarilgan vazifalar soni
     startedAt: "08.09.2025", // kursni boshlagan sana
     courses: ["html", "css"], // Tugallangan kurslar
   },
@@ -40,7 +40,7 @@ const activeStudents = [
     attendance: 100, // yo'qlama foizi
     taskScore: 100, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 9, // bajarilgan vazifalar soni
+    completedTasks: 14, // bajarilgan vazifalar soni
     startedAt: "04.08.2025", // kursni boshlagan sana
     courses: ["html", "css"], // Tugallangan kurslar
   },
