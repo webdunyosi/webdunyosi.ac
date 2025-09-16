@@ -2236,4 +2236,32 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })
   })
+
+  // Course curriculum accordion functionality
+  document.querySelectorAll('.curriculum-header').forEach(function(header) {
+    header.addEventListener('click', function() {
+      const target = this.getAttribute('data-target')
+      const content = document.getElementById(target)
+      const arrow = this.querySelector('.curriculum-arrow')
+      
+      // Toggle current accordion
+      if (content.classList.contains('hidden')) {
+        // Close all other accordions
+        document.querySelectorAll('.curriculum-content').forEach(function(otherContent) {
+          otherContent.classList.add('hidden')
+        })
+        document.querySelectorAll('.curriculum-arrow').forEach(function(otherArrow) {
+          otherArrow.classList.remove('rotate-180')
+        })
+        
+        // Open current accordion
+        content.classList.remove('hidden')
+        arrow.classList.add('rotate-180')
+      } else {
+        // Close current accordion
+        content.classList.add('hidden')
+        arrow.classList.remove('rotate-180')
+      }
+    })
+  })
 })
