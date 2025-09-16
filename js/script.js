@@ -117,7 +117,7 @@ const activeStudents = [
   {
     name: "Muzaffarov Jasur", // o'quvchi ismi
     avatar: "../images/students/MuzaffarovJasur.png", // o'quvchi rasmi
-    attendance: 167, // yo'qlama foizi
+    attendance: 67, // yo'qlama foizi
     taskScore: 36, // vazifalar uchun ball
     projectScore: 100, // loyihalar uchun ball
     completedTasks: 4, // bajarilgan vazifalar soni
