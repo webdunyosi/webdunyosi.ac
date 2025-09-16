@@ -351,6 +351,21 @@ const newVideos = [
       },
     ],
   },
+  // KOMPYUTER SAVODXONLIGI NEW 2025
+  {
+    id: 4,
+    title: "KOMPYUTER SAVODXONLIGI NEW 2025",
+    description:
+      "Kompyuter savodxonligi asoslarini o'rganing va zamonaviy texnologiyalar bilan ishlash ko'nikmalarini rivojlantiring",
+    image: "../images/kurslar/kompyuter-savodxonligi/KOMPYUTER SAVODXONLIGI.png",
+    videos: [
+      {
+        id: 1,
+        title: "PDF ni WORD ga o'tkazish",
+        videoFile: "https://youtu.be/7rlgzVcipWU",
+      },
+    ],
+  },
 ]
 
 // Eski Videolar
