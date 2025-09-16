@@ -2226,4 +2226,14 @@ document.addEventListener("DOMContentLoaded", function () {
       closeSidebar()
     }
   })
+
+  // Auto-close sidebar when navigation links are clicked
+  document.querySelectorAll('.nav-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      // Close sidebar on mobile after selecting menu item
+      if (window.innerWidth < 1024) {
+        closeSidebar()
+      }
+    })
+  })
 })
