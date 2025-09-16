@@ -144,6 +144,16 @@ const activeStudents = [
     startedAt: "01.06.2029", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
+  {
+    name: "Safarov Durbek", // o'quvchi ismi
+    avatar: "../images/students/SafarovDurbek.png", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 73, // vazifalar uchun ball
+    projectScore: 100, // loyihalar uchun ball
+    completedTasks: 8, // bajarilgan vazifalar soni
+    startedAt: "01.07.2027", // kursni boshlagan sana
+    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+  },
 ]
 
 // Recalculate totalScore automatically from attendance, taskScore, projectScore
