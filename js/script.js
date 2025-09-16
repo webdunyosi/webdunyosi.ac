@@ -1012,6 +1012,11 @@ const questions = [
         title: "Qanday qilib ikki xil rangni birlashtirish mumkin?",
         videoFile: "https://youtu.be/R99Zh4pEq80",
       },
+      {
+        id: 3,
+        title: "Transition nima va qanday ishlatiladi?",
+        videoFile: "https://youtu.be/NEIOJ_gyYyo",
+      },
     ],
   }
 ]
