@@ -365,6 +365,11 @@ const newVideos = [
         title: "PDF ni WORD ga o'tkazish",
         videoFile: "https://youtu.be/7rlgzVcipWU",
       },
+      {
+        id: 2,
+        title: "Avtomatik yonadigan dasturlarni o'chirish",
+        videoFile: "https://youtu.be/6uJ_aFyXSjs",
+      },
     ],
   },
 ]
