@@ -147,17 +147,41 @@
       <!-- Enhanced Main Content -->
       <div class="flex-1 lg:ml-56 min-h-screen">
         <!-- Enhanced Header -->
-        <header class="flex justify-between items-center py-4 lg:py-0 px-6 lg:px-0 glass sticky top-0 z-20 border-b border-gray-800">
+        <header
+          class="flex justify-between items-center py-4 lg:py-0 px-6 lg:px-0 glass sticky top-0 z-20 border-b border-gray-800"
+        >
           <div class="flex items-center">
-            <!-- Mobile Menu Button -->
+            <!-- Header Logo (left) -->
+            <div class="flex items-center">
+              <div
+                class="logo-container w-9 h-9 mr-3 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-black font-bold text-sm logo-glow"
+              >
+                <img
+                  src="images/webdunyosi.png"
+                  alt="Web Dunyosi Logo"
+                  class="w-6 h-6 rounded-full"
+                />
+              </div>
+              <div class="block">
+                <h2
+                  class="text-base font-bold text-primary neon-text leading-none"
+                >
+                  Web Dunyosi
+                </h2>
+                <p class="text-[10px] text-gray-400 leading-none mt-1">
+                  Video Darsliklar
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <!-- Mobile Menu Button (right) -->
             <button
               id="mobileMenuBtn"
-              class="lg:hidden w-11 h-11 rounded-xl bg-dark-lighter flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all hover:scale-110 mr-4"
+              class="lg:hidden w-11 h-11 rounded-xl bg-dark-lighter flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all hover:scale-110"
             >
               <i class="fas fa-bars"></i>
             </button>
-          </div>
-          <div class="flex items-center space-x-4">
             <!-- Enhanced User Account Section -->
             <div id="userAccount" class="hidden relative">
               <div
