@@ -2340,7 +2340,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `👤 <b>Ism:</b> ${encodeURIComponent(name)}\n` +
         `📞 <b>Telefon:</b> ${phone}\n` +
         (age ? `🎂 <b>Yosh:</b> ${encodeURIComponent(age)}\n` : "") +
-        `📚 <b>Kurs:</b> ${encodeURIComponent(course)}\n` +
+        `📚 <b>Kurs:</b> ${course}\n` +
         (message ? `💬 <b>Izoh:</b> ${message}\n` : "") +
         `⏰ <i>Vaqt: ${new Date().toLocaleString("uz-UZ")}</i>`
       try {
