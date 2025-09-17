@@ -357,7 +357,8 @@ const newVideos = [
     title: "KOMPYUTER SAVODXONLIGI NEW 2025",
     description:
       "Kompyuter savodxonligi asoslarini o'rganing va zamonaviy texnologiyalar bilan ishlash ko'nikmalarini rivojlantiring",
-    image: "../images/kurslar/kompyuter-savodxonligi/KOMPYUTER SAVODXONLIGI.png",
+    image:
+      "../images/kurslar/kompyuter-savodxonligi/KOMPYUTER SAVODXONLIGI.png",
     videos: [
       {
         id: 1,
@@ -1018,7 +1019,7 @@ const questions = [
         videoFile: "https://youtu.be/NEIOJ_gyYyo",
       },
     ],
-  }
+  },
 ]
 
 // Barcha video darslar (yangi + eski)
@@ -2268,8 +2269,8 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
   // Auto-close sidebar when navigation links are clicked
-  document.querySelectorAll('.nav-link').forEach(function(link) {
-    link.addEventListener('click', function() {
+  document.querySelectorAll(".nav-link").forEach(function (link) {
+    link.addEventListener("click", function () {
       // Close sidebar on mobile after selecting menu item
       if (window.innerWidth < 1024) {
         closeSidebar()
@@ -2278,30 +2279,93 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
   // Course curriculum accordion functionality
-  document.querySelectorAll('.curriculum-header').forEach(function(header) {
-    header.addEventListener('click', function() {
-      const target = this.getAttribute('data-target')
+  document.querySelectorAll(".curriculum-header").forEach(function (header) {
+    header.addEventListener("click", function () {
+      const target = this.getAttribute("data-target")
       const content = document.getElementById(target)
-      const arrow = this.querySelector('.curriculum-arrow')
-      
+      const arrow = this.querySelector(".curriculum-arrow")
+
       // Toggle current accordion
-      if (content.classList.contains('hidden')) {
+      if (content.classList.contains("hidden")) {
         // Close all other accordions
-        document.querySelectorAll('.curriculum-content').forEach(function(otherContent) {
-          otherContent.classList.add('hidden')
-        })
-        document.querySelectorAll('.curriculum-arrow').forEach(function(otherArrow) {
-          otherArrow.classList.remove('rotate-180')
-        })
-        
+        document
+          .querySelectorAll(".curriculum-content")
+          .forEach(function (otherContent) {
+            otherContent.classList.add("hidden")
+          })
+        document
+          .querySelectorAll(".curriculum-arrow")
+          .forEach(function (otherArrow) {
+            otherArrow.classList.remove("rotate-180")
+          })
+
         // Open current accordion
-        content.classList.remove('hidden')
-        arrow.classList.add('rotate-180')
+        content.classList.remove("hidden")
+        arrow.classList.add("rotate-180")
       } else {
         // Close current accordion
-        content.classList.add('hidden')
-        arrow.classList.remove('rotate-180')
+        content.classList.add("hidden")
+        arrow.classList.remove("rotate-180")
       }
     })
   })
+
+  // Contact form -> Telegram botga yuborish
+  const contactForm = document.getElementById("contactForm")
+  if (contactForm) {
+    contactForm.addEventListener("submit", async function (e) {
+      e.preventDefault()
+      const statusEl = document.getElementById("contactStatus")
+      const name = document.getElementById("cfName").value.trim()
+      const phone = document.getElementById("cfPhone").value.trim()
+      const age = document.getElementById("cfAge").value.trim()
+      const course = document.getElementById("cfCourse").value
+      const message = document.getElementById("cfMessage").value.trim()
+
+      if (!name || !phone) {
+        statusEl.textContent = "Iltimos, ism va telefonni kiriting."
+        statusEl.className = "text-sm text-red-400"
+        return
+      }
+
+      statusEl.textContent = "Yuborilmoqda..."
+      statusEl.className = "text-sm text-gray-400"
+
+      // Telegram bot ma'lumotlari (foydalanuvchi bergan)
+      const BOT_TOKEN = "7327447931:AAEwcEUm4zykjJblfkxxVzGLoH_P_BJwQ7E"
+      const CHAT_ID = "5414733748"
+
+      const text =
+        `Yangi ro'yxatdan o'tish:%0A` +
+        `Ism: ${encodeURIComponent(name)}%0A` +
+        `Telefon: ${encodeURIComponent(phone)}%0A` +
+        (age ? `Yosh: ${encodeURIComponent(age)}%0A` : "") +
+        `Kurs: ${encodeURIComponent(course)}%0A` +
+        (message ? `Izoh: ${encodeURIComponent(message)}` : "")
+
+      try {
+        const res = await fetch(
+          `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              chat_id: CHAT_ID,
+              text: text,
+              parse_mode: "HTML",
+            }),
+          }
+        )
+        if (!res.ok) throw new Error("Network response was not ok")
+        statusEl.textContent =
+          "Muvaffaqiyatli yuborildi! Tez orada bog'lanamiz."
+        statusEl.className = "text-sm text-green-400"
+        contactForm.reset()
+      } catch (err) {
+        statusEl.textContent =
+          "Xatolik yuz berdi. Iltimos, birozdan so'ng qayta urinib ko'ring."
+        statusEl.className = "text-sm text-red-400"
+      }
+    })
+  }
 })
