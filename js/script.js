@@ -2333,16 +2333,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Telegram bot ma'lumotlari (foydalanuvchi bergan)
       const BOT_TOKEN = "7327447931:AAEwcEUm4zykjJblfkxxVzGLoH_P_BJwQ7E"
-      const CHAT_ID = "5414733748"
+      const CHAT_ID = "-1002607241253"
 
       const text =
-        `Yangi ro'yxatdan o'tish:%0A` +
-        `Ism: ${encodeURIComponent(name)}%0A` +
-        `Telefon: ${encodeURIComponent(phone)}%0A` +
-        (age ? `Yosh: ${encodeURIComponent(age)}%0A` : "") +
-        `Kurs: ${encodeURIComponent(course)}%0A` +
-        (message ? `Izoh: ${encodeURIComponent(message)}` : "")
-
+        `🎓 <b>YANGI RO'YXATDAN O'TISH</b>\n\n` +
+        `👤 <b>Ism:</b> ${encodeURIComponent(name)}\n` +
+        `📞 <b>Telefon:</b> ${phone}\n` +
+        (age ? `🎂 <b>Yosh:</b> ${encodeURIComponent(age)}\n` : "") +
+        `📚 <b>Kurs:</b> ${encodeURIComponent(course)}\n` +
+        (message ? `💬 <b>Izoh:</b> ${message}\n` : "") +
+        `⏰ <i>Vaqt: ${new Date().toLocaleString("uz-UZ")}</i>`
       try {
         const res = await fetch(
           `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
