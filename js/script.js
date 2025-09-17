@@ -211,7 +211,7 @@ const newVideos = [
       {
         id: 1,
         title: "Yangi boshlovchilar uchun",
-        videoFile: "https://youtu.be/E0gwAOier80",
+        videoFile: "https://youtu.be/LN1-safk0Xo",
       },
       {
         id: 2,
