@@ -1018,6 +1018,11 @@ const questions = [
         title: "Transition nima va qanday ishlatiladi?",
         videoFile: "https://youtu.be/NEIOJ_gyYyo",
       },
+      {
+        id: 4,
+        title: "Cursor property nima va u qanday ishlaydi?",
+        videoFile: "https://youtu.be/3vGCBWqW6hA",
+      },
     ],
   },
 ]
