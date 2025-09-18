@@ -359,6 +359,11 @@ const newVideos = [
         title: "5-dars. Width, Height, Border",
         videoFile: "https://youtu.be/UlLB5n3ru2I",
       },
+      {
+        id: 5,
+        title: "6-dars. Border-radius, Margin, Padding",
+        videoFile: "https://youtu.be/bLZT-cOUaes",
+      },
     ],
   },
   // KOMPYUTER SAVODXONLIGI NEW 2025
