@@ -2322,6 +2322,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Contact form -> Telegram botga yuborish
   const contactForm = document.getElementById("contactForm")
+  // HTML uchun xavfsiz qilish helperi
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/\"/g, "&quot;")
+      .replace(/'/g, "&#39;")
+  }
   if (contactForm) {
     contactForm.addEventListener("submit", async function (e) {
       e.preventDefault()
@@ -2347,11 +2356,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const text =
         `🎓 <b>YANGI RO'YXATDAN O'TISH</b>\n\n` +
-        `👤 <b>Ism:</b> ${encodeURIComponent(name)}\n` +
-        `📞 <b>Telefon:</b> ${phone}\n` +
-        (age ? `🎂 <b>Yosh:</b> ${encodeURIComponent(age)}\n` : "") +
-        `📚 <b>Kurs:</b> ${course}\n` +
-        (message ? `💬 <b>Izoh:</b> ${message}\n` : "") +
+        `👤 <b>Ism:</b> ${escapeHtml(name)}\n` +
+        `📞 <b>Telefon:</b> ${escapeHtml(phone)}\n` +
+        (age ? `🎂 <b>Yosh:</b> ${escapeHtml(age)}\n` : "") +
+        `📚 <b>Kurs:</b> ${escapeHtml(course)}\n` +
+        (message ? `💬 <b>Izoh:</b> ${escapeHtml(message)}\n` : "") +
         `⏰ <i>Vaqt: ${new Date().toLocaleString("uz-UZ")}</i>`
       try {
         const res = await fetch(
