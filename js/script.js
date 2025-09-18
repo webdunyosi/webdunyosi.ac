@@ -354,6 +354,11 @@ const newVideos = [
         title: "4-dars. Responsive",
         videoFile: "https://youtu.be/OEl73-HZnU4",
       },
+      {
+        id: 5,
+        title: "5-dars. Width, Height, Border",
+        videoFile: "https://youtu.be/UlLB5n3ru2I",
+      },
     ],
   },
   // KOMPYUTER SAVODXONLIGI NEW 2025
