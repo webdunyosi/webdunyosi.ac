@@ -349,6 +349,11 @@ const newVideos = [
         title: "3-dars. Flexbox",
         videoFile: "https://youtu.be/J--VlZ51uxI",
       },
+      {
+        id: 4,
+        title: "4-dars. Responsive",
+        videoFile: "https://youtu.be/OEl73-HZnU4",
+      },
     ],
   },
   // KOMPYUTER SAVODXONLIGI NEW 2025
