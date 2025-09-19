@@ -1001,6 +1001,11 @@ const assignments = [
         title: "6-dars. Uyga vazifa. Amid",
         videoFile: "https://youtu.be/caLAMR0yDzg",
       },
+      {
+        id: 7,
+        title: "7-dars. Uyga vazifa. Olonje",
+        videoFile: "https://youtu.be/QLob7E_kGpE",
+      },
     ],
   },
   // REACTJS VAZIFALAR
