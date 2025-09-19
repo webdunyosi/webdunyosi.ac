@@ -360,9 +360,14 @@ const newVideos = [
         videoFile: "https://youtu.be/UlLB5n3ru2I",
       },
       {
-        id: 5,
+        id: 6,
         title: "6-dars. Border-radius, Margin, Padding",
         videoFile: "https://youtu.be/bLZT-cOUaes",
+      },
+      {
+        id: 7,
+        title: "7-dars. Background-color, Gradient",
+        videoFile: "https://youtu.be/--zLFmMJ_5E",
       },
     ],
   },
