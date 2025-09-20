@@ -374,6 +374,11 @@ const newVideos = [
         title: "8-dars. Inline, Block, Background-image",
         videoFile: "https://youtu.be/5uozA5hyaxg",
       },
+      {
+        id: 9,
+        title: "9-dars. Filter, Shadow, backdrop-blur, ",
+        videoFile: "https://youtu.be/cNcC4uPBUPM",
+      },
     ],
   },
   // KOMPYUTER SAVODXONLIGI NEW 2025
