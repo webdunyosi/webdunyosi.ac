@@ -1002,9 +1002,14 @@ const assignments = [
         videoFile: "https://youtu.be/caLAMR0yDzg",
       },
       {
-        id: 7,
+        id: 8,
         title: "7-dars. Uyga vazifa. Olonje",
         videoFile: "https://youtu.be/QLob7E_kGpE",
+      },
+      {
+        id: 9,
+        title: "8-dars. Uyga vazifa. Portfolio",
+        videoFile: "https://youtu.be/E5SJBJGelVg",
       },
     ],
   },
