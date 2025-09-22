@@ -1078,6 +1078,11 @@ const questions = [
         title: "Cursor property nima va u qanday ishlaydi?",
         videoFile: "https://youtu.be/3vGCBWqW6hA",
       },
+      {
+        id: 5,
+        title: "Animation Buttons yaratish",
+        videoFile: "https://youtu.be/X7C_fSyOK0k",
+      },
     ],
   },
 ]
