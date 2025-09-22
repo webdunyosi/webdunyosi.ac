@@ -389,6 +389,11 @@ const newVideos = [
         title: "11-dars. 2D",
         videoFile: "https://youtu.be/4jJrsDSpLa4",
       },
+      {
+        id: 12,
+        title: "12-dars. Animation, Grid",
+        videoFile: "https://youtu.be/QZMl9ETMtek",
+      },
     ],
   },
   // KOMPYUTER SAVODXONLIGI NEW 2025
