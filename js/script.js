@@ -1036,6 +1036,11 @@ const assignments = [
         title: "8-dars. Uyga vazifa. Portfolio",
         videoFile: "https://youtu.be/E5SJBJGelVg",
       },
+      {
+        id: 10,
+        title: "9-dars. Uyga vazifa. SeoGram",
+        videoFile: "https://youtu.be/Bq2qbi7JEBc",
+      },
     ],
   },
   // REACTJS VAZIFALAR
