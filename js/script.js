@@ -376,8 +376,13 @@ const newVideos = [
       },
       {
         id: 9,
-        title: "9-dars. Filter, Shadow, backdrop-blur, ",
+        title: "9-dars. Filter, Shadow, backdrop-blur",
         videoFile: "https://youtu.be/cNcC4uPBUPM",
+      },
+      {
+        id: 10,
+        title: "10-dars. Position, z-index",
+        videoFile: "https://youtu.be/MJtReX4IZXM",
       },
     ],
   },
