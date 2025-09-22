@@ -1046,6 +1046,11 @@ const assignments = [
         title: "10-dars. Uyga vazifa. Bag",
         videoFile: "https://youtu.be/WEtEaiM10QU",
       },
+      {
+        id: 12,
+        title: "11-dars. Uyga vazifa. Bag",
+        videoFile: "https://youtu.be/fPe2_R_PiDg",
+      },
     ],
   },
   // REACTJS VAZIFALAR
