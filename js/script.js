@@ -384,6 +384,11 @@ const newVideos = [
         title: "10-dars. Position, z-index",
         videoFile: "https://youtu.be/MJtReX4IZXM",
       },
+      {
+        id: 11,
+        title: "11-dars. 2D",
+        videoFile: "https://youtu.be/4jJrsDSpLa4",
+      },
     ],
   },
   // KOMPYUTER SAVODXONLIGI NEW 2025
