@@ -1056,6 +1056,11 @@ const assignments = [
         title: "12-dars. Uyga vazifa. Zero",
         videoFile: "https://youtu.be/2ctF9LjupNU",
       },
+      {
+        id: 14,
+        title: "13-dars. Uyga vazifa. Grovemade",
+        videoFile: "https://youtu.be/UXbeGz2OX-4",
+      },
     ],
   },
   // REACTJS VAZIFALAR
