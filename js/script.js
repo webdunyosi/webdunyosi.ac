@@ -127,7 +127,7 @@ const activeStudents = [
   {
     name: "Tursunov Ibrohimjon", // o'quvchi ismi
     avatar: "../images/students/TursunovIbrohimjon.png", // o'quvchi rasmi
-    attendance: 69, // yo'qlama foizi
+    attendance: 73, // yo'qlama foizi
     taskScore: 90, // vazifalar uchun ball
     projectScore: 100, // loyihalar uchun ball
     completedTasks: 9, // bajarilgan vazifalar soni
@@ -151,6 +151,16 @@ const activeStudents = [
     taskScore: 100, // vazifalar uchun ball
     projectScore: 100, // loyihalar uchun ball
     completedTasks: 13, // bajarilgan vazifalar soni
+    startedAt: "01.07.2027", // kursni boshlagan sana
+    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+  },
+  {
+    name: "Xamidova Baxshand", // o'quvchi ismi
+    avatar: "../images/students/", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 5, // bajarilgan vazifalar soni
     startedAt: "01.07.2027", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
