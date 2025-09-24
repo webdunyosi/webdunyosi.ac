@@ -1066,6 +1066,11 @@ const assignments = [
         title: "14-dars. Uyga vazifa. Locus",
         videoFile: "https://youtu.be/rLgr5M8Gelw",
       },
+      {
+        id: 15,
+        title: "15-dars. Uyga vazifa. Drile",
+        videoFile: "https://youtu.be/HkoavA1UqJA",
+      },
     ],
   },
   // REACTJS VAZIFALAR
