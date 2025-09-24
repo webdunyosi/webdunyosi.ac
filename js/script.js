@@ -1085,25 +1085,16 @@ const assignments = [
         title: "1-dars. Uyga Vazifa. Zeus UI",
         videoFile: "https://youtu.be/E4iy3dde5rQ",
       },
-    ],
-  },
-  // TAILWINDCSS VAZIFALAR
-  {
-    id: 2,
-    title: "TAILWINDCSS VAZIFALAR",
-    description: "TailwindCSS vazifalarini shu yerga joylab boraman.",
-    image: "../images/tailwind.png",
-    videos: [
       {
-        id: 1,
-        title: "1-dars. Uyga Vazifa. Zeus UI",
-        videoFile: "https://youtu.be/E4iy3dde5rQ",
+        id: 2,
+        title: "2-dars. Uyga Vazifa. EaTurkish",
+        videoFile: "https://youtu.be/fFyF_jmkB8k",
       },
     ],
   },
   // JAVASCRIPT VAZIFALAR
   {
-    id: 2,
+    id: 3,
     title: "JAVASCRIPT VAZIFALAR",
     description: "Javascript darslari uchun uyga vazifalar",
     image: "../images/js.png",
@@ -1117,7 +1108,7 @@ const assignments = [
   },
   // REACTJS VAZIFALAR
   {
-    id: 3,
+    id: 4,
     title: "REACTJS VAZIFALAR",
     description: "ReactJS darslari uchun uyga vazifalar",
     image: "../images/rj.jpg",
