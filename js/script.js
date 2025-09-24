@@ -430,6 +430,11 @@ const newVideos = [
         title: "Rasmni orqa fonini qirqish",
         videoFile: "https://youtu.be/Vrp40qhxXcw",
       },
+      {
+        id: 6,
+        title: "Paint rubber AI",
+        videoFile: "https://youtu.be/jUtFV3S9xwg",
+      },
     ],
   },
 ]
