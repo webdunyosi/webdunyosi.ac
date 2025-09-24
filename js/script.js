@@ -420,6 +420,11 @@ const newVideos = [
         title: "Zip",
         videoFile: "https://youtu.be/SZjo5XYSae4",
       },
+      {
+        id: 4,
+        title: "Rasmni tiniqlashtirish",
+        videoFile: "https://youtu.be/92kvtYVgWiw",
+      },
     ],
   },
 ]
