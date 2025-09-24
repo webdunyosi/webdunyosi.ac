@@ -425,6 +425,11 @@ const newVideos = [
         title: "Rasmni tiniqlashtirish",
         videoFile: "https://youtu.be/92kvtYVgWiw",
       },
+      {
+        id: 5,
+        title: "Rasmni orqa fonini qirqish",
+        videoFile: "https://youtu.be/Vrp40qhxXcw",
+      },
     ],
   },
 ]
