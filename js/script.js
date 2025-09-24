@@ -1110,6 +1110,11 @@ const assignments = [
         title: "2-dars. Uyga Vazifa. EaTurkish",
         videoFile: "https://youtu.be/fFyF_jmkB8k",
       },
+      {
+        id: 3,
+        title: "3-dars. Uyga Vazifa. Olonje",
+        videoFile: "https://youtu.be/UmZj1fK7UcY",
+      },
     ],
   },
   // JAVASCRIPT VAZIFALAR
