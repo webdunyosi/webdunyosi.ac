@@ -415,6 +415,11 @@ const newVideos = [
         title: "Avtomatik yonadigan dasturlarni o'chirish",
         videoFile: "https://youtu.be/6uJ_aFyXSjs",
       },
+      {
+        id: 3,
+        title: "Zip",
+        videoFile: "https://youtu.be/SZjo5XYSae4",
+      },
     ],
   },
 ]
