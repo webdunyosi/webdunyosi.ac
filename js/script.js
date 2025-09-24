@@ -156,7 +156,7 @@ const activeStudents = [
   },
   {
     name: "Xamidova Baxshand", // o'quvchi ismi
-    avatar: "../images/students/", // o'quvchi rasmi
+    avatar: "../images/students/XamidovaBaxshand.png", // o'quvchi rasmi
     attendance: 100, // yo'qlama foizi
     taskScore: 100, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
