@@ -1073,9 +1073,23 @@ const assignments = [
       },
     ],
   },
-  // REACTJS VAZIFALAR
+  // TAILWINDCSS VAZIFALAR
   {
     id: 2,
+    title: "TAILWINDCSS VAZIFALAR",
+    description: "TailwindCSS vazifalarini shu yerga joylab boraman.",
+    image: "../images/tailwind.png",
+    videos: [
+      {
+        id: 1,
+        title: "1-dars. Uyga Vazifa. Zeus UI",
+        videoFile: "https://youtu.be/E4iy3dde5rQ",
+      },
+    ],
+  },
+  // REACTJS VAZIFALAR
+  {
+    id: 3,
     title: "REACTJS VAZIFALAR",
     description: "ReactJS darslari uchun uyga vazifalar",
     image: "../images/rj.jpg",
