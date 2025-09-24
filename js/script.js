@@ -1124,10 +1124,10 @@ const assignments = [
 
 // Savollar kurslari
 const questions = [
-  // CSS SAVOLLAR
+  // CSS QISQA SAVOLLAR
   {
     id: 1,
-    title: "CSS SAVOLLAR",
+    title: "CSS QISQA SAVOLLAR",
     description: "CSS bo'yicha o'quvchilar bergan savollar va javoblar",
     image: "../images/question.webp",
     videos: [
@@ -1155,6 +1155,20 @@ const questions = [
         id: 5,
         title: "Animation Buttons yaratish",
         videoFile: "https://youtu.be/X7C_fSyOK0k",
+      },
+    ],
+  },
+  // FRONTEND QISQA SAVOLLAR
+  {
+    id: 2,
+    title: "FRONTEND QISQA SAVOLLAR",
+    description: "Frontend bo'yicha qisqa savollar va javoblar",
+    image: "../images/question.webp",
+    videos: [
+      {
+        id: 1,
+        title: "Figmada Zip papkani qanday ochish mumkin?",
+        videoFile: "https://youtu.be/O_8cqHPQ-5U",
       },
     ],
   },
