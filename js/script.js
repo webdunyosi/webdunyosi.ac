@@ -201,6 +201,47 @@ computeStudentsTotalScores()
 
 // Yangi Videolar (2025)
 const newVideos = [
+  // KOMPYUTER SAVODXONLIGI NEW 2025
+  {
+    id: 4,
+    title: "KOMPYUTER SAVODXONLIGI NEW 2025",
+    description:
+      "Kompyuter savodxonligi asoslarini o'rganing va zamonaviy texnologiyalar bilan ishlash ko'nikmalarini rivojlantiring",
+    image:
+      "../images/kurslar/kompyuter-savodxonligi/KOMPYUTER SAVODXONLIGI.png",
+    videos: [
+      {
+        id: 1,
+        title: "PDF ni WORD ga o'tkazish",
+        videoFile: "https://youtu.be/7rlgzVcipWU",
+      },
+      {
+        id: 2,
+        title: "Avtomatik yonadigan dasturlarni o'chirish",
+        videoFile: "https://youtu.be/6uJ_aFyXSjs",
+      },
+      {
+        id: 3,
+        title: "Zip",
+        videoFile: "https://youtu.be/SZjo5XYSae4",
+      },
+      {
+        id: 4,
+        title: "Rasmni tiniqlashtirish",
+        videoFile: "https://youtu.be/92kvtYVgWiw",
+      },
+      {
+        id: 5,
+        title: "Rasmni orqa fonini qirqish",
+        videoFile: "https://youtu.be/Vrp40qhxXcw",
+      },
+      {
+        id: 6,
+        title: "Paint rubber AI",
+        videoFile: "https://youtu.be/jUtFV3S9xwg",
+      },
+    ],
+  },
   // HTML NEW 2025
   {
     id: 1,
@@ -396,44 +437,164 @@ const newVideos = [
       },
     ],
   },
-  // KOMPYUTER SAVODXONLIGI NEW 2025
+  // JAVASCRIPT NEW 2025
   {
-    id: 4,
-    title: "KOMPYUTER SAVODXONLIGI NEW 2025",
+    id: 6,
+    title: "JavaScript Dasturlash",
     description:
-      "Kompyuter savodxonligi asoslarini o'rganing va zamonaviy texnologiyalar bilan ishlash ko'nikmalarini rivojlantiring",
-    image:
-      "../images/kurslar/kompyuter-savodxonligi/KOMPYUTER SAVODXONLIGI.png",
+      "Interaktiv web sahifalar yaratish uchun JavaScript ni o'rganing",
+    image: "../images/js.png",
     videos: [
       {
         id: 1,
-        title: "PDF ni WORD ga o'tkazish",
-        videoFile: "https://youtu.be/7rlgzVcipWU",
+        title: "MERN Stack kursi haqida",
+        videoFile:
+          "https://youtu.be/yyasmRTnsqI?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
       },
       {
         id: 2,
-        title: "Avtomatik yonadigan dasturlarni o'chirish",
-        videoFile: "https://youtu.be/6uJ_aFyXSjs",
+        title: "1-dars. JavaScript modulni samarali tugatish",
+        videoFile:
+          "https://youtu.be/7wKJ2wj8vPk?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
       },
       {
         id: 3,
-        title: "Zip",
-        videoFile: "https://youtu.be/SZjo5XYSae4",
+        title: "2-dars. Ish joyini sozlash",
+        videoFile:
+          "https://youtu.be/AX3AFc4n_1s?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
       },
       {
         id: 4,
-        title: "Rasmni tiniqlashtirish",
-        videoFile: "https://youtu.be/92kvtYVgWiw",
+        title: "3-dars. Node js ni ornatish",
+        videoFile:
+          "https://youtu.be/TK_7Q4mTT7s?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
       },
       {
         id: 5,
-        title: "Rasmni orqa fonini qirqish",
-        videoFile: "https://youtu.be/Vrp40qhxXcw",
+        title: "4-dars. Javascript nima?",
+        videoFile:
+          "https://youtu.be/EjpJiZViUhE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
       },
       {
         id: 6,
-        title: "Paint rubber AI",
-        videoFile: "https://youtu.be/jUtFV3S9xwg",
+        title: "5-dars Ozgaruvchilar",
+        videoFile:
+          "https://youtu.be/wx5YU36IqnM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 7,
+        title: "6-dars. Qatiy rejim va u nima?",
+        videoFile:
+          "https://youtu.be/_HNC2CS9VrE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 8,
+        title: "7-dars. Javascriptdagi malumotlar turlarining tasnifi",
+        videoFile:
+          "https://youtu.be/y9OOdaKLU3o?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 9,
+        title: "8-dars. Foydalanuvchi bilan oddiy muloqot",
+        videoFile:
+          "https://youtu.be/qbskYCDdsNY?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 10,
+        title: "8-dars. Javascriptda foydalanuvchi bilan muloqot",
+        videoFile:
+          "https://youtu.be/JPXkfrymWD0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 11,
+        title: "9-dars. Interpolatsiya",
+        videoFile:
+          "https://youtu.be/fYZy93uqk5Q?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 12,
+        title: "10-dars. Javascript Operatorlari",
+        videoFile:
+          "https://youtu.be/lcmEWA0_ABU?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 13,
+        title:
+          "11-dars Git and GitHub boshlovchilar uchun. #git #github #programming",
+        videoFile:
+          "https://youtu.be/ai5JZTEoE8M?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 14,
+        title: "12-dars. Amaliyot. Ilova yaratishni boshlaymiz",
+        videoFile:
+          "https://youtu.be/yVknEYclH3Y?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 15,
+        title: "13-dars. Shartli operator",
+        videoFile:
+          "https://youtu.be/KbR53u2vUVE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 16,
+        title: "14-dars. Loops - while, do while and for",
+        videoFile:
+          "https://youtu.be/DGHZuDHn2rs?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 17,
+        title: "14-dars. for in and for of",
+        videoFile:
+          "https://youtu.be/ZB6pS-AZf0A?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 18,
+        title: "15-dars. Amaliyot. Sikl",
+        videoFile:
+          "https://youtu.be/2NmNh0vNxtk?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 19,
+        title: "16-dars. Funksiya",
+        videoFile:
+          "https://youtu.be/MCwtzQz7rE0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 20,
+        title: "17. Metod va xususiyatlar",
+        videoFile:
+          "https://youtu.be/hPb7KpEpUBa?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 21,
+        title: "18-dars. Amaliyot. Function.",
+        videoFile:
+          "https://youtu.be/Lfr5WAdFnLg?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 22,
+        title: "19-dars. Callback function",
+        videoFile:
+          "https://youtu.be/QJSp9YaCIj8?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 23,
+        title: "20-dars. Obyektlar, destruptizatsiya",
+        videoFile:
+          "https://youtu.be/a78_nMCpikU?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 24,
+        title: "21-dars. Massivlar va psevdo massivlar",
+        videoFile:
+          "https://youtu.be/y2k4JZVLKXI?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+      },
+      {
+        id: 25,
+        title: "35-dars. ClassList",
+        videoFile:
+          "https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
       },
     ],
   },
