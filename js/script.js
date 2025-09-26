@@ -592,6 +592,26 @@ const newVideos = [
       },
       {
         id: 25,
+        title: "13-dars. forEach",
+        videoFile: "https://youtu.be/D4z_6uXP-IA",
+      },
+      {
+        id: 26,
+        title: "14-dars. map, filter, every, some, reduce",
+        videoFile: "https://youtu.be/k392OZSZw64",
+      },
+      {
+        id: 27,
+        title: "15-dars. Spread Operatori (...), splice()",
+        videoFile: "https://youtu.be/hPhOYxEQ9YY",
+      },
+      {
+        id: 28,
+        title: "16-dars. OOP",
+        videoFile: "https://youtu.be/yft7wFzo74Q",
+      },
+      {
+        id: 25,
         title: "35-dars. ClassList",
         videoFile:
           "https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
@@ -1430,6 +1450,16 @@ const assignments = [
         id: 1,
         title: "1-dars. Uyga Vazifa. O'zgaruvchi va Malumot turlari",
         videoFile: "https://youtu.be/WSovZv-s1og",
+      },
+      {
+        id: 2,
+        title: "2-dars. Uyga Vazifa. Prompt",
+        videoFile: "https://youtu.be/mojkjQqjdbo",
+      },
+      {
+        id: 3,
+        title: "3-dars. Arifmetik operatorlar",
+        videoFile: "https://youtu.be/qlW4VTD5k4U",
       },
       {
         id: 36,
