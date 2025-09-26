@@ -1427,6 +1427,11 @@ const assignments = [
     image: "../images/js.png",
     videos: [
       {
+        id: 1,
+        title: "1-dars. Uyga Vazifa. O'zgaruvchi va Malumot turlari",
+        videoFile: "https://youtu.be/WSovZv-s1og",
+      },
+      {
         id: 36,
         title: "36-dars. Uyga Vazifa. JSON Placeholder",
         videoFile: "https://youtu.be/HgfgZnhQ0ZI",
