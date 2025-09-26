@@ -611,6 +611,11 @@ const newVideos = [
         videoFile: "https://youtu.be/yft7wFzo74Q",
       },
       {
+        id: 29,
+        title: "17-dars. DOM bilan ishlash",
+        videoFile: "https://youtu.be/60qrpg2mVoE",
+      },
+      {
         id: 25,
         title: "35-dars. ClassList",
         videoFile:
