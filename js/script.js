@@ -616,6 +616,11 @@ const newVideos = [
         videoFile: "https://youtu.be/60qrpg2mVoE",
       },
       {
+        id: 30,
+        title: "18-dars. createElement, classList, append, prepend, textContent, InnerHTML",
+        videoFile: "https://youtu.be/60qrpg2mVoE",
+      },
+      {
         id: 25,
         title: "35-dars. ClassList",
         videoFile:
