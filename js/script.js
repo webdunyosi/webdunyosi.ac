@@ -716,6 +716,12 @@ const newVideos = [
           "https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
         duration: "2:13", // minut
       },
+      {
+        id: 35,
+        title: "23-dars. Delegatsiya",
+        videoFile: "https://youtu.be/paxeIUAMl60",
+        duration: "6:09", // minut
+      },
     ],
   },
 ]
@@ -1449,6 +1455,13 @@ const oldVideos = [
         title: "21-dars. Massivlar va psevdo massivlar",
         videoFile:
           "https://youtu.be/y2k4JZVLKXI?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
+      },
+      {
+        id: 25,
+        title: "35-dars. ClassList",
+        videoFile:
+          "https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
         duration: "2:13", // minut
       },
       {
