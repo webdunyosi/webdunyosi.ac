@@ -203,7 +203,7 @@ computeStudentsTotalScores()
 const newVideos = [
   // KOMPYUTER SAVODXONLIGI NEW 2025
   {
-    id: 4,
+    id: 1,
     title: "KOMPYUTER SAVODXONLIGI NEW 2025",
     description:
       "Kompyuter savodxonligi asoslarini o'rganing va zamonaviy texnologiyalar bilan ishlash ko'nikmalarini rivojlantiring",
@@ -214,43 +214,43 @@ const newVideos = [
         id: 1,
         title: "PDF ni WORD ga o'tkazish",
         videoFile: "https://youtu.be/7rlgzVcipWU",
-        duration: "2:12" // minut
+        duration: "2:12", // minut
       },
       {
         id: 2,
         title: "Avtomatik yonadigan dasturlarni o'chirish",
         videoFile: "https://youtu.be/6uJ_aFyXSjs",
-        duration: "4:17" // minut
+        duration: "4:17", // minut
       },
       {
         id: 3,
         title: "Zip",
         videoFile: "https://youtu.be/SZjo5XYSae4",
-        duration: "4:32" // minut
+        duration: "4:32", // minut
       },
       {
         id: 4,
         title: "Rasmni tiniqlashtirish",
         videoFile: "https://youtu.be/92kvtYVgWiw",
-        duration: "3:00" // minut
+        duration: "3:00", // minut
       },
       {
         id: 5,
         title: "Rasmni orqa fonini qirqish",
         videoFile: "https://youtu.be/Vrp40qhxXcw",
-        duration: "5:04" // minut
+        duration: "5:04", // minut
       },
       {
         id: 6,
         title: "Paint rubber AI",
         videoFile: "https://youtu.be/jUtFV3S9xwg",
-        duration: "4:23" // minut
+        duration: "4:23", // minut
       },
     ],
   },
   // HTML NEW 2025
   {
-    id: 1,
+    id: 2,
     title: "HTML NEW 2025",
     description: "Web sahifalar yaratishning asosiy tili - HTML ni o'rganing",
     image: "../images/html.jpg",
@@ -259,37 +259,43 @@ const newVideos = [
         id: 1,
         title: "Yangi boshlovchilar uchun",
         videoFile: "https://youtu.be/LN1-safk0Xo",
+        duration: "6:12", // minut
       },
       {
         id: 2,
         title: "Faol o'quvchilar bo'limi haqida",
         videoFile: "https://youtu.be/-MlnCH-rZLs",
+        duration: "3:36", // minut
       },
       {
         id: 3,
         title: "1-dars. HTML asoslari - Kirish",
         videoFile: "https://youtu.be/stkPk65Sthk",
+        duration: "13:59", // minut
       },
       {
         id: 4,
         title: "2-dars. Img, div, komentariya",
         videoFile: "https://youtu.be/vhhwnIn7x-Y",
+        duration: "10:00", // minut
       },
       {
         id: 5,
         title: "3-dars. Anchor, Iframe",
         videoFile: "https://youtu.be/WxADzZG-AsI",
+        duration: "19:31", // minut
       },
       {
         id: 6,
         title: "4-dars. Form",
         videoFile: "https://youtu.be/NDbsi_pTnVw",
+        duration: "11:02", // minut
       },
     ],
   },
   // CSS NEW 2025
   {
-    id: 2,
+    id: 3,
     title: "CSS NEW 2025",
     description:
       "Web sahifalarni chiroyli qilish uchun CSS stillarini o'rganing",
@@ -300,76 +306,91 @@ const newVideos = [
         title:
           "1-dars. Css kirish, Css ulash, Color, Selectorlar, Hover, Nth-child",
         videoFile: "https://youtu.be/Cwazxwe8EXc",
+        duration: "10:06", // minut
       },
       {
         id: 2,
         title: "2-dars. Text propertylari",
         videoFile: "https://youtu.be/xyhk6zIXB-M",
+        duration: "10:01", // minut
       },
       {
         id: 3,
         title: "3-dars. Background-color, Display",
         videoFile: "https://youtu.be/gU2pMuKKEuE",
+        duration: "6:53", // minut
       },
       {
         id: 4,
         title: "4-dars. Width, Height, Border",
         videoFile: "https://youtu.be/Cg1mVfRQIGE",
+        duration: "3:27", // minut
       },
       {
         id: 5,
         title: "5-dars.  Padding, Margin, Border-radius",
         videoFile: "https://youtu.be/Z50UCstYRfM",
+        duration: "14:01", // minut
       },
       {
         id: 6,
         title: "6-dars. Background-img, Gradient",
         videoFile: "https://youtu.be/zwbZ7n6teVA",
+        duration: "7:40", // minut
       },
       {
         id: 7,
         title: "7-dars. Flex box. 1-qism",
         videoFile: "https://youtu.be/gf08BsANT30",
+        duration: "8:34", // minut
       },
       {
         id: 8,
         title: "8-dars. Flex box. 2-qism",
         videoFile: "https://youtu.be/0frBcO7T_Qg",
+        duration: "8:33", // minut
       },
       {
         id: 9,
         title: "9-dars. Responsive, :root",
         videoFile: "https://youtu.be/q9vULhEkovI",
+        duration: "12:44", // minut
       },
       {
         id: 10,
         title: "10-dars. box-shadow, Object-fit, Boxicons",
         videoFile: "https://youtu.be/CTft-qAuiOI",
+        duration: "13:07", // minut
       },
       {
         id: 11,
         title: "11-dars. position, overflow",
         videoFile: "https://youtu.be/5B4Q1uBV904",
+        duration: "12:10", // minut
       },
       {
         id: 12,
         title: "12-dars.Backdrop-filterd, sticky, z-index",
         videoFile: "https://youtu.be/U6lDfArUsqQ",
+        duration: "7:34", // minut
       },
       {
         id: 13,
         title: "13-dars. 2D Transform",
         videoFile: "https://youtu.be/1f_xMsUsWdA",
+        duration: "6:44", // minut
       },
       {
         id: 14,
         title: "14-dars. Animation",
         videoFile: "https://youtu.be/TeYUlI1tUsc",
+        duration: "9:53", // minut
       },
       {
         id: 15,
         title: "15-dars. Grid",
         videoFile: "https://youtu.be/tzwhtnsCQN4",
+        duration: "9:58", // minut
       },
     ],
   },
@@ -385,61 +406,73 @@ const newVideos = [
         id: 1,
         title: "1-dars. TailwindCss, Color, Hover",
         videoFile: "https://youtu.be/mrSys5opVyM",
+        duration: "27:40", // minut
       },
       {
         id: 2,
         title: "2-dars. Text property",
         videoFile: "https://youtu.be/ty0JqVa8HS8",
+        duration: "6:31", // minut
       },
       {
         id: 3,
         title: "3-dars. Flexbox",
         videoFile: "https://youtu.be/J--VlZ51uxI",
+        duration: "5:32", // minut
       },
       {
         id: 4,
         title: "4-dars. Responsive",
         videoFile: "https://youtu.be/OEl73-HZnU4",
+        duration: "12:20", // minut
       },
       {
         id: 5,
         title: "5-dars. Width, Height, Border",
         videoFile: "https://youtu.be/UlLB5n3ru2I",
+        duration: "5:34", // minut
       },
       {
         id: 6,
         title: "6-dars. Border-radius, Margin, Padding",
         videoFile: "https://youtu.be/bLZT-cOUaes",
+        duration: "5:43", // minut
       },
       {
         id: 7,
         title: "7-dars. Background-color, Gradient",
         videoFile: "https://youtu.be/--zLFmMJ_5E",
+        duration: "14:11", // minut
       },
       {
         id: 8,
         title: "8-dars. Inline, Block, Background-image",
         videoFile: "https://youtu.be/5uozA5hyaxg",
+        duration: "8:50", // minut
       },
       {
         id: 9,
         title: "9-dars. Filter, Shadow, backdrop-blur",
         videoFile: "https://youtu.be/cNcC4uPBUPM",
+        duration: "7:33", // minut
       },
       {
         id: 10,
         title: "10-dars. Position, z-index",
         videoFile: "https://youtu.be/MJtReX4IZXM",
+        duration: "7:47", // minut
       },
       {
         id: 11,
         title: "11-dars. 2D",
         videoFile: "https://youtu.be/4jJrsDSpLa4",
+        duration: "6:42", // minut
       },
       {
         id: 12,
         title: "12-dars. Animation, Grid",
         videoFile: "https://youtu.be/QZMl9ETMtek",
+        duration: "6:45", // minut
       },
     ],
   },
@@ -456,72 +489,84 @@ const newVideos = [
         title: "MERN Stack kursi haqida",
         videoFile:
           "https://youtu.be/yyasmRTnsqI?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 2,
         title: "1-dars. JavaScript modulni samarali tugatish",
         videoFile:
           "https://youtu.be/7wKJ2wj8vPk?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 3,
         title: "2-dars. Ish joyini sozlash",
         videoFile:
           "https://youtu.be/AX3AFc4n_1s?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 4,
         title: "3-dars. Node js ni ornatish",
         videoFile:
           "https://youtu.be/TK_7Q4mTT7s?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 5,
         title: "4-dars. Javascript nima?",
         videoFile:
           "https://youtu.be/EjpJiZViUhE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 6,
         title: "5-dars Ozgaruvchilar",
         videoFile:
           "https://youtu.be/wx5YU36IqnM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 7,
         title: "6-dars. Qatiy rejim va u nima?",
         videoFile:
           "https://youtu.be/_HNC2CS9VrE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 8,
         title: "7-dars. Javascriptdagi malumotlar turlarining tasnifi",
         videoFile:
           "https://youtu.be/y9OOdaKLU3o?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 9,
         title: "8-dars. Foydalanuvchi bilan oddiy muloqot",
         videoFile:
           "https://youtu.be/qbskYCDdsNY?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 10,
         title: "8-dars. Javascriptda foydalanuvchi bilan muloqot",
         videoFile:
           "https://youtu.be/JPXkfrymWD0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 11,
         title: "9-dars. Interpolatsiya",
         videoFile:
           "https://youtu.be/fYZy93uqk5Q?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 12,
         title: "10-dars. Javascript Operatorlari",
         videoFile:
           "https://youtu.be/lcmEWA0_ABU?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 13,
@@ -529,125 +574,147 @@ const newVideos = [
           "11-dars Git and GitHub boshlovchilar uchun. #git #github #programming",
         videoFile:
           "https://youtu.be/ai5JZTEoE8M?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 14,
         title: "12-dars. Amaliyot. Ilova yaratishni boshlaymiz",
         videoFile:
           "https://youtu.be/yVknEYclH3Y?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 15,
         title: "13-dars. Shartli operator",
         videoFile:
           "https://youtu.be/KbR53u2vUVE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 16,
         title: "14-dars. Loops - while, do while and for",
         videoFile:
           "https://youtu.be/DGHZuDHn2rs?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 17,
         title: "14-dars. for in and for of",
         videoFile:
           "https://youtu.be/ZB6pS-AZf0A?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 18,
         title: "15-dars. Amaliyot. Sikl",
         videoFile:
           "https://youtu.be/2NmNh0vNxtk?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 19,
         title: "16-dars. Funksiya",
         videoFile:
           "https://youtu.be/MCwtzQz7rE0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 20,
         title: "17. Metod va xususiyatlar",
         videoFile:
           "https://youtu.be/hPb7KpEpUBa?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 21,
         title: "18-dars. Amaliyot. Function.",
         videoFile:
           "https://youtu.be/Lfr5WAdFnLg?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 22,
         title: "19-dars. Callback function",
         videoFile:
           "https://youtu.be/QJSp9YaCIj8?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 23,
         title: "20-dars. Obyektlar, destruptizatsiya",
         videoFile:
           "https://youtu.be/a78_nMCpikU?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 24,
         title: "21-dars. Massivlar va psevdo massivlar",
         videoFile:
           "https://youtu.be/y2k4JZVLKXI?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 25,
         title: "13-dars. forEach",
         videoFile: "https://youtu.be/D4z_6uXP-IA",
+        duration: "2:13", // minut
       },
       {
         id: 26,
         title: "14-dars. map, filter, every, some, reduce",
         videoFile: "https://youtu.be/k392OZSZw64",
+        duration: "2:13", // minut
       },
       {
         id: 27,
         title: "15-dars. Spread Operatori (...), splice()",
         videoFile: "https://youtu.be/hPhOYxEQ9YY",
+        duration: "2:13", // minut
       },
       {
         id: 28,
         title: "16-dars. OOP",
         videoFile: "https://youtu.be/yft7wFzo74Q",
+        duration: "2:13", // minut
       },
       {
         id: 29,
         title: "17-dars. DOM bilan ishlash",
         videoFile: "https://youtu.be/60qrpg2mVoE",
+        duration: "2:13", // minut
       },
       {
         id: 30,
         title:
           "18-dars. createElement, classList, append, prepend, textContent, InnerHTML",
         videoFile: "https://youtu.be/60qrpg2mVoE",
+        duration: "2:13", // minut
       },
       {
         id: 31,
         title: "19-dars. Hodisalar (Events)",
         videoFile: "https://youtu.be/H5yDj_fz-FI",
+        duration: "2:13", // minut
       },
       {
         id: 32,
         title:
           "20-dars. firstChild, lastChild, parentElement, nextSibling, data",
         videoFile: "https://youtu.be/VCQEN_EKVfQ",
+        duration: "2:13", // minut
       },
       {
         id: 33,
         title: "21-dars. Hodisalar amaliyot",
         videoFile: "https://youtu.be/MWFiXdYNB_w",
+        duration: "2:13", // minut
       },
       {
         id: 34,
         title: "22-dars. ClassList",
         videoFile:
           "https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -667,18 +734,21 @@ const oldVideos = [
         title: "File kengaytmasini ko'rinadigan qilish",
         videoFile:
           "https://youtu.be/oxTwNHP3lXk?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 2,
         title: "YouTube URL manzilini qanday o'zgartirish mumkin",
         videoFile:
           "https://youtu.be/ZXf-89wlVK0?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 3,
         title: "Windows 11da Ekran kutish vaqtini sozlash",
         videoFile:
           "https://youtu.be/JzDCjNctOb8?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 4,
@@ -686,90 +756,105 @@ const oldVideos = [
           "LightShot Chop etish tugmasi ishlamayotganini qanday tuzatish mumkin",
         videoFile:
           "https://youtu.be/ZXf-89wlVK0?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 5,
         title: "Antivirusni o'chirish",
         videoFile:
           "https://youtu.be/1mVbPSWCtsQ?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 6,
         title: "Bandicam dasturini o'rnatish",
         videoFile:
           "https://youtu.be/e7Kg1kBvjM0?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 7,
         title: "Lightshot matn yoki o'q hajmini qanday kattalashtirish",
         videoFile:
           "https://youtu.be/1n2BUdkkqZU?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 8,
         title: "Google Docs da ishlash",
         videoFile:
           "https://youtu.be/2OSY2hlnq5Y?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 9,
         title: "Movavi Editor ni o'rnatish",
         videoFile:
           "https://youtu.be/7ebDSxAqPmA?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 10,
         title: "Photoshop tilini o'zgartirish",
         videoFile:
           "https://youtu.be/Uuh4h0LDSLg?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 11,
         title: "Word sozlamalarini o'zgartirish",
         videoFile:
           "https://youtu.be/Lu5c-GSAScA?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 12,
         title: "Office Tab dasturi haqida",
         videoFile:
           "https://youtu.be/Lu5c-GSAScA?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 13,
         title: "NOTION dasturini o'rnatish",
         videoFile:
           "https://youtu.be/he7gHT0fVKQ?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 14,
         title: "NOTION - Video kurslarni rejalashtirish",
         videoFile:
           "https://youtu.be/ecUyXK_t548?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 15,
         title: "NOTION - Eslatma yaratish",
         videoFile:
           "https://youtu.be/0en9r8ewtSk?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 16,
         title: "NOTION - Lug'atni kalendar orqali rejalashtirish",
         videoFile:
           "https://youtu.be/OIEkuWfFKjg?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 17,
         title: "Notion orqali checklist yaratish",
         videoFile:
           "https://youtu.be/P4lHPbKJIZ0?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
       {
         id: 18,
         title: "Notion checklist",
         videoFile:
           "https://youtu.be/NeGIaY3pHEc?list=PLjAKRQl2j0eobIchEwhYJh2GyAjXbkYAK",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -785,71 +870,83 @@ const oldVideos = [
         title: "HTML asoslari - Kirish",
         videoFile:
           "https://youtu.be/QpW_TETUVro?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 2,
         title: "HTML haqida",
         videoFile: "https://www.youtube.com/watch?v=jqmHTqVHQRs",
+        duration: "2:13", // minut
       },
       {
         id: 3,
         title: "Web dasturlash",
         videoFile:
           "https://youtu.be/C_R5CJZzvG8?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 4,
         title: "Hujjatni formatlash, tag va ularning atributlari",
         videoFile:
           "https://youtu.be/R68RFFRkzDk?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 5,
         title: "Taglar haqida batafsil.",
         videoFile:
           "https://youtu.be/Q0DeFN-Lj9g?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 6,
         title: "Attributlar haqida batafsil.",
         videoFile:
           "https://youtu.be/LmkuKu_P4oA?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 7,
         title: " HTML hujjatda shajara tushunchasi va izoh",
         videoFile:
           "https://youtu.be/ul3lqZDCEag?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 8,
         title: "Block va inline xususiyatli teglar haqida",
         videoFile:
           "https://youtu.be/gvwnxc0kiag?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 9,
         title: "Kod yozish madaniyati",
         videoFile:
           "https://youtu.be/dRVJn1OjUpQ?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 10,
         title: "HTML hujjatning asosiy strukturasi",
         videoFile:
           "https://youtu.be/15SCOio0foY?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 11,
         title: "Heading, hr, br, pre.",
         videoFile:
           "https://youtu.be/wyIUSNENDrA?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 12,
         title: "HTML hujjatda jadval hosil qilish",
         videoFile:
           "https://youtu.be/qYmaxcYJldk?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 13,
@@ -857,18 +954,21 @@ const oldVideos = [
           "HTML tilining grafika darslarigacha bolgan qismidan foydalanib sahifa tayyorlash",
         videoFile:
           "https://youtu.be/qGFYTjy6Wb4?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 14,
         title: " img, iframe.",
         videoFile:
           "https://youtu.be/qp1X9asWaBQ?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 15,
         title: "Forma yaratish. form va input teglari haqida. 1-qism.",
         videoFile:
           "https://youtu.be/Wc5cEsVH6vo?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 16,
@@ -876,12 +976,14 @@ const oldVideos = [
           "Forma yaratish. input, select, datalist, option teglari haqida. 2-qism.",
         videoFile:
           "https://youtu.be/RHatko24zp0?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
       {
         id: 17,
         title: "audio, video.",
         videoFile:
           "https://youtu.be/oaSQvMxfQUc?list=PLjAKRQl2j0epNBYiCoeJA3CwY90EZamgG",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -898,12 +1000,14 @@ const oldVideos = [
         title: "CSS | 1. Cssda kod yozish usullari.",
         videoFile:
           "https://youtu.be/4AXdVL6sFaE?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb",
+        duration: "2:13", // minut
       },
       {
         id: 2,
         title: "CSS | 2. Selektorlar haqida.",
         videoFile:
           "https://youtu.be/FFHnN71ZF3o?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb",
+        duration: "2:13", // minut
       },
       {
         id: 3,
@@ -911,221 +1015,262 @@ const oldVideos = [
           "CSS | 3.font-family, font-style, font-size, color propertylari va absolyut olchov birliklari haqida",
         videoFile:
           "https://youtu.be/AJYZtYzCGKo?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb",
+        duration: "2:13", // minut
       },
       {
         id: 4,
         title: "CSS | 4. Selectorlar 2-qisim.",
         videoFile:
           "https://youtu.be/EEzqgL1rd_c?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb",
+        duration: "2:13", // minut
       },
       {
         id: 5,
         title: "CSS | 5. font-weight, line-height, font-family",
         videoFile:
           "https://youtu.be/mfT3uqorKyI?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb",
+        duration: "2:13", // minut
       },
       {
         id: 6,
         title: "CSS | 6. Pseudo selectorlar haqida",
         videoFile:
           "https://youtu.be/1ZiS2mkMJFQ?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb",
+        duration: "2:13", // minut
       },
       {
         id: 7,
         title: "CSS | 7. text properties",
         videoFile:
           "https://youtu.be/CkkX8h8McaY?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb",
+        duration: "2:13", // minut
       },
       {
         id: 8,
         title: "CSS | 8. pseudo classlar",
         videoFile:
           "https://youtu.be/jrnmzahXCxY?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb",
+        duration: "2:13", // minut
       },
       {
         id: 9,
         title: "CSS | 9. Background color, display",
         videoFile:
           "https://youtu.be/v7DR0R3KWS8?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb",
+        duration: "2:13", // minut
       },
       {
         id: 10,
         title: "CSS | 10. border, padding, margin",
         videoFile:
           "https://youtu.be/AFqHEW5JjPY?list=PLjAKRQl2j0erwNe9e6oSk4m2qt3KcEFNb",
+        duration: "2:13", // minut
       },
       {
         id: 11,
         title: "11-dars. Width, Height",
         videoFile: "https://youtu.be/wWV8etGfhtY",
+        duration: "2:13", // minut
       },
       {
         id: 12,
         title: "12-dars  Practice",
         videoFile: "https://youtu.be/BEbj5gQD-zk",
+        duration: "2:13", // minut
       },
       {
         id: 13,
         title: "13-dars. CSSda hoshiya hosil qilish.",
         videoFile: "https://youtu.be/14-fHp3Htvw",
+        duration: "2:13", // minut
       },
       {
         id: 14,
         title: "14-dars.  Background property",
         videoFile: "https://youtu.be/SxNKh0jdlDc",
+        duration: "2:13", // minut
       },
       {
         id: 15,
         title: "15-dars. Amaliy mashg'ulot.",
         videoFile: "https://youtu.be/oKr-SaRucrw",
+        duration: "2:13", // minut
       },
       {
         id: 16,
         title: "16-dars.  Flexbox haqida.",
         videoFile: "https://youtu.be/BStVx2twbIo",
+        duration: "2:13", // minut
       },
       {
         id: 17,
         title: "17-dars. Amaliyot",
         videoFile: "https://youtu.be/PzZuMsegoL0",
+        duration: "2:13", // minut
       },
       {
         id: 18,
         title: "18-dars. Netlify app",
         videoFile: "https://youtu.be/tTPXYs0VqrY",
+        duration: "2:13", // minut
       },
       {
         id: 19,
         title: "19-dars.  filter propertysi haqida.",
         videoFile: "https://youtu.be/eWXv9Hdowbw",
+        duration: "2:13", // minut
       },
       {
         id: 20,
         title: "20-dars.  text-shadow, box-shadow, position va z-index",
         videoFile: "https://youtu.be/gGAUvnvyccU",
+        duration: "2:13", // minut
       },
       {
         id: 21,
         title: '21-dars.  Amaliyot. "Navbar", "Header"',
         videoFile: "https://youtu.be/kw3gHcc3tnE",
+        duration: "2:13", // minut
       },
       {
         id: 22,
         title: `22-dars.  Amaliyot.  "Process" bo'limi.`,
         videoFile: "https://youtu.be/HQEI1AuNA_Q",
+        duration: "2:13", // minut
       },
       {
         id: 23,
         title: `23-dars.  Amaliyot.  "Services" bo'limi.`,
         videoFile: "https://youtu.be/xX90Tihpsgw",
+        duration: "2:13", // minut
       },
       {
         id: 24,
         title: "24-dars. Amaliyot.  Achievement, About, Footer bo'limlari.",
         videoFile: "https://youtu.be/iD_zV4gPvzQ",
+        duration: "2:13", // minut
       },
       {
         id: 25,
         title: "25-dars. float, clear property.",
         videoFile: "https://youtu.be/ToW3-ugPgNo",
+        duration: "2:13", // minut
       },
       {
         id: 26,
         title: "CSS | 26. visibility propertysi haqida, Amaliy mashg'ulot.",
         videoFile: "https://youtu.be/bXuVBUyN43U",
+        duration: "2:13", // minut
       },
       {
         id: 27,
         title:
           "CSS | 27. Ikki holat o'rtasida animatsiya hosil qilish, transition propertylari.",
         videoFile: "https://youtu.be/DblcDGH3tBQ",
+        duration: "2:13", // minut
       },
       {
         id: 28,
         title:
           "28-dars. Animatsion tooltipli ijtimoiy tarmoq tugmachasini yasash.",
         videoFile: "https://youtu.be/2OYUciy6OvE",
+        duration: "2:13", // minut
       },
       {
         id: 29,
         title:
           "29-dars. linear-gradient, radial-gradient, repeating-linear-gradient, repeating-radial-gradient.",
         videoFile: "https://youtu.be/ygJw1ci7fIk",
+        duration: "2:13", // minut
       },
       {
         id: 30,
         title:
           "30-dars. background-clip, vendor prefixlar, prefix generatorlar.",
         videoFile: "https://youtu.be/B0aXMglwBoo",
+        duration: "2:13", // minut
       },
       {
         id: 31,
         title: "31-dars. Gradientni animatsiyalashga doir amaliyot.",
         videoFile: "https://youtu.be/5elTVHKpF2I",
+        duration: "2:13", // minut
       },
       {
         id: 32,
         title: "32-dars. var(), calc()",
         videoFile: "https://youtu.be/FktTAqhkrjw",
+        duration: "2:13", // minut
       },
       {
         id: 33,
         title:
           "33-dars. calc(), Column, object-fit va object-position propertylari.",
         videoFile: "https://youtu.be/7auAV8uKTJA",
+        duration: "2:13", // minut
       },
       {
         id: 34,
         title:
           "34-dars. 2D-transform, translateX, scaleY, scale, rotate, skewX, skewY, skew, transform-origin.",
         videoFile: "https://youtu.be/Tuy6x0izD_w",
+        duration: "2:13", // minut
       },
       {
         id: 35,
         title:
           "35-dars. Transform va transition`dan foydalanib, animatsion card yasaymiz.",
         videoFile: "https://youtu.be/RmnHFLC8oPk",
+        duration: "2:13", // minut
       },
       {
         id: 36,
         title:
           "36-dars. Bir necha holatlarni animatsiyalash. Animation xusisiyati va @keyframes direktivasi haqida.",
         videoFile: "https://youtu.be/g1fm0n5Wvl8",
+        duration: "2:13", // minut
       },
       {
         id: 37,
         title: "37-dars. HTML, CSS yordamida animatsion soat yasaymiz.",
         videoFile: "https://youtu.be/Hdl5dFAAZBs",
+        duration: "2:13", // minut
       },
       {
         id: 38,
         title: "38-dars. CSSda 3D-transformatsiya.",
         videoFile: "https://youtu.be/RAE8w-RgSz4",
+        duration: "2:13", // minut
       },
       {
         id: 39,
         title: "39-dars. 3D-transformatsiya yordamida kub yasaymiz.",
         videoFile: "https://youtu.be/NP0UJTxNs_E",
+        duration: "2:13", // minut
       },
       {
         id: 40,
         title: "40-dars. @media directive haqida.",
         videoFile: "https://youtu.be/Q_hi00grU-0",
+        duration: "2:13", // minut
       },
       {
         id: 41,
         title: "41-dars. viewport meta-tegi, @media directive`ga doir mashq.",
         videoFile: "https://youtu.be/t-9joNaC27Q",
+        duration: "2:13", // minut
       },
       {
         id: 42,
         title: "42-dars. Grid Layout strukturasi.",
         videoFile: "https://youtu.be/fB6MSCgkQOM",
+        duration: "2:13", // minut
       },
       {
         id: 43,
         title: "43-dars. Grid Layout yordamida responsive gallery yasaymiz.",
         videoFile: "https://youtu.be/XckfPomCSQw",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -1142,72 +1287,84 @@ const oldVideos = [
         title: "MERN Stack kursi haqida",
         videoFile:
           "https://youtu.be/yyasmRTnsqI?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 2,
         title: "1-dars. JavaScript modulni samarali tugatish",
         videoFile:
           "https://youtu.be/7wKJ2wj8vPk?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 3,
         title: "2-dars. Ish joyini sozlash",
         videoFile:
           "https://youtu.be/AX3AFc4n_1s?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 4,
         title: "3-dars. Node js ni ornatish",
         videoFile:
           "https://youtu.be/TK_7Q4mTT7s?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 5,
         title: "4-dars. Javascript nima?",
         videoFile:
           "https://youtu.be/EjpJiZViUhE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 6,
         title: "5-dars Ozgaruvchilar",
         videoFile:
           "https://youtu.be/wx5YU36IqnM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 7,
         title: "6-dars. Qatiy rejim va u nima?",
         videoFile:
           "https://youtu.be/_HNC2CS9VrE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 8,
         title: "7-dars. Javascriptdagi malumotlar turlarining tasnifi",
         videoFile:
           "https://youtu.be/y9OOdaKLU3o?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 9,
         title: "8-dars. Foydalanuvchi bilan oddiy muloqot",
         videoFile:
           "https://youtu.be/qbskYCDdsNY?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 10,
         title: "8-dars. Javascriptda foydalanuvchi bilan muloqot",
         videoFile:
           "https://youtu.be/JPXkfrymWD0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 11,
         title: "9-dars. Interpolatsiya",
         videoFile:
           "https://youtu.be/fYZy93uqk5Q?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 12,
         title: "10-dars. Javascript Operatorlari",
         videoFile:
           "https://youtu.be/lcmEWA0_ABU?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 13,
@@ -1215,78 +1372,91 @@ const oldVideos = [
           "11-dars Git and GitHub boshlovchilar uchun. #git #github #programming",
         videoFile:
           "https://youtu.be/ai5JZTEoE8M?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 14,
         title: "12-dars. Amaliyot. Ilova yaratishni boshlaymiz",
         videoFile:
           "https://youtu.be/yVknEYclH3Y?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 15,
         title: "13-dars. Shartli operator",
         videoFile:
           "https://youtu.be/KbR53u2vUVE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 16,
         title: "14-dars. Loops - while, do while and for",
         videoFile:
           "https://youtu.be/DGHZuDHn2rs?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 17,
         title: "14-dars. for in and for of",
         videoFile:
           "https://youtu.be/ZB6pS-AZf0A?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 18,
         title: "15-dars. Amaliyot. Sikl",
         videoFile:
           "https://youtu.be/2NmNh0vNxtk?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 19,
         title: "16-dars. Funksiya",
         videoFile:
           "https://youtu.be/MCwtzQz7rE0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 20,
         title: "17. Metod va xususiyatlar",
         videoFile:
           "https://youtu.be/hPb7KpEpUBa?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 21,
         title: "18-dars. Amaliyot. Function.",
         videoFile:
           "https://youtu.be/Lfr5WAdFnLg?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 22,
         title: "19-dars. Callback function",
         videoFile:
           "https://youtu.be/QJSp9YaCIj8?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 23,
         title: "20-dars. Obyektlar, destruptizatsiya",
         videoFile:
           "https://youtu.be/a78_nMCpikU?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 24,
         title: "21-dars. Massivlar va psevdo massivlar",
         videoFile:
           "https://youtu.be/y2k4JZVLKXI?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
       {
         id: 25,
         title: "35-dars. ClassList",
         videoFile:
           "https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -1302,51 +1472,61 @@ const oldVideos = [
         id: 1,
         title: "Reactga kirish",
         videoFile: "https://youtu.be/bMknfKXIFA8",
+        duration: "2:13", // minut
       },
       {
         id: 2,
         title: "React komponentlar va JSX",
         videoFile: "https://youtu.be/Ke90Tje7VS0",
+        duration: "2:13", // minut
       },
       {
         id: 3,
         title: "Props va State tushunchasi",
         videoFile: "https://youtu.be/6ThXsUwLWvc",
+        duration: "2:13", // minut
       },
       {
         id: 4,
         title: "useState va useEffect hooklari",
         videoFile: "https://youtu.be/dpw9EHDh2bM",
+        duration: "2:13", // minut
       },
       {
         id: 5,
         title: "React Router bilan navigatsiya",
         videoFile: "https://youtu.be/Law7wfdg_ls",
+        duration: "2:13", // minut
       },
       {
         id: 6,
         title: "Formalar va controlled komponentlar",
         videoFile: "https://youtu.be/0ZJgIjIuY7U",
+        duration: "2:13", // minut
       },
       {
         id: 7,
         title: "API bilan ishlash (fetch, axios)",
         videoFile: "https://youtu.be/5W_q7RQE8xE",
+        duration: "2:13", // minut
       },
       {
         id: 8,
         title: "React Context va prop drilling",
         videoFile: "https://youtu.be/35lXWvCuM8o",
+        duration: "2:13", // minut
       },
       {
         id: 9,
         title: "Custom hookslar yaratish",
         videoFile: "https://youtu.be/6ThXsUwLWvc",
+        duration: "2:13", // minut
       },
       {
         id: 10,
         title: "React bilan loyihani yakunlash",
         videoFile: "https://youtu.be/Tn6-PIqc4UM",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -1365,81 +1545,97 @@ const assignments = [
         id: 1,
         title: "Vazifani qayerdan topish kerak?",
         videoFile: "https://youtu.be/PlZPhopUb0w",
+        duration: "2:13", // minut
       },
       {
         id: 2,
         title: "CSS 1-dars vazifalari",
         videoFile: "https://youtu.be/wsV-8gbd2KM",
+        duration: "2:13", // minut
       },
       {
         id: 3,
         title: "CSS 2-dars. Uyga vazifa - EaTurkish",
         videoFile: "https://youtu.be/qMXiR8wvclI",
+        duration: "2:13", // minut
       },
       {
         id: 4,
         title: "CSS 3-dars. Uyga vazifa. Restaurants",
         videoFile: "https://youtu.be/xlt6KwAOAFI",
+        duration: "2:13", // minut
       },
       {
         id: 5,
         title: "CSS 4-dars. Uyga vazifa",
         videoFile: "https://youtu.be/s7yhYyRI6IQ",
+        duration: "2:13", // minut
       },
       {
         id: 6,
         title: "CSS 5-dars. Uyga vazifa. Max Way",
         videoFile: "https://youtu.be/gFzZdlXfTUc",
+        duration: "2:13", // minut
       },
       {
         id: 7,
         title: "6-dars. Uyga vazifa. Amid",
         videoFile: "https://youtu.be/caLAMR0yDzg",
+        duration: "2:13", // minut
       },
       {
         id: 8,
         title: "7-dars. Uyga vazifa. Olonje",
         videoFile: "https://youtu.be/QLob7E_kGpE",
+        duration: "2:13", // minut
       },
       {
         id: 9,
         title: "8-dars. Uyga vazifa. Portfolio",
         videoFile: "https://youtu.be/E5SJBJGelVg",
+        duration: "2:13", // minut
       },
       {
         id: 10,
         title: "9-dars. Uyga vazifa. SeoGram",
         videoFile: "https://youtu.be/Bq2qbi7JEBc",
+        duration: "2:13", // minut
       },
       {
         id: 11,
         title: "10-dars. Uyga vazifa. Bag",
         videoFile: "https://youtu.be/WEtEaiM10QU",
+        duration: "2:13", // minut
       },
       {
         id: 12,
         title: "11-dars. Uyga vazifa. Bag",
         videoFile: "https://youtu.be/fPe2_R_PiDg",
+        duration: "2:13", // minut
       },
       {
         id: 13,
         title: "12-dars. Uyga vazifa. Zero",
         videoFile: "https://youtu.be/2ctF9LjupNU",
+        duration: "2:13", // minut
       },
       {
         id: 14,
         title: "13-dars. Uyga vazifa. Grovemade",
         videoFile: "https://youtu.be/UXbeGz2OX-4",
+        duration: "2:13", // minut
       },
       {
         id: 15,
         title: "14-dars. Uyga vazifa. Locus",
         videoFile: "https://youtu.be/rLgr5M8Gelw",
+        duration: "2:13", // minut
       },
       {
         id: 15,
         title: "15-dars. Uyga vazifa. Drile",
         videoFile: "https://youtu.be/HkoavA1UqJA",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -1454,21 +1650,25 @@ const assignments = [
         id: 1,
         title: "1-dars. Uyga Vazifa. Zeus UI",
         videoFile: "https://youtu.be/E4iy3dde5rQ",
+        duration: "2:13", // minut
       },
       {
         id: 2,
         title: "2-dars. Uyga Vazifa. EaTurkish",
         videoFile: "https://youtu.be/fFyF_jmkB8k",
+        duration: "2:13", // minut
       },
       {
         id: 3,
         title: "3-dars. Uyga Vazifa. Olonje",
         videoFile: "https://youtu.be/UmZj1fK7UcY",
+        duration: "2:13", // minut
       },
       {
         id: 4,
         title: "4-dars. Uyga Vazifa. Wahid",
         videoFile: "https://youtu.be/COUM-GNlbz4",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -1483,31 +1683,37 @@ const assignments = [
         id: 1,
         title: "1-dars. Uyga Vazifa. O'zgaruvchi va Malumot turlari",
         videoFile: "https://youtu.be/WSovZv-s1og",
+        duration: "2:13", // minut
       },
       {
         id: 2,
         title: "2-dars. Uyga Vazifa. Prompt",
         videoFile: "https://youtu.be/mojkjQqjdbo",
+        duration: "2:13", // minut
       },
       {
         id: 3,
         title: "3-dars. Arifmetik operatorlar",
         videoFile: "https://youtu.be/qlW4VTD5k4U",
+        duration: "2:13", // minut
       },
       {
         id: 4,
         title: "4-dars. Uyga Vazifa. If Else",
         videoFile: "https://youtu.be/gK3Q8tlI5Wk",
+        duration: "2:13", // minut
       },
       {
         id: 5,
         title: "5-dars. Uyga Vazifa. For Loop",
         videoFile: "https://youtu.be/2jZM6Zbaa48",
+        duration: "2:13", // minut
       },
       {
         id: 36,
         title: "36-dars. Uyga Vazifa. JSON Placeholder",
         videoFile: "https://youtu.be/HgfgZnhQ0ZI",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -1522,6 +1728,7 @@ const assignments = [
         id: 1,
         title: "4-dars. Props, Distruptizatsiya, map, React Developer Tools",
         videoFile: "https://youtu.be/croIMV8jAvY",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -1540,26 +1747,31 @@ const questions = [
         id: 1,
         title: "Qanday qilib saytdan orqa fon rasmini olish mumkin?",
         videoFile: "https://youtu.be/Obp5LvqEzZM",
+        duration: "2:13", // minut
       },
       {
         id: 2,
         title: "Qanday qilib ikki xil rangni birlashtirish mumkin?",
         videoFile: "https://youtu.be/R99Zh4pEq80",
+        duration: "2:13", // minut
       },
       {
         id: 3,
         title: "Transition nima va qanday ishlatiladi?",
         videoFile: "https://youtu.be/NEIOJ_gyYyo",
+        duration: "2:13", // minut
       },
       {
         id: 4,
         title: "Cursor property nima va u qanday ishlaydi?",
         videoFile: "https://youtu.be/3vGCBWqW6hA",
+        duration: "2:13", // minut
       },
       {
         id: 5,
         title: "Animation Buttons yaratish",
         videoFile: "https://youtu.be/X7C_fSyOK0k",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -1574,6 +1786,7 @@ const questions = [
         id: 1,
         title: "Figmada Zip papkani qanday ochish mumkin?",
         videoFile: "https://youtu.be/O_8cqHPQ-5U",
+        duration: "2:13", // minut
       },
     ],
   },
@@ -1852,13 +2065,17 @@ function loadCourseDetails() {
   courseContent.innerHTML = `
     <div class="flex flex-col lg:flex-row items-center mb-6 glass rounded-2xl p-6 border border-gray-700 animate-fade-in">
       <div class="w-24 h-24 mb-4 lg:mb-0 lg:mr-6 bg-gradient-to-br from-dark-lighter to-dark rounded-2xl flex justify-center items-center border border-gray-700 floating-element">
-        <img src="${course.image}" alt="${course.title}" class="w-20 h-20 object-contain rounded-xl">
+        <img src="${course.image}" alt="${
+    course.title
+  }" class="w-20 h-20 object-contain rounded-xl">
       </div>
       <div class="text-center lg:text-left">
         <h1 class="text-3xl font-black mb-4 text-primary neon-text">
           ${course.title}
         </h1>
-        <p class="text-gray-300 text-lg mb-4 leading-relaxed">${course.description}</p>
+        <p class="text-gray-300 text-lg mb-4 leading-relaxed">${
+          course.description
+        }</p>
         <div class="flex flex-wrap justify-center lg:justify-start gap-4">
           <div class="flex items-center text-gray-400">
             <i class="fas fa-video mr-2 text-primary"></i>
@@ -1869,8 +2086,41 @@ function loadCourseDetails() {
             <span class="font-semibold">Bepul</span>
           </div>
           <div class="flex items-center text-gray-400">
-            <i class="fas fa-certificate mr-2 text-primary"></i>
-            <span class="font-semibold">Sertifikat</span>
+            <i class="fas fa-clock mr-2 text-primary"></i>
+            <span class="font-semibold">
+              ${(() => {
+                // Helper to parse "mm:ss" or "m:ss" or "h:mm:ss"
+                function parseDuration(str) {
+                  if (!str) return 0
+                  const parts = str.split(":").map(Number)
+                  if (parts.length === 3) {
+                    // h:mm:ss
+                    return parts[0] * 3600 + parts[1] * 60 + parts[2]
+                  } else if (parts.length === 2) {
+                    // mm:ss
+                    return parts[0] * 60 + parts[1]
+                  } else if (parts.length === 1) {
+                    // Only minutes
+                    return parts[0] * 60
+                  }
+                  return 0
+                }
+                // Sum all durations
+                let totalSeconds = 0
+                if (Array.isArray(course.videos)) {
+                  totalSeconds = course.videos.reduce((sum, v) => {
+                    return sum + parseDuration(v.duration)
+                  }, 0)
+                }
+                // Format as "X soat Y minut"
+                const hours = Math.floor(totalSeconds / 3600)
+                const minutes = Math.floor((totalSeconds % 3600) / 60)
+                let result = ""
+                if (hours > 0) result += hours + " soat "
+                result += minutes + " minut"
+                return result.trim()
+              })()}
+            </span>
           </div>
         </div>
       </div>
@@ -1946,7 +2196,9 @@ function loadCourseDetails() {
                       video.title
                     }</h4>
                     <div class="flex items-center mt-1">
-                      <span class="text-xs text-gray-500">${index + 1} • ${video.duration ? video.duration + " min" : "5 min"}</span>
+                      <span class="text-xs text-gray-500">${index + 1} • ${
+                video.duration ? video.duration + " min" : "5 min"
+              }</span>
                     </div>
                   </div>
                 </div>
