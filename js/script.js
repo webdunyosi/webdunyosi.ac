@@ -1725,7 +1725,19 @@ const assignments = [
         id: 7,
         title: "7-dars. String methodlar",
         videoFile: "https://youtu.be/-g63jpgrmuM",
-        duration: "13:53", // minut
+        duration: "13:54", // minut
+      },
+      {
+        id: 8,
+        title: "8-dars. Number methodlar",
+        videoFile: "https://youtu.be/iQ-2DRkgjLQ",
+        duration: "12:25", // minut
+      },
+      {
+        id: 9,
+        title: "9-dars. Callback, setTimeout()",
+        videoFile: "https://youtu.be/0hFTe9DAzdI",
+        duration: "8:01", // minut
       },
       {
         id: 36,
