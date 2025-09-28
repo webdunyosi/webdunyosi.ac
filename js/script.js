@@ -617,12 +617,24 @@ const newVideos = [
       },
       {
         id: 30,
-        title: "18-dars. createElement, classList, append, prepend, textContent, InnerHTML",
+        title:
+          "18-dars. createElement, classList, append, prepend, textContent, InnerHTML",
         videoFile: "https://youtu.be/60qrpg2mVoE",
       },
       {
-        id: 25,
-        title: "35-dars. ClassList",
+        id: 31,
+        title: "19-dars. Hodisalar (Events)",
+        videoFile: "https://youtu.be/H5yDj_fz-FI",
+      },
+      {
+        id: 32,
+        title:
+          "20-dars. firstChild, lastChild, parentElement, nextSibling, data",
+        videoFile: "https://youtu.be/VCQEN_EKVfQ",
+      },
+      {
+        id: 34,
+        title: "22-dars. ClassList",
         videoFile:
           "https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
       },
