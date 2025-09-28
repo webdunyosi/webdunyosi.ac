@@ -1477,6 +1477,11 @@ const assignments = [
         videoFile: "https://youtu.be/gK3Q8tlI5Wk",
       },
       {
+        id: 5,
+        title: "5-dars. Uyga Vazifa. For Loop",
+        videoFile: "https://youtu.be/2jZM6Zbaa48",
+      },
+      {
         id: 36,
         title: "36-dars. Uyga Vazifa. JSON Placeholder",
         videoFile: "https://youtu.be/HgfgZnhQ0ZI",
