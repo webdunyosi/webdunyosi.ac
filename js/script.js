@@ -633,6 +633,11 @@ const newVideos = [
         videoFile: "https://youtu.be/VCQEN_EKVfQ",
       },
       {
+        id: 33,
+        title: "21-dars. Hodisalar amaliyot",
+        videoFile: "https://youtu.be/MWFiXdYNB_w",
+      },
+      {
         id: 34,
         title: "22-dars. ClassList",
         videoFile:
