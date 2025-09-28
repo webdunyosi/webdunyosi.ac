@@ -1683,37 +1683,43 @@ const assignments = [
         id: 1,
         title: "1-dars. Uyga Vazifa. O'zgaruvchi va Malumot turlari",
         videoFile: "https://youtu.be/WSovZv-s1og",
-        duration: "2:13", // minut
+        duration: "18:33", // minut
       },
       {
         id: 2,
         title: "2-dars. Uyga Vazifa. Prompt",
         videoFile: "https://youtu.be/mojkjQqjdbo",
-        duration: "2:13", // minut
+        duration: "8:04", // minut
       },
       {
         id: 3,
         title: "3-dars. Arifmetik operatorlar",
         videoFile: "https://youtu.be/qlW4VTD5k4U",
-        duration: "2:13", // minut
+        duration: "4:11", // minut
       },
       {
         id: 4,
         title: "4-dars. Uyga Vazifa. If Else",
         videoFile: "https://youtu.be/gK3Q8tlI5Wk",
-        duration: "2:13", // minut
+        duration: "5:54", // minut
       },
       {
         id: 5,
         title: "5-dars. Uyga Vazifa. For Loop",
         videoFile: "https://youtu.be/2jZM6Zbaa48",
-        duration: "2:13", // minut
+        duration: "8:43", // minut
+      },
+      {
+        id: 6,
+        title: "6-dars. Uyga vazifa. Funksiya",
+        videoFile: "https://youtu.be/bIY9QKvIsEM",
+        duration: "6:34", // minut
       },
       {
         id: 36,
         title: "36-dars. Uyga Vazifa. JSON Placeholder",
         videoFile: "https://youtu.be/HgfgZnhQ0ZI",
-        duration: "2:13", // minut
+        duration: "3:54", // minut
       },
     ],
   },
