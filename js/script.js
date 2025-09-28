@@ -1740,6 +1740,12 @@ const assignments = [
         duration: "8:01", // minut
       },
       {
+        id: 10,
+        title: "10-dars. Object",
+        videoFile: "https://youtu.be/E7WrGt0w4ro",
+        duration: "4:48", // minut
+      },
+      {
         id: 36,
         title: "36-dars. Uyga Vazifa. JSON Placeholder",
         videoFile: "https://youtu.be/HgfgZnhQ0ZI",
