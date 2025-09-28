@@ -214,31 +214,37 @@ const newVideos = [
         id: 1,
         title: "PDF ni WORD ga o'tkazish",
         videoFile: "https://youtu.be/7rlgzVcipWU",
+        duration: "2:12" // minut
       },
       {
         id: 2,
         title: "Avtomatik yonadigan dasturlarni o'chirish",
         videoFile: "https://youtu.be/6uJ_aFyXSjs",
+        duration: "4:17" // minut
       },
       {
         id: 3,
         title: "Zip",
         videoFile: "https://youtu.be/SZjo5XYSae4",
+        duration: "4:32" // minut
       },
       {
         id: 4,
         title: "Rasmni tiniqlashtirish",
         videoFile: "https://youtu.be/92kvtYVgWiw",
+        duration: "3:00" // minut
       },
       {
         id: 5,
         title: "Rasmni orqa fonini qirqish",
         videoFile: "https://youtu.be/Vrp40qhxXcw",
+        duration: "5:04" // minut
       },
       {
         id: 6,
         title: "Paint rubber AI",
         videoFile: "https://youtu.be/jUtFV3S9xwg",
+        duration: "4:23" // minut
       },
     ],
   },
@@ -1940,9 +1946,7 @@ function loadCourseDetails() {
                       video.title
                     }</h4>
                     <div class="flex items-center mt-1">
-                      <span class="text-xs text-gray-500">${
-                        index + 1
-                      } • 5 min</span>
+                      <span class="text-xs text-gray-500">${index + 1} • ${video.duration ? video.duration + " min" : "5 min"}</span>
                     </div>
                   </div>
                 </div>
