@@ -289,7 +289,7 @@ const newVideos = [
         id: 6,
         title: "4-dars. Form",
         videoFile: "https://youtu.be/NDbsi_pTnVw",
-        duration: "11:02", // minut 
+        duration: "11:02", // minut
       },
     ],
   },
