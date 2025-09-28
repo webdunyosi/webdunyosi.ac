@@ -396,7 +396,7 @@ const newVideos = [
   },
   // TAILWINDCSS NEW 2025
   {
-    id: 3,
+    id: 4,
     title: "TAILWINDCSS NEW 2025",
     description:
       "Tez va zamonaviy web dizayn uchun Tailwind CSS frameworkini o'rganing",
@@ -478,7 +478,7 @@ const newVideos = [
   },
   // JAVASCRIPT NEW 2025
   {
-    id: 6,
+    id: 5,
     title: "JavaScript Dasturlash",
     description:
       "Interaktiv web sahifalar yaratish uchun JavaScript ni o'rganing",
@@ -1459,14 +1459,7 @@ const oldVideos = [
       },
       {
         id: 25,
-        title: "35-dars. ClassList",
-        videoFile:
-          "https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 25,
-        title: "35-dars. ClassList",
+        title: "22-dars. ClassList",
         videoFile:
           "https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
         duration: "2:13", // minut
@@ -1727,6 +1720,12 @@ const assignments = [
         title: "6-dars. Uyga vazifa. Funksiya",
         videoFile: "https://youtu.be/bIY9QKvIsEM",
         duration: "6:34", // minut
+      },
+      {
+        id: 7,
+        title: "7-dars. String methodlar",
+        videoFile: "https://youtu.be/-g63jpgrmuM",
+        duration: "13:53", // minut
       },
       {
         id: 36,
