@@ -2083,10 +2083,6 @@ function loadCourseDetails() {
           </div>
           <div class="flex items-center text-gray-400">
             <i class="fas fa-clock mr-2 text-primary"></i>
-            <span class="font-semibold">Bepul</span>
-          </div>
-          <div class="flex items-center text-gray-400">
-            <i class="fas fa-clock mr-2 text-primary"></i>
             <span class="font-semibold">
               ${(() => {
                 // Helper to parse "mm:ss" or "m:ss" or "h:mm:ss"
