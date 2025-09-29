@@ -148,9 +148,9 @@ const activeStudents = [
     name: "Mardiyev Yahyo", // o'quvchi ismi
     avatar: "../images/students/MardiyevYahyo.png", // o'quvchi rasmi
     attendance: 98, // yo'qlama foizi
-    taskScore: 100, // vazifalar uchun ball
+    taskScore: 90, // vazifalar uchun ball
     projectScore: 100, // loyihalar uchun ball
-    completedTasks: 13, // bajarilgan vazifalar soni
+    completedTasks: 14, // bajarilgan vazifalar soni
     startedAt: "01.06.2029", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
