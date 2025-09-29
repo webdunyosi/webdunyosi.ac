@@ -748,6 +748,12 @@ const newVideos = [
         videoFile: "https://youtu.be/lQ5NPN-7aPM",
         duration: "25:39", // minut
       },
+      {
+        id: 37,
+        title: "25-dars. setTimeout(), setInterval(), clearInterval()",
+        videoFile: "https://youtu.be/C--Z7esqgsA",
+        duration: "7:25", // minut
+      },
     ],
   },
 ]
