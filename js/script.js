@@ -1708,6 +1708,36 @@ const assignments = [
         videoFile: "https://youtu.be/COUM-GNlbz4",
         duration: "2:13", // minut
       },
+      {
+        id: 5,
+        title: "5-dars. Uyga Vazifa. Portfolio",
+        videoFile: "https://youtu.be/BiDNnaoJ3z4",
+        duration: "8:07", // minut
+      },
+      {
+        id: 6,
+        title: "6-dars. Uyga Vazifa. MaxWay",
+        videoFile: "https://youtu.be/5-GkgUz5_Bg",
+        duration: "13:54", // minut
+      },
+      {
+        id: 7,
+        title: "7-dars. Uyga Vazifa. Breed Portfolio",
+        videoFile: "https://youtu.be/5Rn9qA5yGig",
+        duration: "15:07", // minut
+      },
+      {
+        id: 8,
+        title: "8-dars. Uyga Vazifa. Amid",
+        videoFile: "https://youtu.be/BZ9TMbmTdm4",
+        duration: "8:46", // minut
+      },
+      {
+        id: 9,
+        title: "9-dars. Uyga Vazifa. Bag",
+        videoFile: "https://youtu.be/7PMjC79xG2k",
+        duration: "14:15", // minut
+      },
     ],
   },
   // JAVASCRIPT VAZIFALAR
