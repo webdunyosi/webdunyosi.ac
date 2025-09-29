@@ -151,8 +151,18 @@ const activeStudents = [
     taskScore: 90, // vazifalar uchun ball
     projectScore: 100, // loyihalar uchun ball
     completedTasks: 14, // bajarilgan vazifalar soni
-    startedAt: "01.06.2029", // kursni boshlagan sana
+    startedAt: "01.06.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+  },
+  {
+    name: "Javohirbek Muhammadiyev", // o'quvchi ismi
+    avatar: "../images/students/JavohirbekMuhammadiyev.jpg", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 1, // bajarilgan vazifalar soni
+    startedAt: "28.09.2025", // kursni boshlagan sana
+    courses: ["html"], // Tugallangan kurslar
   },
   {
     name: "Safarov Durbek", // o'quvchi ismi
@@ -161,7 +171,7 @@ const activeStudents = [
     taskScore: 90, // vazifalar uchun ball
     projectScore: 100, // loyihalar uchun ball
     completedTasks: 14, // bajarilgan vazifalar soni
-    startedAt: "01.07.2027", // kursni boshlagan sana
+    startedAt: "01.07.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
   {
@@ -171,7 +181,7 @@ const activeStudents = [
     taskScore: 100, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
     completedTasks: 5, // bajarilgan vazifalar soni
-    startedAt: "01.07.2027", // kursni boshlagan sana
+    startedAt: "01.07.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
 ]
