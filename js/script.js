@@ -742,6 +742,12 @@ const newVideos = [
         videoFile: "https://youtu.be/paxeIUAMl60",
         duration: "6:09", // minut
       },
+      {
+        id: 36,
+        title: "24-dars. Amaliyot. Foodlover. Tabs",
+        videoFile: "https://youtu.be/lQ5NPN-7aPM",
+        duration: "25:39", // minut
+      },
     ],
   },
 ]
@@ -1764,6 +1770,24 @@ const assignments = [
         title: "10-dars. Object",
         videoFile: "https://youtu.be/E7WrGt0w4ro",
         duration: "4:48", // minut
+      },
+      {
+        id: 11,
+        title: "11-dars. Method, Destruktizatsiya.mp4",
+        videoFile: "https://youtu.be/bieyjNfxvLk",
+        duration: "7:10", // minut
+      },
+      {
+        id: 12,
+        title: "12-dars. Array",
+        videoFile: "https://youtu.be/PCLjLFPErsk",
+        duration: "9:02", // minut
+      },
+      {
+        id: 13,
+        title: "13-dars. forEach",
+        videoFile: "https://youtu.be/W4E-9zpFTsE",
+        duration: "6:27", // minut
       },
       {
         id: 36,
