@@ -754,6 +754,30 @@ const newVideos = [
         videoFile: "https://youtu.be/C--Z7esqgsA",
         duration: "7:25", // minut
       },
+      {
+        id: 38,
+        title: "26-dars. Date",
+        videoFile: "https://youtu.be/5cnBAeKGTk4",
+        duration: "7:33", // minut
+      },
+      {
+        id: 39,
+        title: "27-dars. Amaliyot. Loader va Date",
+        videoFile: "https://youtu.be/ubYeWVvTAbM",
+        duration: "26:43", // minut
+      },
+      {
+        id: 40,
+        title: "28-dars. Document va Window Parametrlari",
+        videoFile: "https://youtu.be/TLiK7uKJQCI",
+        duration: "24:38", // minut
+      },
+      {
+        id: 41,
+        title: "29-dars. Amaliyot. Modal oyna",
+        videoFile: "https://youtu.be/KibTXtRaoHI",
+        duration: "10:02", // minut
+      },
     ],
   },
 ]
@@ -1738,6 +1762,24 @@ const assignments = [
         videoFile: "https://youtu.be/7PMjC79xG2k",
         duration: "14:15", // minut
       },
+      {
+        id: 10,
+        title: "10-dars. Uyga Vazifa. Ranaldo",
+        videoFile: "https://youtu.be/w1wNEhcyiUQ",
+        duration: "14:39", // minut
+      },
+      {
+        id: 11,
+        title: "11-dars. Uyga Vazifa. Grovemade",
+        videoFile: "https://youtu.be/HhlAE0Ty3t0",
+        duration: "10:58", // minut
+      },
+      {
+        id: 12,
+        title: "12-dars. Uyga Vazifa. Coffe shop",
+        videoFile: "https://youtu.be/U-XJpKAQ1TA",
+        duration: "20:42", // minut
+      },
     ],
   },
   // JAVASCRIPT VAZIFALAR
@@ -1824,6 +1866,18 @@ const assignments = [
         title: "13-dars. forEach",
         videoFile: "https://youtu.be/W4E-9zpFTsE",
         duration: "6:27", // minut
+      },
+      {
+        id: 14,
+        title: "14-dars. map, filter, every, some, reduce",
+        videoFile: "https://youtu.be/50u0IH0J1RE",
+        duration: "8:29", // minut
+      },
+      {
+        id: 15,
+        title: "15-dars. Spread Operatori, splice",
+        videoFile: "https://youtu.be/2lqW9fqbuCA",
+        duration: "7:08", // minut
       },
       {
         id: 36,
