@@ -1596,9 +1596,24 @@ const oldVideos = [
 
 // Vazifalar kurslari
 const assignments = [
-  // CSS VAZIFALAR
+  // HTML VAZIFALAR
   {
     id: 1,
+    title: "HTML VAZIFALAR",
+    description: "HTML vazifalarini shu yerga joylab boraman.",
+    image: "../images/html.jpg",
+    videos: [
+      {
+        id: 1,
+        title: "3-dars. Uyga Vazifa. Iframe",
+        videoFile: "https://youtu.be/P-3otsV_3X8",
+        duration: "6:05", // minut
+      },
+    ],
+  },
+  // CSS VAZIFALAR
+  {
+    id: 2,
     title: "CSS VAZIFALAR",
     description: "CSS vazifalarini shu yerga joylab boraman.",
     image: "../images/css-vazifalar.png",
@@ -1694,7 +1709,7 @@ const assignments = [
         duration: "2:13", // minut
       },
       {
-        id: 15,
+        id: 16,
         title: "15-dars. Uyga vazifa. Drile",
         videoFile: "https://youtu.be/HkoavA1UqJA",
         duration: "2:13", // minut
@@ -1703,7 +1718,7 @@ const assignments = [
   },
   // TAILWINDCSS VAZIFALAR
   {
-    id: 2,
+    id: 3,
     title: "TAILWINDCSS VAZIFALAR",
     description: "TailwindCSS vazifalarini shu yerga joylab boraman.",
     image: "../images/tailwind.png",
@@ -1784,7 +1799,7 @@ const assignments = [
   },
   // JAVASCRIPT VAZIFALAR
   {
-    id: 3,
+    id: 4,
     title: "JAVASCRIPT VAZIFALAR",
     description: "Javascript darslari uchun uyga vazifalar",
     image: "../images/js.png",
@@ -1889,7 +1904,7 @@ const assignments = [
   },
   // REACTJS VAZIFALAR
   {
-    id: 4,
+    id: 5,
     title: "REACTJS VAZIFALAR",
     description: "ReactJS darslari uchun uyga vazifalar",
     image: "../images/rj.jpg",
