@@ -1686,7 +1686,7 @@ const assignments = [
       },
       {
         id: 11,
-        title: "11-dars. Uyga vazifa. Bag",
+        title: "11-dars. Uyga vazifa. AirNags",
         videoFile: "https://youtu.be/fPe2_R_PiDg",
         duration: "10:04", // minut
       },
