@@ -266,6 +266,12 @@ const newVideos = [
         videoFile: "https://youtu.be/jUtFV3S9xwg",
         duration: "4:23", // minut
       },
+      {
+        id: 7,
+        title: "Fleshkani formatlash",
+        videoFile: "https://youtu.be/lbtaxMncOq0",
+        duration: "0:43", // minut
+      },
     ],
   },
   // HTML NEW 2025
