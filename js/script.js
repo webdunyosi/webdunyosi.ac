@@ -1605,6 +1605,12 @@ const assignments = [
     videos: [
       {
         id: 1,
+        title: "Vazifani qayerdan topish kerak?",
+        videoFile: "https://youtu.be/PlZPhopUb0w",
+        duration: "2:13", // minut
+      },
+      {
+        id: 2,
         title: "3-dars. Uyga Vazifa. Iframe",
         videoFile: "https://youtu.be/P-3otsV_3X8",
         duration: "6:05", // minut
@@ -1620,99 +1626,93 @@ const assignments = [
     videos: [
       {
         id: 1,
-        title: "Vazifani qayerdan topish kerak?",
-        videoFile: "https://youtu.be/PlZPhopUb0w",
-        duration: "2:13", // minut
+        title: "1-dars. Uyga Vazifa. Cheffest",
+        videoFile: "https://youtu.be/wsV-8gbd2KM",
+        duration: "17:25", // minut
       },
       {
         id: 2,
-        title: "CSS 1-dars vazifalari",
-        videoFile: "https://youtu.be/wsV-8gbd2KM",
-        duration: "2:13", // minut
+        title: "2-dars. Uyga vazifa. EaTurkish",
+        videoFile: "https://youtu.be/qMXiR8wvclI",
+        duration: "3:28", // minut
       },
       {
         id: 3,
-        title: "CSS 2-dars. Uyga vazifa - EaTurkish",
-        videoFile: "https://youtu.be/qMXiR8wvclI",
-        duration: "2:13", // minut
+        title: "3-dars. Uyga vazifa. Restaurants",
+        videoFile: "https://youtu.be/xlt6KwAOAFI",
+        duration: "17:23", // minut
       },
       {
         id: 4,
-        title: "CSS 3-dars. Uyga vazifa. Restaurants",
-        videoFile: "https://youtu.be/xlt6KwAOAFI",
-        duration: "2:13", // minut
+        title: "4-dars. Uyga vazifa. Shlem",
+        videoFile: "https://youtu.be/s7yhYyRI6IQ",
+        duration: "17:30", // minut
       },
       {
         id: 5,
-        title: "CSS 4-dars. Uyga vazifa",
-        videoFile: "https://youtu.be/s7yhYyRI6IQ",
-        duration: "2:13", // minut
+        title: "5-dars. Uyga vazifa. Max Way",
+        videoFile: "https://youtu.be/gFzZdlXfTUc",
+        duration: "35:27", // minut
       },
       {
         id: 6,
-        title: "CSS 5-dars. Uyga vazifa. Max Way",
-        videoFile: "https://youtu.be/gFzZdlXfTUc",
-        duration: "2:13", // minut
+        title: "6-dars. Uyga vazifa. Amid",
+        videoFile: "https://youtu.be/caLAMR0yDzg",
+        duration: "36:30", // minut
       },
       {
         id: 7,
-        title: "6-dars. Uyga vazifa. Amid",
-        videoFile: "https://youtu.be/caLAMR0yDzg",
-        duration: "2:13", // minut
+        title: "7-dars. Uyga vazifa. Olonje",
+        videoFile: "https://youtu.be/QLob7E_kGpE",
+        duration: "13:46", // minut
       },
       {
         id: 8,
-        title: "7-dars. Uyga vazifa. Olonje",
-        videoFile: "https://youtu.be/QLob7E_kGpE",
-        duration: "2:13", // minut
+        title: "8-dars. Uyga vazifa. Portfolio",
+        videoFile: "https://youtu.be/E5SJBJGelVg",
+        duration: "22:22", // minut
       },
       {
         id: 9,
-        title: "8-dars. Uyga vazifa. Portfolio",
-        videoFile: "https://youtu.be/E5SJBJGelVg",
-        duration: "2:13", // minut
+        title: "9-dars. Uyga vazifa. SeoGram",
+        videoFile: "https://youtu.be/Bq2qbi7JEBc",
+        duration: "30:14", // minut
       },
       {
         id: 10,
-        title: "9-dars. Uyga vazifa. SeoGram",
-        videoFile: "https://youtu.be/Bq2qbi7JEBc",
-        duration: "2:13", // minut
+        title: "10-dars. Uyga vazifa. Bag",
+        videoFile: "https://youtu.be/WEtEaiM10QU",
+        duration: "21:22", // minut
       },
       {
         id: 11,
-        title: "10-dars. Uyga vazifa. Bag",
-        videoFile: "https://youtu.be/WEtEaiM10QU",
-        duration: "2:13", // minut
+        title: "11-dars. Uyga vazifa. Bag",
+        videoFile: "https://youtu.be/fPe2_R_PiDg",
+        duration: "10:04", // minut
       },
       {
         id: 12,
-        title: "11-dars. Uyga vazifa. Bag",
-        videoFile: "https://youtu.be/fPe2_R_PiDg",
-        duration: "2:13", // minut
+        title: "12-dars. Uyga vazifa. Zero",
+        videoFile: "https://youtu.be/2ctF9LjupNU",
+        duration: "24:44", // minut
       },
       {
         id: 13,
-        title: "12-dars. Uyga vazifa. Zero",
-        videoFile: "https://youtu.be/2ctF9LjupNU",
-        duration: "2:13", // minut
+        title: "13-dars. Uyga vazifa. Grovemade",
+        videoFile: "https://youtu.be/UXbeGz2OX-4",
+        duration: "9:28", // minut
       },
       {
         id: 14,
-        title: "13-dars. Uyga vazifa. Grovemade",
-        videoFile: "https://youtu.be/UXbeGz2OX-4",
-        duration: "2:13", // minut
+        title: "14-dars. Uyga vazifa. Locus",
+        videoFile: "https://youtu.be/rLgr5M8Gelw",
+        duration: "13:40", // minut
       },
       {
         id: 15,
-        title: "14-dars. Uyga vazifa. Locus",
-        videoFile: "https://youtu.be/rLgr5M8Gelw",
-        duration: "2:13", // minut
-      },
-      {
-        id: 16,
         title: "15-dars. Uyga vazifa. Drile",
         videoFile: "https://youtu.be/HkoavA1UqJA",
-        duration: "2:13", // minut
+        duration: "14:22", // minut
       },
     ],
   },
