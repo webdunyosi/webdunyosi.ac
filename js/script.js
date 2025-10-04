@@ -1617,9 +1617,27 @@ const assignments = [
       },
       {
         id: 2,
+        title: "1-dars. Uyga Vazifa. heading va paragraf",
+        videoFile: "https://youtu.be/cMxB5_Sp7Ow",
+        duration: "3:59", // minut
+      },
+      {
+        id: 3,
+        title: "2-dars. Uyga Vazifa. img",
+        videoFile: "https://youtu.be/cIexuaMmPVI",
+        duration: "4:26", // minut
+      },
+      {
+        id: 4,
         title: "3-dars. Uyga Vazifa. Iframe",
         videoFile: "https://youtu.be/P-3otsV_3X8",
         duration: "6:05", // minut
+      },
+      {
+        id: 5,
+        title: "4-dars. Uyga vazifa. Form",
+        videoFile: "https://youtu.be/u9Z2JS0JaME",
+        duration: "6:26", // minut
       },
     ],
   },
