@@ -789,7 +789,7 @@ const newVideos = [
   // REACTJS NEW 2025
   {
     id: 6,
-    title: "HTML NEW 2025",
+    title: "REACTJS NEW 2025",
     description:
       "Zamonaviy web ilovalar yaratish uchun React kutubxonasini o'rganing",
     image: "../images/react.webp",
