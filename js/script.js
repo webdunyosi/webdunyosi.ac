@@ -786,6 +786,22 @@ const newVideos = [
       },
     ],
   },
+  // REACTJS NEW 2025
+  {
+    id: 6,
+    title: "HTML NEW 2025",
+    description:
+      "Zamonaviy web ilovalar yaratish uchun React kutubxonasini o'rganing",
+    image: "../images/react.webp",
+    videos: [
+      {
+        id: 1,
+        title: "1-dars. ReactJS kirish, Vite",
+        videoFile: "https://youtu.be/KyBl6_FYErg",
+        duration: "25:15", // minut
+      },
+    ],
+  },
 ]
 
 // Eski Videolar
