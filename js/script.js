@@ -2017,11 +2017,32 @@ const questions = [
   },
 ]
 
+// Mnemonika kurslari
+const mnemonika = [
+  // SUPER MIYA
+  {
+    id: 1,
+    title: "SUPER MIYA",
+    description: "Mnemonika texnikasi yordamida samarali xotira rivojlantirish",
+    image: "../images/supermiya.jpg",
+    videos: [
+      {
+        id: 1,
+        title: "Kirish jonli efiri. Supermiya 2 0 kursi.",
+        videoFile: "https://youtu.be/WpUSLffA1EE",
+        duration: "1:05:45",
+      },
+    ],
+  },
+]
+
+
+
 // Barcha video darslar (yangi + eski)
 const videoLessons = [...newVideos, ...oldVideos]
 
-// Barcha kurslar (video darslar + vazifalar + savollar)
-const courses = [...videoLessons, ...assignments, ...questions]
+// Barcha kurslar (video darslar + vazifalar + savollar + mnemonika)
+const courses = [...videoLessons, ...assignments, ...questions, ...mnemonika]
 
 // DOM elements
 const loginBtn = document.getElementById("loginBtn")
@@ -2129,6 +2150,7 @@ function loadAllCourses() {
   loadOldVideos()
   loadAssignments()
   loadQuestions()
+  loadMnemonika()
 }
 
 function loadNewVideos() {
@@ -2199,6 +2221,23 @@ function loadQuestions() {
   addCourseClickListeners()
 }
 
+function loadMnemonika() {
+  const mnemonikaGrid = document.getElementById("mnemonikaGrid")
+
+  mnemonikaGrid.innerHTML = ""
+
+  mnemonika.forEach((course, index) => {
+    const courseCard = createCourseCard(course, "mnemonika")
+    courseCard.style.animationDelay = `${index * 0.15}s`
+    courseCard.classList.add("animate-slide-up")
+    const linkEl = courseCard.querySelector("a.course-link")
+    if (linkEl) linkEl.setAttribute("data-group", "mnemonika")
+    mnemonikaGrid.appendChild(courseCard)
+  })
+
+  addCourseClickListeners()
+}
+
 function createCourseCard(course, category = "featured") {
   const courseCard = document.createElement("div")
   courseCard.className =
@@ -2215,6 +2254,8 @@ function createCourseCard(course, category = "featured") {
         return '<i class="fas fa-tasks mr-1"></i>Vazifa'
       case "questions":
         return '<i class="fas fa-question-circle mr-1"></i>Savol'
+      case "mnemonika":
+        return '<i class="fas fa-brain mr-1"></i>Mnemonika'
       default:
         return '<i class="fas fa-star mr-1"></i>Popular'
     }
@@ -2277,6 +2318,7 @@ function loadCourseDetails() {
   else if (group === "old") sourceList = oldVideos
   else if (group === "assignments") sourceList = assignments
   else if (group === "questions") sourceList = questions
+  else if (group === "mnemonika") sourceList = mnemonika
 
   const course = sourceList.find((c) => c.id === courseId)
 
