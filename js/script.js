@@ -2036,13 +2036,30 @@ const mnemonika = [
   },
 ]
 
-
+// Ingliz tili kurslari
+const english = [
+  // INGLIZ TILI
+  {
+    id: 1,
+    title: "INGLIZ TILI",
+    description: "Ingliz tilini noldan o'rganish va rivojlantirish kursi",
+    image: "../images/kurslar/english/eng.png",
+    videos: [
+      {
+        id: 1,
+        title: "Intro",
+        videoFile: "https://youtu.be/vMWXFIvzVBg",
+        duration: "6:48",
+      },
+    ],
+  },
+]
 
 // Barcha video darslar (yangi + eski)
 const videoLessons = [...newVideos, ...oldVideos]
 
-// Barcha kurslar (video darslar + vazifalar + savollar + mnemonika)
-const courses = [...videoLessons, ...assignments, ...questions, ...mnemonika]
+// Barcha kurslar (video darslar + vazifalar + savollar + mnemonika + ingliz tili)
+const courses = [...videoLessons, ...assignments, ...questions, ...mnemonika, ...english]
 
 // DOM elements
 const loginBtn = document.getElementById("loginBtn")
@@ -2151,6 +2168,7 @@ function loadAllCourses() {
   loadAssignments()
   loadQuestions()
   loadMnemonika()
+  loadEnglish()
 }
 
 function loadNewVideos() {
@@ -2238,6 +2256,23 @@ function loadMnemonika() {
   addCourseClickListeners()
 }
 
+function loadEnglish() {
+  const englishGrid = document.getElementById("englishGrid")
+
+  englishGrid.innerHTML = ""
+
+  english.forEach((course, index) => {
+    const courseCard = createCourseCard(course, "english")
+    courseCard.style.animationDelay = `${index * 0.15}s`
+    courseCard.classList.add("animate-slide-up")
+    const linkEl = courseCard.querySelector("a.course-link")
+    if (linkEl) linkEl.setAttribute("data-group", "english")
+    englishGrid.appendChild(courseCard)
+  })
+
+  addCourseClickListeners()
+}
+
 function createCourseCard(course, category = "featured") {
   const courseCard = document.createElement("div")
   courseCard.className =
@@ -2256,6 +2291,8 @@ function createCourseCard(course, category = "featured") {
         return '<i class="fas fa-question-circle mr-1"></i>Savol'
       case "mnemonika":
         return '<i class="fas fa-brain mr-1"></i>Mnemonika'
+      case "english":
+        return '<i class="fas fa-language mr-1"></i>Ingliz Tili'
       default:
         return '<i class="fas fa-star mr-1"></i>Popular'
     }
@@ -2319,6 +2356,7 @@ function loadCourseDetails() {
   else if (group === "assignments") sourceList = assignments
   else if (group === "questions") sourceList = questions
   else if (group === "mnemonika") sourceList = mnemonika
+  else if (group === "english") sourceList = english
 
   const course = sourceList.find((c) => c.id === courseId)
 
