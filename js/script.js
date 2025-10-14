@@ -2032,6 +2032,12 @@ const mnemonika = [
         videoFile: "https://youtu.be/WpUSLffA1EE",
         duration: "1:05:45",
       },
+      {
+        id: 2,
+        title: "1.1-dars. Mnemonika haqida umumiy tushuncha.",
+        videoFile: "https://youtu.be/xo464RlOjVM",
+        duration: "23:13",
+      },
     ],
   },
 ]
@@ -2050,6 +2056,12 @@ const english = [
         title: "Intro",
         videoFile: "https://youtu.be/vMWXFIvzVBg",
         duration: "6:48",
+      },
+      {
+        id: 1,
+        title: "Grammar Lesson 1",
+        videoFile: "https://youtu.be/5oRMAI3Jhv0",
+        duration: "40:26",
       },
     ],
   },
