@@ -2038,6 +2038,12 @@ const mnemonika = [
         videoFile: "https://youtu.be/xo464RlOjVM",
         duration: "23:13",
       },
+      {
+        id: 3,
+        title: "1.1-dars. Savollarga javoblar.",
+        videoFile: "https://youtu.be/JyckXsZOFFA",
+        duration: "8:06",
+      },
     ],
   },
 ]
@@ -2058,10 +2064,16 @@ const english = [
         duration: "6:48",
       },
       {
-        id: 1,
+        id: 2,
         title: "Grammar Lesson 1",
         videoFile: "https://youtu.be/5oRMAI3Jhv0",
         duration: "40:26",
+      },
+      {
+        id: 3,
+        title: "Grammar Lesson 2",
+        videoFile: "https://youtu.be/39MKKr65ejk",
+        duration: "21:05",
       },
     ],
   },
