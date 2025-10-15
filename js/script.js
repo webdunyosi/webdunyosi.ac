@@ -799,6 +799,7 @@ const newVideos = [
         title: "1-dars. ReactJS kirish, Vite",
         videoFile: "https://youtu.be/KyBl6_FYErg",
         duration: "25:15", // minut
+        link: "https://www.figma.com/design/18ukRLQMlTzz9RgMngOeTr/Developer-Portfolio-Website-Design-(Community)?node-id=0-1&t=caiugME0G9pXKVp6-1",
       },
     ],
   },
@@ -2062,18 +2063,21 @@ const english = [
         title: "Intro",
         videoFile: "https://youtu.be/vMWXFIvzVBg",
         duration: "6:48",
+        link: "",
       },
       {
         id: 2,
         title: "Grammar Lesson 1",
         videoFile: "https://youtu.be/5oRMAI3Jhv0",
         duration: "40:26",
+        link: "",
       },
       {
         id: 3,
         title: "Grammar Lesson 2",
         videoFile: "https://youtu.be/39MKKr65ejk",
         duration: "21:05",
+        link: "",
       },
     ],
   },
@@ -2477,17 +2481,7 @@ function loadCourseDetails() {
           <a href="https://docs.google.com/spreadsheets/d/159vyoIidvK4XFzySgxTkneMgOG_IYRWGF0cI5fgYQM0/edit?gid=0#gid=0" target="_blank" class="text-gray-400">${
             course.title
           }</a>
-          <div class="flex space-x-4">
-            <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-              <i class="fas fa-thumbs-up"></i>
-            </button>
-            <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-              <i class="fas fa-share"></i>
-            </button>
-            <button class="text-gray-400 hover:text-primary transition-all hover:scale-110">
-              <i class="fas fa-bookmark"></i>
-            </button>
-          </div>
+          <div id="taskLinkContainer"></div>
         </div>
       </div>
     </div>
@@ -2546,7 +2540,7 @@ function loadCourseDetails() {
   }
 
   // Video list click listeners
-  document.querySelectorAll(".video-list-item").forEach((item) => {
+  document.querySelectorAll(".video-list-item").forEach((item, index) => {
     item.addEventListener("click", function () {
       const videoUrl = this.getAttribute("data-video")
       const videoTitle = this.getAttribute("data-title")
@@ -2558,8 +2552,33 @@ function loadCourseDetails() {
 
       loadVideoPlayer(videoUrl, videoTitle)
       document.getElementById("currentVideoTitle").textContent = videoTitle
+      
+      // Update task link button
+      updateTaskLinkButton(course.videos[index])
     })
   })
+  
+  // Initialize first video's task link
+  if (course.videos.length > 0) {
+    updateTaskLinkButton(course.videos[0])
+  }
+}
+
+function updateTaskLinkButton(video) {
+  const container = document.getElementById("taskLinkContainer")
+  if (!container) return
+  
+  if (video.link && video.link.trim() !== "") {
+    container.innerHTML = `
+      <a href="${video.link}" target="_blank" 
+         class="btn-primary px-6 py-2.5 rounded-xl inline-flex items-center font-bold transition-all group hover:scale-105">
+        <i class="fas fa-tasks mr-2 group-hover:scale-110 transition-transform"></i>
+        Vazifani ko'rish
+      </a>
+    `
+  } else {
+    container.innerHTML = ""
+  }
 }
 
 function loadVideoPlayer(videoUrl, videoTitle) {
