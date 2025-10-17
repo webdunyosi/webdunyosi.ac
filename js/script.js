@@ -2077,7 +2077,7 @@ const english = [
         title: "Grammar Lesson 2",
         videoFile: "https://youtu.be/39MKKr65ejk",
         duration: "21:05",
-        link: "",
+        link: "https://drive.google.com/file/d/1WDBMj4iACld-55oJwC8LijxEWiwRRKIP/view?usp=sharing",
       },
     ],
   },
@@ -2571,7 +2571,7 @@ function updateTaskLinkButton(video) {
   if (video.link && video.link.trim() !== "") {
     container.innerHTML = `
       <a href="${video.link}" target="_blank" 
-         class="btn-primary px-6 py-2.5 rounded-xl inline-flex items-center font-bold transition-all group hover:scale-105">
+         class="btn-primary px-3 md:px-6 py-1 md:py-2.5 rounded-xl inline-flex items-center font-bold text-xs md:text-base transition-all group hover:scale-105">
         <i class="fas fa-tasks mr-2 group-hover:scale-110 transition-transform"></i>
         Vazifani ko'rish
       </a>
