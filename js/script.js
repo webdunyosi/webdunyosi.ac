@@ -790,6 +790,12 @@ const newVideos = [
         videoFile: "https://youtu.be/lAJmq_LvDRU",
         duration: "9:06", // minut
       },
+      {
+        id: 43,
+        title: "28-dars. JSON, NPM, package.json",
+        videoFile: "https://youtu.be/H7WoWYxGMzc",
+        duration: "9:06", // minut
+      },
     ],
   },
   // REACTJS NEW 2025
