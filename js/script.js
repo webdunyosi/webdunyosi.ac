@@ -784,6 +784,12 @@ const newVideos = [
         videoFile: "https://youtu.be/KibTXtRaoHI",
         duration: "10:02", // minut
       },
+      {
+        id: 42,
+        title: "26-dars. Promise, Fetch, Axios, Async await, Try catch",
+        videoFile: "https://youtu.be/lAJmq_LvDRU",
+        duration: "9:06", // minut
+      },
     ],
   },
   // REACTJS NEW 2025
