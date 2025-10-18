@@ -2045,6 +2045,12 @@ const mnemonika = [
         videoFile: "https://youtu.be/JyckXsZOFFA",
         duration: "8:06",
       },
+      {
+        id: 4,
+        title: "1.2-dars. Lokatsiyalar",
+        videoFile: "https://youtu.be/9hwM_38hX8Y",
+        duration: "21:02",
+      },
     ],
   },
 ]
@@ -2078,6 +2084,13 @@ const english = [
         videoFile: "https://youtu.be/39MKKr65ejk",
         duration: "21:05",
         link: "https://drive.google.com/file/d/1WDBMj4iACld-55oJwC8LijxEWiwRRKIP/view?usp=sharing",
+      },
+      {
+        id: 4,
+        title: "Grammar Lesson 3",
+        videoFile: "https://youtu.be/wFz2YDhlhgM",
+        duration: "41:51",
+        link: "https://drive.google.com/file/d/1bqpDd6txmDe2XWciUxJaEmenbUUkZJT2/view?usp=sharing",
       },
     ],
   },
