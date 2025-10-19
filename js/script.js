@@ -796,6 +796,12 @@ const newVideos = [
         videoFile: "https://youtu.be/H7WoWYxGMzc",
         duration: "9:06", // minut
       },
+      {
+        id: 44,
+        title: "30-dars. LocalStorage",
+        videoFile: "https://youtu.be/ziYsWAje2D8",
+        duration: "2:40", // minut
+      },
     ],
   },
   // REACTJS NEW 2025
