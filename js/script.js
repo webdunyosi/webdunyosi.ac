@@ -7,100 +7,80 @@ const activeStudents = [
   {
     name: "Dustmurodov Akmal", // o'quvchi ismi
     avatar: "../images/students/DustmurodovAkmal.png", // o'quvchi rasmi
-    attendance: 93, // yo'qlama foizi
-    taskScore: 100, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 16, // bajarilgan vazifalar soni
+    attendance: 97, // yo'qlama foizi
+    taskScore: 25, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 2, // bajarilgan vazifalar soni
     startedAt: "01.05.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
-  },
-  {
-    name: "Dustov Eldor", // o'quvchi ismi
-    avatar: "../images/students/DustovEldor.jpg", // o'quvchi rasmi
-    attendance: 100, // yo'qlama foizi
-    taskScore: 100, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 19, // bajarilgan vazifalar soni
-    startedAt: "08.09.2025", // kursni boshlagan sana
-    courses: ["html", "css"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwind", "javascript", "react"], // Tugallangan kurslar
   },
   {
     name: "Abdalov San'at", // o'quvchi ismi
     avatar: "../images/students/AbdalovSanat.png", // o'quvchi rasmi
     attendance: 100, // yo'qlama foizi
-    taskScore: 95, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 18, // bajarilgan vazifalar soni
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 12, // bajarilgan vazifalar soni
     startedAt: "08.09.2025", // kursni boshlagan sana
-    courses: ["html", "css"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwindcss", "javascript"], // Tugallangan kurslar
   },
   {
     name: "Mamarayimov Nemat", // o'quvchi ismi
     avatar: "../images/students/MamarayimovNemat.png", // o'quvchi rasmi
     attendance: 100, // yo'qlama foizi
     taskScore: 100, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 19, // bajarilgan vazifalar soni
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 12, // bajarilgan vazifalar soni
     startedAt: "04.08.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwindcss"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwindcss", "javascript"], // Tugallangan kurslar
   },
   {
     name: "Mardayev Sayfiddin", // o'quvchi ismi
     avatar: "../images/students/MardayevSayfiddin.png", // o'quvchi rasmi
-    attendance: 69, // yo'qlama foizi
-    taskScore: 100, // vazifalar uchun ball
+    attendance: 70, // yo'qlama foizi
+    taskScore: 56, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 2, // bajarilgan vazifalar soni
+    completedTasks: 5, // bajarilgan vazifalar soni
     startedAt: "18.09.2025", // kursni boshlagan sana
-    courses: ["html"], // Tugallangan kurslar
-  },
-  {
-    name: "Mavlonova Marjona", // o'quvchi ismi
-    avatar: "../images/students/MavlonovaMarjona.png", // o'quvchi rasmi
-    attendance: 72, // yo'qlama foizi
-    taskScore: 13, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 2, // bajarilgan vazifalar soni
-    startedAt: "01.05.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+    courses: ["html", "css"], // Tugallangan kurslar
   },
   {
     name: "Axbutayev Muhammadali", // o'quvchi ismi
     avatar: "../images/students/AxbutayevMuhammadali.png", // o'quvchi rasmi
-    attendance: 87, // yo'qlama foizi
-    taskScore: 84, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 16, // bajarilgan vazifalar soni
+    attendance: 100, // yo'qlama foizi
+    taskScore: 55, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 6, // bajarilgan vazifalar soni
     startedAt: "28.08.2025", // kursni boshlagan sana
-    courses: ["html", "css"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwindcss"], // Tugallangan kurslar
   },
   {
     name: "Raxmonqulov Ozodbek", // o'quvchi ismi
     avatar: "../images/students/RaxmonqulovOzodbek.png", // o'quvchi rasmi
     attendance: 100, // yo'qlama foizi
-    taskScore: 79, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 15, // bajarilgan vazifalar soni
+    taskScore: 73, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 8, // bajarilgan vazifalar soni
     startedAt: "06.09.2025", // kursni boshlagan sana
-    courses: ["html", "css"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwindcss"], // Tugallangan kurslar
   },
   {
     name: "Aslonov Jahongir", // o'quvchi ismi
     avatar: "../images/students/AslonovJahongir.png", // o'quvchi rasmi
     attendance: 100, // yo'qlama foizi
-    taskScore: 79, // vazifalar uchun ball
+    taskScore: 82, // vazifalar uchun ball
     projectScore: 100, // loyihalar uchun ball
-    completedTasks: 15, // bajarilgan vazifalar soni
+    completedTasks: 9, // bajarilgan vazifalar soni
     startedAt: "11.08.2025", // kursni boshlagan sana
-    courses: ["html", "css"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwindcss"], // Tugallangan kurslar
   },
   {
     name: "Sharipov Zafar", // o'quvchi ismi
     avatar: "../images/students/SharipovZafar.JPG", // o'quvchi rasmi
-    attendance: 68, // yo'qlama foizi
-    taskScore: 86, // vazifalar uchun ball
+    attendance: 67, // yo'qlama foizi
+    taskScore: 0, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 13, // bajarilgan vazifalar soni
+    completedTasks: 0, // bajarilgan vazifalar soni
     startedAt: "19.08.2025", // kursni boshlagan sana
     courses: ["html", "css"], // Tugallangan kurslar
   },
@@ -108,81 +88,91 @@ const activeStudents = [
     name: "Burxonov Behruz", // o'quvchi ismi
     avatar: "../images/students/BurxonovBehruz.png", // o'quvchi rasmi
     attendance: 100, // yo'qlama foizi
-    taskScore: 73, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 11, // bajarilgan vazifalar soni
+    taskScore: 83, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 5, // bajarilgan vazifalar soni
     startedAt: "19.08.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwind", "javascript", "react"], // Tugallangan kurslar
   },
   {
     name: "Temirbekov Ahadjon", // o'quvchi ismi
     avatar: "../images/students/TemirbekovAhadjon.png", // o'quvchi rasmi
-    attendance: 48, // yo'qlama foizi
-    taskScore: 47, // vazifalar uchun ball
+    attendance: 50, // yo'qlama foizi
+    taskScore: 67, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 9, // bajarilgan vazifalar soni
+    completedTasks: 6, // bajarilgan vazifalar soni
     startedAt: "19.08.2025", // kursni boshlagan sana
     courses: ["html", "css"], // Tugallangan kurslar
   },
   {
     name: "Saydaliyev Salohiddin", // o'quvchi ismi
-    avatar: "../images/students/SaydaliyevSalohiddin.png", // o'quvchi rasmi
-    attendance: 98, // yo'qlama foizi
-    taskScore: 100, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 13, // bajarilgan vazifalar soni
+    avatar: "../images/students/boy.png", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 78, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 7, // bajarilgan vazifalar soni
     startedAt: "01.07.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
   {
-    name: "Tursunov Ibrohimjon", // o'quvchi ismi
-    avatar: "../images/students/TursunovIbrohimjon.png", // o'quvchi rasmi
-    attendance: 71, // yo'qlama foizi
-    taskScore: 69, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 9, // bajarilgan vazifalar soni
+    name: "Abdulhamidov Ibrohim", // o'quvchi ismi
+    avatar: "../images/students/boy.png", // o'quvchi rasmi
+    attendance: 83, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 11, // bajarilgan vazifalar soni
     startedAt: "19.08.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwind"], // Tugallangan kurslar
   },
   {
     name: "Mardiyev Yahyo", // o'quvchi ismi
     avatar: "../images/students/MardiyevYahyo.png", // o'quvchi rasmi
-    attendance: 98, // yo'qlama foizi
-    taskScore: 90, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 14, // bajarilgan vazifalar soni
+    attendance: 100, // yo'qlama foizi
+    taskScore: 0, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 0, // bajarilgan vazifalar soni
     startedAt: "01.06.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwind", "javascript", "react"], // Tugallangan kurslar
   },
   {
-    name: "Javohirbek Muhammadiyev", // o'quvchi ismi
+    name: "Muhammadiyev Javohirbek", // o'quvchi ismi
     avatar: "../images/students/JavohirbekMuhammadiyev.jpg", // o'quvchi rasmi
-    attendance: 100, // yo'qlama foizi
-    taskScore: 100, // vazifalar uchun ball
+    attendance: 90, // yo'qlama foizi
+    taskScore: 89, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 1, // bajarilgan vazifalar soni
+    completedTasks: 8, // bajarilgan vazifalar soni
     startedAt: "28.09.2025", // kursni boshlagan sana
-    courses: ["html"], // Tugallangan kurslar
+    courses: ["html", "css"], // Tugallangan kurslar
   },
   {
     name: "Safarov Durbek", // o'quvchi ismi
     avatar: "../images/students/SafarovDurbek.png", // o'quvchi rasmi
-    attendance: 98, // yo'qlama foizi
-    taskScore: 90, // vazifalar uchun ball
-    projectScore: 100, // loyihalar uchun ball
-    completedTasks: 14, // bajarilgan vazifalar soni
+    attendance: 100, // yo'qlama foizi
+    taskScore: 17, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 1, // bajarilgan vazifalar soni
     startedAt: "01.07.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwind", "javascript", "react"], // Tugallangan kurslar
   },
   {
     name: "Xamidova Baxshand", // o'quvchi ismi
     avatar: "../images/students/XamidovaBaxshand.png", // o'quvchi rasmi
-    attendance: 100, // yo'qlama foizi
+    attendance: 67, // yo'qlama foizi
     taskScore: 100, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 5, // bajarilgan vazifalar soni
-    startedAt: "01.07.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
+    completedTasks: 15, // bajarilgan vazifalar soni
+    startedAt: "18.09.2025", // kursni boshlagan sana
+    courses: ["html", "css", "tailwind"], // Tugallangan kurslar
+  },
+  {
+    name: "Qalandarov Shohijaxon", // o'quvchi ismi
+    avatar: "../images/students/QalandarovShohijaxon.png", // o'quvchi rasmi
+    attendance: 83, // yo'qlama foizi
+    taskScore: 27, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 3, // bajarilgan vazifalar soni
+    startedAt: "18.09.2025", // kursni boshlagan sana
+    courses: ["html", "css", "tailwind"], // Tugallangan kurslar
   },
 ]
 
@@ -2118,7 +2108,13 @@ const english = [
 const videoLessons = [...newVideos, ...oldVideos]
 
 // Barcha kurslar (video darslar + vazifalar + savollar + mnemonika + ingliz tili)
-const courses = [...videoLessons, ...assignments, ...questions, ...mnemonika, ...english]
+const courses = [
+  ...videoLessons,
+  ...assignments,
+  ...questions,
+  ...mnemonika,
+  ...english,
+]
 
 // DOM elements
 const loginBtn = document.getElementById("loginBtn")
@@ -2583,12 +2579,12 @@ function loadCourseDetails() {
 
       loadVideoPlayer(videoUrl, videoTitle)
       document.getElementById("currentVideoTitle").textContent = videoTitle
-      
+
       // Update task link button
       updateTaskLinkButton(course.videos[index])
     })
   })
-  
+
   // Initialize first video's task link
   if (course.videos.length > 0) {
     updateTaskLinkButton(course.videos[0])
@@ -2598,7 +2594,7 @@ function loadCourseDetails() {
 function updateTaskLinkButton(video) {
   const container = document.getElementById("taskLinkContainer")
   if (!container) return
-  
+
   if (video.link && video.link.trim() !== "") {
     container.innerHTML = `
       <a href="${video.link}" target="_blank" 
