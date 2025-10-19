@@ -22,7 +22,7 @@ const activeStudents = [
     projectScore: 0, // loyihalar uchun ball
     completedTasks: 12, // bajarilgan vazifalar soni
     startedAt: "08.09.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwindcss", "javascript"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
   {
     name: "Mamarayimov Nemat", // o'quvchi ismi
@@ -32,7 +32,7 @@ const activeStudents = [
     projectScore: 0, // loyihalar uchun ball
     completedTasks: 12, // bajarilgan vazifalar soni
     startedAt: "04.08.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwindcss", "javascript"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwind", "javascript"], // Tugallangan kurslar
   },
   {
     name: "Mardayev Sayfiddin", // o'quvchi ismi
@@ -52,7 +52,7 @@ const activeStudents = [
     projectScore: 0, // loyihalar uchun ball
     completedTasks: 6, // bajarilgan vazifalar soni
     startedAt: "28.08.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwindcss"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwind"], // Tugallangan kurslar
   },
   {
     name: "Raxmonqulov Ozodbek", // o'quvchi ismi
@@ -62,7 +62,7 @@ const activeStudents = [
     projectScore: 0, // loyihalar uchun ball
     completedTasks: 8, // bajarilgan vazifalar soni
     startedAt: "06.09.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwindcss"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwind"], // Tugallangan kurslar
   },
   {
     name: "Aslonov Jahongir", // o'quvchi ismi
@@ -72,7 +72,7 @@ const activeStudents = [
     projectScore: 100, // loyihalar uchun ball
     completedTasks: 9, // bajarilgan vazifalar soni
     startedAt: "11.08.2025", // kursni boshlagan sana
-    courses: ["html", "css", "tailwindcss"], // Tugallangan kurslar
+    courses: ["html", "css", "tailwind"], // Tugallangan kurslar
   },
   {
     name: "Sharipov Zafar", // o'quvchi ismi
