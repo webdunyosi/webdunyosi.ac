@@ -2059,6 +2059,12 @@ const mnemonika = [
         videoFile: "https://youtu.be/9hwM_38hX8Y",
         duration: "21:02",
       },
+      {
+        id: 5,
+        title: "1.2-dars. Savol-javob",
+        videoFile: "https://youtu.be/hRumN8D4YIA",
+        duration: "8:05",
+      },
     ],
   },
 ]
