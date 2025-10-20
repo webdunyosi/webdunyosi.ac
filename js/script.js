@@ -809,6 +809,34 @@ const newVideos = [
         duration: "25:15", // minut
         link: "https://www.figma.com/design/18ukRLQMlTzz9RgMngOeTr/Developer-Portfolio-Website-Design-(Community)?node-id=0-1&t=caiugME0G9pXKVp6-1",
       },
+      {
+        id: 2,
+        title: "2-dars. Function component, O'zgaruvchi, Funksiya, Ternary Operator",
+        videoFile: "https://youtu.be/YfgtmVH4ew4",
+        duration: "6:32", // minut
+        link: "https://www.figma.com/file/16bdlWFoZXXIpyyZmwy9JU/Logoipsum?node-id=0%3A1",
+      },
+      {
+        id: 3,
+        title: "3-dars. Loyiha. Komponentlar",
+        videoFile: "https://youtu.be/pNJTXibhho4",
+        duration: "19:35", // minut
+        link: "https://www.figma.com/design/ZH88T47VJJXVpCBqrt0UgC/Todo-List-UI--Community---Copy-?node-id=0-1&t=VxemnRLHCyNVLWEf-1",
+      },
+      {
+        id: 4,
+        title: "4-dars. Props, Destructuring, Children, map",
+        videoFile: "https://youtu.be/e11rBouVwsQ",
+        duration: "9:18", // minut
+        link: "https://drive.google.com/file/d/1_vlh-GDgsUTG4TnGY8wICHVFERJmhOFc/view?usp=sharing",
+      },
+      {
+        id: 5,
+        title: "5-dars. Utility Function",
+        videoFile: "https://youtu.be/AX7SfuMx0n4",
+        duration: "4:36", // minut
+        link: "https://www.figma.com/design/6rW4GDdTZQxGwC0g2jfjI9/Planta---E-Commerce-app-for-Plant-Enthusiast--Community-?node-id=1596-18774&t=hCG4TQlovSxWfSUl-0",
+      },
     ],
   },
 ]
