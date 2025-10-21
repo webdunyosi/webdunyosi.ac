@@ -837,6 +837,27 @@ const newVideos = [
         duration: "4:36", // minut
         link: "https://www.figma.com/design/6rW4GDdTZQxGwC0g2jfjI9/Planta---E-Commerce-app-for-Plant-Enthusiast--Community-?node-id=1596-18774&t=hCG4TQlovSxWfSUl-0",
       },
+      {
+        id: 6,
+        title: "6-dars. Hook, State va Hodisalar",
+        videoFile: "https://youtu.be/DF-5WeR54aU",
+        duration: "14:56", // minut
+        link: "https://www.figma.com/design/W7a4pegDLk5P8a91D8HCLC/Planta---E-Commerce-app-for-Plant-Enthusiast--Community---Copy-?node-id=125-841&p=f&t=A0hmq1xzqHW0ZO9I-0",
+      },
+      {
+        id: 7,
+        title: "7-dars. Todo list",
+        videoFile: "https://youtu.be/OSr-7qVhkmk",
+        duration: "14:47", // minut
+        link: "https://www.figma.com/design/ZH88T47VJJXVpCBqrt0UgC/Todo-List-UI--Community---Copy-?node-id=0-1&t=VxemnRLHCyNVLWEf-1",
+      },
+      {
+        id: 8,
+        title: "8-dars. Shadcn UI Kutubxonalar",
+        videoFile: "https://youtu.be/3BxPBs00yj8",
+        duration: "5:10", // minut
+        link: "https://originui.com/",
+      },
     ],
   },
 ]
