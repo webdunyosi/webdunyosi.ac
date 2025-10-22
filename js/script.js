@@ -2149,6 +2149,20 @@ const mnemonika = [
         videoFile: "https://youtu.be/hRumN8D4YIA",
         duration: "8:05",
       },
+      {
+        id: 6,
+        title: "1.3-dars. Lokatsiyalarni shug'ullantirish.",
+        videoFile: "https://youtu.be/qSU-kXT7juQ",
+        duration: "19:37",
+        link: "https://drive.google.com/file/d/1AyoGtJd3cST6lYAXti8wQ62yqfFsMEhG/view?usp=sharing",
+      },
+      {
+        id: 7,
+        title: "1.3-dars. Savol-javoblar.",
+        videoFile: "https://youtu.be/-_Zx-kOsx5g",
+        duration: "11:48",
+        link: "https://drive.google.com/file/d/1AyoGtJd3cST6lYAXti8wQ62yqfFsMEhG/view?usp=sharing",
+      },
     ],
   },
 ]
