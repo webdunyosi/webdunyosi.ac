@@ -865,6 +865,34 @@ const newVideos = [
         duration: "3:49", // minut
         link: "https://www.figma.com/design/QJzIEYvy3cbMmvDtSsPsDe/To-do-List-Web-App-Design--Community-?node-id=16-35&t=tyWCXwXbLeu8wFa0-0",
       },
+      {
+        id: 10,
+        title: "10-dars. useEffect, Axios, Async await, Try catch",
+        videoFile: "https://youtu.be/mEk-HMKwLFk",
+        duration: "7:31", // minut
+        link: "https://drive.google.com/file/d/1dZKlNqhjI6QF2hZ4RopKmeBYnLkghWZ3/view?usp=sharing",
+      },
+      {
+        id: 11,
+        title: "11-dars. TanStack Query",
+        videoFile: "https://youtu.be/fm3-w69i_Zw",
+        duration: "6:49", // minut
+        link: "https://drive.google.com/file/d/1dZKlNqhjI6QF2hZ4RopKmeBYnLkghWZ3/view?usp=sharing",
+      },
+      {
+        id: 12,
+        title: "12-dars. useRef, useCallback va useMemo",
+        videoFile: "https://youtu.be/fsQOo0O9Js8",
+        duration: "9:56", // minut
+        link: "https://www.figma.com/design/ZH88T47VJJXVpCBqrt0UgC/Todo-List-UI--Community---Copy-?node-id=0-1&t=VxemnRLHCyNVLWEf-1",
+      },
+      {
+        id: 13,
+        title: "13-dars. Custom hooks",
+        videoFile: "https://youtu.be/VCOSxwMju00",
+        duration: "5:39", // minut
+        link: "https://drive.google.com/file/d/1dZKlNqhjI6QF2hZ4RopKmeBYnLkghWZ3/view?usp=sharing",
+      },
     ],
   },
 ]
