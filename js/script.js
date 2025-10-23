@@ -893,6 +893,13 @@ const newVideos = [
         duration: "5:39", // minut
         link: "https://drive.google.com/file/d/1dZKlNqhjI6QF2hZ4RopKmeBYnLkghWZ3/view?usp=sharing",
       },
+      {
+        id: 14,
+        title: "14-dars. Lazy load function",
+        videoFile: "https://youtu.be/3pCOSfMfxVE",
+        duration: "5:42", // minut
+        link: "https://www.figma.com/design/SXInJpHfAYk9nLjrraNBil/Free-Medical-Landing-Page-Design--Community-?node-id=1-2&t=HzReHXTeggzVNmFZ-0",
+      },
     ],
   },
 ]
@@ -2121,7 +2128,7 @@ const mnemonika = [
     videos: [
       {
         id: 1,
-        title: "Kirish jonli efiri. Supermiya 2 0 kursi.",
+        title: "Kirish jonli efiri. Supermiya 2.0 kursi.",
         videoFile: "https://youtu.be/WpUSLffA1EE",
         duration: "1:05:45",
       },
