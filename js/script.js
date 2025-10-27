@@ -2171,6 +2171,27 @@ const mnemonika = [
         duration: "11:48",
         link: "https://drive.google.com/file/d/1AyoGtJd3cST6lYAXti8wQ62yqfFsMEhG/view?usp=sharing",
       },
+      {
+        id: 8,
+        title: "1.4-dars. Lokatsiyalarni tezlashtirish.",
+        videoFile: "https://youtu.be/91W6zSgNLAs",
+        duration: "16:30",
+        link: "https://drive.google.com/file/d/1FZU32HYlXvaniNlyTnqbW0V69DXMRZzF/view?usp=sharing",
+      },
+      {
+        id: 9,
+        title: "1.4-dars. Savol-javoblar",
+        videoFile: "https://youtu.be/N5TRzspamkU",
+        duration: "12:11",
+        link: "https://drive.google.com/file/d/1FZU32HYlXvaniNlyTnqbW0V69DXMRZzF/view?usp=sharing",
+      },
+      {
+        id: 10,
+        title: "Lokatsiyalar qo'shimcha jonli efiri.",
+        videoFile: "https://youtu.be/kHJAiZJP6jM",
+        duration: "1:01:55",
+        link: "https://drive.google.com/file/d/1FZU32HYlXvaniNlyTnqbW0V69DXMRZzF/view?usp=sharing",
+      },
     ],
   },
   // ANTI DANGASALIK
