@@ -516,10 +516,9 @@ const newVideos = [
       },
       {
         id: 3,
-        title: "2-dars. Ish joyini sozlash",
-        videoFile:
-          "https://youtu.be/AX3AFc4n_1s?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
+        title: "2-dars. Foydalanuvchi bilan ishlash, Interpolatsiya",
+        videoFile: "https://youtu.be/qS5Z_uwYOnA",
+        duration: "2:04", // minut
       },
       {
         id: 4,
@@ -2198,7 +2197,8 @@ const mnemonika = [
   {
     id: 2,
     title: "ANTI DANGASALIK",
-    description: "Dangasalik (prokrastinatsiya)ni yengish, diqqat va motivatsiyani oshirishga qaratilgan amaliy texnikalar va samarali ish odatlari.",
+    description:
+      "Dangasalik (prokrastinatsiya)ni yengish, diqqat va motivatsiyani oshirishga qaratilgan amaliy texnikalar va samarali ish odatlari.",
     image: "../images/kurslar/mnemonika/antidangasalik.jpg",
     videos: [
       {
