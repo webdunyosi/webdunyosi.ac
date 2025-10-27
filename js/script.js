@@ -811,7 +811,8 @@ const newVideos = [
       },
       {
         id: 2,
-        title: "2-dars. Function component, O'zgaruvchi, Funksiya, Ternary Operator",
+        title:
+          "2-dars. Function component, O'zgaruvchi, Funksiya, Ternary Operator",
         videoFile: "https://youtu.be/YfgtmVH4ew4",
         duration: "6:32", // minut
         link: "https://www.figma.com/file/16bdlWFoZXXIpyyZmwy9JU/Logoipsum?node-id=0%3A1",
@@ -2124,7 +2125,7 @@ const mnemonika = [
     id: 1,
     title: "SUPER MIYA",
     description: "Mnemonika texnikasi yordamida samarali xotira rivojlantirish",
-    image: "../images/supermiya.jpg",
+    image: "../images/kurslar/mnemonika/supermiya.jpg",
     videos: [
       {
         id: 1,
@@ -2169,6 +2170,22 @@ const mnemonika = [
         videoFile: "https://youtu.be/-_Zx-kOsx5g",
         duration: "11:48",
         link: "https://drive.google.com/file/d/1AyoGtJd3cST6lYAXti8wQ62yqfFsMEhG/view?usp=sharing",
+      },
+    ],
+  },
+  // ANTI DANGASALIK
+  {
+    id: 2,
+    title: "ANTI DANGASALIK",
+    description: "Dangasalik (prokrastinatsiya)ni yengish, diqqat va motivatsiyani oshirishga qaratilgan amaliy texnikalar va samarali ish odatlari.",
+    image: "../images/kurslar/mnemonika/antidangasalik.jpg",
+    videos: [
+      {
+        id: 1,
+        title: "1-dars. Kerakli ish qurollari",
+        videoFile: "https://youtu.be/T8DM9OFuitE",
+        duration: "7:40",
+        link: "https://drive.google.com/file/d/1j9jUj0o1gOLto0Udb0Mz9LbclHfrdx6J/view?usp=sharing",
       },
     ],
   },
