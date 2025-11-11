@@ -714,50 +714,49 @@ const newVideos = [
       {
         id: 32,
         title:
-          "20-dars. firstChild, lastChild, parentElement, nextSibling, data",
+          "17-dars. firstChild, lastChild, parentElement, nextSibling, data",
         videoFile: "https://youtu.be/VCQEN_EKVfQ",
         duration: "2:13", // minut
       },
       {
         id: 33,
-        title: "21-dars. Hodisalar amaliyot",
+        title: "18-dars. Hodisalar amaliyot",
         videoFile: "https://youtu.be/MWFiXdYNB_w",
         duration: "2:13", // minut
       },
       {
         id: 34,
-        title: "22-dars. ClassList",
-        videoFile:
-          "https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
+        title: "19-dars. ClassList",
+        videoFile: "https://youtu.be/Dic0JIj2qmA",
+        duration: "17:37", // minut
       },
       {
         id: 35,
-        title: "23-dars. Delegatsiya",
+        title: "20-dars. Delegatsiya",
         videoFile: "https://youtu.be/paxeIUAMl60",
         duration: "6:09", // minut
       },
       {
         id: 36,
-        title: "24-dars. Amaliyot. Foodlover. Tabs",
+        title: "21-dars. Amaliyot. Foodlover Tabs",
         videoFile: "https://youtu.be/lQ5NPN-7aPM",
         duration: "25:39", // minut
       },
       {
         id: 37,
-        title: "25-dars. setTimeout(), setInterval(), clearInterval()",
+        title: "22-dars. Date",
         videoFile: "https://youtu.be/C--Z7esqgsA",
         duration: "7:25", // minut
       },
       {
         id: 38,
-        title: "26-dars. Date",
+        title: "23-dars. Amaliyot. Loader va Date",
         videoFile: "https://youtu.be/5cnBAeKGTk4",
         duration: "7:33", // minut
       },
       {
         id: 39,
-        title: "27-dars. Amaliyot. Loader va Date",
+        title: "24-dars. Document va Window Parametrlari",
         videoFile: "https://youtu.be/ubYeWVvTAbM",
         duration: "26:43", // minut
       },
@@ -769,7 +768,7 @@ const newVideos = [
       },
       {
         id: 41,
-        title: "29-dars. Amaliyot. Modal oyna",
+        title: "25-dars. Amaliyot. Modal oyna",
         videoFile: "https://youtu.be/KibTXtRaoHI",
         duration: "10:02", // minut
       },
@@ -2207,6 +2206,18 @@ const mnemonika = [
         videoFile: "https://youtu.be/T8DM9OFuitE",
         duration: "7:40",
         link: "https://drive.google.com/file/d/1j9jUj0o1gOLto0Udb0Mz9LbclHfrdx6J/view?usp=sharing",
+      },
+      {
+        id: 2,
+        title: "2-dars. Anti danasalik kirish darsi",
+        videoFile: "https://youtu.be/pispedmkRLM",
+        duration: "1:18:45",
+      },
+      {
+        id: 3,
+        title: "3-dars. Anti dangasalik",
+        videoFile: "https://youtu.be/5dTVPt6n8B8",
+        duration: "1:30:45",
       },
     ],
   },
