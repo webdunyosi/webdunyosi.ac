@@ -2295,7 +2295,7 @@ const english = [
       },
       {
         id: 2,
-        title: "Grammar Lesson 1",
+        title: "1-dars. Tobe fe'li",
         videoFile: "https://youtu.be/5oRMAI3Jhv0",
         duration: "40:26",
         link: "https://drive.google.com/file/d/1mJtW2s9mKMPF9ORB-8_2JetuYhQPLu-P/view?usp=sharing",
