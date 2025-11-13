@@ -495,7 +495,7 @@ const newVideos = [
   // JAVASCRIPT NEW 2025
   {
     id: 5,
-    title: "JavaScript Dasturlash",
+    title: "JAVASCRIPT NEW 2025",
     description:
       "Interaktiv web sahifalar yaratish uchun JavaScript ni o'rganing",
     image: "../images/js.png",
