@@ -502,293 +502,10 @@ const newVideos = [
     videos: [
       {
         id: 1,
-        title: "MERN Stack kursi haqida",
-        videoFile:
-          "https://youtu.be/yyasmRTnsqI?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 2,
-        title: "1-dars. JavaScript modulni samarali tugatish",
-        videoFile:
-          "https://youtu.be/7wKJ2wj8vPk?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 3,
-        title: "2-dars. Foydalanuvchi bilan ishlash, Interpolatsiya",
-        videoFile: "https://youtu.be/qS5Z_uwYOnA",
-        duration: "2:04", // minut
-      },
-      {
-        id: 4,
-        title: "3-dars. Node js ni ornatish",
-        videoFile:
-          "https://youtu.be/TK_7Q4mTT7s?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 5,
-        title: "4-dars. Javascript nima?",
-        videoFile:
-          "https://youtu.be/EjpJiZViUhE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 6,
-        title: "5-dars Ozgaruvchilar",
-        videoFile:
-          "https://youtu.be/wx5YU36IqnM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 7,
-        title: "6-dars. Qatiy rejim va u nima?",
-        videoFile:
-          "https://youtu.be/_HNC2CS9VrE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 8,
-        title: "7-dars. Javascriptdagi malumotlar turlarining tasnifi",
-        videoFile:
-          "https://youtu.be/y9OOdaKLU3o?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 9,
-        title: "8-dars. Foydalanuvchi bilan oddiy muloqot",
-        videoFile:
-          "https://youtu.be/qbskYCDdsNY?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 10,
-        title: "8-dars. Javascriptda foydalanuvchi bilan muloqot",
-        videoFile:
-          "https://youtu.be/JPXkfrymWD0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 11,
-        title: "9-dars. Interpolatsiya",
-        videoFile:
-          "https://youtu.be/fYZy93uqk5Q?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 12,
-        title: "10-dars. Javascript Operatorlari",
-        videoFile:
-          "https://youtu.be/lcmEWA0_ABU?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 13,
-        title:
-          "11-dars Git and GitHub boshlovchilar uchun. #git #github #programming",
-        videoFile:
-          "https://youtu.be/ai5JZTEoE8M?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 14,
-        title: "12-dars. Amaliyot. Ilova yaratishni boshlaymiz",
-        videoFile:
-          "https://youtu.be/yVknEYclH3Y?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 15,
-        title: "13-dars. Shartli operator",
-        videoFile:
-          "https://youtu.be/KbR53u2vUVE?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 16,
-        title: "14-dars. Loops - while, do while and for",
-        videoFile:
-          "https://youtu.be/DGHZuDHn2rs?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 17,
-        title: "14-dars. for in and for of",
-        videoFile:
-          "https://youtu.be/ZB6pS-AZf0A?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 18,
-        title: "15-dars. Amaliyot. Sikl",
-        videoFile:
-          "https://youtu.be/2NmNh0vNxtk?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 19,
-        title: "16-dars. Funksiya",
-        videoFile:
-          "https://youtu.be/MCwtzQz7rE0?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 20,
-        title: "17. Metod va xususiyatlar",
-        videoFile:
-          "https://youtu.be/hPb7KpEpUBa?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 21,
-        title: "18-dars. Amaliyot. Function.",
-        videoFile:
-          "https://youtu.be/Lfr5WAdFnLg?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 22,
-        title: "19-dars. Callback function",
-        videoFile:
-          "https://youtu.be/QJSp9YaCIj8?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 23,
-        title: "20-dars. Obyektlar, destruptizatsiya",
-        videoFile:
-          "https://youtu.be/a78_nMCpikU?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 24,
-        title: "21-dars. Massivlar va psevdo massivlar",
-        videoFile:
-          "https://youtu.be/y2k4JZVLKXI?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
-      },
-      {
-        id: 25,
-        title: "13-dars. forEach",
-        videoFile: "https://youtu.be/D4z_6uXP-IA",
-        duration: "2:13", // minut
-      },
-      {
-        id: 26,
-        title: "14-dars. map, filter, every, some, reduce",
-        videoFile: "https://youtu.be/k392OZSZw64",
-        duration: "2:13", // minut
-      },
-      {
-        id: 27,
-        title: "15-dars. Spread Operatori (...), splice()",
-        videoFile: "https://youtu.be/hPhOYxEQ9YY",
-        duration: "2:13", // minut
-      },
-      {
-        id: 28,
-        title: "16-dars. OOP",
-        videoFile: "https://youtu.be/yft7wFzo74Q",
-        duration: "2:13", // minut
-      },
-      {
-        id: 29,
-        title: "17-dars. DOM bilan ishlash",
-        videoFile: "https://youtu.be/60qrpg2mVoE",
-        duration: "2:13", // minut
-      },
-      {
-        id: 30,
-        title:
-          "18-dars. createElement, classList, append, prepend, textContent, InnerHTML",
-        videoFile: "https://youtu.be/60qrpg2mVoE",
-        duration: "2:13", // minut
-      },
-      {
-        id: 31,
-        title: "19-dars. Hodisalar (Events)",
-        videoFile: "https://youtu.be/H5yDj_fz-FI",
-        duration: "2:13", // minut
-      },
-      {
-        id: 32,
-        title:
-          "17-dars. firstChild, lastChild, parentElement, nextSibling, data",
-        videoFile: "https://youtu.be/VCQEN_EKVfQ",
-        duration: "2:13", // minut
-      },
-      {
-        id: 33,
-        title: "18-dars. Hodisalar amaliyot",
-        videoFile: "https://youtu.be/MWFiXdYNB_w",
-        duration: "2:13", // minut
-      },
-      {
-        id: 34,
-        title: "19-dars. ClassList",
-        videoFile: "https://youtu.be/Dic0JIj2qmA",
-        duration: "17:37", // minut
-      },
-      {
-        id: 35,
-        title: "20-dars. Delegatsiya",
-        videoFile: "https://youtu.be/paxeIUAMl60",
-        duration: "6:09", // minut
-      },
-      {
-        id: 36,
-        title: "21-dars. Amaliyot. Foodlover Tabs",
-        videoFile: "https://youtu.be/lQ5NPN-7aPM",
-        duration: "25:39", // minut
-      },
-      {
-        id: 37,
-        title: "22-dars. Date",
-        videoFile: "https://youtu.be/C--Z7esqgsA",
-        duration: "7:25", // minut
-      },
-      {
-        id: 38,
-        title: "23-dars. Amaliyot. Loader va Date",
-        videoFile: "https://youtu.be/5cnBAeKGTk4",
-        duration: "7:33", // minut
-      },
-      {
-        id: 39,
-        title: "24-dars. Document va Window Parametrlari",
-        videoFile: "https://youtu.be/ubYeWVvTAbM",
-        duration: "26:43", // minut
-      },
-      {
-        id: 40,
-        title: "28-dars. Document va Window Parametrlari",
-        videoFile: "https://youtu.be/TLiK7uKJQCI",
-        duration: "24:38", // minut
-      },
-      {
-        id: 41,
-        title: "25-dars. Amaliyot. Modal oyna",
-        videoFile: "https://youtu.be/KibTXtRaoHI",
-        duration: "10:02", // minut
-      },
-      {
-        id: 42,
-        title: "26-dars. Promise, Fetch, Axios, Async await, Try catch",
-        videoFile: "https://youtu.be/lAJmq_LvDRU",
-        duration: "9:06", // minut
-      },
-      {
-        id: 43,
-        title: "28-dars. JSON, NPM, package.json",
-        videoFile: "https://youtu.be/H7WoWYxGMzc",
-        duration: "9:06", // minut
-      },
-      {
-        id: 44,
-        title: "30-dars. LocalStorage",
-        videoFile: "https://youtu.be/ziYsWAje2D8",
-        duration: "2:40", // minut
+        title: "1-dars. Javascript ulash, O'zgaruvchilar, Ma'lumot turlari",
+        videoFile: "https://youtu.be/M4xOCsnKeZo",
+        duration: "16:26", // minut,
+        link: "https://heyzine.com/flip-book/e2501fad68.html#page/1",
       },
     ],
   },
@@ -1481,10 +1198,9 @@ const oldVideos = [
       },
       {
         id: 3,
-        title: "2-dars. Ish joyini sozlash",
-        videoFile:
-          "https://youtu.be/AX3AFc4n_1s?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
-        duration: "2:13", // minut
+        title: "2-dars. Foydalanuvchi bilan ishlash, Interpolatsiya",
+        videoFile: "https://youtu.be/qS5Z_uwYOnA",
+        duration: "2:04", // minut
       },
       {
         id: 4,
@@ -1636,10 +1352,125 @@ const oldVideos = [
       },
       {
         id: 25,
-        title: "22-dars. ClassList",
-        videoFile:
-          "https://youtu.be/Pfc2d27d9WM?list=PLjAKRQl2j0epVcnrkqmYsbGV254hGnuJu",
+        title: "13-dars. forEach",
+        videoFile: "https://youtu.be/D4z_6uXP-IA",
         duration: "2:13", // minut
+      },
+      {
+        id: 26,
+        title: "14-dars. map, filter, every, some, reduce",
+        videoFile: "https://youtu.be/k392OZSZw64",
+        duration: "2:13", // minut
+      },
+      {
+        id: 27,
+        title: "15-dars. Spread Operatori (...), splice()",
+        videoFile: "https://youtu.be/hPhOYxEQ9YY",
+        duration: "2:13", // minut
+      },
+      {
+        id: 28,
+        title: "16-dars. OOP",
+        videoFile: "https://youtu.be/yft7wFzo74Q",
+        duration: "2:13", // minut
+      },
+      {
+        id: 29,
+        title: "17-dars. DOM bilan ishlash",
+        videoFile: "https://youtu.be/60qrpg2mVoE",
+        duration: "2:13", // minut
+      },
+      {
+        id: 30,
+        title:
+          "18-dars. createElement, classList, append, prepend, textContent, InnerHTML",
+        videoFile: "https://youtu.be/60qrpg2mVoE",
+        duration: "2:13", // minut
+      },
+      {
+        id: 31,
+        title: "19-dars. Hodisalar (Events)",
+        videoFile: "https://youtu.be/H5yDj_fz-FI",
+        duration: "2:13", // minut
+      },
+      {
+        id: 32,
+        title:
+          "17-dars. firstChild, lastChild, parentElement, nextSibling, data",
+        videoFile: "https://youtu.be/VCQEN_EKVfQ",
+        duration: "2:13", // minut
+      },
+      {
+        id: 33,
+        title: "18-dars. Hodisalar amaliyot",
+        videoFile: "https://youtu.be/MWFiXdYNB_w",
+        duration: "2:13", // minut
+      },
+      {
+        id: 34,
+        title: "19-dars. ClassList",
+        videoFile: "https://youtu.be/Dic0JIj2qmA",
+        duration: "17:37", // minut
+      },
+      {
+        id: 35,
+        title: "20-dars. Delegatsiya",
+        videoFile: "https://youtu.be/paxeIUAMl60",
+        duration: "6:09", // minut
+      },
+      {
+        id: 36,
+        title: "21-dars. Amaliyot. Foodlover Tabs",
+        videoFile: "https://youtu.be/lQ5NPN-7aPM",
+        duration: "25:39", // minut
+      },
+      {
+        id: 37,
+        title: "22-dars. Date",
+        videoFile: "https://youtu.be/C--Z7esqgsA",
+        duration: "7:25", // minut
+      },
+      {
+        id: 38,
+        title: "23-dars. Amaliyot. Loader va Date",
+        videoFile: "https://youtu.be/5cnBAeKGTk4",
+        duration: "7:33", // minut
+      },
+      {
+        id: 39,
+        title: "24-dars. Document va Window Parametrlari",
+        videoFile: "https://youtu.be/ubYeWVvTAbM",
+        duration: "26:43", // minut
+      },
+      {
+        id: 40,
+        title: "28-dars. Document va Window Parametrlari",
+        videoFile: "https://youtu.be/TLiK7uKJQCI",
+        duration: "24:38", // minut
+      },
+      {
+        id: 41,
+        title: "25-dars. Amaliyot. Modal oyna",
+        videoFile: "https://youtu.be/KibTXtRaoHI",
+        duration: "10:02", // minut
+      },
+      {
+        id: 42,
+        title: "26-dars. Promise, Fetch, Axios, Async await, Try catch",
+        videoFile: "https://youtu.be/lAJmq_LvDRU",
+        duration: "9:06", // minut
+      },
+      {
+        id: 43,
+        title: "28-dars. JSON, NPM, package.json",
+        videoFile: "https://youtu.be/H7WoWYxGMzc",
+        duration: "9:06", // minut
+      },
+      {
+        id: 44,
+        title: "30-dars. LocalStorage",
+        videoFile: "https://youtu.be/ziYsWAje2D8",
+        duration: "2:40", // minut
       },
     ],
   },
@@ -2323,7 +2154,8 @@ const english = [
       },
       {
         id: 6,
-        title: "5-dars. The Present Continuous Tense (Progressive tense) Hozirgi davomiy zamon",
+        title:
+          "5-dars. The Present Continuous Tense (Progressive tense) Hozirgi davomiy zamon",
         videoFile: "https://youtu.be/VRbydVW245g",
         duration: "29:39",
         link: "https://drive.google.com/file/d/1YFNiehZ_eZUA1rdceiDwRUpQSXTQ_HZ-/view?usp=sharing",
