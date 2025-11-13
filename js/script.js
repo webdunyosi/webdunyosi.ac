@@ -514,6 +514,13 @@ const newVideos = [
         duration: "5:54", // minut,
         link: "https://heyzine.com/flip-book/b7c0134aa2.html",
       },
+      {
+        id: 3,
+        title: "3-dars. Arifmetik operatorlar",
+        videoFile: "https://youtu.be/eubTHzcS1BI",
+        duration: "3:09", // minut,
+        link: "https://heyzine.com/flip-book/38fe467d09.html",
+      },
     ],
   },
   // REACTJS NEW 2025
