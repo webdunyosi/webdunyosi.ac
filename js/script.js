@@ -507,6 +507,13 @@ const newVideos = [
         duration: "16:26", // minut,
         link: "https://heyzine.com/flip-book/e2501fad68.html#page/1",
       },
+      {
+        id: 2,
+        title: "2-dars. Foydalanuvchi bilan ishlash, Interpolatsiy",
+        videoFile: "https://youtu.be/7sar3_dP3Aw",
+        duration: "5:54", // minut,
+        link: "https://heyzine.com/flip-book/b7c0134aa2.html",
+      },
     ],
   },
   // REACTJS NEW 2025
