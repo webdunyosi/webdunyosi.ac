@@ -570,6 +570,13 @@ const newVideos = [
         duration: "5:25", // minut,
         link: "https://www.flipbookpdf.net/web/site/a57ee9ed8cd0c3e1f70098aa83e56b9c07f21a15202511.pdf.html",
       },
+      {
+        id: 11,
+        title: "11-dars. Array, forEach()",
+        videoFile: "https://youtu.be/mRYkTkqW0rs",
+        duration: "9:25", // minut,
+        link: "https://online.fliphtml5.com/faayf/pomh/#p=1",
+      },
     ],
   },
   // REACTJS NEW 2025
