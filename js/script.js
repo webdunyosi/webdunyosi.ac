@@ -577,6 +577,13 @@ const newVideos = [
         duration: "9:25", // minut,
         link: "https://online.fliphtml5.com/faayf/pomh/#p=1",
       },
+      {
+        id: 12,
+        title: "12-dars. map(), filter(), every(), some(), reduce()",
+        videoFile: "https://youtu.be/HfQh7Aw6WF4  ",
+        duration: "8:54", // minut,
+        link: "https://online.fliphtml5.com/faayf/npgy/#p=1",
+      },
     ],
   },
   // REACTJS NEW 2025
