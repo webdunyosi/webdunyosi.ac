@@ -584,6 +584,13 @@ const newVideos = [
         duration: "8:54", // minut,
         link: "https://online.fliphtml5.com/faayf/npgy/#p=1",
       },
+      {
+        id: 13,
+        title: "13-dars. Spread Operatori (...)",
+        videoFile: "https://youtu.be/Vgb0qyYVg_4",
+        duration: "4:56", // minut,
+        link: "https://online.fliphtml5.com/faayf/unpr/#p=1",
+      },
     ],
   },
   // REACTJS NEW 2025
