@@ -598,6 +598,13 @@ const newVideos = [
         duration: "7:01", // minut,
         link: "https://online.fliphtml5.com/faayf/dhvh/#p=1",
       },
+      {
+        id: 15,
+        title: "15-dars. createElement, classList, append, prepend, textContent, InnerHTML",
+        videoFile: "https://youtu.be/ZspbllspYDA",
+        duration: "10:38", // minut,
+        link: "https://online.fliphtml5.com/faayf/dkja/#p=1",
+      },
     ],
   },
   // REACTJS NEW 2025
