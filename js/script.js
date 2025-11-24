@@ -591,6 +591,13 @@ const newVideos = [
         duration: "4:56", // minut,
         link: "https://online.fliphtml5.com/faayf/unpr/#p=1",
       },
+      {
+        id: 14,
+        title: "14-dars. DOM bilan ishlash",
+        videoFile: "https://youtu.be/vvhkQEOD314",
+        duration: "7:01", // minut,
+        link: "https://online.fliphtml5.com/faayf/dhvh/#p=1",
+      },
     ],
   },
   // REACTJS NEW 2025
