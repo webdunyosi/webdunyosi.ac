@@ -7,10 +7,10 @@ const activeStudents = [
   {
     name: "Dustmurodov Akmal", // o'quvchi ismi
     avatar: "../images/students/DustmurodovAkmal.png", // o'quvchi rasmi
-    attendance: 0, // yo'qlama foizi
+    attendance: 100, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    completedTasks: 0, // Coinlar soni
     startedAt: "01.05.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript", "react"], // Yutuqlar
   },
@@ -20,7 +20,7 @@ const activeStudents = [
     attendance: 0, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    completedTasks: 0, // Coinlar soni
     startedAt: "04.08.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Yutuqlar
   },
@@ -30,17 +30,17 @@ const activeStudents = [
     attendance: 0, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    completedTasks: 0, // Coinlar soni
     startedAt: "18.09.2025", // kursni boshlagan sana
     courses: ["html", "css"], // Yutuqlar
   },
   {
     name: "Axbutayev Muhammadali", // o'quvchi ismi
     avatar: "../images/students/AxbutayevMuhammadali.png", // o'quvchi rasmi
-    attendance: 0, // yo'qlama foizi
-    taskScore: 0, // vazifalar uchun ball
+    attendance: 100, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    completedTasks: 1, // Coinlar soni
     startedAt: "28.08.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind"], // Yutuqlar
   },
@@ -50,17 +50,17 @@ const activeStudents = [
     attendance: 0, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    completedTasks: 0, // Coinlar soni
     startedAt: "06.09.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind"], // Yutuqlar
   },
   {
     name: "Aslonov Jahongir", // o'quvchi ismi
     avatar: "../images/students/AslonovJahongir.png", // o'quvchi rasmi
-    attendance: 0, // yo'qlama foizi
+    attendance: 100, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
-    projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    projectScore: 10, // loyihalar uchun ball
+    completedTasks: 1, // Coinlar soni
     startedAt: "11.08.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind"], // Yutuqlar
   },
@@ -70,7 +70,7 @@ const activeStudents = [
     attendance: 0, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    completedTasks: 0, // Coinlar soni
     startedAt: "19.08.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript", "react"], // Yutuqlar
   },
@@ -80,17 +80,17 @@ const activeStudents = [
     attendance: 0, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    completedTasks: 0, // Coinlar soni
     startedAt: "19.08.2025", // kursni boshlagan sana
     courses: ["html", "css"], // Yutuqlar
   },
   {
     name: "Saydaliyev Salohiddin", // o'quvchi ismi
     avatar: "../images/students/boy.png", // o'quvchi rasmi
-    attendance: 0, // yo'qlama foizi
+    attendance: 100, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    completedTasks: 0, // Coinlar soni
     startedAt: "01.07.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Yutuqlar
   },
@@ -100,17 +100,17 @@ const activeStudents = [
     attendance: 0, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    completedTasks: 0, // Coinlar soni
     startedAt: "28.09.2025", // kursni boshlagan sana
     courses: ["html", "css"], // Yutuqlar
   },
   {
     name: "Safarov Durbek", // o'quvchi ismi
     avatar: "../images/students/SafarovDurbek.png", // o'quvchi rasmi
-    attendance: 0, // yo'qlama foizi
-    taskScore: 0, // vazifalar uchun ball
-    projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    attendance: 100, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 10, // loyihalar uchun ball
+    completedTasks: 2, // Coinlar soni
     startedAt: "01.07.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript", "react"], // Yutuqlar
   },
@@ -120,17 +120,17 @@ const activeStudents = [
     attendance: 0, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    completedTasks: 0, // Coinlar soni
     startedAt: "18.09.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind"], // Tugallangan kurslar
   },
   {
     name: "Qalandarov Shohijaxon", // o'quvchi ismi
     avatar: "../images/students/QalandarovShohijaxon.png", // o'quvchi rasmi
-    attendance: 0, // yo'qlama foizi
-    taskScore: 0, // vazifalar uchun ball
-    projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // bajarilgan vazifalar soni
+    attendance: 100, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 10, // loyihalar uchun ball
+    completedTasks: 2, // Coinlar soni
     startedAt: "18.09.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind"], // Yutuqlar
   },
@@ -561,7 +561,8 @@ const newVideos = [
       },
       {
         id: 15,
-        title: "15-dars. createElement, classList, append, prepend, textContent, InnerHTML",
+        title:
+          "15-dars. createElement, classList, append, prepend, textContent, InnerHTML",
         videoFile: "https://youtu.be/ZspbllspYDA",
         duration: "10:38", // minut,
         link: "https://online.fliphtml5.com/faayf/dkja/#p=1",
