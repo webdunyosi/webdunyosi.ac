@@ -7,7 +7,7 @@ const activeStudents = [
   {
     name: "Dustmurodov Akmal", // o'quvchi ismi
     avatar: "../images/students/DustmurodovAkmal.png", // o'quvchi rasmi
-    attendance: 100, // yo'qlama foizi
+    attendance: 96, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
     projectScore: 0, // loyihalar uchun ball
     completedTasks: 0, // Coinlar soni
@@ -89,8 +89,8 @@ const activeStudents = [
     avatar: "../images/students/boy.png", // o'quvchi rasmi
     attendance: 100, // yo'qlama foizi
     taskScore: 0, // vazifalar uchun ball
-    projectScore: 0, // loyihalar uchun ball
-    completedTasks: 0, // Coinlar soni
+    projectScore: 10, // loyihalar uchun ball
+    completedTasks: 1, // Coinlar soni
     startedAt: "01.07.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind", "javascript"], // Yutuqlar
   },
@@ -130,9 +130,19 @@ const activeStudents = [
     attendance: 100, // yo'qlama foizi
     taskScore: 100, // vazifalar uchun ball
     projectScore: 10, // loyihalar uchun ball
-    completedTasks: 2, // Coinlar soni
+    completedTasks: 3, // Coinlar soni
     startedAt: "18.09.2025", // kursni boshlagan sana
     courses: ["html", "css", "tailwind"], // Yutuqlar
+  },
+  {
+    name: "Mavlonov Asadbek", // o'quvchi ismi
+    avatar: "../images/students/MavlonovAsadbek.png", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 0, // loyihalar uchun ball
+    completedTasks: 2, // Coinlar soni
+    startedAt: "18.09.2025", // kursni boshlagan sana
+    courses: ["html"], // Yutuqlar
   },
 ]
 
