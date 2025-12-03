@@ -247,7 +247,6 @@ const newVideos = [
         title: "Yangi boshlovchilar uchun",
         videoFile: "https://youtu.be/LN1-safk0Xo",
         duration: "6:12", // minut
-        link: "https://online.fliphtml5.com/faayf/aadq/#p=1",
       },
       {
         id: 2,
@@ -260,24 +259,28 @@ const newVideos = [
         title: "1-dars. HTML asoslari - Kirish",
         videoFile: "https://youtu.be/stkPk65Sthk",
         duration: "13:59", // minut
+        link: "https://online.fliphtml5.com/faayf/aadq/#p=1",
       },
       {
         id: 4,
         title: "2-dars. Img, div, komentariya",
         videoFile: "https://youtu.be/vhhwnIn7x-Y",
         duration: "10:00", // minut
+        link: "https://online.fliphtml5.com/faayf/vmrx/#p=1",
       },
       {
         id: 5,
         title: "3-dars. Anchor, Iframe",
         videoFile: "https://youtu.be/WxADzZG-AsI",
         duration: "19:31", // minut
+        link: "https://online.fliphtml5.com/faayf/actw/#p=1",
       },
       {
         id: 6,
         title: "4-dars. Form",
         videoFile: "https://youtu.be/NDbsi_pTnVw",
         duration: "11:02", // minut
+        link: "https://online.fliphtml5.com/faayf/qant/#p=1",
       },
     ],
   },
