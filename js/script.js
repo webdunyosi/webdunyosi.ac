@@ -247,6 +247,7 @@ const newVideos = [
         title: "Yangi boshlovchilar uchun",
         videoFile: "https://youtu.be/LN1-safk0Xo",
         duration: "6:12", // minut
+        link: "https://online.fliphtml5.com/faayf/aadq/#p=1",
       },
       {
         id: 2,
