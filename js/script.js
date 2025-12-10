@@ -58,7 +58,7 @@ const activeStudents = [
     name: "Aslonov Jahongir", // o'quvchi ismi
     avatar: "../images/students/AslonovJahongir.png", // o'quvchi rasmi
     attendance: 100, // yo'qlama foizi
-    taskScore: 0, // vazifalar uchun ball
+    taskScore: 100, // vazifalar uchun ball
     projectScore: 10, // loyihalar uchun ball
     completedTasks: 1, // Coinlar soni
     startedAt: "11.08.2025", // kursni boshlagan sana
