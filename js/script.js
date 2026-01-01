@@ -588,6 +588,13 @@ const newVideos = [
         duration: "9:45", // minut,
         link: "https://www.flipbookpdf.net/web/site/3dfeb8e07de721b0ed69f316dcd9992d0227b2c9202601.pdf-bd9999ea1f71fc81c281a6421402b1359b6455b6.html#page/1",
       },
+      {
+        id: 17,
+        title: "17-dars. firstChild, lastChild, parentElement, nextSibling, data",
+        videoFile: "https://youtu.be/TofOtdiv-Bs",
+        duration: "6:01", // minut,
+        link: "https://www.flipbookpdf.net/web/site/ca0b34f7018640f491cd0d265d3c73982295f38c202601.pdf.html#page/1",
+      },
     ],
   },
   // REACTJS NEW 2025
