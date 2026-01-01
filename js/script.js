@@ -595,6 +595,13 @@ const newVideos = [
         duration: "6:01", // minut,
         link: "https://www.flipbookpdf.net/web/site/ca0b34f7018640f491cd0d265d3c73982295f38c202601.pdf.html#page/1",
       },
+      {
+        id: 18,
+        title: "18-dars. Hodisalar amaliyot",
+        videoFile: "https://youtu.be/HY_fczYFiu8",
+        duration: "3:01", // minut,
+        link: "https://www.flipbookpdf.net/web/site/2ca4a9b00bddd917788b76a161faf1268fa5b541202601.pdf.html#page/1",
+      },
     ],
   },
   // REACTJS NEW 2025
