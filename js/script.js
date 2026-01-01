@@ -581,6 +581,13 @@ const newVideos = [
         duration: "10:38", // minut,
         link: "https://online.fliphtml5.com/faayf/dkja/#p=1",
       },
+      {
+        id: 16,
+        title: "16-dars. Hodisalar (Events)",
+        videoFile: "https://youtu.be/qCBMpSaUr6w",
+        duration: "9:45", // minut,
+        link: "https://www.flipbookpdf.net/web/site/3dfeb8e07de721b0ed69f316dcd9992d0227b2c9202601.pdf-bd9999ea1f71fc81c281a6421402b1359b6455b6.html#page/1",
+      },
     ],
   },
   // REACTJS NEW 2025
