@@ -602,6 +602,13 @@ const newVideos = [
         duration: "3:01", // minut,
         link: "https://www.flipbookpdf.net/web/site/2ca4a9b00bddd917788b76a161faf1268fa5b541202601.pdf.html#page/1",
       },
+      {
+        id: 19,
+        title: "19-dars. ClassList",
+        videoFile: "https://youtu.be/Zv170wOQgME",
+        duration: "7:53", // minut,
+        link: "https://www.flipbookpdf.net/web/site/e203ef47d366bfc9e1d98613b0ce0447e7acf98d202601.pdf.html#page/1",
+      },
     ],
   },
   // REACTJS NEW 2025
