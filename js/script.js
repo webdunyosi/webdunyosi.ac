@@ -609,6 +609,20 @@ const newVideos = [
         duration: "7:53", // minut,
         link: "https://www.flipbookpdf.net/web/site/e203ef47d366bfc9e1d98613b0ce0447e7acf98d202601.pdf.html#page/1",
       },
+      {
+        id: 20,
+        title: "20-dars. Delegatsiya",
+        videoFile: "https://youtu.be/7yojKixiYVs",
+        duration: "3:40", // minut,
+        link: "https://online.fliphtml5.com/faayf/thbx/#p=1",
+      },
+      {
+        id: 21,
+        title: "21-dars. Amaliyot. Foodlover Tabs",
+        videoFile: "https://youtu.be/nt0RySaBhyk",
+        duration: "7:40", // minut,
+        link: "https://online.fliphtml5.com/faayf/thbx/#p=1",
+      },
     ],
   },
   // REACTJS NEW 2025
