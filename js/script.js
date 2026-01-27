@@ -623,6 +623,27 @@ const newVideos = [
         duration: "7:40", // minut,
         link: "https://online.fliphtml5.com/faayf/thbx/#p=1",
       },
+      {
+        id: 29,
+        title: "29-dars. Amaliyot. Slider",
+        videoFile: "https://youtu.be/bl_2PuPDirQ",
+        duration: "4:29", // minut,
+        link: "",
+      },
+      {
+        id: 30,
+        title: "30-dars. LocalStorage",
+        videoFile: "https://youtu.be/BI4sYmO_qJ4",
+        duration: "5:19", // minut,
+        link: "",
+      },
+      {
+        id: 31,
+        title: "31-dars. Regular Expression",
+        videoFile: "https://youtu.be/yT46BNzVlnM",
+        duration: "6:09", // minut,
+        link: "",
+      },
     ],
   },
   // REACTJS NEW 2025
