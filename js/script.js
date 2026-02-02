@@ -802,6 +802,48 @@ const newVideos = [
         duration: "5:42", // minut
         link: "https://www.figma.com/design/SXInJpHfAYk9nLjrraNBil/Free-Medical-Landing-Page-Design--Community-?node-id=1-2&t=HzReHXTeggzVNmFZ-0",
       },
+      {
+        id: 15,
+        title: "15-dars. React Memo",
+        videoFile: "https://youtu.be/Nj4rPm9CPzk",
+        duration: "4:10", // minut
+        link: "https://www.figma.com/design/TBe3mud1W5e0a5b3WrCcfe/Forever?node-id=0-1&p=f&t=H6LFFJW4OJE9Qay1-0",
+      },
+      {
+        id: 16,
+        title: "16-dars. useReducer",
+        videoFile: "https://youtu.be/BQnxFnGRgXA",
+        duration: "4:20", // minut
+        link: "https://www.figma.com/design/TBe3mud1W5e0a5b3WrCcfe/Forever?node-id=0-1&p=f&t=H6LFFJW4OJE9Qay1-0",
+      },
+      {
+        id: 17,
+        title: "17-dars. useContext",
+        videoFile: "https://youtu.be/aUN5BrtdOB8",
+        duration: "3:32", // minut
+        link: "https://www.figma.com/design/L4CWzu9LfuHk3KdNAWLyzw/Dark---Light-Mode--Community-?node-id=0-1&p=f&t=yMyPc35xrYUliETJ-0",
+      },
+      {
+        id: 18,
+        title: "18-dars. Redux Toolkit, configureStore(), createSlice(), useSelector(), useDispatch()",
+        videoFile: "https://youtu.be/yr9r8G8GA04",
+        duration: "5:37", // minut
+        link: "https://www.figma.com/design/OjPk8qAZkeZVCF44OTDJhL/Prototyping-Add-to-Cart--Community-?node-id=1-2&p=f&t=kQEkOt6b08WA9LeY-0",
+      },
+      {
+        id: 19, 
+        title: "19-dars. CreateAsyncThunk",
+        videoFile: "https://youtu.be/cr0TvyJ0ZnQ",
+        duration: "4:10", // minut
+        link: "https://www.figma.com/design/etB4hkCKkKWpTN5asWXqGV/React-design--Rick---Morty-API---Community-?node-id=0-1&p=f&t=rK4x4MPWifTOfu4R-0",
+      },
+      {
+        id: 20,
+        title: "20-dars. RTK Query",
+        videoFile: "https://youtu.be/G8UfSMATd4k",
+        duration: "4:34", // minut
+        link: "https://www.figma.com/design/Ol9oO9rYoQzX4E9zv6WNK3/Movies-app--Community-?node-id=6-686&p=f&t=YeaQHMZGMA3mdKUg-0",
+      },
     ],
   },
 ]
