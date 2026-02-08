@@ -90,6 +90,17 @@
                   <span class="text-sm">Faol O'quvchilar</span>
                 </a>
               </li>
+              <li>
+                <a
+                  href="#graduated"
+                  class="nav-link flex items-center p-2 rounded-lg transition-all group"
+                >
+                  <i
+                    class="fas fa-user-graduate mr-2 text-sm group-hover:scale-110 transition-transform"
+                  ></i>
+                  <span class="text-sm">Tugatgan O'quvchilar</span>
+                </a>
+              </li>
               <li id="adminMenuItem" class="hidden">
                 <a
                   href="#admin"
@@ -1796,6 +1807,77 @@
             id="studentsList"
           >
             <!-- Students will be loaded dynamically -->
+          </div>
+        </div>
+
+        <!-- Graduated Students Page -->
+        <div id="graduatedPage" class="page p-3 md:p-6 mt-2">
+          <div class="mb-6">
+            <h1 class="text-5xl font-black mb-3">
+              <span class="neon-text">Tugatgan O'quvchilar</span>
+            </h1>
+            <p class="text-gray-300 text-lg max-w-3xl">
+              Kurslarni muvaffaqiyatli tamomlagan va kasb egasi bo'lgan o'quvchilarimiz
+            </p>
+          </div>
+
+          <!-- Statistics Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div class="stat-card rounded-2xl p-6 text-center relative">
+              <div class="text-primary text-4xl mb-4 floating-element">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3
+                class="text-2xl font-black text-primary mb-2 neon-text"
+                id="totalGraduatedStudents"
+              >
+                0
+              </h3>
+              <p class="text-gray-400 text-lg">Tugatgan O'quvchilar</p>
+              <div
+                class="absolute top-3 right-3 w-2 h-2 bg-primary rounded-full animate-pulse"
+              ></div>
+            </div>
+            <div class="stat-card rounded-2xl p-6 text-center relative">
+              <div class="text-primary text-4xl mb-4 floating-element">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h3
+                class="text-2xl font-black text-primary mb-2 neon-text"
+                id="graduatedCountries"
+              >
+                0
+              </h3>
+              <p class="text-gray-400 text-lg">Mamlakatlar</p>
+              <div
+                class="absolute top-3 right-3 w-2 h-2 bg-secondary rounded-full animate-pulse"
+                style="animation-delay: 0.5s"
+              ></div>
+            </div>
+            <div class="stat-card rounded-2xl p-6 text-center relative">
+              <div class="text-primary text-4xl mb-4 floating-element">
+                <i class="fas fa-award"></i>
+              </div>
+              <h3
+                class="text-2xl font-black text-primary mb-2 neon-text"
+                id="graduatedSuccessRate"
+              >
+                100%
+              </h3>
+              <p class="text-gray-400 text-lg">Muvaffaqiyat darajasi</p>
+              <div
+                class="absolute top-3 right-3 w-2 h-2 bg-accent rounded-full animate-pulse"
+                style="animation-delay: 1s"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Graduated Students List -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
+            id="graduatedStudentsList"
+          >
+            <!-- Graduated students will be loaded dynamically -->
           </div>
         </div>
 

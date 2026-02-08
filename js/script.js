@@ -2509,6 +2509,9 @@ function navigateTo(page) {
       case "students":
         loadStudentsData()
         break
+      case "graduated":
+        loadGraduatedStudents()
+        break
       case "admin":
         loadAdminData()
         break
@@ -3907,3 +3910,108 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   }
 })
+
+// Graduated Students Functions
+async function loadGraduatedStudents() {
+  try {
+    const response = await fetch('./data/graduated-students.json')
+    const graduatedStudents = await response.json()
+    
+    // Update statistics
+    document.getElementById('totalGraduatedStudents').textContent = graduatedStudents.length
+    
+    // Count unique countries
+    const countries = [...new Set(graduatedStudents.map(s => s.location.split(',')[0]))]
+    document.getElementById('graduatedCountries').textContent = countries.length
+    
+    // Display graduated students
+    displayGraduatedStudents(graduatedStudents)
+  } catch (error) {
+    console.error('Error loading graduated students:', error)
+    document.getElementById('graduatedStudentsList').innerHTML = `
+      <div class="col-span-full text-center text-red-400">
+        <i class="fas fa-exclamation-circle text-4xl mb-4"></i>
+        <p>Ma'lumotlarni yuklashda xatolik yuz berdi</p>
+      </div>
+    `
+  }
+}
+
+function displayGraduatedStudents(students) {
+  const graduatedList = document.getElementById('graduatedStudentsList')
+  graduatedList.innerHTML = ''
+  
+  students.forEach((student, index) => {
+    const studentCard = createGraduatedStudentCard(student, index + 1)
+    graduatedList.appendChild(studentCard)
+  })
+}
+
+function createGraduatedStudentCard(student, rank) {
+  const card = document.createElement('div')
+  card.className = 'student-card relative'
+  
+  // Create learned badges HTML
+  const learnedBadges = student.learned.map(course => 
+    `<span class="achievement-badge">${course}</span>`
+  ).join('')
+  
+  card.innerHTML = `
+    <div class="student-header">
+      <div class="student-rank">
+        <div class="rank-number-only">${rank}</div>
+      </div>
+    </div>
+    
+    <div class="flex items-start gap-4 mb-4">
+      <img src="${student.avatar}" alt="${student.name}" class="student-avatar" onerror="this.src='../images/students/boy.png'">
+      <div class="flex-1">
+        <h3 class="text-xl font-bold text-primary mb-1">${student.name}</h3>
+        <div class="flex items-center gap-2 text-gray-400 text-sm mb-2">
+          <i class="fas fa-map-marker-alt text-primary"></i>
+          <span>${student.location}</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-400 text-sm">
+          <i class="fas fa-birthday-cake text-primary"></i>
+          <span>${student.birthDate}</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-4">
+      <div class="flex items-center gap-2 mb-2">
+        <i class="fas fa-calendar-alt text-primary"></i>
+        <span class="text-gray-300 text-sm font-semibold">Qatnashgan yil:</span>
+      </div>
+      <p class="text-gray-400 text-sm ml-6">${student.participationDate}</p>
+    </div>
+    
+    <div class="mb-4">
+      <div class="flex items-center gap-2 mb-2">
+        <i class="fas fa-trophy text-primary"></i>
+        <span class="text-gray-300 text-sm font-semibold">Natijalar:</span>
+      </div>
+      <p class="text-gray-400 text-sm ml-6">${student.results}</p>
+    </div>
+    
+    <div>
+      <div class="flex items-center gap-2 mb-2">
+        <i class="fas fa-book text-primary"></i>
+        <span class="text-gray-300 text-sm font-semibold">O'rgangan texnologiyalar:</span>
+      </div>
+      <div class="flex flex-wrap gap-2 ml-6">
+        ${learnedBadges}
+      </div>
+    </div>
+    
+    <div class="mt-4 pt-4 border-t border-gray-700">
+      <div class="flex items-center justify-center gap-2 text-primary">
+        <i class="fas fa-check-circle"></i>
+        <span class="text-sm font-semibold">Muvaffaqiyatli tamomlangan</span>
+      </div>
+    </div>
+  `
+  
+  return card
+}
+

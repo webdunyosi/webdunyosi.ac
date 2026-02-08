@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Alimov Sardor",
+    "location": "O'zbekiston, Navoiy",
+    "participationDate": "2024-2025",
+    "results": "A'lo diplom bilan tamomladi, Backend dasturlash bo'yicha loyihalar yaratdi",
+    "birthDate": "13.08.2001",
+    "learned": ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB"],
+    "avatar": "../images/students/boy.png"
+  },
+  {
+    "name": "Karimova Diyora",
+    "location": "O'zbekiston, Toshkent",
+    "participationDate": "2023-2024",
+    "results": "Frontend dasturlash bo'yicha mutaxassis, 5+ loyiha yaratdi",
+    "birthDate": "25.03.2002",
+    "learned": ["HTML", "CSS", "Tailwind CSS", "JavaScript", "React", "TypeScript"],
+    "avatar": "../images/students/girl.png"
+  },
+  {
+    "name": "Petrov Ivan",
+    "location": "Rossiya, Tyumen",
+    "participationDate": "2024-2025",
+    "results": "Full-stack dasturchi, hozirda yirik kompaniyada ishlaydi",
+    "birthDate": "17.11.2000",
+    "learned": ["HTML", "CSS", "JavaScript", "React", "Node.js", "PostgreSQL", "Docker"],
+    "avatar": "../images/students/boy.png"
+  },
+  {
+    "name": "Rahmonov Jasur",
+    "location": "O'zbekiston, Samarqand",
+    "participationDate": "2023-2024",
+    "results": "Web dizayn va frontend dasturlash, 10+ mijoz bilan ishladi",
+    "birthDate": "05.06.2003",
+    "learned": ["HTML", "CSS", "Tailwind CSS", "JavaScript", "Figma", "UI/UX Design"],
+    "avatar": "../images/students/boy.png"
+  },
+  {
+    "name": "Smirnova Olga",
+    "location": "Rossiya, Moskva",
+    "participationDate": "2024-2025",
+    "results": "React dasturchi, zamonaviy veb ilovalar yaratadi",
+    "birthDate": "22.09.2001",
+    "learned": ["HTML", "CSS", "JavaScript", "React", "Redux", "Next.js"],
+    "avatar": "../images/students/girl.png"
+  }
+]
