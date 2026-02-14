@@ -85,6 +85,16 @@ const activeStudents = [
     courses: ["html", "css"], // Yutuqlar
   },
   {
+    name: "Abdujabborov Abdumalik", // o'quvchi ismi
+    avatar: "../images/students/AbdujabborovAbdumalik.png", // o'quvchi rasmi
+    attendance: 100, // yo'qlama foizi
+    taskScore: 100, // vazifalar uchun ball
+    projectScore: 100, // loyihalar uchun ball
+    completedTasks: 100, // Coinlar soni
+    startedAt: "10.02.2026", // kursni boshlagan sana
+    courses: ["html", "css"], // Yutuqlar
+  },
+  {
     name: "Saydaliyev Salohiddin", // o'quvchi ismi
     avatar: "../images/students/boy.png", // o'quvchi rasmi
     attendance: 100, // yo'qlama foizi
