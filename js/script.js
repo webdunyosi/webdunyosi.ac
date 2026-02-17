@@ -2519,6 +2519,9 @@ function navigateTo(page) {
       case "students":
         loadStudentsData()
         break
+      case "afitsant":
+        // Afitsant page - no additional loading needed
+        break
       case "admin":
         loadAdminData()
         break
@@ -3913,6 +3916,143 @@ document.addEventListener("DOMContentLoaded", function () {
         statusEl.textContent =
           "Xatolik yuz berdi. Iltimos, birozdan so'ng qayta urinib ko'ring."
         statusEl.className = "text-sm text-red-400"
+      }
+    })
+  }
+
+  // Star Rating Functionality
+  const starIcons = document.querySelectorAll('.star-icon')
+  const ratingValueInput = document.getElementById('ratingValue')
+  const ratingText = document.getElementById('ratingText')
+  let selectedRating = 0
+
+  const ratingTexts = {
+    1: 'Juda yomon 😞',
+    2: 'Yomon 😐',
+    3: 'O\'rtacha 🙂',
+    4: 'Yaxshi 😊',
+    5: 'A\'lo darajada! 🌟'
+  }
+
+  starIcons.forEach(star => {
+    star.addEventListener('click', function() {
+      selectedRating = parseInt(this.getAttribute('data-rating'))
+      ratingValueInput.value = selectedRating
+      ratingText.textContent = ratingTexts[selectedRating]
+      
+      // Update star colors
+      starIcons.forEach((s, index) => {
+        if (index < selectedRating) {
+          s.classList.add('active')
+        } else {
+          s.classList.remove('active')
+        }
+      })
+    })
+
+    // Hover effect
+    star.addEventListener('mouseenter', function() {
+      const hoverRating = parseInt(this.getAttribute('data-rating'))
+      starIcons.forEach((s, index) => {
+        if (index < hoverRating) {
+          s.style.color = '#fbbf24'
+        } else if (!s.classList.contains('active')) {
+          s.style.color = '#374151'
+        }
+      })
+    })
+  })
+
+  // Reset stars on mouse leave from star container
+  const starRatingContainer = document.getElementById('starRating')
+  if (starRatingContainer) {
+    starRatingContainer.addEventListener('mouseleave', function() {
+      starIcons.forEach((s, index) => {
+        if (index < selectedRating) {
+          s.style.color = '#fbbf24'
+        } else {
+          s.style.color = '#374151'
+        }
+      })
+    })
+  }
+
+  // Rating Form Submission
+  const ratingForm = document.getElementById('ratingForm')
+  if (ratingForm) {
+    ratingForm.addEventListener('submit', async function(e) {
+      e.preventDefault()
+      
+      const statusEl = document.getElementById('ratingStatus')
+      const rating = document.getElementById('ratingValue').value
+      const name = document.getElementById('customerName').value.trim()
+      const phone = document.getElementById('customerPhone').value.trim()
+      const comment = document.getElementById('customerComment').value.trim()
+
+      if (!rating) {
+        statusEl.textContent = 'Iltimos, baho tanlang!'
+        statusEl.className = 'text-sm text-red-400'
+        return
+      }
+
+      if (!name || !comment) {
+        statusEl.textContent = 'Iltimos, barcha majburiy maydonlarni to\'ldiring!'
+        statusEl.className = 'text-sm text-red-400'
+        return
+      }
+
+      statusEl.textContent = 'Yuborilmoqda...'
+      statusEl.className = 'text-sm text-gray-400'
+
+      // Telegram bot credentials
+      const BOT_TOKEN = '7327447931:AAEwcEUm4zykjJblfkxxVzGLoH_P_BJwQ7E'
+      const CHAT_ID = '-1002607241253'
+
+      // Create star emojis based on rating
+      const starEmoji = '⭐'.repeat(parseInt(rating))
+      
+      const text = 
+        `🌟 <b>YANGI AFITSANT BAHOSI</b>\n\n` +
+        `👤 <b>Mijoz:</b> ${escapeHtml(name)}\n` +
+        (phone ? `📞 <b>Telefon:</b> ${escapeHtml(phone)}\n` : '') +
+        `⭐ <b>Baho:</b> ${starEmoji} (${rating}/5)\n` +
+        `💬 <b>Izoh:</b>\n${escapeHtml(comment)}\n\n` +
+        `⏰ <i>Vaqt: ${new Date().toLocaleString('uz-UZ')}</i>`
+
+      try {
+        const res = await fetch(
+          `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: CHAT_ID,
+              text: text,
+              parse_mode: 'HTML'
+            })
+          }
+        )
+        
+        if (!res.ok) throw new Error('Network response was not ok')
+        
+        statusEl.textContent = 'Rahmat! Fikr-mulohazangiz muvaffaqiyatli yuborildi! 🎉'
+        statusEl.className = 'text-sm text-green-400'
+        
+        // Reset form
+        ratingForm.reset()
+        selectedRating = 0
+        ratingValueInput.value = ''
+        ratingText.textContent = 'Baho tanlanmagan'
+        starIcons.forEach(s => s.classList.remove('active'))
+        
+        // Clear status after 5 seconds
+        setTimeout(() => {
+          statusEl.textContent = ''
+        }, 5000)
+      } catch (err) {
+        console.error('Rating submission error:', err)
+        statusEl.textContent = 'Xatolik yuz berdi. Iltimos, qayta urinib ko\'ring.'
+        statusEl.className = 'text-sm text-red-400'
       }
     })
   }

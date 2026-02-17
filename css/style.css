@@ -1343,3 +1343,23 @@ body {
     display: none;
   }
 }
+
+/* Star Rating Styles */
+.star-icon {
+  color: #374151;
+  transition: all 0.3s ease;
+}
+
+.star-icon:hover {
+  color: #fbbf24;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+.star-icon.active {
+  color: #fbbf24;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.8);
+}
+
+.star-icon.active:hover {
+  color: #f59e0b;
+}
