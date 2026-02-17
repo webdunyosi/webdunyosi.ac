@@ -3957,7 +3957,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (index < hoverRating) {
           s.style.color = '#fbbf24'
         } else if (!s.classList.contains('active')) {
-          s.style.color = '#374151'
+          s.style.color = '#6b7280'
         }
       })
     })
@@ -3971,7 +3971,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (index < selectedRating) {
           s.style.color = '#fbbf24'
         } else {
-          s.style.color = '#374151'
+          s.style.color = '#6b7280'
         }
       })
     })

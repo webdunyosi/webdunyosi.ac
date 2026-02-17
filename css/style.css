@@ -1346,20 +1346,24 @@ body {
 
 /* Star Rating Styles */
 .star-icon {
-  color: #374151;
+  color: #4b5563;
   transition: all 0.3s ease;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.1));
 }
 
 .star-icon:hover {
   color: #fbbf24;
   text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+  filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.5));
 }
 
 .star-icon.active {
   color: #fbbf24;
   text-shadow: 0 0 20px rgba(251, 191, 36, 0.8);
+  filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.6));
 }
 
 .star-icon.active:hover {
   color: #f59e0b;
+  filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.8));
 }
