@@ -3924,21 +3924,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const starIcons = document.querySelectorAll('.star-icon')
   const ratingValueInput = document.getElementById('ratingValue')
   const ratingText = document.getElementById('ratingText')
-  let selectedRating = 0
+  const starRatingContainer = document.getElementById('starRating')
 
-  const ratingTexts = {
-    1: 'Juda yomon 😞',
-    2: 'Yomon 😐',
-    3: 'O\'rtacha 🙂',
-    4: 'Yaxshi 😊',
-    5: 'A\'lo darajada! 🌟'
-  }
+  if (starIcons.length > 0 && ratingValueInput && ratingText) {
+    let selectedRating = 0
 
-  starIcons.forEach(star => {
-    star.addEventListener('click', function() {
-      selectedRating = parseInt(this.getAttribute('data-rating'))
-      ratingValueInput.value = selectedRating
-      ratingText.textContent = ratingTexts[selectedRating]
+    const ratingTexts = {
+      1: 'Juda yomon 😞',
+      2: 'Yomon 😐',
+      3: 'O'rtacha 🙂',
+      4: 'Yaxshi 😊',
+      5: 'A'lo darajada! 🌟'
+    }
+
+    starIcons.forEach(star => {
+      star.addEventListener('click', function() {
+        selectedRating = parseInt(this.getAttribute('data-rating'))
+        ratingValueInput.value = selectedRating
+        ratingText.textContent = ratingTexts[selectedRating]
       
       // Update star colors
       starIcons.forEach((s, index) => {
@@ -3964,7 +3967,6 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
   // Reset stars on mouse leave from star container
-  const starRatingContainer = document.getElementById('starRating')
   if (starRatingContainer) {
     starRatingContainer.addEventListener('mouseleave', function() {
       starIcons.forEach((s, index) => {
@@ -3976,6 +3978,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
     })
   }
+}
 
   // Rating Form Submission
   const ratingForm = document.getElementById('ratingForm')
